@@ -5,13 +5,16 @@
 ## PBH January 2024
 
 
+source("Scripts/01-ModelParameters.R")
+
+
 # Function to get flows (numbers of cars,EV,LIB) depending on the 
 # vehicle and battery starting age
 # Discretized by year using a Logistic Distribution
 # n vehicles: vehicles currently on stock, 
 f.getOutflows <- function(n_veh=1,EV_age,LIB_age,
-                          mean_ev=17,sd_ev=4,
-                          mean_lib=15,sd_lib=4,
+                          mean_ev=p.mean_ev,sd_ev=p.sd_ev,
+                          mean_lib=p.mean_lib,sd_lib=p.sd_lib,
                           maxEV_age=30, maxLIB_age=30,
                           dist.Age="Logistic"){
   
@@ -45,6 +48,8 @@ f.getOutflows <- function(n_veh=1,EV_age,LIB_age,
   
   return(ret)
 }
+
+
 
 
 # Test - vehicle of age 12, with original battery

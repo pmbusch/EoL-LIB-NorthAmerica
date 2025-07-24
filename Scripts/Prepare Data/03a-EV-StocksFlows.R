@@ -22,10 +22,10 @@ for (st in unique(sales$Country)){
     cat(v,", ")
     sales_aux <- sales %>% filter(Vehicle==v,Country==st)
     stock_iter <- f.LIB_EV_Stock(sales_aux,
-                               ev_age_newLib=8,
-                               max_reuse_lib=0.5,
-                               max_ev_age_replacement=16, 
-                               max_lib_age_secondlife=12, 
+                               ev_age_newLib=p.ev_age_newLib,
+                               max_reuse_lib=p.max_reuse_lib,
+                               max_ev_age_replacement=p.max_ev_age_replacement, 
+                               max_lib_age_secondlife=p.max_lib_age_secondlife, 
                                start_year=2015 )
     stock <- rbind(stock,stock_iter)
     rm(stock_iter,sales_aux)
