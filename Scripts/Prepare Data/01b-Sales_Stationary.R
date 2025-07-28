@@ -1,5 +1,6 @@
 ## Stationary storage based on forecast of solar and wind generation capacity
 # Method originally from https://doi.org/10.1016/j.resconrec.2025.108377
+# Add historical capacity data from 2015, to build stock
 
 
 source("Scripts/00-Libraries.R", encoding = "UTF-8")
@@ -38,26 +39,51 @@ head(df_ren)
 usa <- df_ren %>% 
   filter(scenario=="ref2025") %>% 
   filter(regionName=="United States") %>% 
-  group_by(period) %>% 
+  rename(Year=period) %>% 
+  group_by(Year) %>% 
   reframe(gw=sum(value)) %>% ungroup()
 
 usa$Country <- "United States"
 
+# Historical
+# Source: https://www.eia.gov/electricity/data/state/
+# EIA-860 Annual Electric Generator Report (released: 9/21/2024)
+# Existing Nameplate and Net Summer Capacity by Energy Source, Producer Type and State
+url_drive <- "H:/.shortcut-targets-by-id/1CWiPbqLa53GMwIlw6QXl5kVdUX6nm-Sa/North America Battery Retirements and Recycling Capacity Research/Data/"
+usa_hist <- read_excel(paste0(url_drive,"USA_existcapacity_annual.xlsx"),
+                       skip = 1)
+head(usa_hist)
+usa_hist <- usa_hist %>% 
+  filter(Year>2014) %>% 
+  filter(`State Code`=="US") %>% 
+  filter(!str_detect(`Producer Type`,"Total")) %>% 
+  filter(str_detect(`Fuel Source`,"Wind|Solar"))
+
+# aggregate
+usa_hist <- usa_hist %>% 
+  group_by(Year) %>% 
+  reframe(gw=sum(`Nameplate Capacity (Megawatts)`)/1e3) %>% ungroup() %>% 
+  mutate(Country="United States")
+
+usa <- rbind(usa,usa_hist)
+rm(usa_hist)
+
 # Mexico ---------- 
 # Based on https://energia.conahcyt.mx/planeas/electricidad/capacidad-generacion and https://www.cenace.gob.mx/Docs/16_MARCOREGULATORIO/Prodecen/20%202024-2038%20Cap%C3%ADtulos%201%20al%206.pdf
 # Figure plotted and data to scale
-url_drive <- "H:/.shortcut-targets-by-id/1CWiPbqLa53GMwIlw6QXl5kVdUX6nm-Sa/North America Battery Retirements and Recycling Capacity Research/Data/"
-# Global demand in GWh
+# Global demand in GWh - forecast and historical
 mex <- read_excel(paste0(url_drive,"Mexico_ElectricityCap_PROSEDEN.xlsx"),
-                 sheet="Sheet1",range = "G5:V7")
+                 sheet="Forecast",range = "G5:AG7")
+
 mex <- mex %>% 
   pivot_longer(c(-Type), names_to = "Year", values_to = "gw") %>% 
-  mutate(gw=gw/1e3,Year=as.numeric(Year))
+  mutate(gw=gw/1e3,Year=as.numeric(Year)) %>% 
+  filter(Year>2014) %>% 
+  arrange(Type,Year)
   
 # extrapolate based on last 10 years slope (linear)
-slope_wind <- ((mex[15,3]-mex[6,3])/10) %>% .$gw
-slope_solar <- ((mex[30,3]-mex[21,3])/10) %>% .$gw
-
+slope_solar <- ((mex[24,3]-mex[15,3])/10) %>% .$gw
+slope_wind <- ((mex[48,3]-mex[39,3])/10) %>% .$gw
 
 mex_ext <- mex %>% filter(Year==2038) %>% 
   mutate(Year=NULL) %>% 
@@ -86,13 +112,13 @@ can <- can %>%
   group_by(Year) %>% 
   reframe(gw=sum(Value)/1e3) %>% ungroup() # MW to GW
 
-can <- can %>% filter(Year>2024)
+range(can$Year)
+can <- can %>% filter(Year>2014)
 
 can$Country <- "Canada"
 
 
-df <- usa %>% rename(Year=period) %>% 
-  rbind(can) %>% rbind(mex)
+df <- rbind(usa,can,mex)
 
 # Convert to battery kwh ----
 
@@ -100,7 +126,8 @@ df <- usa %>% rename(Year=period) %>%
 df <- df %>% 
   arrange(Country, Year) %>%  
   group_by(Country) %>%       
-  mutate(gw = gw - lag(gw, default = 0)) %>% ungroup()
+  mutate(gw = gw - lag(gw, default = 0)) %>% ungroup() %>% 
+  mutate(gw=if_else(gw<0,0,gw))
 
 
 # Key parameters

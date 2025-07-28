@@ -8,6 +8,7 @@ p.ev_age_newLib <- 8 #
 p.max_reuse_lib <- 0.5 # Share of LIBs that goes towards reuse (in another EV)
 p.max_ev_age_replacement <- 16 # Max EV age to get a new LIB (replacement)
 p.max_lib_age_secondlife <- 12 # Max LIB age to be use in another EV (reuse)
+p.max_lib_age_repurp <- 12 # Max LIB age to be use in another EV (reuse)
 p.degradation <- 0.02 # LIB capacity degrdation per year
 
 # Lifetime - years

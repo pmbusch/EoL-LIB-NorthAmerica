@@ -22,14 +22,16 @@ range(icct$Year)
 
 # Filter BEV, Ambitious scenario for now
 icct <- icct %>% 
-  filter(Scenario=="Ambitious") %>% 
+  filter(Scenario %in% c("Baseline 2024","Momentum")) %>% 
   filter(Powertrain %in% c("BEV")) %>% 
   filter(Year>2024) %>% 
-  filter(Vehicle %in% c("Cars","Vans","Medium trucks","Heavy trucks","Buses"))
+  filter(Vehicle %in% c("Cars","Vans","Medium trucks","Heavy trucks","Buses")) %>% 
+  mutate(Scenario=str_remove(Scenario," 2024"))
 
 unique(icct$Vehicle)
 unique(icct$Country)
-  
+unique(icct$Scenario)
+
 ## Add historical sales - From EV Volumes, prior to 2024
 historical_sales <- read.csv("Inputs/Battery/historical_EVsales.csv")
 range(historical_sales$Year)
@@ -45,19 +47,23 @@ historical_HDV <- historical_HDV %>%
   mutate(Country=if_else(Country=="USA","United States",Country)) %>% 
   dplyr::select(Vehicle,Year,Country,Sales)
 
+unique(icct$Scenario)
 icct <- icct %>% 
-  dplyr::select(Vehicle,Year,Country,Sales) %>% 
-  rbind(historical_sales) %>%
-  rbind(historical_HDV) %>% 
+  dplyr::select(Scenario,Vehicle,Year,Country,Sales) %>% 
+  rbind(mutate(historical_sales,Scenario="Baseline")) %>%
+  rbind(mutate(historical_sales,Scenario="Momentum")) %>%
+  rbind(mutate(historical_HDV,Scenario="Baseline")) %>% 
+  rbind(mutate(historical_HDV,Scenario="Momentum")) %>% 
   arrange(Year) %>% arrange(Country)
 
 # complete all data
-icct <- icct %>% complete(Vehicle,Country, Year, fill = list(Sales = 0))
-nrow(icct) # 540, 3*36*5
+icct <- icct %>% complete(Scenario,Vehicle,Country, Year, fill = list(Sales = 0))
+nrow(icct) # 1080, 3*36*5*2
 
 write.csv(icct,"Inputs/EV_Sales.csv",row.names = F)
 
 icct %>% 
+  filter(Scenario=="Momentum") %>% 
   filter(Year %in% c(2025,2050)) %>% 
   group_by(Country,Vehicle,Year) %>% 
   reframe(Sales=sum(Sales)/1e6) %>% # to millions

@@ -1,541 +1,1081 @@
-"Vehicle","Country","Year","Sales"
-"Buses","Canada",2015,0
-"Buses","Canada",2016,5
-"Buses","Canada",2017,11
-"Buses","Canada",2018,27
-"Buses","Canada",2019,115
-"Buses","Canada",2020,315
-"Buses","Canada",2021,269
-"Buses","Canada",2022,678
-"Buses","Canada",2023,1193
-"Buses","Canada",2024,740
-"Buses","Canada",2025,1083
-"Buses","Canada",2026,1264
-"Buses","Canada",2027,1474
-"Buses","Canada",2028,1717
-"Buses","Canada",2029,2000
-"Buses","Canada",2030,2327
-"Buses","Canada",2031,2514
-"Buses","Canada",2032,2990
-"Buses","Canada",2033,3487
-"Buses","Canada",2034,3823
-"Buses","Canada",2035,3993
-"Buses","Canada",2036,4143
-"Buses","Canada",2037,4253
-"Buses","Canada",2038,4432
-"Buses","Canada",2039,4615
-"Buses","Canada",2040,4801
-"Buses","Canada",2041,4893
-"Buses","Canada",2042,4986
-"Buses","Canada",2043,5078
-"Buses","Canada",2044,5170
-"Buses","Canada",2045,5262
-"Buses","Canada",2046,5355
-"Buses","Canada",2047,5447
-"Buses","Canada",2048,5539
-"Buses","Canada",2049,5631
-"Buses","Canada",2050,5724
-"Buses","Mexico",2015,0
-"Buses","Mexico",2016,0
-"Buses","Mexico",2017,0
-"Buses","Mexico",2018,10
-"Buses","Mexico",2019,63
-"Buses","Mexico",2020,15
-"Buses","Mexico",2021,39
-"Buses","Mexico",2022,2
-"Buses","Mexico",2023,87
-"Buses","Mexico",2024,658
-"Buses","Mexico",2025,1088
-"Buses","Mexico",2026,1174
-"Buses","Mexico",2027,1450
-"Buses","Mexico",2028,2382
-"Buses","Mexico",2029,4222
-"Buses","Mexico",2030,7870
-"Buses","Mexico",2031,8382
-"Buses","Mexico",2032,8909
-"Buses","Mexico",2033,9452
-"Buses","Mexico",2034,10010
-"Buses","Mexico",2035,10585
-"Buses","Mexico",2036,11062
-"Buses","Mexico",2037,11550
-"Buses","Mexico",2038,12047
-"Buses","Mexico",2039,12556
-"Buses","Mexico",2040,13075
-"Buses","Mexico",2041,13352
-"Buses","Mexico",2042,13630
-"Buses","Mexico",2043,13907
-"Buses","Mexico",2044,14185
-"Buses","Mexico",2045,14462
-"Buses","Mexico",2046,14740
-"Buses","Mexico",2047,15017
-"Buses","Mexico",2048,15295
-"Buses","Mexico",2049,15571
-"Buses","Mexico",2050,15849
-"Buses","United States",2015,44
-"Buses","United States",2016,331
-"Buses","United States",2017,150
-"Buses","United States",2018,466
-"Buses","United States",2019,554
-"Buses","United States",2020,658
-"Buses","United States",2021,501
-"Buses","United States",2022,793
-"Buses","United States",2023,3522
-"Buses","United States",2024,2239
-"Buses","United States",2025,27709
-"Buses","United States",2026,31868
-"Buses","United States",2027,46319
-"Buses","United States",2028,66446
-"Buses","United States",2029,85913
-"Buses","United States",2030,104509
-"Buses","United States",2031,107685
-"Buses","United States",2032,111919
-"Buses","United States",2033,116530
-"Buses","United States",2034,120972
-"Buses","United States",2035,126211
-"Buses","United States",2036,129863
-"Buses","United States",2037,132932
-"Buses","United States",2038,136227
-"Buses","United States",2039,139613
-"Buses","United States",2040,143437
-"Buses","United States",2041,145022
-"Buses","United States",2042,146583
-"Buses","United States",2043,148189
-"Buses","United States",2044,149322
-"Buses","United States",2045,150364
-"Buses","United States",2046,151265
-"Buses","United States",2047,152738
-"Buses","United States",2048,153978
-"Buses","United States",2049,155397
-"Buses","United States",2050,157368
-"Cars","Canada",2015,4553
-"Cars","Canada",2016,5178
-"Cars","Canada",2017,9666
-"Cars","Canada",2018,21307
-"Cars","Canada",2019,32402
-"Cars","Canada",2020,34806
-"Cars","Canada",2021,58726
-"Cars","Canada",2022,98486
-"Cars","Canada",2023,136693
-"Cars","Canada",2024,177214
-"Cars","Canada",2025,214543
-"Cars","Canada",2026,328243
-"Cars","Canada",2027,468772
-"Cars","Canada",2028,669225
-"Cars","Canada",2029,954469
-"Cars","Canada",2030,1358421
-"Cars","Canada",2031,1451058
-"Cars","Canada",2032,1541739
-"Cars","Canada",2033,1645233
-"Cars","Canada",2034,1732922
-"Cars","Canada",2035,1820054
-"Cars","Canada",2036,1817662
-"Cars","Canada",2037,1818068
-"Cars","Canada",2038,1820056
-"Cars","Canada",2039,1820539
-"Cars","Canada",2040,1819733
-"Cars","Canada",2041,1823206
-"Cars","Canada",2042,1829009
-"Cars","Canada",2043,1828302
-"Cars","Canada",2044,1831465
-"Cars","Canada",2045,1841176
-"Cars","Canada",2046,1844977
-"Cars","Canada",2047,1847991
-"Cars","Canada",2048,1850427
-"Cars","Canada",2049,1849032
-"Cars","Canada",2050,1846613
-"Cars","Mexico",2015,212
-"Cars","Mexico",2016,133
-"Cars","Mexico",2017,324
-"Cars","Mexico",2018,236
-"Cars","Mexico",2019,897
-"Cars","Mexico",2020,1840
-"Cars","Mexico",2021,3015
-"Cars","Mexico",2022,6911
-"Cars","Mexico",2023,14417
-"Cars","Mexico",2024,19488
-"Cars","Mexico",2025,21130
-"Cars","Mexico",2026,35915
-"Cars","Mexico",2027,62946
-"Cars","Mexico",2028,109538
-"Cars","Mexico",2029,186509
-"Cars","Mexico",2030,317993
-"Cars","Mexico",2031,412151
-"Cars","Mexico",2032,514567
-"Cars","Mexico",2033,624689
-"Cars","Mexico",2034,742688
-"Cars","Mexico",2035,869491
-"Cars","Mexico",2036,1004106
-"Cars","Mexico",2037,1146639
-"Cars","Mexico",2038,1298537
-"Cars","Mexico",2039,1457048
-"Cars","Mexico",2040,1623858
-"Cars","Mexico",2041,1684649
-"Cars","Mexico",2042,1746043
-"Cars","Mexico",2043,1808879
-"Cars","Mexico",2044,1872288
-"Cars","Mexico",2045,1941016
-"Cars","Mexico",2046,2000175
-"Cars","Mexico",2047,2059333
-"Cars","Mexico",2048,2118491
-"Cars","Mexico",2049,2177651
-"Cars","Mexico",2050,2236809
-"Cars","United States",2015,71701
-"Cars","United States",2016,84260
-"Cars","United States",2017,106700
-"Cars","United States",2018,236407
-"Cars","United States",2019,233890
-"Cars","United States",2020,256143
-"Cars","United States",2021,482739
-"Cars","United States",2022,749466
-"Cars","United States",2023,1100815
-"Cars","United States",2024,1137551
-"Cars","United States",2025,3448282
-"Cars","United States",2026,4256322
-"Cars","United States",2027,5101519
-"Cars","United States",2028,6290761
-"Cars","United States",2029,7700285
-"Cars","United States",2030,8972018
-"Cars","United States",2031,9804878
-"Cars","United States",2032,10704253
-"Cars","United States",2033,11835259
-"Cars","United States",2034,12960797
-"Cars","United States",2035,14857329
-"Cars","United States",2036,14984472
-"Cars","United States",2037,15092254
-"Cars","United States",2038,15222397
-"Cars","United States",2039,15334426
-"Cars","United States",2040,15471111
-"Cars","United States",2041,15524962
-"Cars","United States",2042,15584891
-"Cars","United States",2043,15628845
-"Cars","United States",2044,15680038
-"Cars","United States",2045,15811025
-"Cars","United States",2046,15928285
-"Cars","United States",2047,15996275
-"Cars","United States",2048,16037727
-"Cars","United States",2049,16131882
-"Cars","United States",2050,16275731
-"Heavy trucks","Canada",2015,0
-"Heavy trucks","Canada",2016,0
-"Heavy trucks","Canada",2017,1
-"Heavy trucks","Canada",2018,7
-"Heavy trucks","Canada",2019,0
-"Heavy trucks","Canada",2020,0
-"Heavy trucks","Canada",2021,14
-"Heavy trucks","Canada",2022,129
-"Heavy trucks","Canada",2023,80
-"Heavy trucks","Canada",2024,107
-"Heavy trucks","Canada",2025,344
-"Heavy trucks","Canada",2026,737
-"Heavy trucks","Canada",2027,1576
-"Heavy trucks","Canada",2028,3375
-"Heavy trucks","Canada",2029,7220
-"Heavy trucks","Canada",2030,15450
-"Heavy trucks","Canada",2031,17193
-"Heavy trucks","Canada",2032,18971
-"Heavy trucks","Canada",2033,20786
-"Heavy trucks","Canada",2034,22636
-"Heavy trucks","Canada",2035,24522
-"Heavy trucks","Canada",2036,28097
-"Heavy trucks","Canada",2037,31744
-"Heavy trucks","Canada",2038,35463
-"Heavy trucks","Canada",2039,39253
-"Heavy trucks","Canada",2040,43115
-"Heavy trucks","Canada",2041,43564
-"Heavy trucks","Canada",2042,44013
-"Heavy trucks","Canada",2043,44462
-"Heavy trucks","Canada",2044,44911
-"Heavy trucks","Canada",2045,45360
-"Heavy trucks","Canada",2046,45808
-"Heavy trucks","Canada",2047,46257
-"Heavy trucks","Canada",2048,46706
-"Heavy trucks","Canada",2049,47155
-"Heavy trucks","Canada",2050,47604
-"Heavy trucks","Mexico",2015,0
-"Heavy trucks","Mexico",2016,0
-"Heavy trucks","Mexico",2017,0
-"Heavy trucks","Mexico",2018,0
-"Heavy trucks","Mexico",2019,0
-"Heavy trucks","Mexico",2020,0
-"Heavy trucks","Mexico",2021,20
-"Heavy trucks","Mexico",2022,88
-"Heavy trucks","Mexico",2023,47
-"Heavy trucks","Mexico",2024,22
-"Heavy trucks","Mexico",2025,371
-"Heavy trucks","Mexico",2026,541
-"Heavy trucks","Mexico",2027,917
-"Heavy trucks","Mexico",2028,1564
-"Heavy trucks","Mexico",2029,2681
-"Heavy trucks","Mexico",2030,4607
-"Heavy trucks","Mexico",2031,5383
-"Heavy trucks","Mexico",2032,6112
-"Heavy trucks","Mexico",2033,6794
-"Heavy trucks","Mexico",2034,7430
-"Heavy trucks","Mexico",2035,8018
-"Heavy trucks","Mexico",2036,8559
-"Heavy trucks","Mexico",2037,9054
-"Heavy trucks","Mexico",2038,9502
-"Heavy trucks","Mexico",2039,9903
-"Heavy trucks","Mexico",2040,10257
-"Heavy trucks","Mexico",2041,10126
-"Heavy trucks","Mexico",2042,9978
-"Heavy trucks","Mexico",2043,9814
-"Heavy trucks","Mexico",2044,9636
-"Heavy trucks","Mexico",2045,9441
-"Heavy trucks","Mexico",2046,9051
-"Heavy trucks","Mexico",2047,8659
-"Heavy trucks","Mexico",2048,8268
-"Heavy trucks","Mexico",2049,7878
-"Heavy trucks","Mexico",2050,7486
-"Heavy trucks","United States",2015,25
-"Heavy trucks","United States",2016,125
-"Heavy trucks","United States",2017,11
-"Heavy trucks","United States",2018,12
-"Heavy trucks","United States",2019,95
-"Heavy trucks","United States",2020,142
-"Heavy trucks","United States",2021,75
-"Heavy trucks","United States",2022,599
-"Heavy trucks","United States",2023,1151
-"Heavy trucks","United States",2024,1044
-"Heavy trucks","United States",2025,20351
-"Heavy trucks","United States",2026,30592
-"Heavy trucks","United States",2027,37293
-"Heavy trucks","United States",2028,45647
-"Heavy trucks","United States",2029,53219
-"Heavy trucks","United States",2030,62525
-"Heavy trucks","United States",2031,72505
-"Heavy trucks","United States",2032,83570
-"Heavy trucks","United States",2033,95102
-"Heavy trucks","United States",2034,106710
-"Heavy trucks","United States",2035,118292
-"Heavy trucks","United States",2036,128780
-"Heavy trucks","United States",2037,138004
-"Heavy trucks","United States",2038,147793
-"Heavy trucks","United States",2039,157352
-"Heavy trucks","United States",2040,178943
-"Heavy trucks","United States",2041,179227
-"Heavy trucks","United States",2042,178502
-"Heavy trucks","United States",2043,178246
-"Heavy trucks","United States",2044,177141
-"Heavy trucks","United States",2045,174637
-"Heavy trucks","United States",2046,171832
-"Heavy trucks","United States",2047,170749
-"Heavy trucks","United States",2048,170767
-"Heavy trucks","United States",2049,169940
-"Heavy trucks","United States",2050,169926
-"Medium trucks","Canada",2015,0
-"Medium trucks","Canada",2016,0
-"Medium trucks","Canada",2017,0
-"Medium trucks","Canada",2018,0
-"Medium trucks","Canada",2019,0
-"Medium trucks","Canada",2020,0
-"Medium trucks","Canada",2021,16
-"Medium trucks","Canada",2022,256
-"Medium trucks","Canada",2023,106
-"Medium trucks","Canada",2024,185
-"Medium trucks","Canada",2025,4779
-"Medium trucks","Canada",2026,7625
-"Medium trucks","Canada",2027,12141
-"Medium trucks","Canada",2028,19354
-"Medium trucks","Canada",2029,30843
-"Medium trucks","Canada",2030,49149
-"Medium trucks","Canada",2031,55416
-"Medium trucks","Canada",2032,61753
-"Medium trucks","Canada",2033,68135
-"Medium trucks","Canada",2034,74588
-"Medium trucks","Canada",2035,81087
-"Medium trucks","Canada",2036,87655
-"Medium trucks","Canada",2037,94270
-"Medium trucks","Canada",2038,100954
-"Medium trucks","Canada",2039,107685
-"Medium trucks","Canada",2040,114485
-"Medium trucks","Canada",2041,115012
-"Medium trucks","Canada",2042,115538
-"Medium trucks","Canada",2043,116065
-"Medium trucks","Canada",2044,116591
-"Medium trucks","Canada",2045,117118
-"Medium trucks","Canada",2046,117645
-"Medium trucks","Canada",2047,118171
-"Medium trucks","Canada",2048,118698
-"Medium trucks","Canada",2049,119224
-"Medium trucks","Canada",2050,119751
-"Medium trucks","Mexico",2015,0
-"Medium trucks","Mexico",2016,0
-"Medium trucks","Mexico",2017,0
-"Medium trucks","Mexico",2018,0
-"Medium trucks","Mexico",2019,0
-"Medium trucks","Mexico",2020,0
-"Medium trucks","Mexico",2021,0
-"Medium trucks","Mexico",2022,0
-"Medium trucks","Mexico",2023,0
-"Medium trucks","Mexico",2024,30
-"Medium trucks","Mexico",2025,516
-"Medium trucks","Mexico",2026,663
-"Medium trucks","Mexico",2027,1268
-"Medium trucks","Mexico",2028,2428
-"Medium trucks","Mexico",2029,4635
-"Medium trucks","Mexico",2030,8830
-"Medium trucks","Mexico",2031,10836
-"Medium trucks","Mexico",2032,12978
-"Medium trucks","Mexico",2033,15258
-"Medium trucks","Mexico",2034,17674
-"Medium trucks","Mexico",2035,20227
-"Medium trucks","Mexico",2036,22359
-"Medium trucks","Mexico",2037,24588
-"Medium trucks","Mexico",2038,26916
-"Medium trucks","Mexico",2039,29341
-"Medium trucks","Mexico",2040,31864
-"Medium trucks","Mexico",2041,32843
-"Medium trucks","Mexico",2042,33822
-"Medium trucks","Mexico",2043,34801
-"Medium trucks","Mexico",2044,35780
-"Medium trucks","Mexico",2045,36759
-"Medium trucks","Mexico",2046,37738
-"Medium trucks","Mexico",2047,38718
-"Medium trucks","Mexico",2048,39697
-"Medium trucks","Mexico",2049,40676
-"Medium trucks","Mexico",2050,41655
-"Medium trucks","United States",2015,5
-"Medium trucks","United States",2016,5
-"Medium trucks","United States",2017,12
-"Medium trucks","United States",2018,78
-"Medium trucks","United States",2019,85
-"Medium trucks","United States",2020,98
-"Medium trucks","United States",2021,140
-"Medium trucks","United States",2022,365
-"Medium trucks","United States",2023,703
-"Medium trucks","United States",2024,763
-"Medium trucks","United States",2025,139417
-"Medium trucks","United States",2026,151298
-"Medium trucks","United States",2027,182535
-"Medium trucks","United States",2028,226022
-"Medium trucks","United States",2029,259666
-"Medium trucks","United States",2030,306909
-"Medium trucks","United States",2031,369950
-"Medium trucks","United States",2032,416812
-"Medium trucks","United States",2033,481549
-"Medium trucks","United States",2034,542203
-"Medium trucks","United States",2035,605574
-"Medium trucks","United States",2036,643830
-"Medium trucks","United States",2037,683110
-"Medium trucks","United States",2038,722666
-"Medium trucks","United States",2039,764000
-"Medium trucks","United States",2040,807250
-"Medium trucks","United States",2041,816937
-"Medium trucks","United States",2042,824816
-"Medium trucks","United States",2043,833181
-"Medium trucks","United States",2044,841572
-"Medium trucks","United States",2045,849258
-"Medium trucks","United States",2046,856721
-"Medium trucks","United States",2047,863719
-"Medium trucks","United States",2048,874093
-"Medium trucks","United States",2049,883169
-"Medium trucks","United States",2050,896089
-"Vans","Canada",2015,0
-"Vans","Canada",2016,0
-"Vans","Canada",2017,0
-"Vans","Canada",2018,0
-"Vans","Canada",2019,0
-"Vans","Canada",2020,0
-"Vans","Canada",2021,0
-"Vans","Canada",2022,83
-"Vans","Canada",2023,2280
-"Vans","Canada",2024,2900
-"Vans","Canada",2025,10709
-"Vans","Canada",2026,12835
-"Vans","Canada",2027,14827
-"Vans","Canada",2028,22007
-"Vans","Canada",2029,27915
-"Vans","Canada",2030,48734
-"Vans","Canada",2031,52028
-"Vans","Canada",2032,55246
-"Vans","Canada",2033,60922
-"Vans","Canada",2034,63088
-"Vans","Canada",2035,65053
-"Vans","Canada",2036,64969
-"Vans","Canada",2037,64983
-"Vans","Canada",2038,65053
-"Vans","Canada",2039,65069
-"Vans","Canada",2040,65042
-"Vans","Canada",2041,65165
-"Vans","Canada",2042,65372
-"Vans","Canada",2043,65348
-"Vans","Canada",2044,65461
-"Vans","Canada",2045,65807
-"Vans","Canada",2046,65943
-"Vans","Canada",2047,66051
-"Vans","Canada",2048,66141
-"Vans","Canada",2049,66088
-"Vans","Canada",2050,66002
-"Vans","Mexico",2015,0
-"Vans","Mexico",2016,0
-"Vans","Mexico",2017,0
-"Vans","Mexico",2018,0
-"Vans","Mexico",2019,0
-"Vans","Mexico",2020,57
-"Vans","Mexico",2021,494
-"Vans","Mexico",2022,684
-"Vans","Mexico",2023,1578
-"Vans","Mexico",2024,2748
-"Vans","Mexico",2025,47823
-"Vans","Mexico",2026,71181
-"Vans","Mexico",2027,99380
-"Vans","Mexico",2028,197343
-"Vans","Mexico",2029,275269
-"Vans","Mexico",2030,355161
-"Vans","Mexico",2031,387760
-"Vans","Mexico",2032,418916
-"Vans","Mexico",2033,449582
-"Vans","Mexico",2034,478638
-"Vans","Mexico",2035,507611
-"Vans","Mexico",2036,535377
-"Vans","Mexico",2037,563462
-"Vans","Mexico",2038,591363
-"Vans","Mexico",2039,616137
-"Vans","Mexico",2040,641200
-"Vans","Mexico",2041,636153
-"Vans","Mexico",2042,629048
-"Vans","Mexico",2043,623738
-"Vans","Mexico",2044,620946
-"Vans","Mexico",2045,618651
-"Vans","Mexico",2046,610339
-"Vans","Mexico",2047,602028
-"Vans","Mexico",2048,593716
-"Vans","Mexico",2049,585405
-"Vans","Mexico",2050,577093
-"Vans","United States",2015,0
-"Vans","United States",2016,0
-"Vans","United States",2017,0
-"Vans","United States",2018,0
-"Vans","United States",2019,0
-"Vans","United States",2020,0
-"Vans","United States",2021,15
-"Vans","United States",2022,8959
-"Vans","United States",2023,16669
-"Vans","United States",2024,25336
-"Vans","United States",2025,228019
-"Vans","United States",2026,277806
-"Vans","United States",2027,329193
-"Vans","United States",2028,409680
-"Vans","United States",2029,475647
-"Vans","United States",2030,553872
-"Vans","United States",2031,585403
-"Vans","United States",2032,601922
-"Vans","United States",2033,639408
-"Vans","United States",2034,723250
-"Vans","United States",2035,807878
-"Vans","United States",2036,814738
-"Vans","United States",2037,822375
-"Vans","United States",2038,831280
-"Vans","United States",2039,838904
-"Vans","United States",2040,848649
-"Vans","United States",2041,854032
-"Vans","United States",2042,859653
-"Vans","United States",2043,865773
-"Vans","United States",2044,870324
-"Vans","United States",2045,880249
-"Vans","United States",2046,884504
-"Vans","United States",2047,891224
-"Vans","United States",2048,898246
-"Vans","United States",2049,901725
-"Vans","United States",2050,910729
+"Scenario","Vehicle","Country","Year","Sales"
+"Baseline","Buses","Canada",2015,0
+"Baseline","Buses","Canada",2016,5
+"Baseline","Buses","Canada",2017,11
+"Baseline","Buses","Canada",2018,27
+"Baseline","Buses","Canada",2019,115
+"Baseline","Buses","Canada",2020,315
+"Baseline","Buses","Canada",2021,269
+"Baseline","Buses","Canada",2022,678
+"Baseline","Buses","Canada",2023,1193
+"Baseline","Buses","Canada",2024,740
+"Baseline","Buses","Canada",2025,897
+"Baseline","Buses","Canada",2026,953
+"Baseline","Buses","Canada",2027,1012
+"Baseline","Buses","Canada",2028,1073
+"Baseline","Buses","Canada",2029,1138
+"Baseline","Buses","Canada",2030,1205
+"Baseline","Buses","Canada",2031,1276
+"Baseline","Buses","Canada",2032,1350
+"Baseline","Buses","Canada",2033,1428
+"Baseline","Buses","Canada",2034,1510
+"Baseline","Buses","Canada",2035,1595
+"Baseline","Buses","Canada",2036,1685
+"Baseline","Buses","Canada",2037,1778
+"Baseline","Buses","Canada",2038,1877
+"Baseline","Buses","Canada",2039,1980
+"Baseline","Buses","Canada",2040,2087
+"Baseline","Buses","Canada",2041,2181
+"Baseline","Buses","Canada",2042,2276
+"Baseline","Buses","Canada",2043,2373
+"Baseline","Buses","Canada",2044,2473
+"Baseline","Buses","Canada",2045,2574
+"Baseline","Buses","Canada",2046,2677
+"Baseline","Buses","Canada",2047,2783
+"Baseline","Buses","Canada",2048,2890
+"Baseline","Buses","Canada",2049,2999
+"Baseline","Buses","Canada",2050,3111
+"Baseline","Buses","Mexico",2015,0
+"Baseline","Buses","Mexico",2016,0
+"Baseline","Buses","Mexico",2017,0
+"Baseline","Buses","Mexico",2018,10
+"Baseline","Buses","Mexico",2019,63
+"Baseline","Buses","Mexico",2020,15
+"Baseline","Buses","Mexico",2021,39
+"Baseline","Buses","Mexico",2022,2
+"Baseline","Buses","Mexico",2023,87
+"Baseline","Buses","Mexico",2024,658
+"Baseline","Buses","Mexico",2025,1088
+"Baseline","Buses","Mexico",2026,1174
+"Baseline","Buses","Mexico",2027,1263
+"Baseline","Buses","Mexico",2028,1356
+"Baseline","Buses","Mexico",2029,1452
+"Baseline","Buses","Mexico",2030,1549
+"Baseline","Buses","Mexico",2031,1691
+"Baseline","Buses","Mexico",2032,1838
+"Baseline","Buses","Mexico",2033,1990
+"Baseline","Buses","Mexico",2034,2147
+"Baseline","Buses","Mexico",2035,2310
+"Baseline","Buses","Mexico",2036,2590
+"Baseline","Buses","Mexico",2037,2882
+"Baseline","Buses","Mexico",2038,3183
+"Baseline","Buses","Mexico",2039,3496
+"Baseline","Buses","Mexico",2040,3818
+"Baseline","Buses","Mexico",2041,4151
+"Baseline","Buses","Mexico",2042,4495
+"Baseline","Buses","Mexico",2043,4849
+"Baseline","Buses","Mexico",2044,5214
+"Baseline","Buses","Mexico",2045,5588
+"Baseline","Buses","Mexico",2046,6113
+"Baseline","Buses","Mexico",2047,6653
+"Baseline","Buses","Mexico",2048,7210
+"Baseline","Buses","Mexico",2049,7781
+"Baseline","Buses","Mexico",2050,8369
+"Baseline","Buses","United States",2015,44
+"Baseline","Buses","United States",2016,331
+"Baseline","Buses","United States",2017,150
+"Baseline","Buses","United States",2018,466
+"Baseline","Buses","United States",2019,554
+"Baseline","Buses","United States",2020,658
+"Baseline","Buses","United States",2021,501
+"Baseline","Buses","United States",2022,793
+"Baseline","Buses","United States",2023,3522
+"Baseline","Buses","United States",2024,2239
+"Baseline","Buses","United States",2025,9881
+"Baseline","Buses","United States",2026,10415
+"Baseline","Buses","United States",2027,15571
+"Baseline","Buses","United States",2028,19715
+"Baseline","Buses","United States",2029,23645
+"Baseline","Buses","United States",2030,28650
+"Baseline","Buses","United States",2031,40267
+"Baseline","Buses","United States",2032,53635
+"Baseline","Buses","United States",2033,55493
+"Baseline","Buses","United States",2034,57258
+"Baseline","Buses","United States",2035,59393
+"Baseline","Buses","United States",2036,61641
+"Baseline","Buses","United States",2037,63632
+"Baseline","Buses","United States",2038,65734
+"Baseline","Buses","United States",2039,67900
+"Baseline","Buses","United States",2040,70284
+"Baseline","Buses","United States",2041,72511
+"Baseline","Buses","United States",2042,73737
+"Baseline","Buses","United States",2043,74980
+"Baseline","Buses","United States",2044,76008
+"Baseline","Buses","United States",2045,76686
+"Baseline","Buses","United States",2046,77227
+"Baseline","Buses","United States",2047,77980
+"Baseline","Buses","United States",2048,78612
+"Baseline","Buses","United States",2049,79337
+"Baseline","Buses","United States",2050,80343
+"Baseline","Cars","Canada",2015,4553
+"Baseline","Cars","Canada",2016,5178
+"Baseline","Cars","Canada",2017,9666
+"Baseline","Cars","Canada",2018,21307
+"Baseline","Cars","Canada",2019,32402
+"Baseline","Cars","Canada",2020,34806
+"Baseline","Cars","Canada",2021,58726
+"Baseline","Cars","Canada",2022,98486
+"Baseline","Cars","Canada",2023,136693
+"Baseline","Cars","Canada",2024,177214
+"Baseline","Cars","Canada",2025,214543
+"Baseline","Cars","Canada",2026,243070
+"Baseline","Cars","Canada",2027,342244
+"Baseline","Cars","Canada",2028,432075
+"Baseline","Cars","Canada",2029,547966
+"Baseline","Cars","Canada",2030,765357
+"Baseline","Cars","Canada",2031,944696
+"Baseline","Cars","Canada",2032,1058895
+"Baseline","Cars","Canada",2033,1195837
+"Baseline","Cars","Canada",2034,1251047
+"Baseline","Cars","Canada",2035,1276965
+"Baseline","Cars","Canada",2036,1275286
+"Baseline","Cars","Canada",2037,1275571
+"Baseline","Cars","Canada",2038,1276966
+"Baseline","Cars","Canada",2039,1277304
+"Baseline","Cars","Canada",2040,1276739
+"Baseline","Cars","Canada",2041,1279176
+"Baseline","Cars","Canada",2042,1283247
+"Baseline","Cars","Canada",2043,1282751
+"Baseline","Cars","Canada",2044,1284970
+"Baseline","Cars","Canada",2045,1291784
+"Baseline","Cars","Canada",2046,1294451
+"Baseline","Cars","Canada",2047,1296565
+"Baseline","Cars","Canada",2048,1298275
+"Baseline","Cars","Canada",2049,1297296
+"Baseline","Cars","Canada",2050,1295598
+"Baseline","Cars","Mexico",2015,212
+"Baseline","Cars","Mexico",2016,133
+"Baseline","Cars","Mexico",2017,324
+"Baseline","Cars","Mexico",2018,236
+"Baseline","Cars","Mexico",2019,897
+"Baseline","Cars","Mexico",2020,1840
+"Baseline","Cars","Mexico",2021,3015
+"Baseline","Cars","Mexico",2022,6911
+"Baseline","Cars","Mexico",2023,14417
+"Baseline","Cars","Mexico",2024,19488
+"Baseline","Cars","Mexico",2025,21130
+"Baseline","Cars","Mexico",2026,31626
+"Baseline","Cars","Mexico",2027,47103
+"Baseline","Cars","Mexico",2028,69965
+"Baseline","Cars","Mexico",2029,103430
+"Baseline","Cars","Mexico",2030,123780
+"Baseline","Cars","Mexico",2031,145763
+"Baseline","Cars","Mexico",2032,171825
+"Baseline","Cars","Mexico",2033,199787
+"Baseline","Cars","Mexico",2034,231503
+"Baseline","Cars","Mexico",2035,266169
+"Baseline","Cars","Mexico",2036,304015
+"Baseline","Cars","Mexico",2037,344352
+"Baseline","Cars","Mexico",2038,386885
+"Baseline","Cars","Mexico",2039,432831
+"Baseline","Cars","Mexico",2040,480127
+"Baseline","Cars","Mexico",2041,530695
+"Baseline","Cars","Mexico",2042,582671
+"Baseline","Cars","Mexico",2043,636092
+"Baseline","Cars","Mexico",2044,688444
+"Baseline","Cars","Mexico",2045,741285
+"Baseline","Cars","Mexico",2046,792930
+"Baseline","Cars","Mexico",2047,844139
+"Baseline","Cars","Mexico",2048,894915
+"Baseline","Cars","Mexico",2049,945096
+"Baseline","Cars","Mexico",2050,971450
+"Baseline","Cars","United States",2015,71701
+"Baseline","Cars","United States",2016,84260
+"Baseline","Cars","United States",2017,106700
+"Baseline","Cars","United States",2018,236407
+"Baseline","Cars","United States",2019,233890
+"Baseline","Cars","United States",2020,256143
+"Baseline","Cars","United States",2021,482739
+"Baseline","Cars","United States",2022,749466
+"Baseline","Cars","United States",2023,1100815
+"Baseline","Cars","United States",2024,1137551
+"Baseline","Cars","United States",2025,2207263
+"Baseline","Cars","United States",2026,3038275
+"Baseline","Cars","United States",2027,4132397
+"Baseline","Cars","United States",2028,4729704
+"Baseline","Cars","United States",2029,6062054
+"Baseline","Cars","United States",2030,6769074
+"Baseline","Cars","United States",2031,7955745
+"Baseline","Cars","United States",2032,8928137
+"Baseline","Cars","United States",2033,9855807
+"Baseline","Cars","United States",2034,10236033
+"Baseline","Cars","United States",2035,10688318
+"Baseline","Cars","United States",2036,10885202
+"Baseline","Cars","United States",2037,11071192
+"Baseline","Cars","United States",2038,11273753
+"Baseline","Cars","United States",2039,11464602
+"Baseline","Cars","United States",2040,11675635
+"Baseline","Cars","United States",2041,11825496
+"Baseline","Cars","United States",2042,11980787
+"Baseline","Cars","United States",2043,12124528
+"Baseline","Cars","United States",2044,12274554
+"Baseline","Cars","United States",2045,12488326
+"Baseline","Cars","United States",2046,12694603
+"Baseline","Cars","United States",2047,12861326
+"Baseline","Cars","United States",2048,13007483
+"Baseline","Cars","United States",2049,13197339
+"Baseline","Cars","United States",2050,13429523
+"Baseline","Heavy trucks","Canada",2015,0
+"Baseline","Heavy trucks","Canada",2016,0
+"Baseline","Heavy trucks","Canada",2017,1
+"Baseline","Heavy trucks","Canada",2018,7
+"Baseline","Heavy trucks","Canada",2019,0
+"Baseline","Heavy trucks","Canada",2020,0
+"Baseline","Heavy trucks","Canada",2021,14
+"Baseline","Heavy trucks","Canada",2022,129
+"Baseline","Heavy trucks","Canada",2023,80
+"Baseline","Heavy trucks","Canada",2024,107
+"Baseline","Heavy trucks","Canada",2025,265
+"Baseline","Heavy trucks","Canada",2026,296
+"Baseline","Heavy trucks","Canada",2027,332
+"Baseline","Heavy trucks","Canada",2028,369
+"Baseline","Heavy trucks","Canada",2029,415
+"Baseline","Heavy trucks","Canada",2030,466
+"Baseline","Heavy trucks","Canada",2031,518
+"Baseline","Heavy trucks","Canada",2032,580
+"Baseline","Heavy trucks","Canada",2033,647
+"Baseline","Heavy trucks","Canada",2034,721
+"Baseline","Heavy trucks","Canada",2035,800
+"Baseline","Heavy trucks","Canada",2036,885
+"Baseline","Heavy trucks","Canada",2037,972
+"Baseline","Heavy trucks","Canada",2038,1065
+"Baseline","Heavy trucks","Canada",2039,1164
+"Baseline","Heavy trucks","Canada",2040,1261
+"Baseline","Heavy trucks","Canada",2041,1364
+"Baseline","Heavy trucks","Canada",2042,1469
+"Baseline","Heavy trucks","Canada",2043,1571
+"Baseline","Heavy trucks","Canada",2044,1670
+"Baseline","Heavy trucks","Canada",2045,1770
+"Baseline","Heavy trucks","Canada",2046,1867
+"Baseline","Heavy trucks","Canada",2047,1961
+"Baseline","Heavy trucks","Canada",2048,2051
+"Baseline","Heavy trucks","Canada",2049,2132
+"Baseline","Heavy trucks","Canada",2050,2215
+"Baseline","Heavy trucks","Mexico",2015,0
+"Baseline","Heavy trucks","Mexico",2016,0
+"Baseline","Heavy trucks","Mexico",2017,0
+"Baseline","Heavy trucks","Mexico",2018,0
+"Baseline","Heavy trucks","Mexico",2019,0
+"Baseline","Heavy trucks","Mexico",2020,0
+"Baseline","Heavy trucks","Mexico",2021,20
+"Baseline","Heavy trucks","Mexico",2022,88
+"Baseline","Heavy trucks","Mexico",2023,47
+"Baseline","Heavy trucks","Mexico",2024,22
+"Baseline","Heavy trucks","Mexico",2025,371
+"Baseline","Heavy trucks","Mexico",2026,395
+"Baseline","Heavy trucks","Mexico",2027,420
+"Baseline","Heavy trucks","Mexico",2028,441
+"Baseline","Heavy trucks","Mexico",2029,463
+"Baseline","Heavy trucks","Mexico",2030,481
+"Baseline","Heavy trucks","Mexico",2031,498
+"Baseline","Heavy trucks","Mexico",2032,515
+"Baseline","Heavy trucks","Mexico",2033,529
+"Baseline","Heavy trucks","Mexico",2034,543
+"Baseline","Heavy trucks","Mexico",2035,553
+"Baseline","Heavy trucks","Mexico",2036,562
+"Baseline","Heavy trucks","Mexico",2037,571
+"Baseline","Heavy trucks","Mexico",2038,577
+"Baseline","Heavy trucks","Mexico",2039,583
+"Baseline","Heavy trucks","Mexico",2040,586
+"Baseline","Heavy trucks","Mexico",2041,611
+"Baseline","Heavy trucks","Mexico",2042,631
+"Baseline","Heavy trucks","Mexico",2043,647
+"Baseline","Heavy trucks","Mexico",2044,663
+"Baseline","Heavy trucks","Mexico",2045,674
+"Baseline","Heavy trucks","Mexico",2046,701
+"Baseline","Heavy trucks","Mexico",2047,722
+"Baseline","Heavy trucks","Mexico",2048,739
+"Baseline","Heavy trucks","Mexico",2049,752
+"Baseline","Heavy trucks","Mexico",2050,759
+"Baseline","Heavy trucks","United States",2015,25
+"Baseline","Heavy trucks","United States",2016,125
+"Baseline","Heavy trucks","United States",2017,11
+"Baseline","Heavy trucks","United States",2018,12
+"Baseline","Heavy trucks","United States",2019,95
+"Baseline","Heavy trucks","United States",2020,142
+"Baseline","Heavy trucks","United States",2021,75
+"Baseline","Heavy trucks","United States",2022,599
+"Baseline","Heavy trucks","United States",2023,1151
+"Baseline","Heavy trucks","United States",2024,1044
+"Baseline","Heavy trucks","United States",2025,7891
+"Baseline","Heavy trucks","United States",2026,8241
+"Baseline","Heavy trucks","United States",2027,9730
+"Baseline","Heavy trucks","United States",2028,13692
+"Baseline","Heavy trucks","United States",2029,17355
+"Baseline","Heavy trucks","United States",2030,22397
+"Baseline","Heavy trucks","United States",2031,40030
+"Baseline","Heavy trucks","United States",2032,61508
+"Baseline","Heavy trucks","United States",2033,63336
+"Baseline","Heavy trucks","United States",2034,65219
+"Baseline","Heavy trucks","United States",2035,68890
+"Baseline","Heavy trucks","United States",2036,75298
+"Baseline","Heavy trucks","United States",2037,74733
+"Baseline","Heavy trucks","United States",2038,74542
+"Baseline","Heavy trucks","United States",2039,74257
+"Baseline","Heavy trucks","United States",2040,74183
+"Baseline","Heavy trucks","United States",2041,74301
+"Baseline","Heavy trucks","United States",2042,74001
+"Baseline","Heavy trucks","United States",2043,73895
+"Baseline","Heavy trucks","United States",2044,73437
+"Baseline","Heavy trucks","United States",2045,72398
+"Baseline","Heavy trucks","United States",2046,71236
+"Baseline","Heavy trucks","United States",2047,70787
+"Baseline","Heavy trucks","United States",2048,70794
+"Baseline","Heavy trucks","United States",2049,70451
+"Baseline","Heavy trucks","United States",2050,70445
+"Baseline","Medium trucks","Canada",2015,0
+"Baseline","Medium trucks","Canada",2016,0
+"Baseline","Medium trucks","Canada",2017,0
+"Baseline","Medium trucks","Canada",2018,0
+"Baseline","Medium trucks","Canada",2019,0
+"Baseline","Medium trucks","Canada",2020,0
+"Baseline","Medium trucks","Canada",2021,16
+"Baseline","Medium trucks","Canada",2022,256
+"Baseline","Medium trucks","Canada",2023,106
+"Baseline","Medium trucks","Canada",2024,185
+"Baseline","Medium trucks","Canada",2025,2991
+"Baseline","Medium trucks","Canada",2026,3167
+"Baseline","Medium trucks","Canada",2027,3357
+"Baseline","Medium trucks","Canada",2028,3571
+"Baseline","Medium trucks","Canada",2029,3822
+"Baseline","Medium trucks","Canada",2030,4087
+"Baseline","Medium trucks","Canada",2031,4378
+"Baseline","Medium trucks","Canada",2032,4707
+"Baseline","Medium trucks","Canada",2033,5063
+"Baseline","Medium trucks","Canada",2034,5435
+"Baseline","Medium trucks","Canada",2035,5845
+"Baseline","Medium trucks","Canada",2036,6284
+"Baseline","Medium trucks","Canada",2037,6738
+"Baseline","Medium trucks","Canada",2038,7208
+"Baseline","Medium trucks","Canada",2039,7695
+"Baseline","Medium trucks","Canada",2040,8186
+"Baseline","Medium trucks","Canada",2041,8682
+"Baseline","Medium trucks","Canada",2042,9181
+"Baseline","Medium trucks","Canada",2043,9685
+"Baseline","Medium trucks","Canada",2044,10155
+"Baseline","Medium trucks","Canada",2045,10629
+"Baseline","Medium trucks","Canada",2046,11081
+"Baseline","Medium trucks","Canada",2047,11499
+"Baseline","Medium trucks","Canada",2048,11908
+"Baseline","Medium trucks","Canada",2049,12294
+"Baseline","Medium trucks","Canada",2050,12645
+"Baseline","Medium trucks","Mexico",2015,0
+"Baseline","Medium trucks","Mexico",2016,0
+"Baseline","Medium trucks","Mexico",2017,0
+"Baseline","Medium trucks","Mexico",2018,0
+"Baseline","Medium trucks","Mexico",2019,0
+"Baseline","Medium trucks","Mexico",2020,0
+"Baseline","Medium trucks","Mexico",2021,0
+"Baseline","Medium trucks","Mexico",2022,0
+"Baseline","Medium trucks","Mexico",2023,0
+"Baseline","Medium trucks","Mexico",2024,30
+"Baseline","Medium trucks","Mexico",2025,516
+"Baseline","Medium trucks","Mexico",2026,618
+"Baseline","Medium trucks","Mexico",2027,727
+"Baseline","Medium trucks","Mexico",2028,847
+"Baseline","Medium trucks","Mexico",2029,972
+"Baseline","Medium trucks","Mexico",2030,1105
+"Baseline","Medium trucks","Mexico",2031,1246
+"Baseline","Medium trucks","Mexico",2032,1395
+"Baseline","Medium trucks","Mexico",2033,1554
+"Baseline","Medium trucks","Mexico",2034,1718
+"Baseline","Medium trucks","Mexico",2035,1890
+"Baseline","Medium trucks","Mexico",2036,2127
+"Baseline","Medium trucks","Mexico",2037,2375
+"Baseline","Medium trucks","Mexico",2038,2632
+"Baseline","Medium trucks","Mexico",2039,2904
+"Baseline","Medium trucks","Mexico",2040,3188
+"Baseline","Medium trucks","Mexico",2041,3615
+"Baseline","Medium trucks","Mexico",2042,4060
+"Baseline","Medium trucks","Mexico",2043,4526
+"Baseline","Medium trucks","Mexico",2044,5011
+"Baseline","Medium trucks","Mexico",2045,5516
+"Baseline","Medium trucks","Mexico",2046,6040
+"Baseline","Medium trucks","Mexico",2047,6585
+"Baseline","Medium trucks","Mexico",2048,7148
+"Baseline","Medium trucks","Mexico",2049,7731
+"Baseline","Medium trucks","Mexico",2050,8333
+"Baseline","Medium trucks","United States",2015,5
+"Baseline","Medium trucks","United States",2016,5
+"Baseline","Medium trucks","United States",2017,12
+"Baseline","Medium trucks","United States",2018,78
+"Baseline","Medium trucks","United States",2019,85
+"Baseline","Medium trucks","United States",2020,98
+"Baseline","Medium trucks","United States",2021,140
+"Baseline","Medium trucks","United States",2022,365
+"Baseline","Medium trucks","United States",2023,703
+"Baseline","Medium trucks","United States",2024,763
+"Baseline","Medium trucks","United States",2025,139417
+"Baseline","Medium trucks","United States",2026,151298
+"Baseline","Medium trucks","United States",2027,182535
+"Baseline","Medium trucks","United States",2028,226022
+"Baseline","Medium trucks","United States",2029,259666
+"Baseline","Medium trucks","United States",2030,306909
+"Baseline","Medium trucks","United States",2031,369950
+"Baseline","Medium trucks","United States",2032,411729
+"Baseline","Medium trucks","United States",2033,426095
+"Baseline","Medium trucks","United States",2034,434322
+"Baseline","Medium trucks","United States",2035,460002
+"Baseline","Medium trucks","United States",2036,466080
+"Baseline","Medium trucks","United States",2037,472378
+"Baseline","Medium trucks","United States",2038,478318
+"Baseline","Medium trucks","United States",2039,484844
+"Baseline","Medium trucks","United States",2040,492075
+"Baseline","Medium trucks","United States",2041,497980
+"Baseline","Medium trucks","United States",2042,502783
+"Baseline","Medium trucks","United States",2043,507882
+"Baseline","Medium trucks","United States",2044,512997
+"Baseline","Medium trucks","United States",2045,517682
+"Baseline","Medium trucks","United States",2046,522231
+"Baseline","Medium trucks","United States",2047,526497
+"Baseline","Medium trucks","United States",2048,532821
+"Baseline","Medium trucks","United States",2049,538353
+"Baseline","Medium trucks","United States",2050,546229
+"Baseline","Vans","Canada",2015,0
+"Baseline","Vans","Canada",2016,0
+"Baseline","Vans","Canada",2017,0
+"Baseline","Vans","Canada",2018,0
+"Baseline","Vans","Canada",2019,0
+"Baseline","Vans","Canada",2020,0
+"Baseline","Vans","Canada",2021,0
+"Baseline","Vans","Canada",2022,83
+"Baseline","Vans","Canada",2023,2280
+"Baseline","Vans","Canada",2024,2900
+"Baseline","Vans","Canada",2025,10709
+"Baseline","Vans","Canada",2026,12835
+"Baseline","Vans","Canada",2027,14827
+"Baseline","Vans","Canada",2028,22007
+"Baseline","Vans","Canada",2029,27915
+"Baseline","Vans","Canada",2030,38987
+"Baseline","Vans","Canada",2031,48126
+"Baseline","Vans","Canada",2032,53946
+"Baseline","Vans","Canada",2033,60922
+"Baseline","Vans","Canada",2034,63088
+"Baseline","Vans","Canada",2035,65053
+"Baseline","Vans","Canada",2036,64969
+"Baseline","Vans","Canada",2037,64983
+"Baseline","Vans","Canada",2038,65053
+"Baseline","Vans","Canada",2039,65069
+"Baseline","Vans","Canada",2040,65042
+"Baseline","Vans","Canada",2041,65165
+"Baseline","Vans","Canada",2042,65372
+"Baseline","Vans","Canada",2043,65348
+"Baseline","Vans","Canada",2044,65461
+"Baseline","Vans","Canada",2045,65807
+"Baseline","Vans","Canada",2046,65943
+"Baseline","Vans","Canada",2047,66051
+"Baseline","Vans","Canada",2048,66141
+"Baseline","Vans","Canada",2049,66088
+"Baseline","Vans","Canada",2050,66002
+"Baseline","Vans","Mexico",2015,0
+"Baseline","Vans","Mexico",2016,0
+"Baseline","Vans","Mexico",2017,0
+"Baseline","Vans","Mexico",2018,0
+"Baseline","Vans","Mexico",2019,0
+"Baseline","Vans","Mexico",2020,57
+"Baseline","Vans","Mexico",2021,494
+"Baseline","Vans","Mexico",2022,684
+"Baseline","Vans","Mexico",2023,1578
+"Baseline","Vans","Mexico",2024,2748
+"Baseline","Vans","Mexico",2025,13186
+"Baseline","Vans","Mexico",2026,19521
+"Baseline","Vans","Mexico",2027,28188
+"Baseline","Vans","Mexico",2028,40470
+"Baseline","Vans","Mexico",2029,57840
+"Baseline","Vans","Mexico",2030,82295
+"Baseline","Vans","Mexico",2031,91016
+"Baseline","Vans","Mexico",2032,102682
+"Baseline","Vans","Mexico",2033,112670
+"Baseline","Vans","Mexico",2034,122345
+"Baseline","Vans","Mexico",2035,133356
+"Baseline","Vans","Mexico",2036,145028
+"Baseline","Vans","Mexico",2037,156611
+"Baseline","Vans","Mexico",2038,166940
+"Baseline","Vans","Mexico",2039,178535
+"Baseline","Vans","Mexico",2040,188988
+"Baseline","Vans","Mexico",2041,200434
+"Baseline","Vans","Mexico",2042,211075
+"Baseline","Vans","Mexico",2043,221410
+"Baseline","Vans","Mexico",2044,228970
+"Baseline","Vans","Mexico",2045,235895
+"Baseline","Vans","Mexico",2046,241347
+"Baseline","Vans","Mexico",2047,246055
+"Baseline","Vans","Mexico",2048,250043
+"Baseline","Vans","Mexico",2049,253276
+"Baseline","Vans","Mexico",2050,255777
+"Baseline","Vans","United States",2015,0
+"Baseline","Vans","United States",2016,0
+"Baseline","Vans","United States",2017,0
+"Baseline","Vans","United States",2018,0
+"Baseline","Vans","United States",2019,0
+"Baseline","Vans","United States",2020,0
+"Baseline","Vans","United States",2021,15
+"Baseline","Vans","United States",2022,8959
+"Baseline","Vans","United States",2023,16669
+"Baseline","Vans","United States",2024,25336
+"Baseline","Vans","United States",2025,119140
+"Baseline","Vans","United States",2026,181265
+"Baseline","Vans","United States",2027,267977
+"Baseline","Vans","United States",2028,312281
+"Baseline","Vans","United States",2029,404184
+"Baseline","Vans","United States",2030,456465
+"Baseline","Vans","United States",2031,506244
+"Baseline","Vans","United States",2032,561252
+"Baseline","Vans","United States",2033,606135
+"Baseline","Vans","United States",2034,624369
+"Baseline","Vans","United States",2035,647238
+"Baseline","Vans","United States",2036,658394
+"Baseline","Vans","United States",2037,670279
+"Baseline","Vans","United States",2038,683312
+"Baseline","Vans","United States",2039,695407
+"Baseline","Vans","United States",2040,709381
+"Baseline","Vans","United States",2041,719814
+"Baseline","Vans","United States",2042,730524
+"Baseline","Vans","United States",2043,741740
+"Baseline","Vans","United States",2044,751594
+"Baseline","Vans","United States",2045,766280
+"Baseline","Vans","United States",2046,776129
+"Baseline","Vans","United States",2047,788218
+"Baseline","Vans","United States",2048,800668
+"Baseline","Vans","United States",2049,810034
+"Baseline","Vans","United States",2050,824449
+"Momentum","Buses","Canada",2015,0
+"Momentum","Buses","Canada",2016,5
+"Momentum","Buses","Canada",2017,11
+"Momentum","Buses","Canada",2018,27
+"Momentum","Buses","Canada",2019,115
+"Momentum","Buses","Canada",2020,315
+"Momentum","Buses","Canada",2021,269
+"Momentum","Buses","Canada",2022,678
+"Momentum","Buses","Canada",2023,1193
+"Momentum","Buses","Canada",2024,740
+"Momentum","Buses","Canada",2025,965
+"Momentum","Buses","Canada",2026,1062
+"Momentum","Buses","Canada",2027,1169
+"Momentum","Buses","Canada",2028,1285
+"Momentum","Buses","Canada",2029,1413
+"Momentum","Buses","Canada",2030,1551
+"Momentum","Buses","Canada",2031,1827
+"Momentum","Buses","Canada",2032,2113
+"Momentum","Buses","Canada",2033,2410
+"Momentum","Buses","Canada",2034,2719
+"Momentum","Buses","Canada",2035,3038
+"Momentum","Buses","Canada",2036,3368
+"Momentum","Buses","Canada",2037,3710
+"Momentum","Buses","Canada",2038,4063
+"Momentum","Buses","Canada",2039,4426
+"Momentum","Buses","Canada",2040,4801
+"Momentum","Buses","Canada",2041,4893
+"Momentum","Buses","Canada",2042,4986
+"Momentum","Buses","Canada",2043,5078
+"Momentum","Buses","Canada",2044,5170
+"Momentum","Buses","Canada",2045,5262
+"Momentum","Buses","Canada",2046,5355
+"Momentum","Buses","Canada",2047,5447
+"Momentum","Buses","Canada",2048,5539
+"Momentum","Buses","Canada",2049,5631
+"Momentum","Buses","Canada",2050,5724
+"Momentum","Buses","Mexico",2015,0
+"Momentum","Buses","Mexico",2016,0
+"Momentum","Buses","Mexico",2017,0
+"Momentum","Buses","Mexico",2018,10
+"Momentum","Buses","Mexico",2019,63
+"Momentum","Buses","Mexico",2020,15
+"Momentum","Buses","Mexico",2021,39
+"Momentum","Buses","Mexico",2022,2
+"Momentum","Buses","Mexico",2023,87
+"Momentum","Buses","Mexico",2024,658
+"Momentum","Buses","Mexico",2025,1088
+"Momentum","Buses","Mexico",2026,1174
+"Momentum","Buses","Mexico",2027,1263
+"Momentum","Buses","Mexico",2028,1356
+"Momentum","Buses","Mexico",2029,1452
+"Momentum","Buses","Mexico",2030,1549
+"Momentum","Buses","Mexico",2031,1851
+"Momentum","Buses","Mexico",2032,2165
+"Momentum","Buses","Mexico",2033,2495
+"Momentum","Buses","Mexico",2034,2837
+"Momentum","Buses","Mexico",2035,3193
+"Momentum","Buses","Mexico",2036,3811
+"Momentum","Buses","Mexico",2037,4453
+"Momentum","Buses","Mexico",2038,5122
+"Momentum","Buses","Mexico",2039,5815
+"Momentum","Buses","Mexico",2040,6903
+"Momentum","Buses","Mexico",2041,7428
+"Momentum","Buses","Mexico",2042,8046
+"Momentum","Buses","Mexico",2043,8840
+"Momentum","Buses","Mexico",2044,9659
+"Momentum","Buses","Mexico",2045,10503
+"Momentum","Buses","Mexico",2046,11373
+"Momentum","Buses","Mexico",2047,12266
+"Momentum","Buses","Mexico",2048,13187
+"Momentum","Buses","Mexico",2049,14130
+"Momentum","Buses","Mexico",2050,15849
+"Momentum","Buses","United States",2015,44
+"Momentum","Buses","United States",2016,331
+"Momentum","Buses","United States",2017,150
+"Momentum","Buses","United States",2018,466
+"Momentum","Buses","United States",2019,554
+"Momentum","Buses","United States",2020,658
+"Momentum","Buses","United States",2021,501
+"Momentum","Buses","United States",2022,793
+"Momentum","Buses","United States",2023,3522
+"Momentum","Buses","United States",2024,2239
+"Momentum","Buses","United States",2025,10888
+"Momentum","Buses","United States",2026,15270
+"Momentum","Buses","United States",2027,20762
+"Momentum","Buses","United States",2028,26287
+"Momentum","Buses","United States",2029,31527
+"Momentum","Buses","United States",2030,39069
+"Momentum","Buses","United States",2031,76821
+"Momentum","Buses","United States",2032,84092
+"Momentum","Buses","United States",2033,91713
+"Momentum","Buses","United States",2034,99261
+"Momentum","Buses","United States",2035,107548
+"Momentum","Buses","United States",2036,116075
+"Momentum","Buses","United States",2037,124227
+"Momentum","Buses","United States",2038,136227
+"Momentum","Buses","United States",2039,139613
+"Momentum","Buses","United States",2040,143437
+"Momentum","Buses","United States",2041,145022
+"Momentum","Buses","United States",2042,146583
+"Momentum","Buses","United States",2043,148189
+"Momentum","Buses","United States",2044,149322
+"Momentum","Buses","United States",2045,150364
+"Momentum","Buses","United States",2046,151265
+"Momentum","Buses","United States",2047,152738
+"Momentum","Buses","United States",2048,153978
+"Momentum","Buses","United States",2049,155397
+"Momentum","Buses","United States",2050,157368
+"Momentum","Cars","Canada",2015,4553
+"Momentum","Cars","Canada",2016,5178
+"Momentum","Cars","Canada",2017,9666
+"Momentum","Cars","Canada",2018,21307
+"Momentum","Cars","Canada",2019,32402
+"Momentum","Cars","Canada",2020,34806
+"Momentum","Cars","Canada",2021,58726
+"Momentum","Cars","Canada",2022,98486
+"Momentum","Cars","Canada",2023,136693
+"Momentum","Cars","Canada",2024,177214
+"Momentum","Cars","Canada",2025,214543
+"Momentum","Cars","Canada",2026,284033
+"Momentum","Cars","Canada",2027,342244
+"Momentum","Cars","Canada",2028,528719
+"Momentum","Cars","Canada",2029,698374
+"Momentum","Cars","Canada",2030,1009635
+"Momentum","Cars","Canada",2031,1261606
+"Momentum","Cars","Canada",2032,1434278
+"Momentum","Cars","Canada",2033,1645233
+"Momentum","Cars","Canada",2034,1732922
+"Momentum","Cars","Canada",2035,1820054
+"Momentum","Cars","Canada",2036,1817662
+"Momentum","Cars","Canada",2037,1818068
+"Momentum","Cars","Canada",2038,1820056
+"Momentum","Cars","Canada",2039,1820539
+"Momentum","Cars","Canada",2040,1819733
+"Momentum","Cars","Canada",2041,1823206
+"Momentum","Cars","Canada",2042,1829009
+"Momentum","Cars","Canada",2043,1828302
+"Momentum","Cars","Canada",2044,1831465
+"Momentum","Cars","Canada",2045,1841176
+"Momentum","Cars","Canada",2046,1844977
+"Momentum","Cars","Canada",2047,1847991
+"Momentum","Cars","Canada",2048,1850427
+"Momentum","Cars","Canada",2049,1849032
+"Momentum","Cars","Canada",2050,1846613
+"Momentum","Cars","Mexico",2015,212
+"Momentum","Cars","Mexico",2016,133
+"Momentum","Cars","Mexico",2017,324
+"Momentum","Cars","Mexico",2018,236
+"Momentum","Cars","Mexico",2019,897
+"Momentum","Cars","Mexico",2020,1840
+"Momentum","Cars","Mexico",2021,3015
+"Momentum","Cars","Mexico",2022,6911
+"Momentum","Cars","Mexico",2023,14417
+"Momentum","Cars","Mexico",2024,19488
+"Momentum","Cars","Mexico",2025,21130
+"Momentum","Cars","Mexico",2026,35915
+"Momentum","Cars","Mexico",2027,61988
+"Momentum","Cars","Mexico",2028,107012
+"Momentum","Cars","Mexico",2029,184108
+"Momentum","Cars","Mexico",2030,316155
+"Momentum","Cars","Mexico",2031,409264
+"Momentum","Cars","Mexico",2032,511749
+"Momentum","Cars","Mexico",2033,621026
+"Momentum","Cars","Mexico",2034,739237
+"Momentum","Cars","Mexico",2035,865185
+"Momentum","Cars","Mexico",2036,999468
+"Momentum","Cars","Mexico",2037,1141158
+"Momentum","Cars","Mexico",2038,1290276
+"Momentum","Cars","Mexico",2039,1448273
+"Momentum","Cars","Mexico",2040,1613369
+"Momentum","Cars","Mexico",2041,1674592
+"Momentum","Cars","Mexico",2042,1735808
+"Momentum","Cars","Mexico",2043,1797470
+"Momentum","Cars","Mexico",2044,1857343
+"Momentum","Cars","Mexico",2045,1917477
+"Momentum","Cars","Mexico",2046,1976526
+"Momentum","Cars","Mexico",2047,2035619
+"Momentum","Cars","Mexico",2048,2094740
+"Momentum","Cars","Mexico",2049,2153902
+"Momentum","Cars","Mexico",2050,2213095
+"Momentum","Cars","United States",2015,71701
+"Momentum","Cars","United States",2016,84260
+"Momentum","Cars","United States",2017,106700
+"Momentum","Cars","United States",2018,236407
+"Momentum","Cars","United States",2019,233890
+"Momentum","Cars","United States",2020,256143
+"Momentum","Cars","United States",2021,482739
+"Momentum","Cars","United States",2022,749466
+"Momentum","Cars","United States",2023,1100815
+"Momentum","Cars","United States",2024,1137551
+"Momentum","Cars","United States",2025,2207263
+"Momentum","Cars","United States",2026,3038275
+"Momentum","Cars","United States",2027,4132397
+"Momentum","Cars","United States",2028,4729704
+"Momentum","Cars","United States",2029,6062054
+"Momentum","Cars","United States",2030,6769074
+"Momentum","Cars","United States",2031,7955745
+"Momentum","Cars","United States",2032,8928137
+"Momentum","Cars","United States",2033,9855807
+"Momentum","Cars","United States",2034,10236033
+"Momentum","Cars","United States",2035,10688318
+"Momentum","Cars","United States",2036,10885202
+"Momentum","Cars","United States",2037,11071192
+"Momentum","Cars","United States",2038,11273753
+"Momentum","Cars","United States",2039,11464602
+"Momentum","Cars","United States",2040,11675635
+"Momentum","Cars","United States",2041,11825496
+"Momentum","Cars","United States",2042,11980787
+"Momentum","Cars","United States",2043,12124528
+"Momentum","Cars","United States",2044,12274554
+"Momentum","Cars","United States",2045,12488326
+"Momentum","Cars","United States",2046,12694603
+"Momentum","Cars","United States",2047,12861326
+"Momentum","Cars","United States",2048,13007483
+"Momentum","Cars","United States",2049,13197339
+"Momentum","Cars","United States",2050,13429523
+"Momentum","Heavy trucks","Canada",2015,0
+"Momentum","Heavy trucks","Canada",2016,0
+"Momentum","Heavy trucks","Canada",2017,1
+"Momentum","Heavy trucks","Canada",2018,7
+"Momentum","Heavy trucks","Canada",2019,0
+"Momentum","Heavy trucks","Canada",2020,0
+"Momentum","Heavy trucks","Canada",2021,14
+"Momentum","Heavy trucks","Canada",2022,129
+"Momentum","Heavy trucks","Canada",2023,80
+"Momentum","Heavy trucks","Canada",2024,107
+"Momentum","Heavy trucks","Canada",2025,332
+"Momentum","Heavy trucks","Canada",2026,697
+"Momentum","Heavy trucks","Canada",2027,1459
+"Momentum","Heavy trucks","Canada",2028,3067
+"Momentum","Heavy trucks","Canada",2029,6440
+"Momentum","Heavy trucks","Canada",2030,13519
+"Momentum","Heavy trucks","Canada",2031,14849
+"Momentum","Heavy trucks","Canada",2032,16205
+"Momentum","Heavy trucks","Canada",2033,17588
+"Momentum","Heavy trucks","Canada",2034,18998
+"Momentum","Heavy trucks","Canada",2035,20435
+"Momentum","Heavy trucks","Canada",2036,24792
+"Momentum","Heavy trucks","Canada",2037,29238
+"Momentum","Heavy trucks","Canada",2038,33774
+"Momentum","Heavy trucks","Canada",2039,38400
+"Momentum","Heavy trucks","Canada",2040,43115
+"Momentum","Heavy trucks","Canada",2041,43564
+"Momentum","Heavy trucks","Canada",2042,44013
+"Momentum","Heavy trucks","Canada",2043,44462
+"Momentum","Heavy trucks","Canada",2044,44911
+"Momentum","Heavy trucks","Canada",2045,45360
+"Momentum","Heavy trucks","Canada",2046,45808
+"Momentum","Heavy trucks","Canada",2047,46257
+"Momentum","Heavy trucks","Canada",2048,46706
+"Momentum","Heavy trucks","Canada",2049,47155
+"Momentum","Heavy trucks","Canada",2050,47604
+"Momentum","Heavy trucks","Mexico",2015,0
+"Momentum","Heavy trucks","Mexico",2016,0
+"Momentum","Heavy trucks","Mexico",2017,0
+"Momentum","Heavy trucks","Mexico",2018,0
+"Momentum","Heavy trucks","Mexico",2019,0
+"Momentum","Heavy trucks","Mexico",2020,0
+"Momentum","Heavy trucks","Mexico",2021,20
+"Momentum","Heavy trucks","Mexico",2022,88
+"Momentum","Heavy trucks","Mexico",2023,47
+"Momentum","Heavy trucks","Mexico",2024,22
+"Momentum","Heavy trucks","Mexico",2025,371
+"Momentum","Heavy trucks","Mexico",2026,430
+"Momentum","Heavy trucks","Mexico",2027,486
+"Momentum","Heavy trucks","Mexico",2028,537
+"Momentum","Heavy trucks","Mexico",2029,588
+"Momentum","Heavy trucks","Mexico",2030,634
+"Momentum","Heavy trucks","Mexico",2031,1093
+"Momentum","Heavy trucks","Mexico",2032,1530
+"Momentum","Heavy trucks","Mexico",2033,1940
+"Momentum","Heavy trucks","Mexico",2034,2327
+"Momentum","Heavy trucks","Mexico",2035,2686
+"Momentum","Heavy trucks","Mexico",2036,3124
+"Momentum","Heavy trucks","Mexico",2037,3533
+"Momentum","Heavy trucks","Mexico",2038,3909
+"Momentum","Heavy trucks","Mexico",2039,4255
+"Momentum","Heavy trucks","Mexico",2040,4568
+"Momentum","Heavy trucks","Mexico",2041,4852
+"Momentum","Heavy trucks","Mexico",2042,5103
+"Momentum","Heavy trucks","Mexico",2043,5323
+"Momentum","Heavy trucks","Mexico",2044,5513
+"Momentum","Heavy trucks","Mexico",2045,5670
+"Momentum","Heavy trucks","Mexico",2046,5797
+"Momentum","Heavy trucks","Mexico",2047,5892
+"Momentum","Heavy trucks","Mexico",2048,5956
+"Momentum","Heavy trucks","Mexico",2049,5990
+"Momentum","Heavy trucks","Mexico",2050,7486
+"Momentum","Heavy trucks","United States",2015,25
+"Momentum","Heavy trucks","United States",2016,125
+"Momentum","Heavy trucks","United States",2017,11
+"Momentum","Heavy trucks","United States",2018,12
+"Momentum","Heavy trucks","United States",2019,95
+"Momentum","Heavy trucks","United States",2020,142
+"Momentum","Heavy trucks","United States",2021,75
+"Momentum","Heavy trucks","United States",2022,599
+"Momentum","Heavy trucks","United States",2023,1151
+"Momentum","Heavy trucks","United States",2024,1044
+"Momentum","Heavy trucks","United States",2025,20351
+"Momentum","Heavy trucks","United States",2026,30592
+"Momentum","Heavy trucks","United States",2027,37293
+"Momentum","Heavy trucks","United States",2028,45647
+"Momentum","Heavy trucks","United States",2029,53219
+"Momentum","Heavy trucks","United States",2030,55993
+"Momentum","Heavy trucks","United States",2031,72505
+"Momentum","Heavy trucks","United States",2032,83570
+"Momentum","Heavy trucks","United States",2033,95102
+"Momentum","Heavy trucks","United States",2034,106710
+"Momentum","Heavy trucks","United States",2035,118292
+"Momentum","Heavy trucks","United States",2036,128780
+"Momentum","Heavy trucks","United States",2037,138004
+"Momentum","Heavy trucks","United States",2038,147793
+"Momentum","Heavy trucks","United States",2039,157352
+"Momentum","Heavy trucks","United States",2040,178943
+"Momentum","Heavy trucks","United States",2041,179227
+"Momentum","Heavy trucks","United States",2042,178502
+"Momentum","Heavy trucks","United States",2043,178246
+"Momentum","Heavy trucks","United States",2044,177141
+"Momentum","Heavy trucks","United States",2045,174637
+"Momentum","Heavy trucks","United States",2046,171832
+"Momentum","Heavy trucks","United States",2047,170749
+"Momentum","Heavy trucks","United States",2048,170767
+"Momentum","Heavy trucks","United States",2049,169940
+"Momentum","Heavy trucks","United States",2050,169926
+"Momentum","Medium trucks","Canada",2015,0
+"Momentum","Medium trucks","Canada",2016,0
+"Momentum","Medium trucks","Canada",2017,0
+"Momentum","Medium trucks","Canada",2018,0
+"Momentum","Medium trucks","Canada",2019,0
+"Momentum","Medium trucks","Canada",2020,0
+"Momentum","Medium trucks","Canada",2021,16
+"Momentum","Medium trucks","Canada",2022,256
+"Momentum","Medium trucks","Canada",2023,106
+"Momentum","Medium trucks","Canada",2024,185
+"Momentum","Medium trucks","Canada",2025,4447
+"Momentum","Medium trucks","Canada",2026,6841
+"Momentum","Medium trucks","Canada",2027,10521
+"Momentum","Medium trucks","Canada",2028,16178
+"Momentum","Medium trucks","Canada",2029,24871
+"Momentum","Medium trucks","Canada",2030,38227
+"Momentum","Medium trucks","Canada",2031,45539
+"Momentum","Medium trucks","Canada",2032,52931
+"Momentum","Medium trucks","Canada",2033,60380
+"Momentum","Medium trucks","Canada",2034,67909
+"Momentum","Medium trucks","Canada",2035,75494
+"Momentum","Medium trucks","Canada",2036,83160
+"Momentum","Medium trucks","Canada",2037,90883
+"Momentum","Medium trucks","Canada",2038,98686
+"Momentum","Medium trucks","Canada",2039,106545
+"Momentum","Medium trucks","Canada",2040,114485
+"Momentum","Medium trucks","Canada",2041,115012
+"Momentum","Medium trucks","Canada",2042,115538
+"Momentum","Medium trucks","Canada",2043,116065
+"Momentum","Medium trucks","Canada",2044,116591
+"Momentum","Medium trucks","Canada",2045,117118
+"Momentum","Medium trucks","Canada",2046,117645
+"Momentum","Medium trucks","Canada",2047,118171
+"Momentum","Medium trucks","Canada",2048,118698
+"Momentum","Medium trucks","Canada",2049,119224
+"Momentum","Medium trucks","Canada",2050,119751
+"Momentum","Medium trucks","Mexico",2015,0
+"Momentum","Medium trucks","Mexico",2016,0
+"Momentum","Medium trucks","Mexico",2017,0
+"Momentum","Medium trucks","Mexico",2018,0
+"Momentum","Medium trucks","Mexico",2019,0
+"Momentum","Medium trucks","Mexico",2020,0
+"Momentum","Medium trucks","Mexico",2021,0
+"Momentum","Medium trucks","Mexico",2022,0
+"Momentum","Medium trucks","Mexico",2023,0
+"Momentum","Medium trucks","Mexico",2024,30
+"Momentum","Medium trucks","Mexico",2025,516
+"Momentum","Medium trucks","Mexico",2026,618
+"Momentum","Medium trucks","Mexico",2027,727
+"Momentum","Medium trucks","Mexico",2028,847
+"Momentum","Medium trucks","Mexico",2029,972
+"Momentum","Medium trucks","Mexico",2030,1105
+"Momentum","Medium trucks","Mexico",2031,1754
+"Momentum","Medium trucks","Mexico",2032,2454
+"Momentum","Medium trucks","Mexico",2033,3202
+"Momentum","Medium trucks","Mexico",2034,4004
+"Momentum","Medium trucks","Mexico",2035,4856
+"Momentum","Medium trucks","Mexico",2036,6093
+"Momentum","Medium trucks","Mexico",2037,7407
+"Momentum","Medium trucks","Mexico",2038,8793
+"Momentum","Medium trucks","Mexico",2039,10257
+"Momentum","Medium trucks","Mexico",2040,12747
+"Momentum","Medium trucks","Mexico",2041,14452
+"Momentum","Medium trucks","Mexico",2042,16236
+"Momentum","Medium trucks","Mexico",2043,18098
+"Momentum","Medium trucks","Mexico",2044,20038
+"Momentum","Medium trucks","Mexico",2045,22056
+"Momentum","Medium trucks","Mexico",2046,24153
+"Momentum","Medium trucks","Mexico",2047,26400
+"Momentum","Medium trucks","Mexico",2048,31109
+"Momentum","Medium trucks","Mexico",2049,36023
+"Momentum","Medium trucks","Mexico",2050,41655
+"Momentum","Medium trucks","United States",2015,5
+"Momentum","Medium trucks","United States",2016,5
+"Momentum","Medium trucks","United States",2017,12
+"Momentum","Medium trucks","United States",2018,78
+"Momentum","Medium trucks","United States",2019,85
+"Momentum","Medium trucks","United States",2020,98
+"Momentum","Medium trucks","United States",2021,140
+"Momentum","Medium trucks","United States",2022,365
+"Momentum","Medium trucks","United States",2023,703
+"Momentum","Medium trucks","United States",2024,763
+"Momentum","Medium trucks","United States",2025,139417
+"Momentum","Medium trucks","United States",2026,151298
+"Momentum","Medium trucks","United States",2027,182535
+"Momentum","Medium trucks","United States",2028,226022
+"Momentum","Medium trucks","United States",2029,259666
+"Momentum","Medium trucks","United States",2030,306909
+"Momentum","Medium trucks","United States",2031,369950
+"Momentum","Medium trucks","United States",2032,416812
+"Momentum","Medium trucks","United States",2033,481549
+"Momentum","Medium trucks","United States",2034,542203
+"Momentum","Medium trucks","United States",2035,605574
+"Momentum","Medium trucks","United States",2036,643830
+"Momentum","Medium trucks","United States",2037,683110
+"Momentum","Medium trucks","United States",2038,722666
+"Momentum","Medium trucks","United States",2039,764000
+"Momentum","Medium trucks","United States",2040,807250
+"Momentum","Medium trucks","United States",2041,816937
+"Momentum","Medium trucks","United States",2042,824816
+"Momentum","Medium trucks","United States",2043,833181
+"Momentum","Medium trucks","United States",2044,841572
+"Momentum","Medium trucks","United States",2045,849258
+"Momentum","Medium trucks","United States",2046,856721
+"Momentum","Medium trucks","United States",2047,863719
+"Momentum","Medium trucks","United States",2048,874093
+"Momentum","Medium trucks","United States",2049,883169
+"Momentum","Medium trucks","United States",2050,896089
+"Momentum","Vans","Canada",2015,0
+"Momentum","Vans","Canada",2016,0
+"Momentum","Vans","Canada",2017,0
+"Momentum","Vans","Canada",2018,0
+"Momentum","Vans","Canada",2019,0
+"Momentum","Vans","Canada",2020,0
+"Momentum","Vans","Canada",2021,0
+"Momentum","Vans","Canada",2022,83
+"Momentum","Vans","Canada",2023,2280
+"Momentum","Vans","Canada",2024,2900
+"Momentum","Vans","Canada",2025,10709
+"Momentum","Vans","Canada",2026,12835
+"Momentum","Vans","Canada",2027,14827
+"Momentum","Vans","Canada",2028,22007
+"Momentum","Vans","Canada",2029,27915
+"Momentum","Vans","Canada",2030,38987
+"Momentum","Vans","Canada",2031,48126
+"Momentum","Vans","Canada",2032,53946
+"Momentum","Vans","Canada",2033,60922
+"Momentum","Vans","Canada",2034,63088
+"Momentum","Vans","Canada",2035,65053
+"Momentum","Vans","Canada",2036,64969
+"Momentum","Vans","Canada",2037,64983
+"Momentum","Vans","Canada",2038,65053
+"Momentum","Vans","Canada",2039,65069
+"Momentum","Vans","Canada",2040,65042
+"Momentum","Vans","Canada",2041,65165
+"Momentum","Vans","Canada",2042,65372
+"Momentum","Vans","Canada",2043,65348
+"Momentum","Vans","Canada",2044,65461
+"Momentum","Vans","Canada",2045,65807
+"Momentum","Vans","Canada",2046,65943
+"Momentum","Vans","Canada",2047,66051
+"Momentum","Vans","Canada",2048,66141
+"Momentum","Vans","Canada",2049,66088
+"Momentum","Vans","Canada",2050,66002
+"Momentum","Vans","Mexico",2015,0
+"Momentum","Vans","Mexico",2016,0
+"Momentum","Vans","Mexico",2017,0
+"Momentum","Vans","Mexico",2018,0
+"Momentum","Vans","Mexico",2019,0
+"Momentum","Vans","Mexico",2020,57
+"Momentum","Vans","Mexico",2021,494
+"Momentum","Vans","Mexico",2022,684
+"Momentum","Vans","Mexico",2023,1578
+"Momentum","Vans","Mexico",2024,2748
+"Momentum","Vans","Mexico",2025,47823
+"Momentum","Vans","Mexico",2026,71181
+"Momentum","Vans","Mexico",2027,94482
+"Momentum","Vans","Mexico",2028,189354
+"Momentum","Vans","Mexico",2029,269111
+"Momentum","Vans","Mexico",2030,351752
+"Momentum","Vans","Mexico",2031,382940
+"Momentum","Vans","Mexico",2032,415817
+"Momentum","Vans","Mexico",2033,445781
+"Momentum","Vans","Mexico",2034,474289
+"Momentum","Vans","Mexico",2035,503011
+"Momentum","Vans","Mexico",2036,531355
+"Momentum","Vans","Mexico",2037,558659
+"Momentum","Vans","Mexico",2038,583894
+"Momentum","Vans","Mexico",2039,609724
+"Momentum","Vans","Mexico",2040,633745
+"Momentum","Vans","Mexico",2041,629332
+"Momentum","Vans","Mexico",2042,624433
+"Momentum","Vans","Mexico",2043,619790
+"Momentum","Vans","Mexico",2044,612857
+"Momentum","Vans","Mexico",2045,605941
+"Momentum","Vans","Mexico",2046,598243
+"Momentum","Vans","Mexico",2047,590533
+"Momentum","Vans","Mexico",2048,582811
+"Momentum","Vans","Mexico",2049,575078
+"Momentum","Vans","Mexico",2050,567333
+"Momentum","Vans","United States",2015,0
+"Momentum","Vans","United States",2016,0
+"Momentum","Vans","United States",2017,0
+"Momentum","Vans","United States",2018,0
+"Momentum","Vans","United States",2019,0
+"Momentum","Vans","United States",2020,0
+"Momentum","Vans","United States",2021,15
+"Momentum","Vans","United States",2022,8959
+"Momentum","Vans","United States",2023,16669
+"Momentum","Vans","United States",2024,25336
+"Momentum","Vans","United States",2025,119140
+"Momentum","Vans","United States",2026,181265
+"Momentum","Vans","United States",2027,267977
+"Momentum","Vans","United States",2028,312281
+"Momentum","Vans","United States",2029,404184
+"Momentum","Vans","United States",2030,456465
+"Momentum","Vans","United States",2031,506244
+"Momentum","Vans","United States",2032,561252
+"Momentum","Vans","United States",2033,606135
+"Momentum","Vans","United States",2034,624369
+"Momentum","Vans","United States",2035,647238
+"Momentum","Vans","United States",2036,658394
+"Momentum","Vans","United States",2037,670279
+"Momentum","Vans","United States",2038,683312
+"Momentum","Vans","United States",2039,695407
+"Momentum","Vans","United States",2040,709381
+"Momentum","Vans","United States",2041,719814
+"Momentum","Vans","United States",2042,730524
+"Momentum","Vans","United States",2043,741740
+"Momentum","Vans","United States",2044,751594
+"Momentum","Vans","United States",2045,766280
+"Momentum","Vans","United States",2046,776129
+"Momentum","Vans","United States",2047,788218
+"Momentum","Vans","United States",2048,800668
+"Momentum","Vans","United States",2049,810034
+"Momentum","Vans","United States",2050,824449
