@@ -19,7 +19,8 @@ bat <- bat %>%
   dplyr::select(-OEM_Group,-Brand,-Make_Model,-Architecture,
                 -LCV_Details,-Fast_Charging,-Battery_kWh,-ED_Wh_kg_Cell,
                 -Cell_Type,-Cell_Supplier,-Cathode_Supplier) %>% 
-  pivot_longer(-c(Sales_Region,Sales_Sub_Region,Sales_Country, Global_Segment,
+  rowid_to_column() %>% 
+  pivot_longer(-c(rowid,Sales_Region,Sales_Sub_Region,Sales_Country, Global_Segment,
                  Vehicle_Production_Region,Vehicle_Production_Country,
                  Propulsion,Cathode_Chemistry,Cathode_Mix), names_to = "key", values_to = "value")
 unique(bat$key)  
@@ -27,7 +28,8 @@ unique(bat$key)
 # get total EV registrations and MWh
 bat <- bat %>% 
   mutate(type=str_extract(key,"Mwh|Reg"),
-         year=str_extract(key,paste0(2013:2025,collapse="|"))) %>% 
+         year=str_extract(key,paste0(2013:2025,collapse="|")),
+         month=substr(key, nchar(key)-4, nchar(key))) %>% 
   filter(year<2025,value>0)
 unique(bat$year)  
 unique(bat$type)
@@ -44,6 +46,56 @@ bat <- bat %>%
   mutate(Vehicle=if_else(Global_Segment=="LCV","Vans","Cars"))
 table(bat$Vehicle,bat$Global_Segment)
 
+# Distribution avg size -----------
+head(bat)
+# sum over years
+dist <- bat %>% 
+  group_by(Sales_Country, Vehicle,type,year,rowid) %>% 
+  reframe(value=sum(value)) %>% ungroup()
+dist <- dist %>%  
+  pivot_wider(names_from = type, values_from = value) %>% 
+  filter(!is.na(Mwh))
+
+dist <- dist %>% mutate(kwh_veh=Mwh*1e3/Reg)
+
+# histogram
+ggplot(dist,aes(kwh_veh,fill=Sales_Country))+
+  # geom_histogram()+
+  geom_density(alpha=.5)+
+  facet_grid(Vehicle~Sales_Country)
+
+library(ggridges)
+dist %>% 
+  filter(Vehicle=="Cars"|year!=2020) %>% 
+  ggplot(aes(kwh_veh,fill=Sales_Country,y=year,group=year,weight=Reg))+
+  # geom_density_ridges(alpha=.8)+
+  geom_density_ridges(
+    aes(point_size = Reg),
+    jittered_points = TRUE,
+    linewidth=0.1,
+    position = position_points_jitter(width = 0.01, height = 0),
+    # point_shape = '|', 
+    point_alpha = 0.7, alpha = 0.7)+
+  facet_grid(Vehicle~Sales_Country,scales="free_y",space="free_y")+
+  scale_point_size_continuous(range=c(0.1,5))+
+  labs(x="Battery size [kWh per vehicle]",y="",fill="",caption="Weighted by sales")+
+  theme(legend.position = "none")
+
+ggsave("Figures/Inputs/EVVol_dist.png", ggplot2::last_plot(),
+       units="cm",dpi=600,width=8.7*2,height=8.7*1.5)
+
+# same average as later
+bat_scen <- dist %>% 
+  filter(year==2024) %>% 
+  group_by(Sales_Country,Vehicle) %>% 
+  reframe(mean_kwh_veh=weighted.mean(kwh_veh,Reg),
+          low_kwh_veh=Hmisc::wtd.quantile(kwh_veh,weights=Reg,probs = 0.1),
+          high_kwh_veh=Hmisc::wtd.quantile(kwh_veh,weights=Reg,probs = 0.9))
+bat_scen
+write.csv(bat_scen,"Inputs/Battery/bat_quantiles.csv",row.names = F)
+
+
+# Summarise ----------
 # summarise by year, COUNTRY, MIX
 bat <- bat %>% 
   group_by(Sales_Country, Vehicle,
@@ -117,6 +169,18 @@ other_share <- bat %>%
   group_by(year) %>% 
   mutate(perc=MWh/sum(MWh)) %>% ungroup()
 
+table(bat$chemistry)
+# combine into 4 groups
+bat <- bat %>% 
+  mutate(chemistry_group=case_when(
+    chemistry=="LFP" ~ "LFP",
+    chemistry=="NCA" ~ "NCA",
+    chemistry %in% c("LMO","LTO") ~ "LTO/LMO",
+    chemistry %in% c("NMC","NMC 111") ~ "NMC Low Ni",
+    chemistry %in% c("NMC 532","NMC 622","NMC 721","NMC 811") ~ "NMC High Ni",
+    T ~ "remove"))
+table(bat$chemistry_group,bat$chemistry)
+
 ## Flat years -----
 bat <- bat %>% mutate(unit = if_else(is.na(unit), 0, unit))
 
@@ -186,6 +250,9 @@ bat_country <- bat_country %>%
   mutate(kwh_veh_total=sum(kwh_veh)) %>% ungroup()
 
 bat_country <- bat_country %>% rename(Year=year)
+
+bat_country %>% filter(Year==2024) %>% 
+  group_by(Sales_Country,Vehicle) %>% reframe(x=mean(kwh_veh_total))
 
 # SAVE DATA -----------
 

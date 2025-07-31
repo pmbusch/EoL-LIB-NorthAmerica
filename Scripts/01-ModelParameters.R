@@ -9,7 +9,7 @@ p.max_reuse_lib <- 0.5 # Share of LIBs that goes towards reuse (in another EV)
 p.max_ev_age_replacement <- 16 # Max EV age to get a new LIB (replacement)
 p.max_lib_age_secondlife <- 12 # Max LIB age to be use in another EV (reuse)
 p.max_lib_age_repurp <- 12 # Max LIB age to be use in another EV (reuse)
-p.degradation <- 0.02 # LIB capacity degrdation per year
+p.degradation <- 0.02 # LIB capacity degradation per year
 
 # Lifetime - years
 p.mean_ev=17
@@ -19,6 +19,7 @@ p.sd_lib=4
 
 # Production scrap
 p.scrap <- 0.04
+
 
 
 # EoF

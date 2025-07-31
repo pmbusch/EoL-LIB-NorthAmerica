@@ -2,13 +2,14 @@
 # PBH July 2025
 
 source("Scripts/00-Libraries.R", encoding = "UTF-8")
-source("Scripts/01-ModelParameters.R")
+# source("Scripts/01-ModelParameters.R") # uncomment for debug
 
 # Load data ----
 # Demand
 ss <- read.csv("Inputs/StationaryStorage.csv")
 # LIBs suitable for repurp
-ss_vector <- read.csv("Results/Intermediate/LIB_repurpose_available.csv")
+# UNCOMMENT FOR DEBUG, if not variable is created in Script 02-EV_LIB_Demand_Recycling.R
+# ss_vector <- read.csv("Results/Intermediate/LIB_repurpose_available.csv")
 
 # Calculations -----
 
@@ -51,7 +52,7 @@ out.fails <- c()
 out.add <- c()
 out.new <- c()
 for (ct in unique(ss$Country)){
-  cat(ct," \n")
+  # cat(ct," \n")
   ss_ct <- ss %>% filter(Country==ct) %>% arrange(Year)
   repurp <- ss_vector %>% filter(Country==ct) %>% arrange(Year,age)
   
@@ -130,19 +131,19 @@ for (ct in unique(ss$Country)){
   }
 }
 
-# joib all
-df <- rbind(out.new,out.add,out.fails,out.recyc) %>% 
+# join all
+ss <- rbind(out.new,out.add,out.fails,out.recyc) %>% 
   mutate(Vehicle="Stationary Storage")
 
 # ADD lib to repurp not used
-df <- rbind(df,mutate(ss_recyc,Vehicle="Cars")) # all to EVs for now
+ss <- rbind(ss,mutate(ss_recyc,Vehicle="Cars")) # all to EVs for now
 
-df <- df %>% 
+ss <- ss %>% 
   filter(Year>2024) %>% 
   group_by(Vehicle,Country,Flow,Year) %>% 
   reframe(kwh=sum(kwh)) %>% ungroup()
 
-
-write.csv(df,"Results/Intermediate/ss.csv",row.names = F)
+# UNCOMMENT TO DEBUG
+# write.csv(ss,"Results/Intermediate/ss.csv",row.names = F)
 
 # EoF

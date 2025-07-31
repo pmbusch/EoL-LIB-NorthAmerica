@@ -19,8 +19,9 @@ bat <- bat %>%
   dplyr::select(Sales_Country,Brand,Global_Segment,`Estd_Average_Battery_Capacity_[kWh]`,
                 Primary_Application,Cathode_Chemistry,
                 `2010`,`2011`,`2012`,`2013`,`2014`,`2015`,`2016`,
-                `2017`,`2018`,`2019`,`2020`,`2021`,`2022`,`2023`,`2024`) %>% 
-  pivot_longer(-c(Sales_Country,Brand,Global_Segment,`Estd_Average_Battery_Capacity_[kWh]`,
+                `2017`,`2018`,`2019`,`2020`,`2021`,`2022`,`2023`,`2024`) %>%
+  rowid_to_column() %>% 
+  pivot_longer(-c(rowid,Sales_Country,Brand,Global_Segment,`Estd_Average_Battery_Capacity_[kWh]`,
                   Primary_Application,Cathode_Chemistry), 
                names_to = "year", values_to = "sales")
 unique(bat$year)  
@@ -42,7 +43,47 @@ bat <- bat %>%
     Global_Segment=="Truck - Heavy" ~ "Heavy trucks"))
 table(bat$Vehicle,bat$Global_Segment)
 
-# summarise by year, COUNTRY, MIX
+# distribtion ---------
+
+dist <- bat %>% rename(kwh_veh=`Estd_Average_Battery_Capacity_[kWh]`)
+
+# histogram
+ggplot(dist,aes(kwh_veh,fill=Sales_Country))+
+  # geom_histogram()+
+  geom_density(alpha=.5)+
+  facet_grid(Vehicle~Sales_Country)
+
+library(ggridges)
+dist %>% 
+  ggplot(aes(kwh_veh,fill=Sales_Country,y=year,group=year,weight=sales))+
+  # geom_density_ridges(alpha=.8)+
+  geom_density_ridges(
+    aes(point_size=sales),
+    jittered_points = TRUE,
+    linewidth=0.1,
+    position = position_points_jitter(width = 0.01, height = 0),
+    # point_shape = '|', 
+    point_alpha = 0.7, alpha = 0.7)+
+  facet_grid(Vehicle~Sales_Country,scales="free_y",space="free_y")+
+  scale_point_size_continuous(range=c(0.1,5))+
+  labs(x="Battery size [kWh per vehicle]",y="",fill="",caption="Weighted by sales")+
+  theme(legend.position = "none")
+
+ggsave("Figures/Inputs/EVVol_dist_MDV.png", ggplot2::last_plot(),
+       units="cm",dpi=600,width=8.7*2,height=8.7*1.5)
+
+
+bat_scen <- dist %>% 
+  filter(year==2024) %>% 
+  group_by(Sales_Country,Vehicle) %>% 
+  reframe(mean_kwh_veh=weighted.mean(kwh_veh,sales),
+          low_kwh_veh=Hmisc::wtd.quantile(kwh_veh,weights=sales,probs = 0.1),
+          high_kwh_veh=Hmisc::wtd.quantile(kwh_veh,weights=sales,probs = 0.9))
+bat_scen
+write.csv(bat_scen,"Inputs/Battery/bat_quantiles_MDV.csv",row.names = F)
+
+
+# summarise by year, COUNTRY, MIX -----
 bat <- bat %>% 
   group_by(year,Sales_Country, Vehicle,Cathode_Chemistry) %>% 
   reframe(kwh_veh=weighted.mean(`Estd_Average_Battery_Capacity_[kWh]`,sales),
