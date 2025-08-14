@@ -110,6 +110,25 @@ write.csv(bat_high,"Inputs/batterySize_large.csv",row.names = F)
 
 # Figure ---------
 
+range(x$Year)
+
+x %>% 
+  filter(Year<2025) %>% 
+  mutate(Vehicle=factor(Vehicle,levels=c("Cars","Vans","Medium trucks","Heavy trucks","Buses"))) %>% 
+  ggplot(aes(Year,kwh_veh,col=Country))+
+  geom_line()+
+  geom_point()+
+  facet_wrap(~Vehicle,scales="free_y")+
+  ylim(0,NA)+
+  scale_x_continuous(breaks=c(2015,2018,2021,2024))+
+  labs(x="",y="",title="Avg. Battery Size [kWh/veh]",col="")+
+  theme(legend.position = c(0.8,0.2))
+
+ggsave("Figures/Inputs/BatterySize.png", ggplot2::last_plot(),
+       units="cm",dpi=600,width=8.7*2,height=8.7)
+
+
+
 # to run figure comment part where I remove chemistry detail
 library(khroma)
 library(scico)
@@ -125,7 +144,7 @@ x %>%
   scale_fill_manual(values = scico(14, palette = "batlow", direction = 1)) +
   labs(x="",y="",title="Battery size [kWh/veh]",fill="Chemistry")
 
-ggsave("Figures/Inputs/BatterySize.png", ggplot2::last_plot(),
+ggsave("Figures/Inputs/BatterySizeChem.png", ggplot2::last_plot(),
        units="cm",dpi=600,width=8.7*2,height=8.7*1.5)
 
 

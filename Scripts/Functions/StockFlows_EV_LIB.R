@@ -43,7 +43,7 @@ f.LIB_EV_Stock <- function(
     matrix_data[matrix_data < 10] <- 0
     
     # Get new matrix of EV stock with ages, LIBs in good use 
-    new_matrix <- matrix_ev <- matrix_lib <- matrix(0, nrow = 31, ncol = 31)
+    new_matrix <- matrix_ev <- matrix_lib <- matrix_both <- matrix(0, nrow = 31, ncol = 31)
     rownames(new_matrix) <-paste0("EV_",0:30) # ROWS are EV
     colnames(new_matrix) <- paste0("LIB_",0:30) # COLS are Battery
     
@@ -55,10 +55,12 @@ f.LIB_EV_Stock <- function(
                                   EV_age = i-1,LIB_age = j-1) # age is minus 1 for the index
           if (i!=31 & j!=31){ # to avoid border case
             new_matrix[i + 1, j + 1] <- result$none # move 1 age for both EV and LIB
-            matrix_ev[i+1,j+1] <- result$lib_fail+result$both_fail # EVs that need LIB
+            matrix_ev[i+1,j+1] <- result$lib_fail # EVs that need LIB
             matrix_lib[i+1,j+1] <- result$ev_fail # LIBs available to use
+            matrix_both[i+1,j+1] <- result$both_fail # LIB failed for recycling
+            
           } else if (j==31 & i!=31){ # BATTERIES TOO OLD
-            matrix_ev[i+1,j] <- result$lib_fail+result$both_fail # EVs that need LIB, no LIBs available as they died
+            matrix_ev[i+1,j] <- result$lib_fail # EVs that need LIB, no LIBs available as they died
           } else if (j!=31 & i==31){ # EV TOO OLD
             matrix_lib[i,j+1] <- result$ev_fail # LIBs available to use, no EV at border
           }
@@ -72,8 +74,10 @@ f.LIB_EV_Stock <- function(
     # Above certain age simply no LIB required, THEY DIED
     ev_need[(max_ev_age_replacement+1):31] <- 0
     
+    # LIB ready for end life recycling, when the LIB failed
     # move to the left to allow for delay in other part of the code
-    lib_failed <- colSums(matrix_ev)[-1] # LIB ready for end life recycling, when the LIB failed
+    lib_failed <- colSums(matrix_ev)[-1] + colSums(matrix_both)[-1]
+    
     lib_available <- colSums(matrix_lib)
     
     # assigning old batteries to second-life in EVs
@@ -159,7 +163,7 @@ f.LIB_EV_Stock <- function(
 
 # To test
 # sales <- read.csv("Inputs/EV_Sales.csv")
-# sales_usa <- sales %>% filter(Vehicle=="Cars",Country=="United States")
+# sales_usa <- sales %>% filter(Vehicle=="Cars",Country=="United States",Scenario=="Ambitious")
 # {
 #   start_time <- proc.time()
 #   stocks <- f.LIB_EV_Stock(sales_usa)

@@ -1,14 +1,18 @@
 # Recycling Capacity Comparison
 # PBH July 2025
 
-source("Scripts/00-Libraries.R", encoding = "UTF-8")
 
+# LOAD DATA -----
+source("Scripts/00-Libraries.R", encoding = "UTF-8")
+source("Scripts/01-ModelParameters.R")
 
 url_drive <- "H:/.shortcut-targets-by-id/1CWiPbqLa53GMwIlw6QXl5kVdUX6nm-Sa/North America Battery Retirements and Recycling Capacity Research/Data/"
 
+
+## Capacity -----
 # in metric tons
 cap <- read_excel(paste0(url_drive,"NA Recycling facilities.xlsx"),
-                         sheet="US and CA cleaned data",range="P2:R8")
+                         sheet="US and CA cleaned data",range="S10:V22")
 # expand to 2050
 cap_2030 <- cap %>% filter(Year==2030)
 for (i in 2031:2050){
@@ -18,13 +22,17 @@ for (i in 2031:2050){
 rm(aux,cap_2030)
 
 cap <- cap %>% 
-  pivot_longer(c(-Year), names_to = "Stage", values_to = "tons") %>% 
-  mutate(Stage=str_remove(Stage," Capacity")) %>% 
-  mutate(type="Capacity")
+  pivot_longer(c(-Year,-Country), names_to = "Stage", values_to = "tons") %>% 
+  mutate(Stage=str_remove(Stage," Capacity") %>% 
+           str_replace("Refining","Refining (black mass)")) %>% 
+  mutate(type="Capacity") %>% 
+  mutate(Country=str_replace(Country,"US","United States"))
   
 cap <- cap %>% mutate(ktons=tons/1e3)
+cap_total <- cap %>% group_by(Stage,Year,type) %>% 
+  reframe(ktons=sum(ktons)) %>% ungroup()
 
-# Recycling outflows ----
+## Recycling outflows ----
 (runs <- list.files("Results/Feedstock/",recursive = F))
 
 # Read all results and put them in the same dataframe!
@@ -35,7 +43,7 @@ unique(df_all$Scenario)
 
 # Extract scens
 df_all <- df_all %>% 
-  mutate(Sales=str_extract(Scenario,"Baseline|Momentum"),
+  mutate(Sales=str_extract(Scenario,"Baseline|Momentum|Ambitious"),
          Size=str_extract(Scenario,"Small|Large"),
          Lifetime=str_extract(Scenario,"Short|Long"),
          eol=str_extract(Scenario,"Repurposing|Recycling"),
@@ -51,55 +59,219 @@ unique(df_all$Lifetime)
 unique(df_all$eol)
 unique(df_all$Reuse)
 
+# consider scrap and max production
+df_all <- df_all %>% 
+  mutate(ratio_cap=case_when(
+  Flow!="LIB_scrap" ~ 1,
+  ratio_cap>1 ~ 1,
+  T ~ ratio_cap)) %>% 
+  mutate(kwh=kwh*ratio_cap,
+         battery_kg=battery_kg*ratio_cap,
+         blackMass_kg=blackMass_kg*ratio_cap)
+
+# add scenario 15% scrap
+df_scrap <- df_all %>% 
+  filter(Scenario=="Momentum__reuse0") %>% 
+  # scale it according to original scrap rate used
+  mutate(adj=if_else(Flow=="LIB_scrap",0.15/p.scrap,1)) %>% 
+  mutate(kwh=kwh*adj,
+         battery_kg=battery_kg*adj,
+         blackMass_kg=blackMass_kg*adj,
+         adj=NULL) %>% 
+  mutate(Scenario="Scrap15")
+
+df_all <- rbind(df_all,df_scrap)
+
 df_all <- df_all %>% 
   group_by(Scenario,Country,Sales,Size,Lifetime,eol,Reuse,Year) %>%
   # to ktons
   reframe(`Pre-processing`=sum(battery_kg)/1e6,
-          Refining=sum(blackMass_kg)/1e6) %>% ungroup() %>% 
-  pivot_longer(c(`Pre-processing`,Refining), names_to = "Stage", values_to = "ktons") %>% 
+          `Refining (black mass)`=sum(blackMass_kg)/1e6) %>% ungroup() %>% 
+  pivot_longer(c(`Pre-processing`,`Refining (black mass)`), 
+               names_to = "Stage", values_to = "ktons") %>% 
   mutate(type="Feedstock")
 
 
 # Pick key scenarios - with their name
 scens_selected <- c("Reference"="Momentum__reuse0",
-                    "Lower EV Sales"="Baseline__reuse0", # Sales
+                    "Ambitious"="Ambitious__reuse0", # Sales
                     "Large LIB"="Momentum__reuse0Large","Small LIB"="Momentum__reuse0Small", # LIB Size
                     "Long life"="Momentum_Long_reuse0","Short life"="Momentum_Short_reuse0", # Lifetime
                     "Recycling"="Momentum__reuse0Recycling","Repurposing"="Momentum__reuse0Repurposing", # Eol
-                    "50% reuse"="Momentum__reuse50") # reuse
+                    "50% reuse"="Momentum__reuse50", # reuse
+                    "15% Scrap"="Scrap15")
 
+
+# FIG 3 -----
+year_limit <- 2050
+
+## a) Cap vs Feedstock -----
 
 df_scen <- df_all %>% 
-  filter(Stage=="Pre-processing") %>% 
+  filter(Year<=year_limit) %>% 
   filter(Scenario %in% scens_selected) %>% 
-  group_by(Scenario,Sales,Size,Lifetime,eol,Reuse,Year) %>%
+  group_by(Stage,Scenario,Country,Sales,Size,Lifetime,eol,Reuse,Year) %>%
+  reframe(ktons=sum(ktons)) %>% ungroup() %>% 
+  left_join(tibble(Scenario=scens_selected,scen_name=names(scens_selected)))
+
+cap <- cap %>% dplyr::select(Year,Country,Stage,type,ktons)
+
+
+data_fig <- df_scen %>% 
+  filter(Country!="Exports") %>% 
+  filter(scen_name=="Reference") %>% 
+  mutate(type="Feedstock") %>% 
+  dplyr::select(Year,Country,Stage,type,ktons) %>% 
+  rbind(cap) %>% 
+  group_by(Stage,Year,type) %>%
+  reframe(ktons=sum(ktons)) %>% ungroup()
+  
+max_v <- max(data_fig$ktons)
+
+pa <- ggplot(data_fig,aes(Year,ktons))+
+  geom_col(aes(fill=type),position = "dodge")+
+  facet_wrap(~Stage)+
+  coord_cartesian(expand = F,ylim = c(0,max_v*1.05),xlim = c(2024.5,year_limit+.5))+
+  scale_x_continuous(breaks=c(2025,2030,2040,2050))+
+  scale_y_continuous(labels=scales::comma)+
+  scale_fill_manual(values = c("Capacity" = "#B22222", "Feedstock" = "#006400"))+
+  guides(fill = guide_legend(ncol = 2))+
+  labs(x="",y="",tag="(a)",fill="",
+       title="North America Battery Feedstock and Processing Capacity (in ktons)")+
+  theme( plot.tag = element_text(face = "bold"),
+         legend.position = c(0.8,0.6),
+         panel.spacing = unit(0.5, "cm"))
+pa
+
+
+## b) net by scenarios -----
+
+data_fig2 <- df_scen %>% 
+  filter(Country!="Exports") %>% 
+  group_by(Scenario,scen_name,Year,Stage) %>% 
+  reframe(ktons=sum(ktons)) %>% ungroup() %>% 
+  left_join(mutate(cap_total,type=NULL,capacity=ktons,ktons=NULL)) %>% 
+  mutate(net=capacity-ktons)
+
+
+annotations <- tibble(Stage = c("Pre-processing", "Pre-processing"), 
+                      x = c(2044, 2044),y = c(800, -800),
+                      label = c("Overcapacity","Undercapacity"))
+
+
+pb <- ggplot(data_fig2,aes(Year,net,col=Scenario))+
+  geom_line()+
+  geom_text_repel(data = . %>% group_by(Scenario) %>% 
+                    slice_max(Year) %>% filter(Stage=="Pre-processing"), 
+                  aes(label = scen_name,col=Scenario),direction = "y", 
+                  segment.size=0.1,nudge_x = 5,
+                  hjust = -0.1,size=8*5/14 * 0.8)+
+  geom_hline(yintercept = 0,col="black",linetype="dashed")+
+  geom_text(data=annotations,aes(x=x,y=y,label=label),fontface="italic",
+            inherit.aes = F,col="black",size=9*5/14 * 0.8)+
+  facet_wrap(~Stage,scales="free_x")+
+  # coord_cartesian(expand = F,xlim = c(2025,year_limit+4),
+  #                 ylim=range(data_fig2$net)*1.05)+
+  scale_y_continuous(labels = scales::label_comma())+
+  scale_x_continuous(breaks = c(2025,2030,2040,2050))+
+  scale_color_manual(values = c("Momentum__reuse0"="black",
+                                "Ambitious__reuse0"="#E31A1C",
+                                "Momentum__reuse0Small"="#A6CEE3","Momentum__reuse0Large"="#1F78B4",
+                                "Momentum_Long_reuse0"="#B2DF8A","Momentum_Short_reuse0"="#33A02C",
+                                "Momentum__reuse0Recycling"="#FDBF6F","Momentum__reuse0Repurposing"="#FF7F00",
+                                "Scrap15"="#6A3D9A"))+
+    labs(x="",y="",col="",title="Net Processing Capacity (ktons)",tag="(b)")+
+  theme(panel.spacing = unit(0.5, "cm"),
+        plot.tag = element_text(face = "bold"),
+        legend.position = "none")
+pb
+
+
+
+## c) By country -----
+
+data_fig3 <- df_scen %>% 
+  filter(Country!="Exports") %>% 
+  filter(scen_name=="Reference") %>% 
+  group_by(Country,Year,Stage) %>% 
+  reframe(ktons=sum(ktons)) %>% ungroup() %>% 
+  left_join(mutate(cap,type=NULL,capacity=ktons,ktons=NULL)) %>% 
+  mutate(capacity=if_else(is.na(capacity),0,capacity)) %>% 
+  mutate(net=capacity-ktons)
+
+annotations <- tibble(
+  Country=c("United States","Mexico")
+  
+)
+  
+  
+
+pc <- ggplot(data_fig3,aes(Year,net,col=Country,group=Country))+
+  geom_line()+
+  geom_hline(yintercept = 0,col="black",linetype="dashed")+
+  # facet_grid(Country~Stage,scales="free_y")+
+  facet_wrap(~Stage)+
+  scale_y_continuous(labels=scales::comma)+
+  scale_x_continuous(breaks=c(2025,2030,2040,2050))+
+  geom_text(x=2045,size=8*5/14 * 0.8,y=-6500,label="United States",angle=-35,col="#3C3B6EFF",data= . %>% filter(Stage=="Pre-processing"))+
+  geom_text(x=2048,size=8*5/14 * 0.8,y=-450,label="Mexico",col="#006847FF",data= . %>% filter(Stage=="Pre-processing"))+
+  geom_text(x=2048,size=8*5/14 * 0.8,y=-2000,label="Canada",col="#B22222FF",data= . %>% filter(Stage=="Pre-processing"))+
+  labs(x="",y="",tag="(c)",
+       title="Net Processing Capacity (ktons) by Country")+
+  theme(plot.tag = element_text(face = "bold"),
+        panel.spacing = unit(0.5, "cm"),
+        legend.position = "none")
+pc
+
+pa1 <- pa+ theme(plot.margin = margin(0, 5, -5, 5)) #trbl
+pb1 <- pb+ theme(plot.margin = margin(-5, 5, -5, 5))
+pc1 <- pc+ theme(plot.margin = margin(-5, 5, -5, 5))
+
+
+cowplot::plot_grid(pa1,pb1,pc1,ncol=1,
+                   rel_heights = c(1, 1.3,1),
+                   align="v",axis = "lr")
+ggsave("Figures/Fig3.png", ggplot2::last_plot(),
+       units="cm",dpi=600,width=8.7*2,height=8.7*2)
+
+# OLD FIGURE ----
+
+df_scen <- df_all %>% 
+  # filter(Stage=="Pre-processing") %>% 
+  filter(Scenario %in% scens_selected) %>% 
+  group_by(Stage,Scenario,Sales,Size,Lifetime,eol,Reuse,Year) %>%
   reframe(ktons=sum(ktons)) %>% ungroup() %>% 
   left_join(tibble(Scenario=scens_selected,scen_name=names(scens_selected)))
   
 # Figure
-year_limit <- 2035
-year_limit <- 2050
+# year_limit <- 2035
+# year_limit <- 2050
 year_limit <- 2040
 
 data_fig <- df_scen %>% 
   filter(Year<=year_limit)
 max_v <- max(data_fig$ktons)
 
+annotations <- tibble(Stage = c("Pre-processing", "Refining (black mass)"), 
+                      x = c(2038, 2030),y = c(1000, 1600),
+                      label = c("North America Recycling Capacity", "North America Recycling Capacity"))
+
+
 ggplot(data_fig,aes(Year,ktons))+
-  geom_col(data=filter(cap,Year<=year_limit,Stage=="Pre-processing"),fill="darkred",alpha=0.8)+
+  geom_col(data=filter(cap_total,Year<=year_limit),fill="darkred",alpha=0.8)+
   geom_line(aes(group=Scenario,col=Scenario),linewidth=0.5)+
   geom_text_repel(data = . %>% group_by(Scenario) %>% slice_max(Year), 
                   aes(label = scen_name,col=Scenario),direction = "y", 
                   segment.size=0.1,
-                  hjust = -0.1,size=6*5/14 * 0.8)+
-  annotate("text",x=2038,y=1000,label="North America Recycling Capacity",
-           col="darkred",size=8*5/14 * 0.8)+
-  # facet_wrap(~Stage)+
+                  hjust = -0.1,size=8*5/14 * 0.8)+
+  geom_text(data=annotations,aes(x=x,y=y,label=label),
+            inherit.aes = F,col="darkred",size=10*5/14 * 0.8)+
+  facet_wrap(~Stage)+
   coord_cartesian(expand = F,xlim = c(2025,year_limit+2),ylim=c(0,max_v*1.05))+
   scale_y_continuous(labels = scales::label_comma())+
   scale_x_continuous(breaks = seq(2025,2050,5))+
   scale_color_manual(values = c("Momentum__reuse0"="black",
-                               "Baseline__reuse0"="#E31A1C",
+                               "Ambitious__reuse0"="#E31A1C",
                                "Momentum__reuse0Small"="#A6CEE3","Momentum__reuse0Large"="#1F78B4",
                                "Momentum_Long_reuse0"="#B2DF8A","Momentum_Short_reuse0"="#33A02C",
                                "Momentum__reuse0Recycling"="#FDBF6F","Momentum__reuse0Repurposing"="#FF7F00",
@@ -113,103 +285,47 @@ ggplot(data_fig,aes(Year,ktons))+
 ggsave("Figures/CapacityComparison.png", ggplot2::last_plot(),
        units="cm",dpi=600,width=8.7*2,height=8.7)
 
-# 2nd figure by country
-
-
-# Heatmap figure ----------
-
+# By country -----
 year_limit=2035
-# join to get deficit towards 2040
-data_fig <- df_all %>%
+data_fig_b <- df_all %>% 
   filter(Stage=="Pre-processing") %>% 
-  group_by(Scenario,Sales,Size,Lifetime,eol,Reuse,Year) %>%
-  reframe(ktons=sum(ktons)) %>% ungroup() %>% 
-  mutate(type=NULL) %>% 
+  filter(Scenario %in% scens_selected) %>% 
   filter(Year==year_limit) %>% 
-  left_join(filter(cap,Year==year_limit) %>% rename(cap=ktons)) %>% 
-  mutate(deficit=ktons-cap)
+  left_join(tibble(Scenario=scens_selected,scen_name=names(scens_selected)))
+
+
+# categories
+data_fig_b <- data_fig_b %>% 
+  mutate(x_lab=case_when(
+    Scenario %in% c("Baseline__reuse0","Momentum__reuse0") ~ "Reference",
+    Size !="Reference" ~ "LIB Size",
+    Lifetime !="Reference" ~ "LIB Lifetime",
+    (eol !="Reference"|str_detect(Scenario,"reuse50")) ~ "End-of-Life") %>% 
+      factor(levels=c("Reference","LIB Size","LIB Lifetime","End-of-Life")))
   
-# categorical levels
-data_fig <- data_fig %>% 
-  mutate(Reuse=paste0(str_remove(Reuse,"reuse"),"%")) %>% 
-  mutate(Lifetime=factor(paste0(Lifetime,if_else(Lifetime=="Reference",""," lifetime")),
-                         levels = c("Short lifetime","Reference","Long lifetime"))) %>% 
-  mutate(Size=factor(paste0(Size,if_else(Size=="Reference",""," LIB")),
-                         levels = c("Small LIB","Reference","Large LIB"))) %>% 
-  mutate(eol=factor(eol,levels=rev(c("Reference","Repurposing","Recycling"))))
+ggplot(data_fig_b,aes(x_lab,ktons))+
+  geom_col(data=filter(data_fig_b,Scenario=="Momentum__reuse0"),
+           alpha=0.8)+
+  geom_point(data=filter(data_fig_b,Scenario!="Momentum__reuse0"),
+             aes(col=x_lab),size=0.5)+
+  stat_summary(data=filter(data_fig_b,Scenario!="Momentum__reuse0"),
+               aes(col=x_lab),linewidth=0.3,
+               geom = "linerange", fun.min = min, fun.max = max)+
+  geom_text_repel(data=filter(data_fig_b,Scenario!="Momentum__reuse0",Country=="United States"),
+                  aes(label=scen_name,col=x_lab),direction = "y",nudge_x = 0.2,
+                  segment.size=0.1,size=6*5/14 * 0.8)+
+  facet_wrap(~Country,ncol=1,scales="free_y")+
+  scale_color_manual(values = c("Reference"="#E31A1C",
+                                "LIB Size"="#1F78B4",
+                                "LIB Lifetime"="#33A02C",
+                                "End-of-Life"="#FF7F00"))+
+  labs(x="",y="",
+       title=paste0(year_limit," battery recycling feedstock (thousand metric tons)"))+
+  theme(legend.position = "none")
 
+ggsave("Figures/Feedstock.png", ggplot2::last_plot(),
+       units="cm",dpi=600,width=8.7*1.2,height=8.7)
 
-# scale transformation
-data_fig$deficit_trans <- sign(data_fig$deficit) * sqrt(abs(data_fig$deficit))
-breaks_orig <- pretty(data_fig$deficit, n = 5)
-breaks_sqrt <- sign(breaks_orig) * sqrt(abs(breaks_orig))
-
-range_deficit <- range(data_fig$deficit)
-# round to 100
-range_deficit <- sign(range_deficit) * ceiling(abs(range_deficit) / 100) * 100
-
-library(cowplot)
-p1 <- 
-  ggplot(filter(data_fig, Sales == "Baseline"), 
-             aes(x = Reuse, y = eol, fill = deficit)) +
-  geom_tile(color = "grey80") +
-  facet_grid(Size ~ Lifetime) +
-  # scale_fill_gradient2(low = scales::alpha("#20215c", 0.9),
-  #                      mid = "white",
-  #                      high = scales::alpha("#570e12", 0.9),
-  #                      labels = scales::label_comma(),
-  #                      limits=range_deficit,
-  #                      breaks = seq(range_deficit[1],range_deficit[2], by = 500),
-  #                      # breaks = breaks_sqrt, # scale transformation
-  #                      # labels = scales::label_comma()(breaks_orig),
-  #                      midpoint = 0) + 
-  scico::scale_fill_scico(palette = "vik",midpoint = 0,
-                         limits=range_deficit,
-                         breaks = seq(range_deficit[1],range_deficit[2], by = 500))+
-  labs(x="Reuse %",y="End-of-Life Scenario",
-       fill=paste0(year_limit," Recycling Capacity Deficit (ktons of battery)")) +
-  theme_minimal(base_size = 9)+
-  theme(panel.grid = element_blank(),
-        strip.background = element_blank(),
-        strip.text = element_text(size = 9),
-        panel.spacing.x= unit(0.1, "lines"),
-        panel.spacing.y = unit(0.2, "lines"),
-        axis.title = element_blank(),
-        axis.text.x = element_text(size = 7,angle = 90,vjust=0),
-        axis.text.y = element_text(size = 7),
-        axis.title.x = element_text(size = 10),
-        axis.title.y = element_text(size = 10),
-        legend.title = element_text(size = 10),
-        legend.position = "bottom",
-        legend.direction = "horizontal")+
-  guides(fill = guide_colorbar(title.position = "top", title.hjust = 0.5,barwidth = unit(0.7, "npc")))
-p1
-
-p2 <- p1 %+% filter(data_fig, Sales == "Momentum")+
-  theme(legend.position = "none",plot.margin = margin(5, 5, 5, -15))+labs(y="")
-p2
-
-# Combine plots
-# Extract legend from one plot
-legend_shared <- get_plot_component(p1,"guide-box-bottom",return_all = T)
-p1 <- p1+theme(legend.position = "none",plot.margin = margin(5, 2, 5, 5))
-
-# Centered title
-p1_with_title <- ggdraw() +
-  draw_label("Baseline Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
-  draw_plot(p1, y = 0, height = 1)
-
-p2_with_title <- ggdraw() +
-  draw_label("Momentum Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
-  draw_plot(p2, y = 0, height = 1)
-
-
-plot_grid(
-  plot_grid(p1_with_title, p2_with_title, ncol = 2, align = "hv", labels = NULL),
-  legend_shared,ncol = 1, rel_heights = c(0.8,0.2))
-
-ggsave("Figures/Fig4.png", ggplot2::last_plot(),
-       units="cm",dpi=600,width=18,height=8.7)
 
 
 # EoL

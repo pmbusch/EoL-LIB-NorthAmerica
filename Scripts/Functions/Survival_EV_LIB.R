@@ -50,7 +50,6 @@ f.getOutflows <- function(n_veh=1,EV_age,LIB_age,
 }
 
 
-
-
 # Test - vehicle of age 12, with original battery
 # f.getOutflows(100,EV_age = 12,LIB_age = 12)
+

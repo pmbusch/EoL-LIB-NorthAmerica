@@ -14,14 +14,15 @@ sales <- read.csv("Inputs/EV_Sales.csv")
 # blank is for reference
 lifetime_scen <- c("","Short","Long")
 p.life.orig=p.mean_lib
+p.life.orig.large=p.mean_lib_large
 
 # reuse rates
-reuse_scens <- seq(0,0.6,0.1)
+reuse_scens <- seq(0,0.5,0.1)
 
 # Loop for scenarios - Each One is different file
 # Runtime: less than 1 minute per scenario loop
-# Estimate for 2x3x7 ~ 40 minutes
-# Debub
+# Estimate for 2x3x6 ~ 40 minutes
+# Debug
 # s="Baseline"
 # s="Momentum"
 # lif=""
@@ -35,14 +36,6 @@ for (s in unique(sales$Scenario)){
       sales_scen <- sales %>% filter(Scenario==s)
       
 
-      if(lif=="Short"){
-        p.mean_lib=10
-      }
-      else if(lif=="Long"){
-        p.mean_lib=20
-      } else {
-        p.mean_lib=p.life.orig # back to original
-      }
       
       # iterate over each country/state and vehicle type
       stock=c()
@@ -50,6 +43,18 @@ for (s in unique(sales$Scenario)){
         cat("\n",st,": ")
         for (v in unique(sales_scen$Vehicle)){
           cat(v,", ")
+          
+          # LIB lifetime
+          if(lif=="Short"){
+            p.mean_lib= if(v %in% large_veh) 5 else 10 #  years
+          }
+          else if(lif=="Long"){
+            p.mean_lib=if(v %in% large_veh) 11 else 20 # years
+          } else {
+            p.mean_lib=if(v %in% large_veh) p.life.orig.large else p.life.orig # back to original
+          }
+          
+          
           sales_aux <- sales_scen %>% filter(Vehicle==v,Country==st)
           stock_iter <- f.LIB_EV_Stock(sales_aux,
                                        ev_age_newLib=p.ev_age_newLib,

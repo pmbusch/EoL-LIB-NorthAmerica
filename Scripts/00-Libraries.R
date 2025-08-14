@@ -21,7 +21,7 @@ lapply(list_libraries, require, character.only = TRUE)
 
 rm(list_libraries) 
 
-theme_set(theme_bw(8)+ theme(panel.grid.major = element_blank(),
+theme_set(theme_bw(10)+ theme(panel.grid.major = element_blank(),
                               panel.grid.minor = element_blank()))
 
 

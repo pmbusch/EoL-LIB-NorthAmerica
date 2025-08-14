@@ -117,17 +117,34 @@ can <- can %>% filter(Year>2014)
 
 can$Country <- "Canada"
 
-
 df <- rbind(usa,can,mex)
-
-# Convert to battery kwh ----
 
 # from stock to annual addition of capacity
 df <- df %>% 
   arrange(Country, Year) %>%  
-  group_by(Country) %>%       
+  group_by(Country) %>%  
+  mutate(gw_stock=gw) %>% 
   mutate(gw = gw - lag(gw, default = 0)) %>% ungroup() %>% 
   mutate(gw=if_else(gw<0,0,gw))
+
+# Figure -----
+
+df %>%
+  pivot_longer(c(gw,gw_stock), names_to = "key", values_to = "value") %>% 
+  mutate(key=if_else(key=="gw","Added year-to-year capacity (GW)",
+                     "Total installed capacity (GW)")) %>% 
+  ggplot(aes(Year,value,fill=Country))+
+  geom_col(position = "stack")+
+  facet_wrap(~key,ncol=1,scales="free_y")+
+  labs(x="",y="",title="Solar and Wind Electricity Capacity (GW)")
+
+ggsave("Figures/Inputs/gw_capacity.png", ggplot2::last_plot(),
+       units="cm",dpi=600,width=8.7*2,height=8.7)
+
+
+
+# Convert to battery kwh ----
+
 
 
 # Key parameters

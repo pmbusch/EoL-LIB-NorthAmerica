@@ -22,7 +22,7 @@ range(icct$Year)
 
 # Filter BEV, Ambitious scenario for now
 icct <- icct %>% 
-  filter(Scenario %in% c("Baseline 2024","Momentum")) %>% 
+  filter(Scenario %in% c("Ambitious","Momentum")) %>% 
   filter(Powertrain %in% c("BEV")) %>% 
   filter(Year>2024) %>% 
   filter(Vehicle %in% c("Cars","Vans","Medium trucks","Heavy trucks","Buses")) %>% 
@@ -50,9 +50,9 @@ historical_HDV <- historical_HDV %>%
 unique(icct$Scenario)
 icct <- icct %>% 
   dplyr::select(Scenario,Vehicle,Year,Country,Sales) %>% 
-  rbind(mutate(historical_sales,Scenario="Baseline")) %>%
+  rbind(mutate(historical_sales,Scenario="Ambitious")) %>%
   rbind(mutate(historical_sales,Scenario="Momentum")) %>%
-  rbind(mutate(historical_HDV,Scenario="Baseline")) %>% 
+  rbind(mutate(historical_HDV,Scenario="Ambitious")) %>% 
   rbind(mutate(historical_HDV,Scenario="Momentum")) %>% 
   arrange(Year) %>% arrange(Country)
 
@@ -68,6 +68,27 @@ icct %>%
   group_by(Country,Vehicle,Year) %>% 
   reframe(Sales=sum(Sales)/1e6) %>% # to millions
   pivot_wider(names_from = Country, values_from = Sales)
+
+# Figure -----
+icct %>% 
+  # filter(Year>=2025) %>% 
+  mutate(Vehicle=factor(Vehicle,
+                        levels=c("Cars","Vans","Buses","Medium trucks","Heavy trucks"))) %>% 
+  mutate(Scenario=factor(Scenario,levels=c("Momentum","Ambitious"))) %>% 
+  ggplot(aes(Year,Sales))+
+  geom_area(aes(fill=Country))+
+  geom_vline(xintercept = 2025,linetype="dashed",linewidth=0.4,col="black")+
+  geom_text(x=2024,y=10e6,label="Historical Sales",angle=90,size=6*5/14 * 0.8,fontface="italic",
+            data=. %>% filter(Vehicle=="Cars",Country=="United States"))+
+  facet_grid(Vehicle~Scenario,scales="free_y")+
+  coord_cartesian(expand = F)+
+  labs(x="",y="",title = "Vehicle Sales [units]")+
+  scale_y_continuous( labels = scales::label_comma())+
+  scale_x_continuous(breaks=c(2015,2025,2040,2050))+
+  theme(panel.spacing.x = unit(1, "cm"))
+
+ggsave("Figures/Inputs/ICCT_Sales.png", ggplot2::last_plot(),
+       units="cm",dpi=600,width=8.7*2,height=13)
 
 
 # EoF

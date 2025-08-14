@@ -1,0 +1,22 @@
+"Country","Vehicle","energy_dens","cathode_we_frac"
+"Canada","Buses",0.164896230799498,0.3
+"Canada","Cars",0.191764283203014,0.274375836643504
+"Canada","Heavy trucks",0.165878379085807,0.3
+"Canada","Medium trucks",0.176763154137109,0.3
+"Canada","Vans",0.180006353527972,0.281991511744559
+"Mexico","Buses",0.171453926480108,0.299840058985339
+"Mexico","Cars",0.177904580901094,0.282983115170882
+"Mexico","Heavy trucks",0.152998247294065,0.3
+"Mexico","Medium trucks",0.15015015015015,0.3
+"Mexico","Vans",0.170540276505758,0.287701204123138
+"United States","Buses",0.168018758065735,0.3
+"United States","Cars",0.190357116375813,0.274682334782296
+"United States","Heavy trucks",0.166338746558444,0.3
+"United States","Medium trucks",0.177128581228512,0.3
+"United States","Vans",0.175192449048868,0.284895134190378
+"Mexico","Consumer Electronics",0.0931966449207828,0.32
+"Canada","Consumer Electronics",0.0931966449207828,0.32
+"United States","Consumer Electronics",0.0931966449207828,0.32
+"Mexico","Stationary Storage",0.15015015015015,0.3
+"Canada","Stationary Storage",0.15015015015015,0.3
+"United States","Stationary Storage",0.15015015015015,0.3

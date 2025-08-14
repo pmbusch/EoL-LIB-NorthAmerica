@@ -1,9 +1,6 @@
 # Estimates battery (LIB) requirements for EVs and recycling outflows
 # Inputs pre-processed in other scripts
 
-source("Scripts/00-Libraries.R", encoding = "UTF-8")
-# source("Scripts/01-ModelParameters.R") # uncomment to debug
-
 # Load Inputs -----
 
 ## Electric Vehicles --------
@@ -11,7 +8,7 @@ source("Scripts/00-Libraries.R", encoding = "UTF-8")
 # Stocks of EVs and LIBs
 
 # Uncomment to debug only
-#stock <- read.csv("Inputs/Stocks/Momentum.csv",stringsAsFactors = FALSE)
+# stock <- read.csv("Inputs/Stocks/Momentum__reuse0.csv",stringsAsFactors = FALSE)
 
 # Convert strings to vectors by year - Process the list column back into a list
 stock <- stock %>%
@@ -68,7 +65,8 @@ ev <- ev %>%
 ss_vector <- ev %>% 
   dplyr::select(Vehicle,Country,Year,kWh_available) %>% 
   unnest_longer(kWh_available, indices_to = "age")  %>% 
-  group_by(Country,Year,age) %>% reframe(kwh=sum(kWh_available)) %>% ungroup() %>% 
+  mutate(Vehicle=if_else(Vehicle %in% large_veh,"LargeVeh","NormalVeh")) %>% 
+  group_by(Country,Year,Vehicle,age) %>% reframe(kwh=sum(kWh_available)) %>% ungroup() %>% 
   filter(kwh>0)
 
 # save to use in SS file
@@ -92,7 +90,25 @@ lib_recycling <- ev %>%
   mutate(Flow="LIB_recycling")
 lib_recycling
 
-# add to resutls
+if (considerTrade){
+  # add trade Effect of second hand vehicles to move recycling flows
+  lib_recycling_trade <- lib_recycling %>% 
+    filter(!(Vehicle %in% large_veh)) %>% # LDV
+    left_join(rename(trade,Country=From),relationship = "many-to-many") %>% 
+    mutate(kwh=kwh*Share,
+           Country=if_else(To=="RoW","Exports",To),
+           Share=NULL,To=NULL) %>% 
+    group_by(Vehicle,Country,Year,Flow) %>% 
+    reframe(kwh=sum(kwh)) %>% ungroup()
+  
+  lib_recycling <- rbind(
+    filter(lib_recycling,Vehicle %in% large_veh),
+    lib_recycling_trade)
+  
+}
+
+
+# add to results
 ev <- ev %>% 
   filter(!str_detect(Flow,"available|recycling")) %>% 
   rbind(lib_recycling)
