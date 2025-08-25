@@ -43,16 +43,16 @@ ce <- ce %>%
   mutate(ce_gwh=ce_gwh*gdp_share,gdp_share=NULL)
 
 # Failure distribution
-# Weibull for US Epa mean 6 (TV) - 3.3, 6.69
+# Weibull for US Epa mean 4 (Laptops)
 
-# max 12 years
-survival_curve <- dweibull(1:12,shape = 3.3,scale = 6.69)
-plot(1:12,survival_curve)
+# max 9 years
+survival_curve <- dweibull(1:9,shape = 4.54,scale = 4.38)
+plot(1:9,survival_curve)
 sum(survival_curve)
 
 # get LIB outflows based on survival curve
 recyc <- ce %>%
-  cross_join(tibble(offset=1:12,p=survival_curve)) %>% 
+  cross_join(tibble(offset=1:9,p=survival_curve)) %>% 
   mutate(Year=Year+offset,
          ce_gwh_recyc=ce_gwh*p) %>% 
   group_by(Country,Year) %>% 

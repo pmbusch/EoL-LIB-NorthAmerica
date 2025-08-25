@@ -69,16 +69,16 @@ df_all <- df_all %>%
          battery_kg=battery_kg*ratio_cap,
          blackMass_kg=blackMass_kg*ratio_cap)
 
-# add scenario 15% scrap
+# add scenario 18% scrap
 df_scrap <- df_all %>% 
   filter(Scenario=="Momentum__reuse0") %>% 
   # scale it according to original scrap rate used
-  mutate(adj=if_else(Flow=="LIB_scrap",0.15/p.scrap,1)) %>% 
+  mutate(adj=if_else(Flow=="LIB_scrap",0.18/p.scrap,1)) %>% 
   mutate(kwh=kwh*adj,
          battery_kg=battery_kg*adj,
          blackMass_kg=blackMass_kg*adj,
          adj=NULL) %>% 
-  mutate(Scenario="Scrap15")
+  mutate(Scenario="Scrap18")
 
 df_all <- rbind(df_all,df_scrap)
 
@@ -99,7 +99,7 @@ scens_selected <- c("Reference"="Momentum__reuse0",
                     "Long life"="Momentum_Long_reuse0","Short life"="Momentum_Short_reuse0", # Lifetime
                     "Recycling"="Momentum__reuse0Recycling","Repurposing"="Momentum__reuse0Repurposing", # Eol
                     "50% reuse"="Momentum__reuse50", # reuse
-                    "15% Scrap"="Scrap15")
+                    "18% Scrap"="Scrap18")
 
 
 # FIG 3 -----
@@ -139,9 +139,26 @@ pa <- ggplot(data_fig,aes(Year,ktons))+
   labs(x="",y="",tag="(a)",fill="",
        title="North America Battery Feedstock and Processing Capacity (in ktons)")+
   theme( plot.tag = element_text(face = "bold"),
-         legend.position = c(0.8,0.6),
+         legend.position = c(0.7,0.45),
+         legend.background = element_rect(fill = "transparent", color = NA),
+         legend.key = element_rect(fill = "transparent", color = NA),
          panel.spacing = unit(0.5, "cm"))
 pa
+
+# zoom versions
+pa_zoom <- ggplot(filter(data_fig,Year<=2030,Stage=="Pre-processing"),
+              aes(Year,ktons))+
+  geom_col(aes(fill=type),position = "dodge")+
+  coord_cartesian(expand = F,ylim=c(0,1400))+
+  scale_x_continuous(breaks=c(2025,2028,2030))+
+  scale_y_continuous(labels=scales::comma)+
+  scale_fill_manual(values = c("Capacity" = "#B22222", "Feedstock" = "#006400"))+
+  labs(x="",y="",fill="")+
+  theme( legend.position = "none",
+         plot.background = element_rect(fill = "transparent", color = NA))
+
+pa_zoom2 <- pa_zoom %+% 
+  filter(data_fig,Year<=2030,str_detect(Stage,"Refining"))
 
 
 ## b) net by scenarios -----
@@ -159,6 +176,13 @@ annotations <- tibble(Stage = c("Pre-processing", "Pre-processing"),
                       label = c("Overcapacity","Undercapacity"))
 
 
+color_scale <- c("Momentum__reuse0"="black",
+                 "Ambitious__reuse0"="#E31A1C",
+                 "Momentum__reuse0Small"="#A6CEE3","Momentum__reuse0Large"="#1F78B4",
+                 "Momentum_Long_reuse0"="#B2DF8A","Momentum_Short_reuse0"="#33A02C",
+                 "Momentum__reuse0Recycling"="#FDBF6F","Momentum__reuse0Repurposing"="#FF7F00",
+                 "Scrap18"="#6A3D9A")
+
 pb <- ggplot(data_fig2,aes(Year,net,col=Scenario))+
   geom_line()+
   geom_text_repel(data = . %>% group_by(Scenario) %>% 
@@ -174,18 +198,29 @@ pb <- ggplot(data_fig2,aes(Year,net,col=Scenario))+
   #                 ylim=range(data_fig2$net)*1.05)+
   scale_y_continuous(labels = scales::label_comma())+
   scale_x_continuous(breaks = c(2025,2030,2040,2050))+
-  scale_color_manual(values = c("Momentum__reuse0"="black",
-                                "Ambitious__reuse0"="#E31A1C",
-                                "Momentum__reuse0Small"="#A6CEE3","Momentum__reuse0Large"="#1F78B4",
-                                "Momentum_Long_reuse0"="#B2DF8A","Momentum_Short_reuse0"="#33A02C",
-                                "Momentum__reuse0Recycling"="#FDBF6F","Momentum__reuse0Repurposing"="#FF7F00",
-                                "Scrap15"="#6A3D9A"))+
+  scale_color_manual(values = color_scale)+
     labs(x="",y="",col="",title="Net Processing Capacity (ktons)",tag="(b)")+
   theme(panel.spacing = unit(0.5, "cm"),
         plot.tag = element_text(face = "bold"),
         legend.position = "none")
 pb
 
+
+pb_zoom <-  ggplot(filter(data_fig2,Year<=2030,Stage=="Pre-processing"),
+                   aes(Year,net,col=Scenario))+
+  geom_line()+
+  geom_hline(yintercept = 0,col="black",linetype="dashed")+
+  coord_cartesian(expand = F,xlim=c(2025,2030),ylim=c(-700,1300))+
+  scale_y_continuous(labels = scales::label_comma())+
+  scale_x_continuous(breaks = c(2025,2028,2030))+
+  scale_color_manual(values = color_scale)+
+  labs(x="",y="",col="")+
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = "transparent", color = NA))
+  
+
+pb_zoom2 <- pb_zoom %+% 
+  filter(data_fig2,Year<=2030,str_detect(Stage,"Refining"))
 
 
 ## c) By country -----
@@ -213,7 +248,7 @@ pc <- ggplot(data_fig3,aes(Year,net,col=Country,group=Country))+
   facet_wrap(~Stage)+
   scale_y_continuous(labels=scales::comma)+
   scale_x_continuous(breaks=c(2025,2030,2040,2050))+
-  geom_text(x=2045,size=8*5/14 * 0.8,y=-6500,label="United States",angle=-35,col="#3C3B6EFF",data= . %>% filter(Stage=="Pre-processing"))+
+  geom_text(x=2045,size=8*5/14 * 0.8,y=-6000,label="United States",angle=-35,col="#3C3B6EFF",data= . %>% filter(Stage=="Pre-processing"))+
   geom_text(x=2048,size=8*5/14 * 0.8,y=-450,label="Mexico",col="#006847FF",data= . %>% filter(Stage=="Pre-processing"))+
   geom_text(x=2048,size=8*5/14 * 0.8,y=-2000,label="Canada",col="#B22222FF",data= . %>% filter(Stage=="Pre-processing"))+
   labs(x="",y="",tag="(c)",
@@ -223,14 +258,51 @@ pc <- ggplot(data_fig3,aes(Year,net,col=Country,group=Country))+
         legend.position = "none")
 pc
 
+pc_zoom <- ggplot(filter(data_fig3,Year<=2030,Stage=="Pre-processing"),
+                  aes(Year,net,col=Country,group=Country))+
+  geom_line()+
+  geom_hline(yintercept = 0,col="black",linetype="dashed")+
+  coord_cartesian(expand = F,xlim=c(2025,2030),ylim=c(-100,1200))+
+  scale_y_continuous(labels=scales::comma)+
+  scale_x_continuous(breaks=c(2025,2028,2030))+
+  labs(x="",y="",col="")+
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = "transparent", color = NA))
+
+pc_zoom2 <- pc_zoom %+% 
+  filter(data_fig3,Year<=2030,str_detect(Stage,"Refining"))
+
+
+## Combine -----
+
 pa1 <- pa+ theme(plot.margin = margin(0, 5, -5, 5)) #trbl
 pb1 <- pb+ theme(plot.margin = margin(-5, 5, -5, 5))
 pc1 <- pc+ theme(plot.margin = margin(-5, 5, -5, 5))
 
+library(cowplot)
+pa1_inset <- ggdraw() +
+  draw_plot(pa1) +
+  draw_plot(pa_zoom, x = 0.11, y = 0.33, width = 0.25, height = 0.38)+
+  draw_plot(pa_zoom2, x = 0.56, y = 0.33, width = 0.25, height = 0.38)
 
-cowplot::plot_grid(pa1,pb1,pc1,ncol=1,
+
+pb1_inset <- ggdraw() +
+  draw_plot(pb1) +
+  draw_plot(pb_zoom, x = 0.11, y = 0.08, width = 0.25, height = 0.35)+
+  draw_plot(pb_zoom2, x = 0.56, y = 0.08, width = 0.25, height = 0.35)
+
+
+pc1_inset <- ggdraw() +
+  draw_plot(pc1) +
+  draw_plot(pc_zoom, x = 0.11, y = 0.08, width = 0.25, height = 0.45)+
+  draw_plot(pc_zoom2, x = 0.56, y = 0.08, width = 0.25, height = 0.45)
+
+
+
+plot_grid(pa1_inset,pb1_inset,pc1_inset,ncol=1,
                    rel_heights = c(1, 1.3,1),
                    align="v",axis = "lr")
+
 ggsave("Figures/Fig3.png", ggplot2::last_plot(),
        units="cm",dpi=600,width=8.7*2,height=8.7*2)
 

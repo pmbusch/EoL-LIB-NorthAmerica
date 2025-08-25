@@ -29,10 +29,14 @@ params <- rbind(params,
 
 
 # Current LIB production capacity
-cap_prod <- tibble(Country="United States",
-                   Year=2025:2050,
-                   cap_ghw=c(1193,1324,1477,1826,1826,1829,rep(1829,20)))
-
+cap_prod <- rbind(
+  tibble(Country="United States",
+         Year=2025:2050,
+         cap_ghw=c(1193,1324,1477,1826,1826,1829,rep(1829,20))),
+  tibble(Country="Mexico",
+         Year=2025:2050,
+         cap_ghw=c(9.44,9.44,rep(29.49,24))))
+  
 
 # Iterate over
 lib_scens <- c("","Small","Large")

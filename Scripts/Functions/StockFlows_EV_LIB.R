@@ -14,7 +14,7 @@ f.LIB_EV_Stock <- function(
     ev_age_newLib=8,# year were a new battery is needed, after that an old battery will be sufficient
     # 8 years assuming a warranty over this period
     max_reuse_lib=0.5,
-    max_ev_age_replacement=16, # Max age when an EV gets a battery, either 2-hand or new
+    max_ev_age_replacement=12, # Max age when an EV gets a battery, either 2-hand or new
     max_lib_age_secondlife=12, # Max age of LIB to be used in an EV
     start_year=2015 # historical to build stock at 2025 
   ){

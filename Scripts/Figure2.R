@@ -47,33 +47,65 @@ data_fig0 <- df %>%
   mutate(kwh=kwh*ratio_cap) %>%
   mutate(Vehicle=case_when(
     Flow=="LIB_scrap" ~ "Production Scrap",
-    Flow=="addLIB" ~ "LIB Replacement",
+    Flow=="addLIB" & Vehicle %in% c("Cars","Vans") ~ "LIB Replacement - LDV",
+    Flow=="addLIB" & Vehicle %in% c("Stationary Storage") ~ "LIB Replacement - SS",
+    Flow=="addLIB" ~ "LIB Replacement - HDV",
     Country=="Exports" ~ "Vehicle Exports",
     T ~ Vehicle))
+
+veh_levels <- MetBrewer::met.brewer("Signac", n = 12)
+names(veh_levels) <- c("Production Scrap",
+                "Consumer Electronics","Stationary Storage",
+                "LIB Replacement - SS",
+                "LIB Replacement - LDV","LIB Replacement - HDV",
+                "Heavy trucks","Medium trucks","Buses",
+                "Vans","Cars","Vehicle Exports")
+
 data_fig <- data_fig0 %>% 
   group_by(FlowType,Year,Vehicle) %>% 
   reframe(gwh=sum(kwh)/1e6) %>% ungroup() %>% 
   mutate(gwh=if_else(str_detect(Vehicle,"Exports"),-gwh,gwh)) %>% 
   mutate(Vehicle=factor(Vehicle,
-                        levels=c("Production Scrap",
-                                 "Consumer Electronics","Stationary Storage",
-                                 "LIB Replacement",
-                                 "Heavy trucks","Medium trucks","Buses",
-                                 "Vans","Cars","Vehicle Exports")))
-
+                        levels=names(veh_levels)))
 
 p1 <- ggplot(data_fig,aes(Year,gwh,fill=Vehicle))+
   facet_wrap(~FlowType)+
   geom_col(position="stack",col="black",linewidth=0.1)+
   scale_x_continuous(breaks = c(2025,2030,2040,2050))+
   scale_y_continuous(labels = scales::label_comma())+
-  scale_fill_manual(values = MetBrewer::met.brewer("Signac", n = 10))+
-  coord_cartesian(expand = F,ylim = c(-100,3000))+
+  scale_fill_manual(values = veh_levels)+
+  coord_cartesian(expand = F,ylim = c(-100,2600))+
   labs(x="",y="",title="GWh of Lithium-ion Batteries",fill="",tag="(a)")+
   theme(panel.spacing = unit(0.5, "cm"),
         plot.tag = element_text(face = "bold"))
 
 p1
+
+
+# zoom to distribution by vehicle type
+data_fig3 <- data_fig %>% 
+  filter(Year %in% c(2030,2040,2050)) %>% 
+  filter(str_detect(FlowType,"Recycling")) %>% 
+  filter(!str_detect(Vehicle,"Exports")) %>% 
+  group_by(Year,Vehicle) %>% 
+  reframe(gwh=sum(gwh)) %>% ungroup() %>% 
+  group_by(Year) %>% 
+  mutate(share=gwh/sum(gwh))
+
+p3 <- ggplot(data_fig3,aes(Year,share,fill=Vehicle))+
+  geom_col(position="stack",col="black",linewidth=0.1,width = 9.5)+
+  scale_y_continuous(labels=scales::percent)+
+  scale_x_reverse(breaks=c(2030,2040,2050))+
+  scale_fill_manual(values = veh_levels)+
+  coord_flip(expand = F)+
+  guides(fill= guide_legend(reverse = TRUE))+
+  labs(x="",y="",title="Share of Battery Recycling Feedstock by Type",fill="",tag="(b)")+
+  theme(plot.tag = element_text(face = "bold"),
+        axis.text.x = element_text(hjust=1),
+        legend.box.spacing = unit(0, "pt"),
+        legend.key.height = unit(8, "pt"),
+        legend.position = "none")
+p3
 
 # share of recycling feedstock by country
 data_fig2 <- data_fig0 %>% 
@@ -87,7 +119,7 @@ data_fig2 <- data_fig0 %>%
                         levels=rev(c("United States","Canada","Mexico","Exports"))))
 
 p2 <- ggplot(data_fig2,aes(Year,share,fill=Country))+
-  geom_col(position="stack",col="black",linewidth=0.1)+
+  geom_col(position="stack",col="black",linewidth=0.1,width = 9.5)+
   scale_y_continuous(labels=scales::percent)+
   scale_x_reverse(breaks=c(2030,2040,2050))+
   # scale_fill_manual(values = MetBrewer::met.brewer("Cassatt1", n = 4))+
@@ -97,18 +129,17 @@ p2 <- ggplot(data_fig2,aes(Year,share,fill=Country))+
 
   coord_flip(expand = F)+
   guides(fill= guide_legend(reverse = TRUE))+
-  labs(x="",y="",title="Share of Battery Recycling Feedstock",fill="",tag="(b)")+
+  labs(x="",y="",title="Share of Battery Recycling Feedstock by Country",fill="",tag="(c)")+
   theme(plot.tag = element_text(face = "bold"),
         axis.text.x = element_text(hjust=1),
         legend.box.spacing = unit(0, "pt"),
         legend.key.height = unit(8, "pt"),
         legend.position = "bottom")
 p2
-
-cowplot::plot_grid(p1,p2,ncol=1,rel_heights = c(0.7,0.3))
+cowplot::plot_grid(p1,p3,p2,ncol=1,rel_heights = c(0.55,0.2,0.25))
 
 ggsave("Figures/Fig2.png", ggplot2::last_plot(),units="cm",
-       dpi=600,width=8.7*2,height=8.7*1.5)
+       dpi=600,width=8.7*2,height=8.7*1.75)
 
 
 # EoF

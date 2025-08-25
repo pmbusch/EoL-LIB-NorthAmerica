@@ -121,121 +121,127 @@ df_all <- df_all %>%
   mutate(type="Feedstock")
 
 
-year_limit=2035
-# join to get deficit towards target year
-data_fig <- df_all %>%
-  filter(Stage=="Pre-processing") %>% 
-  group_by(Scenario,Sales,Size,Lifetime,eol,Reuse,Scrap,Year) %>%
-  reframe(ktons=sum(ktons)) %>% ungroup() %>% 
-  mutate(type=NULL) %>% 
-  filter(Year==year_limit) %>% 
-  left_join(filter(cap_total,Year==year_limit) %>% rename(cap=ktons)) %>% 
-  mutate(deficit=ktons-cap)
+# Loop or debug
+# year_limit=2035
+for (year_limit in seq(2025,2050,5)){
 
-# categorical levels
-data_fig <- data_fig %>% 
-  mutate(Reuse=paste0(str_remove(Reuse,"reuse"),"%")) %>% 
-  mutate(Lifetime=factor(paste0(Lifetime,if_else(Lifetime=="Reference",""," lifetime")),
-                         levels = c("Short lifetime","Reference","Long lifetime"))) %>% 
-  mutate(Size=factor(paste0(Size,if_else(Size=="Reference",""," LIB")),
-                     levels = c("Small LIB","Reference","Large LIB"))) %>% 
-  mutate(eol=factor(eol,levels=rev(c("Reference","Repurposing","Recycling","50% Reuse")))) %>% 
-  mutate(Scrap=factor(Scrap,
-                      levels=c("2%","6%","10%","14%","18%","22%",
-                               "All 2%","All 6%","All 10%","All 14%","All 18%","All 22%")))
+  # join to get deficit towards target year
+  data_fig <- df_all %>%
+    filter(Stage=="Pre-processing") %>% 
+    group_by(Scenario,Sales,Size,Lifetime,eol,Reuse,Scrap,Year) %>%
+    reframe(ktons=sum(ktons)) %>% ungroup() %>% 
+    mutate(type=NULL) %>% 
+    filter(Year==year_limit) %>% 
+    left_join(filter(cap_total,Year==year_limit) %>% rename(cap=ktons)) %>% 
+    mutate(deficit=ktons-cap)
+  
+  # categorical levels
+  data_fig <- data_fig %>% 
+    mutate(Reuse=paste0(str_remove(Reuse,"reuse"),"%")) %>% 
+    mutate(Lifetime=factor(paste0(Lifetime,if_else(Lifetime=="Reference",""," lifetime")),
+                           levels = c("Short lifetime","Reference","Long lifetime"))) %>% 
+    mutate(Size=factor(paste0(Size,if_else(Size=="Reference",""," LIB")),
+                       levels = c("Small LIB","Reference","Large LIB"))) %>% 
+    mutate(eol=factor(eol,levels=rev(c("Reference","Repurposing","Recycling","50% Reuse")))) %>% 
+    mutate(Scrap=factor(Scrap,
+                        levels=c("2%","6%","10%","14%","18%","22%",
+                                 "All 2%","All 6%","All 10%","All 14%","All 18%","All 22%")))
+  
+  # scale transformation
+  data_fig$deficit_trans <- sign(data_fig$deficit) * sqrt(abs(data_fig$deficit))
+  breaks_orig <- pretty(data_fig$deficit, n = 5)
+  breaks_sqrt <- sign(breaks_orig) * sqrt(abs(breaks_orig))
+  
+  # range_deficit <- range(data_fig$deficit_trans)
+  range_deficit <- range(data_fig$deficit)
+  # round to 100
+  range_deficit <- sign(range_deficit) * ceiling(abs(range_deficit) / 100) * 100
+  
+  # labels
+  data_fig <- data_fig %>% 
+    mutate(lab_def=paste0(round(deficit/1e3,1),"M"))
+  
+  library(cowplot)
+  data1 <- filter(data_fig, Sales == "Momentum",Stage=="Pre-processing")
+  p1a <- ggplot(data1,aes(x = Scrap, y = eol, fill = deficit)) +
+    geom_tile(color = "grey80") +
+    # geom_text(aes(label=lab_def),size=6*5/14 * 0.8)+
+    facet_grid(Size ~ Lifetime) +
+    # scale_fill_gradient2(low = scales::alpha("#20215c", 0.9),
+    #                      mid = "white",
+    #                      high = scales::alpha("#570e12", 0.9),
+    #                      labels = scales::label_comma(),
+    #                      limits=range_deficit,
+    #                      breaks = seq(range_deficit[1],range_deficit[2], by = 500),
+    #                      # breaks = breaks_sqrt, # scale transformation
+    #                      # labels = scales::label_comma()(breaks_orig),
+    #                      midpoint = 0) + 
+    scico::scale_fill_scico(palette = "vik",
+                            midpoint = 0,
+                            limits=range_deficit,
+                            breaks = seq(range_deficit[1],range_deficit[2], by = 500))+
+    labs(x="Scrap %",y="End-of-Life Scenario",
+         fill=paste0(year_limit," Recycling Capacity Deficit (ktons of battery)")) +
+    theme_minimal(base_size = 9)+
+    theme(panel.grid = element_blank(),
+          strip.background = element_blank(),
+          strip.text = element_text(size = 9),
+          panel.spacing.x= unit(0.1, "lines"),
+          panel.spacing.y = unit(0.2, "lines"),
+          axis.title = element_blank(),
+          axis.text.x = element_text(size = 7,angle = 90,vjust=0),
+          axis.text.y = element_text(size = 7),
+          axis.title.x = element_text(size = 10),
+          axis.title.y = element_text(size = 10),
+          legend.title = element_text(size = 10),
+          legend.position = "bottom",
+          legend.direction = "horizontal")+
+    guides(fill = guide_colorbar(title.position = "top", title.hjust = 0.5,barwidth = unit(0.7, "npc")))
+  p1a
+  
+  p1b <- p1a %+% filter(data_fig, Sales == "Momentum",Stage=="Refining (black mass)")+
+    theme(legend.position = "none",plot.margin = margin(5, 5, 5, -15))+labs(y="",x="")
+  p1b
+  
+  p2a <- p1a %+% filter(data_fig, Sales == "Ambitious",Stage=="Pre-processing")+
+    theme(legend.position = "none",plot.margin = margin(5, 2, 5, 5))
+  p2a
+  
+  p2b <- p1a %+% filter(data_fig, Sales == "Ambitious",Stage=="Refining (black mass)")+
+    theme(legend.position = "none",plot.margin = margin(5, 5, 5, -15))+labs(y="")
+  p2b
+  
+  
+  # Combine plots
+  # Extract legend from one plot
+  legend_shared <- get_plot_component(p1a,"guide-box-bottom",return_all = T)
+  p1a <- p1a+theme(legend.position = "none",plot.margin = margin(5, 2, 5, 5))+labs(x="")
+  
+  # Centered title
+  p1a_with_title <- ggdraw() +
+    draw_label("Pre-processing & Momentum Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
+    draw_plot(p1a, y = 0, height = 1)
+  
+  p1b_with_title <- ggdraw() +
+    draw_label("Refining & Momentum Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
+    draw_plot(p1b, y = 0, height = 1)
+  
+  p2a_with_title <- ggdraw() +
+    draw_label("Pre-processing & Ambitious Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
+    draw_plot(p2a, y = 0, height = 1)
+  
+  p2b_with_title <- ggdraw() +
+    draw_label("Refining & Ambitious Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
+    draw_plot(p2b, y = 0, height = 1)
+  
+  plot_grid(
+    plot_grid(p1a_with_title,p1b_with_title, p2a_with_title,p2b_with_title, ncol = 2, align = "hv", labels = NULL),
+    legend_shared,ncol = 1, rel_heights = c(0.85,0.15))
+  
+  ggsave(paste0("Figures/Fig4",year_limit,".png"), ggplot2::last_plot(),
+         units="cm",dpi=600,width=18,height=8.7*2)
 
-# scale transformation
-data_fig$deficit_trans <- sign(data_fig$deficit) * sqrt(abs(data_fig$deficit))
-breaks_orig <- pretty(data_fig$deficit, n = 5)
-breaks_sqrt <- sign(breaks_orig) * sqrt(abs(breaks_orig))
+  }
 
-# range_deficit <- range(data_fig$deficit_trans)
-range_deficit <- range(data_fig$deficit)
-# round to 100
-range_deficit <- sign(range_deficit) * ceiling(abs(range_deficit) / 100) * 100
-
-# labels
-data_fig <- data_fig %>% 
-  mutate(lab_def=paste0(round(deficit/1e3,1),"M"))
-
-library(cowplot)
-data1 <- filter(data_fig, Sales == "Momentum",Stage=="Pre-processing")
-p1a <- ggplot(data1,aes(x = Scrap, y = eol, fill = deficit)) +
-  geom_tile(color = "grey80") +
-  # geom_text(aes(label=lab_def),size=6*5/14 * 0.8)+
-  facet_grid(Size ~ Lifetime) +
-  # scale_fill_gradient2(low = scales::alpha("#20215c", 0.9),
-  #                      mid = "white",
-  #                      high = scales::alpha("#570e12", 0.9),
-  #                      labels = scales::label_comma(),
-  #                      limits=range_deficit,
-  #                      breaks = seq(range_deficit[1],range_deficit[2], by = 500),
-  #                      # breaks = breaks_sqrt, # scale transformation
-  #                      # labels = scales::label_comma()(breaks_orig),
-  #                      midpoint = 0) + 
-  scico::scale_fill_scico(palette = "vik",
-                          midpoint = 0,
-                          limits=range_deficit,
-                          breaks = seq(range_deficit[1],range_deficit[2], by = 500))+
-  labs(x="Scrap %",y="End-of-Life Scenario",
-       fill=paste0(year_limit," Recycling Capacity Deficit (ktons of battery)")) +
-  theme_minimal(base_size = 9)+
-  theme(panel.grid = element_blank(),
-        strip.background = element_blank(),
-        strip.text = element_text(size = 9),
-        panel.spacing.x= unit(0.1, "lines"),
-        panel.spacing.y = unit(0.2, "lines"),
-        axis.title = element_blank(),
-        axis.text.x = element_text(size = 7,angle = 90,vjust=0),
-        axis.text.y = element_text(size = 7),
-        axis.title.x = element_text(size = 10),
-        axis.title.y = element_text(size = 10),
-        legend.title = element_text(size = 10),
-        legend.position = "bottom",
-        legend.direction = "horizontal")+
-  guides(fill = guide_colorbar(title.position = "top", title.hjust = 0.5,barwidth = unit(0.7, "npc")))
-p1a
-
-p1b <- p1a %+% filter(data_fig, Sales == "Momentum",Stage=="Refining (black mass)")+
-  theme(legend.position = "none",plot.margin = margin(5, 5, 5, -15))+labs(y="",x="")
-p1b
-
-p2a <- p1a %+% filter(data_fig, Sales == "Ambitious",Stage=="Pre-processing")+
-  theme(legend.position = "none",plot.margin = margin(5, 2, 5, 5))
-p2a
-
-p2b <- p1a %+% filter(data_fig, Sales == "Ambitious",Stage=="Refining (black mass)")+
-  theme(legend.position = "none",plot.margin = margin(5, 5, 5, -15))+labs(y="")
-p2b
-
-
-# Combine plots
-# Extract legend from one plot
-legend_shared <- get_plot_component(p1a,"guide-box-bottom",return_all = T)
-p1a <- p1a+theme(legend.position = "none",plot.margin = margin(5, 2, 5, 5))+labs(x="")
-
-# Centered title
-p1a_with_title <- ggdraw() +
-  draw_label("Pre-processing & Momentum Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
-  draw_plot(p1a, y = 0, height = 1)
-
-p1b_with_title <- ggdraw() +
-  draw_label("Refining & Momentum Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
-  draw_plot(p1b, y = 0, height = 1)
-
-p2a_with_title <- ggdraw() +
-  draw_label("Pre-processing & Ambitious Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
-  draw_plot(p2a, y = 0, height = 1)
-
-p2b_with_title <- ggdraw() +
-  draw_label("Refining & Ambitious Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
-  draw_plot(p2b, y = 0, height = 1)
-
-plot_grid(
-  plot_grid(p1a_with_title,p1b_with_title, p2a_with_title,p2b_with_title, ncol = 2, align = "hv", labels = NULL),
-  legend_shared,ncol = 1, rel_heights = c(0.85,0.15))
-
-ggsave("Figures/Fig4.png", ggplot2::last_plot(),
-       units="cm",dpi=600,width=18,height=8.7*2)
 
 # EoF

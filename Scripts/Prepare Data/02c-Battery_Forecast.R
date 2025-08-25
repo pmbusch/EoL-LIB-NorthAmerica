@@ -1,9 +1,7 @@
 # Battery Forecast scenarios
 # PBH July 2025
 
-
 source("Scripts/00-Libraries.R", encoding = "UTF-8")
-
 
 # LDV -------------
 
