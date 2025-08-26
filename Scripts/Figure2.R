@@ -81,6 +81,14 @@ p1 <- ggplot(data_fig,aes(Year,gwh,fill=Vehicle))+
 
 p1
 
+# level year
+data_fig %>% 
+  filter(Year %in% c(2025,2030,2040,2050)) %>% 
+  filter(str_detect(FlowType,"Recycling")) %>% 
+  group_by(Year) %>% 
+  reframe(gwh=sum(gwh))
+  
+
 
 # zoom to distribution by vehicle type
 data_fig3 <- data_fig %>% 

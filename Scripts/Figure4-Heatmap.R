@@ -31,6 +31,15 @@ cap <- cap %>% mutate(ktons=tons/1e3)
 cap_total <- cap %>% group_by(Stage,Year,type) %>% 
   reframe(ktons=sum(ktons)) %>% ungroup()
 
+cap <- cap %>% 
+  mutate(Stage=if_else(str_detect(Stage,"processing"),
+                       "Pre-processing (ktons of battery)",
+                       "Refining (ktons of black mass)"))
+cap_total <- cap_total %>% 
+  mutate(Stage=if_else(str_detect(Stage,"processing"),
+                       "Pre-processing (ktons of battery)",
+                       "Refining (ktons of black mass)"))
+
 ## Recycling outflows ----
 (runs <- list.files("Results/Feedstock/",recursive = F))
 
@@ -121,13 +130,19 @@ df_all <- df_all %>%
   mutate(type="Feedstock")
 
 
+df_all <- df_all %>% 
+  mutate(Stage=if_else(str_detect(Stage,"processing"),
+                       "Pre-processing (ktons of battery)",
+                       "Refining (ktons of black mass)"))
+
+
 # Loop or debug
 # year_limit=2035
 for (year_limit in seq(2025,2050,5)){
 
   # join to get deficit towards target year
   data_fig <- df_all %>%
-    filter(Stage=="Pre-processing") %>% 
+    filter(str_detect(Stage,"Pre-processing")) %>% 
     group_by(Scenario,Sales,Size,Lifetime,eol,Reuse,Scrap,Year) %>%
     reframe(ktons=sum(ktons)) %>% ungroup() %>% 
     mutate(type=NULL) %>% 
@@ -155,14 +170,18 @@ for (year_limit in seq(2025,2050,5)){
   # range_deficit <- range(data_fig$deficit_trans)
   range_deficit <- range(data_fig$deficit)
   # round to 100
-  range_deficit <- sign(range_deficit) * ceiling(abs(range_deficit) / 100) * 100
+  range_deficit[1] <- floor(range_deficit[1]/100) * 100
+  range_deficit[2] <- ceiling(range_deficit[2]/100) * 100
+  steps <- (range_deficit[2]-range_deficit[1])/10
+  # move to nearest order of magnitude
+  steps <- 10^floor(log10(steps)) * round(steps / 10^floor(log10(steps)))
   
   # labels
   data_fig <- data_fig %>% 
     mutate(lab_def=paste0(round(deficit/1e3,1),"M"))
   
   library(cowplot)
-  data1 <- filter(data_fig, Sales == "Momentum",Stage=="Pre-processing")
+  data1 <- filter(data_fig, Sales == "Momentum",str_detect(Stage,"Pre-processing"))
   p1a <- ggplot(data1,aes(x = Scrap, y = eol, fill = deficit)) +
     geom_tile(color = "grey80") +
     # geom_text(aes(label=lab_def),size=6*5/14 * 0.8)+
@@ -179,9 +198,9 @@ for (year_limit in seq(2025,2050,5)){
     scico::scale_fill_scico(palette = "vik",
                             midpoint = 0,
                             limits=range_deficit,
-                            breaks = seq(range_deficit[1],range_deficit[2], by = 500))+
+                            breaks = seq(range_deficit[1],range_deficit[2], by = steps))+
     labs(x="Scrap %",y="End-of-Life Scenario",
-         fill=paste0(year_limit," Recycling Capacity Deficit (ktons of battery)")) +
+         fill=paste0(year_limit," Recycling Capacity Deficit, in ktons of battery (pre-processing) or black mass (refining)")) +
     theme_minimal(base_size = 9)+
     theme(panel.grid = element_blank(),
           strip.background = element_blank(),
@@ -199,15 +218,15 @@ for (year_limit in seq(2025,2050,5)){
     guides(fill = guide_colorbar(title.position = "top", title.hjust = 0.5,barwidth = unit(0.7, "npc")))
   p1a
   
-  p1b <- p1a %+% filter(data_fig, Sales == "Momentum",Stage=="Refining (black mass)")+
+  p1b <- p1a %+% filter(data_fig, Sales == "Momentum",str_detect(Stage,"Refining"))+
     theme(legend.position = "none",plot.margin = margin(5, 5, 5, -15))+labs(y="",x="")
   p1b
   
-  p2a <- p1a %+% filter(data_fig, Sales == "Ambitious",Stage=="Pre-processing")+
+  p2a <- p1a %+% filter(data_fig, Sales == "Ambitious",str_detect(Stage,"Pre-processing"))+
     theme(legend.position = "none",plot.margin = margin(5, 2, 5, 5))
   p2a
   
-  p2b <- p1a %+% filter(data_fig, Sales == "Ambitious",Stage=="Refining (black mass)")+
+  p2b <- p1a %+% filter(data_fig, Sales == "Ambitious",str_detect(Stage,"Refining"))+
     theme(legend.position = "none",plot.margin = margin(5, 5, 5, -15))+labs(y="")
   p2b
   

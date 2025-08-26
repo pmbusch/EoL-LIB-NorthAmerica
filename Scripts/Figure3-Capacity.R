@@ -101,6 +101,23 @@ scens_selected <- c("Reference"="Momentum__reuse0",
                     "50% reuse"="Momentum__reuse50", # reuse
                     "18% Scrap"="Scrap18")
 
+# names of stages
+df_all <- df_all %>% 
+  mutate(Stage=if_else(str_detect(Stage,"processing"),
+                       "Pre-processing (ktons of battery)",
+                       "Refining (ktons of black mass)"))
+
+cap <- cap %>% 
+  mutate(Stage=if_else(str_detect(Stage,"processing"),
+                       "Pre-processing (ktons of battery)",
+                       "Refining (ktons of black mass)"))
+
+cap_total <- cap_total %>% 
+  mutate(Stage=if_else(str_detect(Stage,"processing"),
+                       "Pre-processing (ktons of battery)",
+                       "Refining (ktons of black mass)"))
+
+
 
 # FIG 3 -----
 year_limit <- 2050
@@ -137,7 +154,7 @@ pa <- ggplot(data_fig,aes(Year,ktons))+
   scale_fill_manual(values = c("Capacity" = "#B22222", "Feedstock" = "#006400"))+
   guides(fill = guide_legend(ncol = 2))+
   labs(x="",y="",tag="(a)",fill="",
-       title="North America Battery Feedstock and Processing Capacity (in ktons)")+
+       title="North America Battery Feedstock and Processing Capacity")+
   theme( plot.tag = element_text(face = "bold"),
          legend.position = c(0.7,0.45),
          legend.background = element_rect(fill = "transparent", color = NA),
@@ -146,14 +163,16 @@ pa <- ggplot(data_fig,aes(Year,ktons))+
 pa
 
 # zoom versions
-pa_zoom <- ggplot(filter(data_fig,Year<=2030,Stage=="Pre-processing"),
+pa_zoom <- ggplot(filter(data_fig,Year<=2030,str_detect(Stage,"Pre-processing")),
               aes(Year,ktons))+
   geom_col(aes(fill=type),position = "dodge")+
-  coord_cartesian(expand = F,ylim=c(0,1400))+
-  scale_x_continuous(breaks=c(2025,2028,2030))+
-  scale_y_continuous(labels=scales::comma)+
+  coord_cartesian(expand = F,ylim=c(0,1100))+
+  scale_x_continuous(breaks=c(2025,2030),minor_breaks=2025:2030)+
+  scale_y_continuous(labels=scales::comma,
+                     breaks=c(0,500,1000))+
   scale_fill_manual(values = c("Capacity" = "#B22222", "Feedstock" = "#006400"))+
   labs(x="",y="",fill="")+
+  guides(x = guide_axis(minor.ticks = TRUE)) +
   theme( legend.position = "none",
          plot.background = element_rect(fill = "transparent", color = NA))
 
@@ -171,7 +190,7 @@ data_fig2 <- df_scen %>%
   mutate(net=capacity-ktons)
 
 
-annotations <- tibble(Stage = c("Pre-processing", "Pre-processing"), 
+annotations <- tibble(Stage = "Pre-processing (ktons of battery)", 
                       x = c(2044, 2044),y = c(800, -800),
                       label = c("Overcapacity","Undercapacity"))
 
@@ -186,7 +205,7 @@ color_scale <- c("Momentum__reuse0"="black",
 pb <- ggplot(data_fig2,aes(Year,net,col=Scenario))+
   geom_line()+
   geom_text_repel(data = . %>% group_by(Scenario) %>% 
-                    slice_max(Year) %>% filter(Stage=="Pre-processing"), 
+                    slice_max(Year) %>% filter(str_detect(Stage,"Pre-processing")), 
                   aes(label = scen_name,col=Scenario),direction = "y", 
                   segment.size=0.1,nudge_x = 5,
                   hjust = -0.1,size=8*5/14 * 0.8)+
@@ -199,22 +218,23 @@ pb <- ggplot(data_fig2,aes(Year,net,col=Scenario))+
   scale_y_continuous(labels = scales::label_comma())+
   scale_x_continuous(breaks = c(2025,2030,2040,2050))+
   scale_color_manual(values = color_scale)+
-    labs(x="",y="",col="",title="Net Processing Capacity (ktons)",tag="(b)")+
+    labs(x="",y="",col="",title="Net Processing Capacity",tag="(b)")+
   theme(panel.spacing = unit(0.5, "cm"),
         plot.tag = element_text(face = "bold"),
         legend.position = "none")
 pb
 
 
-pb_zoom <-  ggplot(filter(data_fig2,Year<=2030,Stage=="Pre-processing"),
+pb_zoom <-  ggplot(filter(data_fig2,Year<=2030,str_detect(Stage,"Pre-processing")),
                    aes(Year,net,col=Scenario))+
   geom_line()+
   geom_hline(yintercept = 0,col="black",linetype="dashed")+
-  coord_cartesian(expand = F,xlim=c(2025,2030),ylim=c(-700,1300))+
+  coord_cartesian(expand = F,xlim=c(2025,2030),ylim=c(-700,500))+
   scale_y_continuous(labels = scales::label_comma())+
-  scale_x_continuous(breaks = c(2025,2028,2030))+
+  scale_x_continuous(breaks = c(2025,2030),minor_breaks=2025:2030)+
   scale_color_manual(values = color_scale)+
   labs(x="",y="",col="")+
+  guides(x = guide_axis(minor.ticks = TRUE)) +
   theme(legend.position = "none",
         plot.background = element_rect(fill = "transparent", color = NA))
   
@@ -252,20 +272,21 @@ pc <- ggplot(data_fig3,aes(Year,net,col=Country,group=Country))+
   geom_text(x=2048,size=8*5/14 * 0.8,y=-450,label="Mexico",col="#006847FF",data= . %>% filter(Stage=="Pre-processing"))+
   geom_text(x=2048,size=8*5/14 * 0.8,y=-2000,label="Canada",col="#B22222FF",data= . %>% filter(Stage=="Pre-processing"))+
   labs(x="",y="",tag="(c)",
-       title="Net Processing Capacity (ktons) by Country")+
+       title="Net Processing Capacity by Country")+
   theme(plot.tag = element_text(face = "bold"),
         panel.spacing = unit(0.5, "cm"),
         legend.position = "none")
 pc
 
-pc_zoom <- ggplot(filter(data_fig3,Year<=2030,Stage=="Pre-processing"),
+pc_zoom <- ggplot(filter(data_fig3,Year<=2030,str_detect(Stage,"Pre-processing")),
                   aes(Year,net,col=Country,group=Country))+
   geom_line()+
   geom_hline(yintercept = 0,col="black",linetype="dashed")+
-  coord_cartesian(expand = F,xlim=c(2025,2030),ylim=c(-100,1200))+
+  coord_cartesian(expand = F,xlim=c(2025,2030),ylim=c(-100,400))+
   scale_y_continuous(labels=scales::comma)+
-  scale_x_continuous(breaks=c(2025,2028,2030))+
+  scale_x_continuous(breaks=c(2025,2030),minor_breaks=2025:2030)+
   labs(x="",y="",col="")+
+  guides(x = guide_axis(minor.ticks = TRUE)) +
   theme(legend.position = "none",
         plot.background = element_rect(fill = "transparent", color = NA))
 
