@@ -145,6 +145,14 @@ data_fig <- df_scen %>%
   
 max_v <- max(data_fig$ktons)
 
+# data for feedstcok
+data_fig %>% 
+  filter(Year %in% c(2025:2030,2035,2040,2045,2050)) %>% 
+  filter(type=="Feedstock") %>% 
+  mutate(ktons=ktons*1e3) %>% 
+  pivot_wider(names_from = Stage, values_from = ktons)
+
+
 pa <- ggplot(data_fig,aes(Year,ktons))+
   geom_col(aes(fill=type),position = "dodge")+
   facet_wrap(~Stage)+
@@ -324,7 +332,7 @@ plot_grid(pa1_inset,pb1_inset,pc1_inset,ncol=1,
                    rel_heights = c(1, 1.3,1),
                    align="v",axis = "lr")
 
-ggsave("Figures/Fig3.png", ggplot2::last_plot(),
+ggsave("Figures/Fig4.png", ggplot2::last_plot(),
        units="cm",dpi=600,width=8.7*2,height=8.7*2)
 
 # OLD FIGURE ----

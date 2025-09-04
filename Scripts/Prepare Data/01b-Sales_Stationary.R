@@ -145,20 +145,20 @@ ggsave("Figures/Inputs/gw_capacity.png", ggplot2::last_plot(),
 
 # Convert to battery kwh ----
 
-
-
 # Key parameters
 sg <- 0.2 # storage to generation ratio - 20%
 sd <- 4 # duration of storage, in hours
 
 df <- df %>% 
   group_by(Country,Year) %>% 
-  reframe(gw=sum(gw)) %>% ungroup() %>% 
+  reframe(gw=sum(gw),gw_stock=sum(gw_stock)) %>% ungroup() %>% 
   mutate(gwh=gw*sg*sd,
+         gwh_stock=gw_stock*sg*sd,
+         gw_stock=NULL,
          gw=NULL)
 
 df %>% filter(Year%%5==0) %>% 
-  pivot_wider(names_from = Country, values_from = gwh)
+  pivot_wider(names_from = Country, values_from = c(gwh,gwh_stock))
 
 
 write.csv(df,"Inputs/StationaryStorage.csv",row.names = F)

@@ -136,8 +136,52 @@ df_all <- df_all %>%
                        "Refining (ktons of black mass)"))
 
 
+# growth in time
+df_all %>% 
+  filter(Year==2035) %>% 
+  group_by(Stage,Scenario,Sales,Size,Lifetime,eol,Reuse,Scrap,Year) %>%
+  reframe(ktons=sum(ktons)) %>% ungroup() %>% 
+  left_join(filter(cap_total,Year==2035) %>% rename(cap=ktons)) %>% 
+  mutate(growth=ktons/cap) %>% 
+  group_by(Stage) %>% 
+  reframe(maxi=max(growth),
+          mini=min(growth))
+
+# exmaple scenario  
+df_all %>% 
+  filter(Year==2035) %>% 
+  group_by(Stage,Scenario,Sales,Size,Lifetime,eol,Reuse,Scrap,Year) %>%
+  reframe(ktons=sum(ktons)) %>% ungroup() %>% 
+  left_join(filter(cap_total,Year==2035) %>% rename(cap=ktons)) %>% 
+  mutate(growth=ktons/cap) %>% 
+  filter(Sales=="Momentum",Scrap=="18%",eol=="Reference",
+         Lifetime=="Short",Size=="Reference") %>% 
+  dplyr::select(Stage,ktons,cap,growth)
+
+# additional ktons
+df_all %>% 
+  filter(Year==2035) %>% 
+  group_by(Stage,Scenario,Sales,Size,Lifetime,eol,Reuse,Scrap,Year) %>%
+  reframe(ktons=sum(ktons)) %>% ungroup() %>% 
+  left_join(filter(cap_total,Year==2035) %>% rename(cap=ktons)) %>% 
+  mutate(deficit=ktons-cap) %>% 
+  group_by(Stage) %>% 
+  reframe(maxi=max(deficit),
+          mini=min(deficit))
+
+# FOR REFERENCE
+df_all %>% 
+  filter(Year==2035) %>% 
+  group_by(Stage,Scenario,Sales,Size,Lifetime,eol,Reuse,Scrap,Year) %>%
+  reframe(ktons=sum(ktons)) %>% ungroup() %>% 
+  left_join(filter(cap_total,Year==2035) %>% rename(cap=ktons)) %>% 
+  mutate(deficit=ktons-cap) %>% 
+  filter(Sales=="Momentum",Scrap=="6%",eol=="Reference",
+         Lifetime=="Reference",Size=="Reference") %>% 
+  dplyr::select(Stage,ktons,cap,deficit)
+
 # Loop or debug
-# year_limit=2035
+year_limit=2035
 for (year_limit in seq(2025,2050,5)){
 
   # join to get deficit towards target year
@@ -196,7 +240,7 @@ for (year_limit in seq(2025,2050,5)){
     #                      # labels = scales::label_comma()(breaks_orig),
     #                      midpoint = 0) + 
     scico::scale_fill_scico(palette = "vik",
-                            midpoint = 0,
+                            # midpoint = 0,
                             limits=range_deficit,
                             breaks = seq(range_deficit[1],range_deficit[2], by = steps))+
     labs(x="Scrap %",y="End-of-Life Scenario",
@@ -257,7 +301,7 @@ for (year_limit in seq(2025,2050,5)){
     plot_grid(p1a_with_title,p1b_with_title, p2a_with_title,p2b_with_title, ncol = 2, align = "hv", labels = NULL),
     legend_shared,ncol = 1, rel_heights = c(0.85,0.15))
   
-  ggsave(paste0("Figures/Fig4",year_limit,".png"), ggplot2::last_plot(),
+  ggsave(paste0("Figures/Fig5",year_limit,".png"), ggplot2::last_plot(),
          units="cm",dpi=600,width=18,height=8.7*2)
 
   }

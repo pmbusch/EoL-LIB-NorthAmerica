@@ -60,8 +60,15 @@ recyc <- ce %>%
   arrange(Country,Year) %>% 
   filter(Year<2051)
 
+# Create stock
 ce <- ce %>% 
-  left_join(recyc) %>% 
+  left_join(recyc)
+
+ce <- ce %>% 
+  mutate(ce_gwh_recyc=if_else(is.na(ce_gwh_recyc),0,ce_gwh_recyc)) %>% 
+  group_by(Country) %>% 
+  mutate(ce_gwh_stock=ce_gwh-ce_gwh_recyc) %>% 
+  mutate(ce_gwh_stock=cumsum(ce_gwh_stock)) %>% ungroup() %>% 
   filter(Year>2024)
 
 write.csv(ce,"Inputs/consumerElectronics.csv",row.names = F)

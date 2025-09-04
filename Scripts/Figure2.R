@@ -81,13 +81,30 @@ p1 <- ggplot(data_fig,aes(Year,gwh,fill=Vehicle))+
 
 p1
 
+
+# production by year
+data_fig %>% 
+  filter(Year %in% c(2025:2030,2035,2040,2045,2050)) %>% 
+  filter(str_detect(FlowType,"Production")) %>% 
+  group_by(Year) %>% 
+  reframe(gwh=sum(gwh))
+
+
 # level year
 data_fig %>% 
-  filter(Year %in% c(2025,2030,2040,2050)) %>% 
+  filter(Year %in% c(2025:2030,2035,2040,2045,2050)) %>% 
   filter(str_detect(FlowType,"Recycling")) %>% 
   group_by(Year) %>% 
   reframe(gwh=sum(gwh))
   
+
+# majorirty of feedstock
+data_fig %>% 
+  filter(Year %in% c(2025,2030,2031,2032,2033,2034,2035)) %>% 
+  filter(str_detect(FlowType,"Recycling")) %>% 
+  group_by(Year,Vehicle) %>% 
+  reframe(gwh=sum(gwh)) %>% ungroup() %>% 
+  pivot_wider(names_from = Year, values_from = gwh)
 
 
 # zoom to distribution by vehicle type
