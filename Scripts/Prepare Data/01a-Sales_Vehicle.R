@@ -71,9 +71,10 @@ icct %>%
 
 # Figure -----
 icct %>% 
+  mutate(Vehicle=if_else(Vehicle=="Vans","LCV",Vehicle)) %>% 
   # filter(Year>=2025) %>% 
   mutate(Vehicle=factor(Vehicle,
-                        levels=c("Cars","Vans","Buses","Medium trucks","Heavy trucks"))) %>% 
+                        levels=c("Cars","LCV","Buses","Medium trucks","Heavy trucks"))) %>% 
   mutate(Scenario=factor(Scenario,levels=c("Momentum","Ambitious"))) %>% 
   ggplot(aes(Year,Sales))+
   geom_area(aes(fill=Country))+

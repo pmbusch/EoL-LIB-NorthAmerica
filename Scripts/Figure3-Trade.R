@@ -77,19 +77,20 @@ cap <- rbind(cap,mex_cap)
 ## Main ----
 
 # SAME COLORS AS FIG 2
-veh_levels <- MetBrewer::met.brewer("Signac", n = 12)
+veh_levels <- MetBrewer::met.brewer("Signac", n = 11)
 names(veh_levels) <- c("Production Scrap",
                        "Consumer Electronics","Stationary Storage",
                        "LIB Replacement - SS",
                        "LIB Replacement - LDV","LIB Replacement - HDV",
                        "Heavy trucks","Medium trucks","Buses",
-                       "Vans","Cars","Used LDV Trade")
+                       "Light Duty Vehicles","Used LDV Trade")
 
 
 data_fig <- df %>% 
   # filter(Year %in% c(2025,2030,2035,2040,2045,2050)) %>% 
   pivot_longer(c(battery_kg,blackMass_kg), names_to = "Stage", values_to = "ktons") %>% 
   mutate(ktons=ktons/1e6) %>% 
+  mutate(Vehicle=if_else(Vehicle %in% c("Cars","Vans"),"Light Duty Vehicles",Vehicle)) %>% 
   mutate(Stage=if_else(str_detect(Stage,"battery"),
                        "Pre-processing (ktons of battery)",
                        "Refining (ktons of black mass)")) %>% 

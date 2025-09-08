@@ -112,7 +112,8 @@ range(x$Year)
 
 x %>% 
   filter(Year<2025) %>% 
-  mutate(Vehicle=factor(Vehicle,levels=c("Cars","Vans","Medium trucks","Heavy trucks","Buses"))) %>% 
+  mutate(Vehicle=if_else(Vehicle=="Vans","LCV",Vehicle)) %>% 
+  mutate(Vehicle=factor(Vehicle,levels=c("Cars","LCV","Medium trucks","Heavy trucks","Buses"))) %>% 
   ggplot(aes(Year,kwh_veh,col=Country))+
   geom_line()+
   geom_point()+

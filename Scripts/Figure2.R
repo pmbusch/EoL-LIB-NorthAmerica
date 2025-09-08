@@ -51,15 +51,16 @@ data_fig0 <- df %>%
     Flow=="addLIB" & Vehicle %in% c("Stationary Storage") ~ "LIB Replacement - SS",
     Flow=="addLIB" ~ "LIB Replacement - HDV",
     Country=="Exports" ~ "Vehicle Exports",
+    Vehicle %in% c("Cars","Vans") ~ "Light Duty Vehicles",
     T ~ Vehicle))
 
-veh_levels <- MetBrewer::met.brewer("Signac", n = 12)
+veh_levels <- MetBrewer::met.brewer("Signac", n = 11)
 names(veh_levels) <- c("Production Scrap",
                 "Consumer Electronics","Stationary Storage",
                 "LIB Replacement - SS",
                 "LIB Replacement - LDV","LIB Replacement - HDV",
                 "Heavy trucks","Medium trucks","Buses",
-                "Vans","Cars","Vehicle Exports")
+                "Light Duty Vehicles","Vehicle Exports")
 
 data_fig <- data_fig0 %>% 
   group_by(FlowType,Year,Vehicle) %>% 

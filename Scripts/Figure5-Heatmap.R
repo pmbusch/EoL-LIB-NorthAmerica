@@ -116,8 +116,17 @@ rm(s,df_aux)
 df_all <- df_all %>% filter(Scrap!="")
 nrow(df_all)/1e6
 
-# remove ALL productions scenario
-df_all <- df_all %>% filter(ScrapScen=="")
+# Add ALL productions scenario to EoL
+unique(df_all$ScrapScen)
+unique(df_all$eol)
+# No limit on production
+df_noProd <- df_all %>% filter(ScrapScen=="All ") %>% 
+  filter(eol=="Reference") %>% 
+  mutate(eol="100% LIB prod.")
+
+df_all <- df_all %>% filter(ScrapScen=="") %>% 
+  rbind(df_noProd)
+
 
 df_all <- df_all %>% 
   mutate(Scrap=paste0(ScrapScen,Scrap)) %>% 
@@ -135,6 +144,8 @@ df_all <- df_all %>%
                        "Pre-processing (ktons of battery)",
                        "Refining (ktons of black mass)"))
 
+df_all <- df_all %>% 
+  mutate(Scrap=str_remove(Scrap,"All "))
 
 # growth in time
 df_all %>% 
@@ -201,7 +212,7 @@ for (year_limit in seq(2025,2050,5)){
                            levels = c("Short lifetime","Reference","Long lifetime"))) %>% 
     mutate(Size=factor(paste0(Size,if_else(Size=="Reference",""," LIB")),
                        levels = c("Small LIB","Reference","Large LIB"))) %>% 
-    mutate(eol=factor(eol,levels=rev(c("Reference","Repurposing","Recycling","50% Reuse")))) %>% 
+    mutate(eol=factor(eol,levels=rev(c("Reference","Repurposing","Recycling","50% Reuse","100% LIB prod.")))) %>% 
     mutate(Scrap=factor(Scrap,
                         levels=c("2%","6%","10%","14%","18%","22%",
                                  "All 2%","All 6%","All 10%","All 14%","All 18%","All 22%")))
