@@ -1,7 +1,6 @@
 # Key model parameters, can be overriden for scenarios
 # PBH July 2025
 
-
 # LIBs
 p.share_repurpose <- 0.5 # Share of LIB available that goes to repurpose (instead of recycling)
 p.ev_age_newLib <- 8 #
@@ -21,11 +20,10 @@ p.mean_lib_repurp <- 20 # LIB for repurposing
 
 # large vehicles
 p.mean_lib_large <- 8
-large_veh <- c("Buses","Medium trucks","Heavy trucks")
+large_veh <- c("Vans", "Buses", "Medium trucks", "Heavy trucks")
 
 
 # Production scrap
 p.scrap <- 0.06 # BatPac
-
 
 # EoF
