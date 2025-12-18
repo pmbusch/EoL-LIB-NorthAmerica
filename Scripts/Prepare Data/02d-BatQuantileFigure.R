@@ -1,4 +1,4 @@
-# Figure of Quantiles of battery size, by coutnry
+# Figure of Quantiles of battery size, by country
 
 library(tidyverse)
 

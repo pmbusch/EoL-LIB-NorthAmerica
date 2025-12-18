@@ -4,7 +4,7 @@
 # PBH July 2025
 
 source("Scripts/00-Libraries.R", encoding = "UTF-8")
-source("Scripts/01-ModelParameters.R")
+source("Scripts/Run Model/01-ModelParameters.R")
 
 # Consumer Electronics
 # No scenario for CE
@@ -13,6 +13,7 @@ ce <- read.csv("Inputs/consumerElectronics.csv")
 # data format
 ce <- ce %>%
   mutate(Vehicle = "Consumer Electronics") %>%
+  dplyr::select(-ce_gwh_stock) |>
   pivot_longer(c(ce_gwh, ce_gwh_recyc), names_to = "Flow", values_to = "kwh") %>%
   mutate(kwh = kwh * 1e6, Flow = if_else(Flow == "ce_gwh", "EVSales", "LIB_recycling"))
 
@@ -21,14 +22,21 @@ trade <- read.csv("Inputs/EV_2handTrade.csv")
 
 # cathode weight
 params <- read.csv("Inputs/battery_weight.csv")
+
+
 # Add cathode weight for exports..
 params <- rbind(params, mutate(filter(params, Country == "United States"), Country = "Exports"))
 
 
-# Current LIB production capacity
+# Current LIB production capacity - assuming a 77% operating capacity
 cap_prod <- rbind(
-  tibble(Country = "United States", Year = 2025:2050, cap_ghw = c(1193, 1324, 1477, 1826, 1826, 1829, rep(1829, 20))),
-  tibble(Country = "Mexico", Year = 2025:2050, cap_ghw = c(9.44, 9.44, rep(29.49, 24)))
+  tibble(
+    Country = "United States",
+    Year = 2025:2050,
+    cap_ghw = c(647.25, 848.67, 1300.63, 1412.28, 1631.73, rep(1656.37, 21))
+  ),
+  tibble(Country = "Mexico", Year = 2025:2050, cap_ghw = c(0, rep(13.48, 25))), # san luis potosi
+  tibble(Country = "Canada", Year = 2025:2050, cap_ghw = c(0.92, 59.17, 97.28, 97.28, rep(194.30, 22))) # Ontario and Quebec
 )
 
 
@@ -44,12 +52,21 @@ p.mean_lib_large.orig <- p.mean_lib_large
 # Need to iterate over all files of stock - each one is a scenario of lifetime and sales
 (runs <- list.files("Inputs/Stocks", recursive = F))
 
-# TO DEBUG
-# b=""
-# e=""
-# tra=""
-# i="Momentum__reuse0.csv"
 
+# To run Sensitivity for chemistry cathode weight
+# Need to uncomment and manually run the code
+# params <- read.csv("Inputs/battery_weight_nmc.csv")
+# params <- read.csv("Inputs/battery_weight_lfp.csv")
+# TO DEBUG
+# b = ""
+# e = ""
+# tra = ""
+# i = "Momentum__reuse0.csv"
+
+# Each iteration takes less than 10 seconds
+# Total iterations: 648
+# Total: 30 min
+length(runs) * length(lib_scens) * length(eol_scens) * length(trade_scens)
 for (i in runs) {
   cat("\n", i)
   # Batteries
@@ -94,10 +111,10 @@ for (i in runs) {
         }
 
         # Run EV script
-        source("Scripts/02-EV_LIB_Demand_Recycling.R")
+        source("Scripts/Run Model/02-EV_LIB_Demand_Recycling.R")
 
         # Run SS script
-        source("Scripts/03-StationaryStorageStock.R")
+        source("Scripts/Run Model/03-StationaryStorageStock.R")
 
         # Variables created in the scripts above
         # ev <- read.csv("Results/Intermediate/EV.csv") # Electric Vehicles
@@ -151,6 +168,7 @@ for (i in runs) {
         # production results
         prod_save <- df %>% filter(FlowType == "LIB Production") %>% mutate(FlowType = NULL, blackMass_kg = NULL)
         name_aux <- str_remove(i, "\\.csv")
+        # name_aux <- paste0(name_aux, "_LFP") # uncomment for special sensitivity
         write.csv(prod_save, paste0("Results/Production/", name_aux, b, e, tra, ".csv"), row.names = F)
         # recycling results
         df <- df %>% filter(FlowType == "LIB Recycling") %>% mutate(FlowType = NULL)

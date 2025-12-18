@@ -1,4 +1,4 @@
-# Cathode weight based on 2024 chemistry
+# Cathode weight and energy density based on 2024 chemistry and BatPac battery parameters
 # PBH July 2025
 
 source("Scripts/00-Libraries.R", encoding = "UTF-8")

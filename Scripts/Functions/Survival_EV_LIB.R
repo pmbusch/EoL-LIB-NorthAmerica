@@ -4,7 +4,7 @@
 # as well as LIB outflows to EVs, SSPS and recycling
 ## PBH January 2024
 
-source("Scripts/01-ModelParameters.R")
+source("Scripts/Run Model/01-ModelParameters.R")
 
 
 # Function to get flows (numbers of cars,EV,LIB) depending on the
