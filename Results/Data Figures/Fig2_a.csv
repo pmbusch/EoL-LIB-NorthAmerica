@@ -1,0 +1,495 @@
+"FlowType","Year","Vehicle","gwh"
+"LIB Production Requirement",2025,"Buses",3.55752868977128
+"LIB Production Requirement",2025,"Consumer Electronics",35.8127794877574
+"LIB Production Requirement",2025,"Heavy trucks",8.71171488403858
+"LIB Production Requirement",2025,"LIB Replacement - HDV",0.830111446159229
+"LIB Production Requirement",2025,"LIB Replacement - LDV",2.15730631053229
+"LIB Production Requirement",2025,"LIB Replacement - SS",0.651192526765053
+"LIB Production Requirement",2025,"Light Commercial Vehicles",15.8694841184066
+"LIB Production Requirement",2025,"Light Duty Vehicles",201.133562029531
+"LIB Production Requirement",2025,"Medium trucks",27.0260255829336
+"LIB Production Requirement",2025,"Stationary Storage",30.2426434360512
+"LIB Production Requirement",2026,"Buses",4.84001981298198
+"LIB Production Requirement",2026,"Consumer Electronics",37.3564337760229
+"LIB Production Requirement",2026,"Heavy trucks",13.1290488057728
+"LIB Production Requirement",2026,"LIB Replacement - HDV",1.90798970056205
+"LIB Production Requirement",2026,"LIB Replacement - LDV",3.57058369871506
+"LIB Production Requirement",2026,"LIB Replacement - SS",1.01548907669091
+"LIB Production Requirement",2026,"Light Commercial Vehicles",23.6732189166161
+"LIB Production Requirement",2026,"Light Duty Vehicles",276.415765251884
+"LIB Production Requirement",2026,"Medium trucks",29.6293593682618
+"LIB Production Requirement",2026,"Stationary Storage",31.2488727566134
+"LIB Production Requirement",2027,"Buses",6.43965782405739
+"LIB Production Requirement",2027,"Consumer Electronics",38.5913572066352
+"LIB Production Requirement",2027,"Heavy trucks",16.2203675225637
+"LIB Production Requirement",2027,"LIB Replacement - HDV",3.65440785542488
+"LIB Production Requirement",2027,"LIB Replacement - LDV",5.77539639046743
+"LIB Production Requirement",2027,"LIB Replacement - SS",1.56943385059463
+"LIB Production Requirement",2027,"Light Commercial Vehicles",33.7964340551767
+"LIB Production Requirement",2027,"Light Duty Vehicles",373.340923183086
+"LIB Production Requirement",2027,"Medium trucks",36.0640391643548
+"LIB Production Requirement",2027,"Stationary Storage",8.36688482199701
+"LIB Production Requirement",2028,"Buses",8.05176849578026
+"LIB Production Requirement",2028,"Consumer Electronics",39.8262806372475
+"LIB Production Requirement",2028,"Heavy trucks",20.3140630714134
+"LIB Production Requirement",2028,"LIB Replacement - HDV",6.40148073216419
+"LIB Production Requirement",2028,"LIB Replacement - LDV",9.1226124019144
+"LIB Production Requirement",2028,"LIB Replacement - SS",2.39921544698927
+"LIB Production Requirement",2028,"Light Commercial Vehicles",45.5652003184002
+"LIB Production Requirement",2028,"Light Duty Vehicles",440.475979423258
+"LIB Production Requirement",2028,"Medium trucks",45.0902210112535
+"LIB Production Requirement",2028,"Stationary Storage",20.3567721018441
+"LIB Production Requirement",2029,"Buses",9.58694980605648
+"LIB Production Requirement",2029,"Consumer Electronics",41.0612040678599
+"LIB Production Requirement",2029,"Heavy trucks",24.7415265671605
+"LIB Production Requirement",2029,"LIB Replacement - HDV",10.4624178615439
+"LIB Production Requirement",2029,"LIB Replacement - LDV",13.6248143674904
+"LIB Production Requirement",2029,"LIB Replacement - SS",3.60745618228007
+"LIB Production Requirement",2029,"Light Commercial Vehicles",60.6419051482894
+"LIB Production Requirement",2029,"Light Duty Vehicles",569.268382259715
+"LIB Production Requirement",2029,"Medium trucks",52.6940088670751
+"LIB Production Requirement",2029,"Stationary Storage",28.787133365057
+"LIB Production Requirement",2030,"Buses",11.7760127834234
+"LIB Production Requirement",2030,"Consumer Electronics",42.2961274984722
+"LIB Production Requirement",2030,"Heavy trucks",28.5546890027474
+"LIB Production Requirement",2030,"LIB Replacement - HDV",16.1945327080635
+"LIB Production Requirement",2030,"LIB Replacement - LDV",20.2464898076574
+"LIB Production Requirement",2030,"LIB Replacement - SS",5.29164396754619
+"LIB Production Requirement",2030,"Light Commercial Vehicles",72.6934259002913
+"LIB Production Requirement",2030,"Light Duty Vehicles",661.037681349326
+"LIB Production Requirement",2030,"Medium trucks",63.5240726949204
+"LIB Production Requirement",2030,"Stationary Storage",33.6070871274574
+"LIB Production Requirement",2031,"Buses",22.5890539015809
+"LIB Production Requirement",2031,"Consumer Electronics",43.5310509290845
+"LIB Production Requirement",2031,"Heavy trucks",36.0692766920998
+"LIB Production Requirement",2031,"LIB Replacement - HDV",24.0786314518133
+"LIB Production Requirement",2031,"LIB Replacement - LDV",29.5949497648964
+"LIB Production Requirement",2031,"LIB Replacement - SS",7.50098070065977
+"LIB Production Requirement",2031,"Light Commercial Vehicles",80.6116550045868
+"LIB Production Requirement",2031,"Light Duty Vehicles",785.306781063006
+"LIB Production Requirement",2031,"Medium trucks",76.5984008851475
+"LIB Production Requirement",2031,"Stationary Storage",43.7785587871593
+"LIB Production Requirement",2032,"Buses",24.7854896436053
+"LIB Production Requirement",2032,"Consumer Electronics",47.2358212209215
+"LIB Production Requirement",2032,"Heavy trucks",41.319562276894
+"LIB Production Requirement",2032,"LIB Replacement - HDV",34.1193790020469
+"LIB Production Requirement",2032,"LIB Replacement - LDV",41.4473846816347
+"LIB Production Requirement",2032,"LIB Replacement - SS",10.1631929034708
+"LIB Production Requirement",2032,"Light Commercial Vehicles",88.80477920563
+"LIB Production Requirement",2032,"Light Duty Vehicles",886.186240478435
+"LIB Production Requirement",2032,"Medium trucks",86.6480463503736
+"LIB Production Requirement",2032,"Stationary Storage",50.8794817880903
+"LIB Production Requirement",2033,"Buses",27.0871424346961
+"LIB Production Requirement",2033,"Consumer Electronics",49.08820636684
+"LIB Production Requirement",2033,"Heavy trucks",46.7657360754565
+"LIB Production Requirement",2033,"LIB Replacement - HDV",46.2892298809934
+"LIB Production Requirement",2033,"LIB Replacement - LDV",55.8299641070354
+"LIB Production Requirement",2033,"LIB Replacement - SS",13.0273744475444
+"LIB Production Requirement",2033,"Light Commercial Vehicles",95.9457727563674
+"LIB Production Requirement",2033,"Light Duty Vehicles",986.826586436921
+"LIB Production Requirement",2033,"Medium trucks",100.085492117672
+"LIB Production Requirement",2033,"Stationary Storage",61.2811949255654
+"LIB Production Requirement",2034,"Buses",29.3737604690339
+"LIB Production Requirement",2034,"Consumer Electronics",50.9405915127585
+"LIB Production Requirement",2034,"Heavy trucks",52.2463325510405
+"LIB Production Requirement",2034,"LIB Replacement - HDV",60.4836796218662
+"LIB Production Requirement",2034,"LIB Replacement - LDV",72.8912692246018
+"LIB Production Requirement",2034,"LIB Replacement - SS",15.7106749802752
+"LIB Production Requirement",2034,"Light Commercial Vehicles",99.9508804959454
+"LIB Production Requirement",2034,"Light Duty Vehicles",1032.98435412732
+"LIB Production Requirement",2034,"Medium trucks",112.778122540703
+"LIB Production Requirement",2034,"Stationary Storage",64.3468638417293
+"LIB Production Requirement",2035,"Buses",31.8749440898616
+"LIB Production Requirement",2035,"Consumer Electronics",52.7929766586769
+"LIB Production Requirement",2035,"Heavy trucks",57.7173139272617
+"LIB Production Requirement",2035,"LIB Replacement - HDV",76.8025521517978
+"LIB Production Requirement",2035,"LIB Replacement - LDV",94.3646683474649
+"LIB Production Requirement",2035,"LIB Replacement - SS",17.8887410740697
+"LIB Production Requirement",2035,"Light Commercial Vehicles",104.391195351178
+"LIB Production Requirement",2035,"Light Duty Vehicles",1085.5737431631
+"LIB Production Requirement",2035,"Medium trucks",126.002817210428
+"LIB Production Requirement",2035,"Stationary Storage",54.001026194672
+"LIB Production Requirement",2036,"Buses",34.50296440402
+"LIB Production Requirement",2036,"Consumer Electronics",54.9540926622485
+"LIB Production Requirement",2036,"Heavy trucks",63.848657168475
+"LIB Production Requirement",2036,"LIB Replacement - HDV",91.2064562808585
+"LIB Production Requirement",2036,"LIB Replacement - LDV",115.163596360347
+"LIB Production Requirement",2036,"LIB Replacement - SS",19.5203850560246
+"LIB Production Requirement",2036,"Light Commercial Vehicles",107.478753346646
+"LIB Production Requirement",2036,"Light Duty Vehicles",1110.49257900739
+"LIB Production Requirement",2036,"Medium trucks",134.600572678421
+"LIB Production Requirement",2036,"Stationary Storage",52.4762676016798
+"LIB Production Requirement",2037,"Buses",37.0331000399776
+"LIB Production Requirement",2037,"Consumer Electronics",56.806477808167
+"LIB Production Requirement",2037,"Heavy trucks",69.4779708577948
+"LIB Production Requirement",2037,"LIB Replacement - HDV",107.17494739524
+"LIB Production Requirement",2037,"LIB Replacement - LDV",136.636380276303
+"LIB Production Requirement",2037,"LIB Replacement - SS",20.8522027861651
+"LIB Production Requirement",2037,"Light Commercial Vehicles",110.571066271289
+"LIB Production Requirement",2037,"Light Duty Vehicles",1135.2152098376
+"LIB Production Requirement",2037,"Medium trucks",143.418112602483
+"LIB Production Requirement",2037,"Stationary Storage",37.6542726481121
+"LIB Production Requirement",2038,"Buses",40.6602385504693
+"LIB Production Requirement",2038,"Consumer Electronics",58.9675938117386
+"LIB Production Requirement",2038,"Heavy trucks",75.3655885347253
+"LIB Production Requirement",2038,"LIB Replacement - HDV",124.344648905007
+"LIB Production Requirement",2038,"LIB Replacement - LDV",157.330544392759
+"LIB Production Requirement",2038,"LIB Replacement - SS",22.2595357601371
+"LIB Production Requirement",2038,"Light Commercial Vehicles",113.62971772277
+"LIB Production Requirement",2038,"Light Duty Vehicles",1161.92196794278
+"LIB Production Requirement",2038,"Medium trucks",152.316546047285
+"LIB Production Requirement",2038,"Stationary Storage",19.9202000586515
+"LIB Production Requirement",2039,"Buses",41.8585407437284
+"LIB Production Requirement",2039,"Consumer Electronics",61.1287098153102
+"LIB Production Requirement",2039,"Heavy trucks",81.181583081189
+"LIB Production Requirement",2039,"LIB Replacement - HDV",142.152804260107
+"LIB Production Requirement",2039,"LIB Replacement - LDV",178.616458845872
+"LIB Production Requirement",2039,"LIB Replacement - SS",24.0388802350852
+"LIB Production Requirement",2039,"Light Commercial Vehicles",116.636339068467
+"LIB Production Requirement",2039,"Light Duty Vehicles",1188.12177974688
+"LIB Production Requirement",2039,"Medium trucks",161.576934694218
+"LIB Production Requirement",2039,"Stationary Storage",8.89117366396119
+"LIB Production Requirement",2040,"Buses",43.2684489307716
+"LIB Production Requirement",2040,"Consumer Electronics",63.2898258188817
+"LIB Production Requirement",2040,"Heavy trucks",92.0280647236171
+"LIB Production Requirement",2040,"LIB Replacement - HDV",160.626563389325
+"LIB Production Requirement",2040,"LIB Replacement - LDV",196.843579723225
+"LIB Production Requirement",2040,"LIB Replacement - SS",26.3526122424067
+"LIB Production Requirement",2040,"Light Commercial Vehicles",119.68722044312
+"LIB Production Requirement",2040,"Light Duty Vehicles",1216.35693234182
+"LIB Production Requirement",2040,"Medium trucks",171.459667790142
+"LIB Production Requirement",2040,"Stationary Storage",0
+"LIB Production Requirement",2041,"Buses",43.8526327128653
+"LIB Production Requirement",2041,"Consumer Electronics",63.2898258188817
+"LIB Production Requirement",2041,"Heavy trucks",92.4040227223053
+"LIB Production Requirement",2041,"LIB Replacement - HDV",178.995198363555
+"LIB Production Requirement",2041,"LIB Replacement - LDV",213.790980595513
+"LIB Production Requirement",2041,"LIB Replacement - SS",29.253388999199
+"LIB Production Requirement",2041,"Light Commercial Vehicles",120.3748558882
+"LIB Production Requirement",2041,"Light Duty Vehicles",1233.0557744445
+"LIB Production Requirement",2041,"Medium trucks",173.774883594056
+"LIB Production Requirement",2041,"Stationary Storage",0
+"LIB Production Requirement",2042,"Buses",44.4502173308026
+"LIB Production Requirement",2042,"Consumer Electronics",63.2898258188817
+"LIB Production Requirement",2042,"Heavy trucks",92.3495716941734
+"LIB Production Requirement",2042,"LIB Replacement - HDV",195.495368508938
+"LIB Production Requirement",2042,"LIB Replacement - LDV",227.722231382217
+"LIB Production Requirement",2042,"LIB Replacement - SS",32.7595838381772
+"LIB Production Requirement",2042,"Light Commercial Vehicles",121.06261475896
+"LIB Production Requirement",2042,"Light Duty Vehicles",1250.38772355531
+"LIB Production Requirement",2042,"Medium trucks",175.768529290822
+"LIB Production Requirement",2042,"Stationary Storage",0
+"LIB Production Requirement",2043,"Buses",45.0980051895412
+"LIB Production Requirement",2043,"Consumer Electronics",63.2898258188817
+"LIB Production Requirement",2043,"Heavy trucks",92.4804882884729
+"LIB Production Requirement",2043,"LIB Replacement - HDV",211.531657305963
+"LIB Production Requirement",2043,"LIB Replacement - LDV",238.975683388358
+"LIB Production Requirement",2043,"LIB Replacement - SS",36.8748571865326
+"LIB Production Requirement",2043,"Light Commercial Vehicles",121.792955310942
+"LIB Production Requirement",2043,"Light Duty Vehicles",1266.27867575635
+"LIB Production Requirement",2043,"Medium trucks",177.872882419114
+"LIB Production Requirement",2043,"Stationary Storage",0
+"LIB Production Requirement",2044,"Buses",45.6173616134488
+"LIB Production Requirement",2044,"Consumer Electronics",63.2898258188817
+"LIB Production Requirement",2044,"Heavy trucks",92.2485390060743
+"LIB Production Requirement",2044,"LIB Replacement - HDV",226.440749748493
+"LIB Production Requirement",2044,"LIB Replacement - LDV",246.838903987863
+"LIB Production Requirement",2044,"LIB Replacement - SS",41.6342193969087
+"LIB Production Requirement",2044,"Light Commercial Vehicles",122.243524417004
+"LIB Production Requirement",2044,"Light Duty Vehicles",1282.87826022644
+"LIB Production Requirement",2044,"Medium trucks",180.000985518238
+"LIB Production Requirement",2044,"Stationary Storage",0
+"LIB Production Requirement",2045,"Buses",46.1163373242762
+"LIB Production Requirement",2045,"Consumer Electronics",63.2898258188817
+"LIB Production Requirement",2045,"Heavy trucks",91.4238629957065
+"LIB Production Requirement",2045,"LIB Replacement - HDV",240.039077215379
+"LIB Production Requirement",2045,"LIB Replacement - LDV",253.829867001313
+"LIB Production Requirement",2045,"LIB Replacement - SS",47.150395576942
+"LIB Production Requirement",2045,"Light Commercial Vehicles",123.178800112744
+"LIB Production Requirement",2045,"Light Duty Vehicles",1305.29148409025
+"LIB Production Requirement",2045,"Medium trucks",182.015386985979
+"LIB Production Requirement",2045,"Stationary Storage",0
+"LIB Production Requirement",2046,"Buses",46.5812573640299
+"LIB Production Requirement",2046,"Consumer Electronics",63.2898258188817
+"LIB Production Requirement",2046,"Heavy trucks",90.4640247840441
+"LIB Production Requirement",2046,"LIB Replacement - HDV",251.935304405798
+"LIB Production Requirement",2046,"LIB Replacement - LDV",259.212963566401
+"LIB Production Requirement",2046,"LIB Replacement - SS",53.4404055773644
+"LIB Production Requirement",2046,"Light Commercial Vehicles",123.576331986748
+"LIB Production Requirement",2046,"Light Duty Vehicles",1326.54658200542
+"LIB Production Requirement",2046,"Medium trucks",184.007007135897
+"LIB Production Requirement",2046,"Stationary Storage",0
+"LIB Production Requirement",2047,"Buses",47.212647578283
+"LIB Production Requirement",2047,"Consumer Electronics",63.2898258188817
+"LIB Production Requirement",2047,"Heavy trucks",90.2111082484237
+"LIB Production Requirement",2047,"LIB Replacement - HDV",262.248079751209
+"LIB Production Requirement",2047,"LIB Replacement - LDV",264.294885749699
+"LIB Production Requirement",2047,"LIB Replacement - SS",61.1927983723604
+"LIB Production Requirement",2047,"Light Commercial Vehicles",124.183056879484
+"LIB Production Requirement",2047,"Light Duty Vehicles",1344.46628310098
+"LIB Production Requirement",2047,"Medium trucks",185.94739468915
+"LIB Production Requirement",2047,"Stationary Storage",0
+"LIB Production Requirement",2048,"Buses",47.7841347221399
+"LIB Production Requirement",2048,"Consumer Electronics",63.2898258188817
+"LIB Production Requirement",2048,"Heavy trucks",90.4065972509433
+"LIB Production Requirement",2048,"LIB Replacement - HDV",270.765249047603
+"LIB Production Requirement",2048,"LIB Replacement - LDV",269.028783093765
+"LIB Production Requirement",2048,"LIB Replacement - SS",70.3007731443519
+"LIB Production Requirement",2048,"Light Commercial Vehicles",124.821376546827
+"LIB Production Requirement",2048,"Light Duty Vehicles",1360.63877264664
+"LIB Production Requirement",2048,"Medium trucks",189.123529519276
+"LIB Production Requirement",2048,"Stationary Storage",0
+"LIB Production Requirement",2049,"Buses",48.4109689876779
+"LIB Production Requirement",2049,"Consumer Electronics",63.2898258188817
+"LIB Production Requirement",2049,"Heavy trucks",90.2408851736997
+"LIB Production Requirement",2049,"LIB Replacement - HDV",277.194365198954
+"LIB Production Requirement",2049,"LIB Replacement - LDV",273.251736705419
+"LIB Production Requirement",2049,"LIB Replacement - SS",80.6696106437113
+"LIB Production Requirement",2049,"Light Commercial Vehicles",125.150914985631
+"LIB Production Requirement",2049,"Light Duty Vehicles",1380.13125178187
+"LIB Production Requirement",2049,"Medium trucks",192.104869803199
+"LIB Production Requirement",2049,"Stationary Storage",3.72529029846191e-15
+"LIB Production Requirement",2050,"Buses",49.3605398561042
+"LIB Production Requirement",2050,"Consumer Electronics",63.2898258188817
+"LIB Production Requirement",2050,"Heavy trucks",90.8771299825584
+"LIB Production Requirement",2050,"LIB Replacement - HDV",281.835858168222
+"LIB Production Requirement",2050,"LIB Replacement - LDV",276.927277545137
+"LIB Production Requirement",2050,"LIB Replacement - SS",91.9547216031509
+"LIB Production Requirement",2050,"Light Commercial Vehicles",125.95617567469
+"LIB Production Requirement",2050,"Light Duty Vehicles",1403.05094394362
+"LIB Production Requirement",2050,"Medium trucks",195.985474255212
+"LIB Production Requirement",2050,"Stationary Storage",0
+"LIB Recycling Feedstock",2025,"Buses",0.225636179063467
+"LIB Recycling Feedstock",2025,"Consumer Electronics",0.191880113729022
+"LIB Recycling Feedstock",2025,"Heavy trucks",0.193723037512973
+"LIB Recycling Feedstock",2025,"Light Commercial Vehicles",0.404610978751709
+"LIB Recycling Feedstock",2025,"Light Duty Vehicles",2.08556704906119
+"LIB Recycling Feedstock",2025,"Medium trucks",0.418868712626883
+"LIB Recycling Feedstock",2025,"Production Scrap",17.7932263049057
+"LIB Recycling Feedstock",2025,"Stationary Storage",0.684684700179352
+"LIB Recycling Feedstock",2025,"Vehicle Exports",-0.055192376904899
+"LIB Recycling Feedstock",2026,"Buses",0.372459749804378
+"LIB Recycling Feedstock",2026,"Consumer Electronics",2.37065075543264
+"LIB Recycling Feedstock",2026,"Heavy trucks",0.479329669606155
+"LIB Recycling Feedstock",2026,"Light Commercial Vehicles",0.956774099498315
+"LIB Recycling Feedstock",2026,"Light Duty Vehicles",3.37170635105401
+"LIB Recycling Feedstock",2026,"Medium trucks",1.07555218628883
+"LIB Recycling Feedstock",2026,"Production Scrap",25.3672068698473
+"LIB Recycling Feedstock",2026,"Stationary Storage",1.01548907669091
+"LIB Recycling Feedstock",2026,"Vehicle Exports",-0.0892142511244499
+"LIB Recycling Feedstock",2027,"Buses",0.599227083804289
+"LIB Recycling Feedstock",2027,"Consumer Electronics",10.302914734533
+"LIB Recycling Feedstock",2027,"Heavy trucks",0.949723048548614
+"LIB Recycling Feedstock",2027,"Light Commercial Vehicles",1.92114828250973
+"LIB Recycling Feedstock",2027,"Light Duty Vehicles",5.38125973971115
+"LIB Recycling Feedstock",2027,"Medium trucks",2.15528963704424
+"LIB Recycling Feedstock",2027,"Production Scrap",31.2009843501791
+"LIB Recycling Feedstock",2027,"Stationary Storage",1.56943385059463
+"LIB Recycling Feedstock",2027,"Vehicle Exports",-0.140862236240563
+"LIB Recycling Feedstock",2028,"Buses",0.929125869319439
+"LIB Recycling Feedstock",2028,"Consumer Electronics",24.090415072696
+"LIB Recycling Feedstock",2028,"Heavy trucks",1.6890300010908
+"LIB Recycling Feedstock",2028,"Light Commercial Vehicles",3.49011865942748
+"LIB Recycling Feedstock",2028,"Light Duty Vehicles",8.32760123506851
+"LIB Recycling Feedstock",2028,"Medium trucks",3.86674977760809
+"LIB Recycling Feedstock",2028,"Production Scrap",37.3595417238605
+"LIB Recycling Feedstock",2028,"Stationary Storage",2.39921544698927
+"LIB Recycling Feedstock",2028,"Vehicle Exports",-0.216142979641392
+"LIB Recycling Feedstock",2029,"Buses",1.40056547488106
+"LIB Recycling Feedstock",2029,"Consumer Electronics",34.2454705984827
+"LIB Recycling Feedstock",2029,"Heavy trucks",2.80031944991845
+"LIB Recycling Feedstock",2029,"Light Commercial Vehicles",5.92449680889321
+"LIB Recycling Feedstock",2029,"Light Duty Vehicles",12.5565211425973
+"LIB Recycling Feedstock",2029,"Medium trucks",6.4085685796038
+"LIB Recycling Feedstock",2029,"Production Scrap",47.4652227814914
+"LIB Recycling Feedstock",2029,"Stationary Storage",3.60745618228007
+"LIB Recycling Feedstock",2029,"Vehicle Exports",-0.324139925677867
+"LIB Recycling Feedstock",2030,"Buses",2.05110401167788
+"LIB Recycling Feedstock",2030,"Consumer Electronics",37.2197854830706
+"LIB Recycling Feedstock",2030,"Heavy trucks",4.36745930330145
+"LIB Recycling Feedstock",2030,"Light Commercial Vehicles",9.43722319137186
+"LIB Recycling Feedstock",2030,"Light Duty Vehicles",18.5701726360493
+"LIB Recycling Feedstock",2030,"Medium trucks",10.0277821772903
+"LIB Recycling Feedstock",2030,"Production Scrap",54.9598532304245
+"LIB Recycling Feedstock",2030,"Stationary Storage",5.29164396754619
+"LIB Recycling Feedstock",2030,"Vehicle Exports",-0.474274725952014
+"LIB Recycling Feedstock",2031,"Buses",3.03766949724709
+"LIB Recycling Feedstock",2031,"Consumer Electronics",38.5779754455885
+"LIB Recycling Feedstock",2031,"Heavy trucks",6.52986667982389
+"LIB Recycling Feedstock",2031,"Light Commercial Vehicles",14.1948216735395
+"LIB Recycling Feedstock",2031,"Light Duty Vehicles",26.7446698890271
+"LIB Recycling Feedstock",2031,"Medium trucks",14.9188393234589
+"LIB Recycling Feedstock",2031,"Production Scrap",65.9102027319469
+"LIB Recycling Feedstock",2031,"Stationary Storage",7.50098070065977
+"LIB Recycling Feedstock",2031,"Vehicle Exports",-0.680165639188797
+"LIB Recycling Feedstock",2032,"Buses",4.32188711009975
+"LIB Recycling Feedstock",2032,"Consumer Electronics",39.8279960287271
+"LIB Recycling Feedstock",2032,"Heavy trucks",9.3144051192108
+"LIB Recycling Feedstock",2032,"Light Commercial Vehicles",20.3479816374274
+"LIB Recycling Feedstock",2032,"Light Duty Vehicles",37.7141044489971
+"LIB Recycling Feedstock",2032,"Medium trucks",21.1162071331097
+"LIB Recycling Feedstock",2032,"Production Scrap",74.9700138452692
+"LIB Recycling Feedstock",2032,"Stationary Storage",10.1631929034708
+"LIB Recycling Feedstock",2032,"Vehicle Exports",-0.958764145610391
+"LIB Recycling Feedstock",2033,"Buses",5.95523913364074
+"LIB Recycling Feedstock",2033,"Consumer Electronics",41.0770289868123
+"LIB Recycling Feedstock",2033,"Heavy trucks",12.7394546049915
+"LIB Recycling Feedstock",2033,"Light Commercial Vehicles",27.9398004491956
+"LIB Recycling Feedstock",2033,"Light Duty Vehicles",52.5619299260589
+"LIB Recycling Feedstock",2033,"Medium trucks",28.6389503570076
+"LIB Recycling Feedstock",2033,"Production Scrap",84.4623755417556
+"LIB Recycling Feedstock",2033,"Stationary Storage",13.0273744475444
+"LIB Recycling Feedstock",2033,"Vehicle Exports",-1.33201790363481
+"LIB Recycling Feedstock",2034,"Buses",7.96308581702644
+"LIB Recycling Feedstock",2034,"Consumer Electronics",42.4705430817227
+"LIB Recycling Feedstock",2034,"Heavy trucks",16.7964841588639
+"LIB Recycling Feedstock",2034,"Light Commercial Vehicles",36.8800197807417
+"LIB Recycling Feedstock",2034,"Light Duty Vehicles",72.4202988998359
+"LIB Recycling Feedstock",2034,"Medium trucks",37.4357923663875
+"LIB Recycling Feedstock",2034,"Production Scrap",90.2709485255328
+"LIB Recycling Feedstock",2034,"Stationary Storage",15.7106749802752
+"LIB Recycling Feedstock",2034,"Vehicle Exports",-1.82544092697172
+"LIB Recycling Feedstock",2035,"Buses",10.3978094022753
+"LIB Recycling Feedstock",2035,"Consumer Electronics",44.3081417041134
+"LIB Recycling Feedstock",2035,"Heavy trucks",21.4811865714141
+"LIB Recycling Feedstock",2035,"Light Commercial Vehicles",47.0370488797715
+"LIB Recycling Feedstock",2035,"Light Duty Vehicles",98.5144210123408
+"LIB Recycling Feedstock",2035,"Medium trucks",47.5298684290299
+"LIB Recycling Feedstock",2035,"Production Scrap",95.8382614977648
+"LIB Recycling Feedstock",2035,"Stationary Storage",17.8887410740697
+"LIB Recycling Feedstock",2035,"Vehicle Exports",-2.46810119760746
+"LIB Recycling Feedstock",2036,"Buses",13.2879635780215
+"LIB Recycling Feedstock",2036,"Consumer Electronics",46.6828025333754
+"LIB Recycling Feedstock",2036,"Heavy trucks",26.8197764795496
+"LIB Recycling Feedstock",2036,"Light Commercial Vehicles",58.2025200485491
+"LIB Recycling Feedstock",2036,"Light Duty Vehicles",131.6341011685
+"LIB Recycling Feedstock",2036,"Medium trucks",58.9317225163465
+"LIB Recycling Feedstock",2036,"Production Scrap",99.9125742103036
+"LIB Recycling Feedstock",2036,"Stationary Storage",19.5203850560246
+"LIB Recycling Feedstock",2036,"Vehicle Exports",-3.28918267562606
+"LIB Recycling Feedstock",2037,"Buses",16.6265949924999
+"LIB Recycling Feedstock",2037,"Consumer Electronics",49.0012525985289
+"LIB Recycling Feedstock",2037,"Heavy trucks",32.8047597805994
+"LIB Recycling Feedstock",2037,"Light Commercial Vehicles",70.11297495308
+"LIB Recycling Feedstock",2037,"Light Duty Vehicles",174.046892973806
+"LIB Recycling Feedstock",2037,"Medium trucks",71.6261798555531
+"LIB Recycling Feedstock",2037,"Production Scrap",102.849882271718
+"LIB Recycling Feedstock",2037,"Stationary Storage",20.8522027861651
+"LIB Recycling Feedstock",2037,"Vehicle Exports",-4.3127836489708
+"LIB Recycling Feedstock",2038,"Buses",20.3870560035116
+"LIB Recycling Feedstock",2038,"Consumer Electronics",50.9623813646208
+"LIB Recycling Feedstock",2038,"Heavy trucks",39.4384194968138
+"LIB Recycling Feedstock",2038,"Light Commercial Vehicles",82.5135933799132
+"LIB Recycling Feedstock",2038,"Light Duty Vehicles",226.161139577417
+"LIB Recycling Feedstock",2038,"Medium trucks",85.6017478692616
+"LIB Recycling Feedstock",2038,"Production Scrap",105.644414006378
+"LIB Recycling Feedstock",2038,"Stationary Storage",22.2595357601371
+"LIB Recycling Feedstock",2038,"Vehicle Exports",-5.55491388359661
+"LIB Recycling Feedstock",2039,"Buses",24.4556867383454
+"LIB Recycling Feedstock",2039,"Consumer Electronics",52.8888360241604
+"LIB Recycling Feedstock",2039,"Heavy trucks",46.6834548322253
+"LIB Recycling Feedstock",2039,"Light Commercial Vehicles",95.1578803740751
+"LIB Recycling Feedstock",2039,"Light Duty Vehicles",288.387717706781
+"LIB Recycling Feedstock",2039,"Medium trucks",100.753773355675
+"LIB Recycling Feedstock",2039,"Production Scrap",108.91009840266
+"LIB Recycling Feedstock",2039,"Stationary Storage",25.3894133075234
+"LIB Recycling Feedstock",2039,"Vehicle Exports",-7.01669226044221
+"LIB Recycling Feedstock",2040,"Buses",28.7335059102292
+"LIB Recycling Feedstock",2040,"Consumer Electronics",54.8820436754349
+"LIB Recycling Feedstock",2040,"Heavy trucks",54.5423396281295
+"LIB Recycling Feedstock",2040,"Light Commercial Vehicles",107.817844611375
+"LIB Recycling Feedstock",2040,"Light Duty Vehicles",359.575102766705
+"LIB Recycling Feedstock",2040,"Medium trucks",116.859998634517
+"LIB Recycling Feedstock",2040,"Production Scrap",111.849
+"LIB Recycling Feedstock",2040,"Stationary Storage",46.8882900292596
+"LIB Recycling Feedstock",2040,"Vehicle Exports",-8.6814566839307
+"LIB Recycling Feedstock",2041,"Buses",33.1372734680178
+"LIB Recycling Feedstock",2041,"Consumer Electronics",56.908143805079
+"LIB Recycling Feedstock",2041,"Heavy trucks",62.8150011144201
+"LIB Recycling Feedstock",2041,"Light Commercial Vehicles",120.225570099043
+"LIB Recycling Feedstock",2041,"Light Duty Vehicles",439.098214733374
+"LIB Recycling Feedstock",2041,"Medium trucks",133.528175040383
+"LIB Recycling Feedstock",2041,"Production Scrap",111.849
+"LIB Recycling Feedstock",2041,"Stationary Storage",71.0802189005343
+"LIB Recycling Feedstock",2041,"Vehicle Exports",-10.5127494577331
+"LIB Recycling Feedstock",2042,"Buses",37.6159209388912
+"LIB Recycling Feedstock",2042,"Consumer Electronics",58.9744215056074
+"LIB Recycling Feedstock",2042,"Heavy trucks",71.3811084208179
+"LIB Recycling Feedstock",2042,"Light Commercial Vehicles",132.152567997903
+"LIB Recycling Feedstock",2042,"Light Duty Vehicles",524.387216042587
+"LIB Recycling Feedstock",2042,"Medium trucks",150.417088545485
+"LIB Recycling Feedstock",2042,"Production Scrap",111.849
+"LIB Recycling Feedstock",2042,"Stationary Storage",78.2362169745349
+"LIB Recycling Feedstock",2042,"Vehicle Exports",-12.4618548011201
+"LIB Recycling Feedstock",2043,"Buses",42.1102861268096
+"LIB Recycling Feedstock",2043,"Consumer Electronics",60.9728351911308
+"LIB Recycling Feedstock",2043,"Heavy trucks",80.1207786187187
+"LIB Recycling Feedstock",2043,"Light Commercial Vehicles",143.397976005224
+"LIB Recycling Feedstock",2043,"Light Duty Vehicles",613.50454366357
+"LIB Recycling Feedstock",2043,"Medium trucks",167.219901364824
+"LIB Recycling Feedstock",2043,"Production Scrap",111.849
+"LIB Recycling Feedstock",2043,"Stationary Storage",98.9649229083686
+"LIB Recycling Feedstock",2043,"Vehicle Exports",-14.470246561818
+"LIB Recycling Feedstock",2044,"Buses",46.5589846580936
+"LIB Recycling Feedstock",2044,"Consumer Electronics",62.49550035989
+"LIB Recycling Feedstock",2044,"Heavy trucks",88.9065831141955
+"LIB Recycling Feedstock",2044,"Light Commercial Vehicles",153.781205375614
+"LIB Recycling Feedstock",2044,"Light Duty Vehicles",703.39039666525
+"LIB Recycling Feedstock",2044,"Medium trucks",183.721899649251
+"LIB Recycling Feedstock",2044,"Production Scrap",111.849
+"LIB Recycling Feedstock",2044,"Stationary Storage",115.774358751408
+"LIB Recycling Feedstock",2044,"Vehicle Exports",-16.4727366809551
+"LIB Recycling Feedstock",2045,"Buses",50.8964830789145
+"LIB Recycling Feedstock",2045,"Consumer Electronics",63.1808253355408
+"LIB Recycling Feedstock",2045,"Heavy trucks",97.5964029362852
+"LIB Recycling Feedstock",2045,"Light Commercial Vehicles",163.166224690165
+"LIB Recycling Feedstock",2045,"Light Duty Vehicles",791.140890843027
+"LIB Recycling Feedstock",2045,"Medium trucks",199.732782447279
+"LIB Recycling Feedstock",2045,"Production Scrap",111.849
+"LIB Recycling Feedstock",2045,"Stationary Storage",125.817694998758
+"LIB Recycling Feedstock",2045,"Vehicle Exports",-18.3994894842128
+"LIB Recycling Feedstock",2046,"Buses",55.0168372142793
+"LIB Recycling Feedstock",2046,"Consumer Electronics",63.2885467821297
+"LIB Recycling Feedstock",2046,"Heavy trucks",106.014709279358
+"LIB Recycling Feedstock",2046,"Light Commercial Vehicles",171.463882371794
+"LIB Recycling Feedstock",2046,"Light Duty Vehicles",873.101488595417
+"LIB Recycling Feedstock",2046,"Medium trucks",215.062202296516
+"LIB Recycling Feedstock",2046,"Production Scrap",111.849
+"LIB Recycling Feedstock",2046,"Stationary Storage",138.645323822977
+"LIB Recycling Feedstock",2046,"Vehicle Exports",-20.1840194331669
+"LIB Recycling Feedstock",2047,"Buses",58.8303940464516
+"LIB Recycling Feedstock",2047,"Consumer Electronics",63.2911903509058
+"LIB Recycling Feedstock",2047,"Heavy trucks",113.960826908608
+"LIB Recycling Feedstock",2047,"Light Commercial Vehicles",178.646404225398
+"LIB Recycling Feedstock",2047,"Light Duty Vehicles",947.012116539275
+"LIB Recycling Feedstock",2047,"Medium trucks",229.496427151776
+"LIB Recycling Feedstock",2047,"Production Scrap",111.849
+"LIB Recycling Feedstock",2047,"Stationary Storage",156.9950979803
+"LIB Recycling Feedstock",2047,"Vehicle Exports",-21.772706129289
+"LIB Recycling Feedstock",2048,"Buses",62.2751598133492
+"LIB Recycling Feedstock",2048,"Consumer Electronics",63.2911941962915
+"LIB Recycling Feedstock",2048,"Heavy trucks",121.262261779329
+"LIB Recycling Feedstock",2048,"Light Commercial Vehicles",184.756324419782
+"LIB Recycling Feedstock",2048,"Light Duty Vehicles",1011.15545659294
+"LIB Recycling Feedstock",2048,"Medium trucks",242.884599298875
+"LIB Recycling Feedstock",2048,"Production Scrap",111.849
+"LIB Recycling Feedstock",2048,"Stationary Storage",181.459079780116
+"LIB Recycling Feedstock",2048,"Vehicle Exports",-23.1362576845327
+"LIB Recycling Feedstock",2049,"Buses",65.3441040964738
+"LIB Recycling Feedstock",2049,"Consumer Electronics",63.2911941963999
+"LIB Recycling Feedstock",2049,"Heavy trucks",127.778571495444
+"LIB Recycling Feedstock",2049,"Light Commercial Vehicles",189.89235236973
+"LIB Recycling Feedstock",2049,"Light Duty Vehicles",1065.41456441294
+"LIB Recycling Feedstock",2049,"Medium trucks",255.109371281653
+"LIB Recycling Feedstock",2049,"Production Scrap",111.849
+"LIB Recycling Feedstock",2049,"Stationary Storage",206.035230277863
+"LIB Recycling Feedstock",2049,"Vehicle Exports",-24.2740340726879
+"LIB Recycling Feedstock",2050,"Buses",68.0581081931362
+"LIB Recycling Feedstock",2050,"Consumer Electronics",63.2911941963999
+"LIB Recycling Feedstock",2050,"Heavy trucks",133.490709620803
+"LIB Recycling Feedstock",2050,"Light Commercial Vehicles",194.188127108318
+"LIB Recycling Feedstock",2050,"Light Duty Vehicles",1110.84321217163
+"LIB Recycling Feedstock",2050,"Medium trucks",266.163193062556
+"LIB Recycling Feedstock",2050,"Production Scrap",111.849
+"LIB Recycling Feedstock",2050,"Stationary Storage",208.690481253058
+"LIB Recycling Feedstock",2050,"Vehicle Exports",-25.2103831785203

@@ -3,7 +3,7 @@
 
 # LOAD DATA -----
 source("Scripts/00-Libraries.R", encoding = "UTF-8")
-source("Scripts/01-ModelParameters.R")
+source("Scripts/Run Model/01-ModelParameters.R")
 
 url_drive <- "Inputs/Original/"
 
@@ -24,6 +24,7 @@ for (i in 2031:2050) {
 rm(aux, cap_2030)
 
 cap <- cap %>%
+  dplyr::select(-`Refining Capacity No Delay`) |>
   pivot_longer(c(-Year, -Country), names_to = "Stage", values_to = "tons") %>%
   mutate(Stage = str_remove(Stage, " Capacity") %>% str_replace("Refining", "Refining (black mass)")) %>%
   mutate(type = "Capacity") %>%
@@ -51,20 +52,24 @@ df_all <- df_all %>%
     Size = str_extract(Scenario, "Small|Large"),
     Lifetime = str_extract(Scenario, "Short|Long"),
     eol = str_extract(Scenario, "Repurposing|Recycling"),
-    Reuse = str_extract(Scenario, "reuse..") %>% str_replace("reuse0.", "reuse0")
+    Reuse = str_extract(Scenario, "reuse..") %>% str_replace("reuse0.", "reuse0"),
+    chem = str_extract(Scenario, "LFP|NMC")
   )
 df_all <- df_all %>%
   mutate(
     Scenario = str_remove(Scenario, "\\.csv"),
     Size = if_else(is.na(Size), "Reference", Size),
     Lifetime = if_else(is.na(Lifetime), "Reference", Lifetime),
-    eol = if_else(is.na(eol), "Reference", eol)
+    eol = if_else(is.na(eol), "Reference", eol),
+    chem = if_else(is.na(chem), "Reference", chem)
   )
 unique(df_all$Sales)
 unique(df_all$Size)
 unique(df_all$Lifetime)
 unique(df_all$eol)
 unique(df_all$Reuse)
+unique(df_all$chem)
+
 
 # consider scrap and max production
 df_all <- df_all %>%
@@ -82,7 +87,7 @@ df_scrap <- df_all %>%
 df_all <- rbind(df_all, df_scrap)
 
 df_all <- df_all %>%
-  group_by(Scenario, Country, Sales, Size, Lifetime, eol, Reuse, Year) %>%
+  group_by(Scenario, Country, Sales, Size, Lifetime, eol, Reuse, chem, Year) %>%
   # to ktons
   reframe(`Pre-processing` = sum(battery_kg) / 1e6, `Refining (black mass)` = sum(blackMass_kg) / 1e6) %>%
   ungroup() %>%
@@ -101,7 +106,9 @@ scens_selected <- c(
   "Recycling" = "Momentum__reuse0Recycling",
   "Repurposing" = "Momentum__reuse0Repurposing", # Eol
   "50% reuse" = "Momentum__reuse50", # reuse
-  "18% Scrap" = "Scrap18"
+  "18% Scrap" = "Scrap18",
+  "LFP " = "Momentum__reuse0_LFP",
+  "NMC 811" = "Momentum__reuse0_NMC"
 )
 
 # names of stages
@@ -145,6 +152,7 @@ df_scen <- df_all %>%
   reframe(ktons = sum(ktons)) %>%
   ungroup() %>%
   left_join(tibble(Scenario = scens_selected, scen_name = names(scens_selected)))
+unique(df_scen$scen_name)
 
 cap <- cap %>% dplyr::select(Year, Country, Stage, type, ktons)
 
@@ -190,7 +198,7 @@ pa
 # zoom versions
 pa_zoom <- ggplot(filter(data_fig, Year <= 2030, str_detect(Stage, "Pre-processing")), aes(Year, ktons)) +
   geom_col(aes(fill=type),position = "dodge") +
-  coord_cartesian(expand = F, ylim = c(0, 1100)) +
+  coord_cartesian(expand = F, ylim = c(0, 1400)) +
   scale_x_continuous(breaks = c(2025, 2030), minor_breaks = 2025:2030) +
   scale_y_continuous(labels = scales::comma, breaks = c(0, 500, 1000)) +
   scale_fill_manual(values = c("Capacity" = "#B22222", "Feedstock" = "#006400")) +
@@ -199,6 +207,8 @@ pa_zoom <- ggplot(filter(data_fig, Year <= 2030, str_detect(Stage, "Pre-processi
   theme(legend.position = "none", plot.background = element_rect(fill = "transparent", color = NA))
 
 pa_zoom2 <- pa_zoom %+% filter(data_fig, Year <= 2030, str_detect(Stage, "Refining"))
+
+write.csv(data_fig, "Results/Data Figures/Fig4_a.csv", row.names = FALSE)
 
 
 ## b) net by scenarios -----
@@ -210,7 +220,6 @@ data_fig2 <- df_scen %>%
   ungroup() %>%
   left_join(mutate(cap_total, type = NULL, capacity = ktons, ktons = NULL)) %>%
   mutate(net = capacity - ktons)
-
 
 annotations <- tibble(
   Stage = "Pre-processing (ktons of battery)",
@@ -229,7 +238,9 @@ color_scale <- c(
   "Momentum_Short_reuse0" = "#33A02C",
   "Momentum__reuse0Recycling" = "#FDBF6F",
   "Momentum__reuse0Repurposing" = "#FF7F00",
-  "Scrap18" = "#6A3D9A"
+  "Scrap18" = "#6A3D9A",
+  "Momentum__reuse0_LFP" = "#CAB2D6",
+  "Momentum__reuse0_NMC" = "#FB9A99"
 )
 
 pb <- ggplot(data_fig2, aes(Year, net, col = Scenario)) +
@@ -241,7 +252,7 @@ pb <- ggplot(data_fig2, aes(Year, net, col = Scenario)) +
     segment.size = 0.1,
     nudge_x = 5,
     hjust = -0.1,
-    size = 8 * 5 / 14 * 0.8
+    size = 7 * 5 / 14 * 0.8
   ) +
   geom_hline(yintercept = 0, col = "black", linetype = "dashed") +
   geom_text(data=annotations,aes(x=x,y=y,label=label),fontface="italic",
@@ -263,7 +274,7 @@ pb_zoom <- ggplot(
 ) +
   geom_line() +
   geom_hline(yintercept = 0, col = "black", linetype = "dashed") +
-  coord_cartesian(expand = F, xlim = c(2025, 2030), ylim = c(-700, 500)) +
+  coord_cartesian(expand = F, xlim = c(2025, 2030), ylim = c(-750, 1200)) +
   scale_y_continuous(labels = scales::label_comma()) +
   scale_x_continuous(breaks = c(2025, 2030), minor_breaks = 2025:2030) +
   scale_color_manual(values = color_scale) +
@@ -273,6 +284,8 @@ pb_zoom <- ggplot(
 
 
 pb_zoom2 <- pb_zoom %+% filter(data_fig2, Year <= 2030, str_detect(Stage, "Refining"))
+
+write.csv(data_fig2, "Results/Data Figures/Fig4_b.csv", row.names = FALSE)
 
 
 ## c) By country -----
@@ -310,7 +323,7 @@ pc_zoom <- ggplot(
 ) +
   geom_line() +
   geom_hline(yintercept = 0, col = "black", linetype = "dashed") +
-  coord_cartesian(expand = F, xlim = c(2025, 2030), ylim = c(-100, 400)) +
+  coord_cartesian(expand = F, xlim = c(2025, 2030), ylim = c(-300, 900)) +
   scale_y_continuous(labels = scales::comma) +
   scale_x_continuous(breaks = c(2025, 2030), minor_breaks = 2025:2030) +
   labs(x = "", y = "", col = "") +
@@ -319,6 +332,7 @@ pc_zoom <- ggplot(
 
 pc_zoom2 <- pc_zoom %+% filter(data_fig3, Year <= 2030, str_detect(Stage, "Refining"))
 
+write.csv(data_fig3, "Results/Data Figures/Fig4_c.csv", row.names = FALSE)
 
 ## Combine -----
 
@@ -345,9 +359,14 @@ pc1_inset <- ggdraw() +
   draw_plot(pc_zoom2, x = 0.56, y = 0.08, width = 0.25, height = 0.45)
 
 
-plot_grid(pa1_inset, pb1_inset, pc1_inset, ncol = 1, rel_heights = c(1, 1.3, 1), align = "v", axis = "lr")
+plot_grid(pa1_inset, pb1_inset, pc1_inset, ncol = 1, rel_heights = c(1, 1.4, 1), align = "v", axis = "lr")
 
 ggsave("Figures/Fig4.png", ggplot2::last_plot(), units = "cm", dpi = 600, width = 8.7 * 2, height = 8.7 * 2)
+
+pdf("Figures/pdf/Fig4.pdf", width = 8.7 * 2 / 2.54, height = 8.7 * 1.75 / 2.54)
+ggplot2::last_plot()
+dev.off()
+
 
 # OLD FIGURE ----
 

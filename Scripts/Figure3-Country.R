@@ -2,7 +2,7 @@
 # PBH August 2025
 
 source("Scripts/00-Libraries.R", encoding = "UTF-8")
-source("Scripts/01-ModelParameters.R")
+source("Scripts/Run Model/01-ModelParameters.R")
 
 # DATA -----
 
@@ -52,7 +52,9 @@ for (i in 2031:2050) {
 }
 rm(aux, cap_2030)
 
+head(cap)
 cap <- cap %>%
+  dplyr::select(-`Refining Capacity No Delay`) |>
   pivot_longer(c(-Year, -Country), names_to = "Stage", values_to = "tons") %>%
   mutate(
     Stage = if_else(
@@ -78,7 +80,7 @@ cap <- rbind(cap, mex_cap)
 ## Main ----
 
 # SAME COLORS AS FIG 2
-veh_levels <- MetBrewer::met.brewer("Signac", n = 11)
+veh_levels <- MetBrewer::met.brewer("Signac", n = 12)
 names(veh_levels) <- c(
   "Production Scrap",
   "Consumer Electronics",
@@ -89,6 +91,7 @@ names(veh_levels) <- c(
   "Heavy trucks",
   "Medium trucks",
   "Buses",
+  "Light Commercial Vehicles",
   "Light Duty Vehicles",
   "Used LDV Trade"
 )
@@ -98,7 +101,13 @@ data_fig <- df %>%
   # filter(Year %in% c(2025,2030,2035,2040,2045,2050)) %>%
   pivot_longer(c(battery_kg, blackMass_kg), names_to = "Stage", values_to = "ktons") %>%
   mutate(ktons = ktons / 1e6) %>%
-  mutate(Vehicle = if_else(Vehicle %in% c("Cars", "Vans"), "Light Duty Vehicles", Vehicle)) %>%
+  mutate(
+    Vehicle = case_when(
+      Vehicle %in% c("Cars") ~ "Light Duty Vehicles",
+      Vehicle %in% c("Vans") ~ "Light Commercial Vehicles",
+      T ~ Vehicle
+    )
+  ) %>%
   mutate(
     Stage = if_else(str_detect(Stage, "battery"), "Pre-processing (ktons of battery)", "Refining (ktons of black mass)")
   ) %>%
@@ -125,7 +134,7 @@ cap_NA <- cap %>%
 cap <- rbind(cap, cap_NA) %>%
   mutate(Country = factor(Country, levels = c("North America", "United States", "Mexico", "Canada")))
 
-# retiring feedstock by coutnry
+# retiring feedstock by country numbers
 data_fig %>%
   filter(Year == 2050) %>%
   group_by(Country, Stage) %>%
@@ -142,8 +151,10 @@ p <- ggplot(data_fig, aes(Year, ktons)) +
   scale_y_continuous(labels = scales::label_comma()) +
   scale_fill_manual(values = veh_levels) +
   labs(x = "", y = "", fill = "") +
-  theme(panel.spacing = unit(0.5, "cm"))
+  theme(panel.spacing = unit(0.5, "cm"), legend.text = element_text(size = 7))
 p
+
+write.csv(data_fig, "Results/Data Figures/Fig3.csv", row.names = FALSE)
 
 ## Zoom versions -----
 p_zoom_base <- ggplot(
@@ -151,7 +162,7 @@ p_zoom_base <- ggplot(
   aes(Year, ktons)
 ) +
   geom_col(aes(fill=Vehicle),col="black",linewidth=0.01) +
-  coord_cartesian(expand = F, ylim = c(-10, 1000)) +
+  coord_cartesian(expand = F, ylim = c(-10, 1400)) +
   scale_x_continuous(breaks = c(2025, 2030), minor_breaks = 2025:2030) +
   scale_y_continuous(labels = scales::comma, breaks = c(0, 500, 1000)) +
   scale_fill_manual(values = veh_levels) +
@@ -168,35 +179,37 @@ p_zoom0b <- p_zoom_base %+%
 
 # USA
 p_zoom1a <- p_zoom_base +
+  coord_cartesian(expand = F, ylim = c(0, 1200)) +
   geom_line(data = filter(cap, Year <= 2030, Country == "United States", str_detect(Stage, "Pre-processing")))
 p_zoom1b <- p_zoom_base %+%
   filter(data_fig, Year <= 2030, Country == "United States", str_detect(Stage, "Refining")) +
+  coord_cartesian(expand = F, ylim = c(0, 1200)) +
   geom_line(data = filter(cap, Year <= 2030, Country == "United States", str_detect(Stage, "Refining")))
 
 # Mex
 p_zoom2a <- p_zoom_base %+%
   filter(data_fig, Year <= 2030, Country == "Mexico", str_detect(Stage, "processing")) +
-  coord_cartesian(expand = F, ylim = c(0, 60)) +
+  coord_cartesian(expand = F, ylim = c(0, 70)) +
   scale_y_continuous(labels = scales::comma, breaks = c(0, 25, 50)) +
   geom_line(data = filter(cap, Year <= 2030, Country == "Mexico", str_detect(Stage, "Pre-processing")))
 
 p_zoom2b <- p_zoom_base %+%
   filter(data_fig, Year <= 2030, Country == "Mexico", str_detect(Stage, "Refining")) +
-  coord_cartesian(expand = F, ylim = c(0, 60)) +
+  coord_cartesian(expand = F, ylim = c(0, 70)) +
   scale_y_continuous(labels = scales::comma, breaks = c(0, 25, 50)) +
   geom_line(data = filter(cap, Year <= 2030, Country == "Mexico", str_detect(Stage, "Refining")))
 
 # Can
 p_zoom3a <- p_zoom_base %+%
   filter(data_fig, Year <= 2030, Country == "Canada", str_detect(Stage, "processing")) +
-  coord_cartesian(expand = F, ylim = c(-2, 90)) +
-  scale_y_continuous(labels = scales::comma, breaks = c(0, 25, 50, 75)) +
+  coord_cartesian(expand = F, ylim = c(-2, 350)) +
+  scale_y_continuous(labels = scales::comma, breaks = c(0, 100, 200, 300)) +
   geom_line(data = filter(cap, Year <= 2030, Country == "Canada", str_detect(Stage, "Pre-processing")))
 
 p_zoom3b <- p_zoom_base %+%
   filter(data_fig, Year <= 2030, Country == "Canada", str_detect(Stage, "Refining")) +
-  coord_cartesian(expand = F, ylim = c(-2, 90)) +
-  scale_y_continuous(labels = scales::comma, breaks = c(0, 25, 50, 75)) +
+  coord_cartesian(expand = F, ylim = c(-2, 350)) +
+  scale_y_continuous(labels = scales::comma, breaks = c(0, 100, 200, 300)) +
   geom_line(data = filter(cap, Year <= 2030, Country == "Canada", str_detect(Stage, "Refining")))
 
 ## Combine ----
@@ -205,24 +218,28 @@ library(cowplot)
 library(grid)
 ggdraw() +
   draw_plot(p) +
-  draw_plot(p_zoom0a, x = 0.07, y = 0.815, width = 0.21, height = 0.14) +
+  draw_plot(p_zoom0a, x = 0.064, y = 0.815, width = 0.21, height = 0.14) +
   draw_plot(p_zoom0b, x = 0.40, y = 0.815, width = 0.21, height = 0.14) +
-  draw_plot(p_zoom1a, x = 0.07, y = 0.582, width = 0.21, height = 0.14) +
+  draw_plot(p_zoom1a, x = 0.064, y = 0.582, width = 0.21, height = 0.14) +
   draw_plot(p_zoom1b, x = 0.40, y = 0.582, width = 0.21, height = 0.14) +
-  draw_plot(p_zoom2a, x = 0.07, y = 0.35, width = 0.21, height = 0.14) +
+  draw_plot(p_zoom2a, x = 0.064, y = 0.35, width = 0.21, height = 0.14) +
   draw_plot(p_zoom2b, x = 0.40, y = 0.35, width = 0.21, height = 0.14) +
-  draw_plot(p_zoom3a, x = 0.07, y = 0.11, width = 0.21, height = 0.14) +
+  draw_plot(p_zoom3a, x = 0.064, y = 0.11, width = 0.21, height = 0.14) +
   draw_plot(p_zoom3b, x = 0.40, y = 0.11, width = 0.21, height = 0.14) +
   draw_label("Recycling Capacity", x = 0.5, y = 0.83, size = 8, color = "black") +
   draw_grob(segmentsGrob(
     x0 = unit(0.5, "npc"),
     y0 = unit(0.815, "npc"),
     x1 = unit(0.5, "npc"),
-    y1 = unit(0.78, "npc"),
+    y1 = unit(0.79, "npc"),
     gp = gpar(col = "black"),
     arrow = arrow(length = unit(0.2, "cm"))
   ))
 
 ggsave("Figures/Fig3.png", ggplot2::last_plot(), units = "cm", dpi = 600, width = 8.7 * 2, height = 8.7 * 1.8)
+
+pdf("Figures/pdf/Fig3.pdf", width = 8.7 * 2 / 2.54, height = 8.7 * 1.8 / 2.54)
+ggplot2::last_plot()
+dev.off()
 
 # EoF

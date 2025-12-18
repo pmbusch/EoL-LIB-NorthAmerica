@@ -4,10 +4,9 @@
 
 # LOAD DATA -----
 source("Scripts/00-Libraries.R", encoding = "UTF-8")
-source("Scripts/01-ModelParameters.R")
+source("Scripts/Run Model/01-ModelParameters.R")
 
 url_drive <- "Inputs/Original/"
-
 
 ## Capacity -----
 # in metric tons
@@ -25,6 +24,7 @@ for (i in 2031:2050) {
 rm(aux, cap_2030)
 
 cap <- cap %>%
+  dplyr::select(-`Refining Capacity No Delay`) |>
   pivot_longer(c(-Year, -Country), names_to = "Stage", values_to = "tons") %>%
   mutate(Stage = str_remove(Stage, " Capacity") %>% str_replace("Refining", "Refining (black mass)")) %>%
   mutate(type = "Capacity") %>%
@@ -79,7 +79,8 @@ df_all <- df_all %>%
     Lifetime = if_else(is.na(Lifetime), "Reference", Lifetime),
     eol = if_else(is.na(eol), "Reference", eol),
     Trade = if_else(is.na(Trade), "Reference", Trade)
-  )
+  ) |>
+  filter(!str_detect("LFP|NMC"))
 unique(df_all$Sales)
 unique(df_all$Size)
 unique(df_all$Lifetime)
@@ -202,8 +203,7 @@ year_limit = 2035
 for (year_limit in seq(2025, 2050, 5)) {
   # join to get deficit towards target year
   data_fig <- df_all %>%
-    filter(str_detect(Stage, "Pre-processing")) %>%
-    group_by(Scenario, Sales, Size, Lifetime, eol, Reuse, Scrap, Year) %>%
+    group_by(Stage, Scenario, Sales, Size, Lifetime, eol, Reuse, Scrap, Year) %>%
     reframe(ktons = sum(ktons)) %>%
     ungroup() %>%
     mutate(type = NULL) %>%
@@ -266,27 +266,38 @@ for (year_limit in seq(2025, 2050, 5)) {
   # labels
   data_fig <- data_fig %>% mutate(lab_def = paste0(round(deficit / 1e3, 1), "M"))
 
+  write.csv(data_fig, paste0("Results/Data Figures/Fig5_", year_limit, ".csv"), row.names = FALSE)
+
   library(cowplot)
   data1 <- filter(data_fig, Sales == "Momentum", str_detect(Stage, "Pre-processing"))
   p1a <- ggplot(data1, aes(x = Scrap, y = eol, fill = deficit)) +
     geom_tile(color = "grey80") +
     # geom_text(aes(label=lab_def),size=6*5/14 * 0.8)+
     facet_grid(Size ~ Lifetime) +
-    # scale_fill_gradient2(low = scales::alpha("#20215c", 0.9),
-    #                      mid = "white",
-    #                      high = scales::alpha("#570e12", 0.9),
-    #                      labels = scales::label_comma(),
-    #                      limits=range_deficit,
-    #                      breaks = seq(range_deficit[1],range_deficit[2], by = 500),
-    #                      # breaks = breaks_sqrt, # scale transformation
-    #                      # labels = scales::label_comma()(breaks_orig),
-    #                      midpoint = 0) +
-    scico::scale_fill_scico(
-      palette = "vik",
-      # midpoint = 0,
+    # scale_fill_gradient2(
+    #   low = scales::alpha("#5d51a3", 0.9),
+    #   mid = "white",
+    #   high = scales::alpha("#9f2049", 0.9),
+    #   labels = scales::label_comma(),
+    #   limits = range_deficit,
+    #   breaks = seq(range_deficit[1], range_deficit[2], by = steps),
+    #   # breaks = breaks_sqrt, # scale transformation
+    #   # labels = scales::label_comma()(breaks_orig),
+    #   midpoint = 0
+    # ) +
+    scale_fill_gradientn(
+      colours = rev(RColorBrewer::brewer.pal(8, "Spectral")),
+      values = scales::rescale(c(range_deficit[1], 0, range_deficit[2])),
       limits = range_deficit,
-      breaks = seq(range_deficit[1], range_deficit[2], by = steps)
+      breaks = seq(range_deficit[1], range_deficit[2], by = steps),
+      labels = scales::label_comma()
     ) +
+    # scico::scale_fill_scico(
+    #   palette = "vik",
+    #   midpoint = 0,
+    #   limits = range_deficit,
+    #   breaks = seq(range_deficit[1], range_deficit[2], by = steps)
+    # ) +
     labs(
       x = "Scrap %",
       y = "End-of-Life Scenario",
@@ -338,20 +349,20 @@ for (year_limit in seq(2025, 2050, 5)) {
 
   # Centered title
   p1a_with_title <- ggdraw() +
-    draw_label("Pre-processing & Momentum Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
-    draw_plot(p1a, y = 0, height = 1)
+    draw_plot(p1a, y = 0, height = 1) +
+    draw_label("Pre-processing & Momentum Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1)
 
   p1b_with_title <- ggdraw() +
-    draw_label("Refining & Momentum Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
-    draw_plot(p1b, y = 0, height = 1)
+    draw_plot(p1b, y = 0, height = 1) +
+    draw_label("Refining & Momentum Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1)
 
   p2a_with_title <- ggdraw() +
-    draw_label("Pre-processing & Ambitious Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
-    draw_plot(p2a, y = 0, height = 1)
+    draw_plot(p2a, y = 0, height = 1) +
+    draw_label("Pre-processing & Ambitious Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1)
 
   p2b_with_title <- ggdraw() +
-    draw_label("Refining & Ambitious Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1) +
-    draw_plot(p2b, y = 0, height = 1)
+    draw_plot(p2b, y = 0, height = 1) +
+    draw_label("Refining & Ambitious Sales", size = 11, x = 0.6, y = 1, hjust = 0.5, vjust = 1)
 
   plot_grid(
     plot_grid(p1a_with_title, p1b_with_title, p2a_with_title, p2b_with_title, ncol = 2, align = "hv", labels = NULL),
@@ -368,6 +379,51 @@ for (year_limit in seq(2025, 2050, 5)) {
     width = 18,
     height = 8.7 * 2
   )
+
+  pdf(paste0("Figures/pdf/Fig5_", year_limit, ".pdf"), width = 18 / 2.54, height = 8.7 * 2 / 2.54)
+  print(ggplot2::last_plot())
+  dev.off()
+  Sys.sleep(1)
 }
+
+# Numbers by 2035
+data_fig <- df_all %>%
+  group_by(Stage, Scenario, Sales, Size, Lifetime, eol, Reuse, Scrap, Year) %>%
+  reframe(ktons = sum(ktons)) %>%
+  ungroup() %>%
+  mutate(type = NULL) %>%
+  filter(Year == 2035) %>%
+  left_join(filter(cap_total, Year == 2035) %>% rename(cap = ktons)) %>%
+  mutate(deficit = ktons - cap)
+
+data_fig |>
+  filter(
+    Sales == "Momentum",
+    eol == "Reference",
+    Size == "Reference",
+    Reuse == "reuse0",
+    Scrap == "6%",
+    Lifetime == "Reference"
+  ) |>
+  mutate(def_pre = deficit / 20) |> # 20k plant
+  mutate(def_ref = deficit / 5.5) #5.5K plant
+
+data_fig |>
+  filter(
+    Sales == "Momentum",
+    eol == "Reference",
+    Size == "Reference",
+    Reuse == "reuse0",
+    Scrap == "18%",
+    Lifetime == "Short"
+  ) |>
+  mutate(ratio = deficit / cap)
+
+data_fig |> filter(!str_detect(Stage, "Refining")) |> filter(deficit < 0) |> pull(Scenario) |> unique()
+
+data_fig |>
+  mutate(ratio = deficit / cap) |>
+  group_by(Stage) |>
+  reframe(maxi = max(ratio), mini = min(ratio), avg = mean(ratio))
 
 # EoF

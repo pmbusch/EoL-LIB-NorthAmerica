@@ -2,7 +2,7 @@
 # PBH July 2025
 
 source("Scripts/00-Libraries.R", encoding = "UTF-8")
-source("Scripts/01-ModelParameters.R")
+source("Scripts/Run Model/01-ModelParameters.R")
 
 df <- read.csv("Results/Feedstock/Momentum__reuse0.csv")
 df2 <- read.csv("Results/Production/Momentum__reuse0.csv")
@@ -52,12 +52,13 @@ data_fig0 <- df %>%
       Flow == "addLIB" & Vehicle %in% c("Stationary Storage") ~ "LIB Replacement - SS",
       Flow == "addLIB" ~ "LIB Replacement - HDV",
       Country == "Exports" ~ "Vehicle Exports",
-      Vehicle %in% c("Cars", "Vans") ~ "Light Duty Vehicles",
+      Vehicle %in% c("Cars") ~ "Light Duty Vehicles",
+      Vehicle %in% c("Vans") ~ "Light Commercial Vehicles",
       T ~ Vehicle
     )
   )
 
-veh_levels <- MetBrewer::met.brewer("Signac", n = 11)
+veh_levels <- MetBrewer::met.brewer("Signac", n = 12)
 names(veh_levels) <- c(
   "Production Scrap",
   "Consumer Electronics",
@@ -68,6 +69,7 @@ names(veh_levels) <- c(
   "Heavy trucks",
   "Medium trucks",
   "Buses",
+  "Light Commercial Vehicles",
   "Light Duty Vehicles",
   "Vehicle Exports"
 )
@@ -91,6 +93,7 @@ p1 <- ggplot(data_fig, aes(Year, gwh, fill = Vehicle)) +
 
 p1
 
+write.csv(data_fig, "Results/Data Figures/Fig2_a.csv", row.names = FALSE)
 
 # production by year
 data_fig %>%
@@ -146,6 +149,8 @@ p3 <- ggplot(data_fig3, aes(Year, share, fill = Vehicle)) +
   )
 p3
 
+write.csv(data_fig3, "Results/Data Figures/Fig2_b.csv", row.names = FALSE)
+
 # share of recycling feedstock by country
 data_fig2 <- data_fig0 %>%
   filter(Year %in% c(2030, 2040, 2050)) %>%
@@ -177,8 +182,16 @@ p2 <- ggplot(data_fig2, aes(Year, share, fill = Country)) +
     legend.position = "bottom"
   )
 p2
+
+write.csv(data_fig2, "Results/Data Figures/Fig2_c.csv", row.names = FALSE)
+
+
 cowplot::plot_grid(p1, p3, p2, ncol = 1, rel_heights = c(0.55, 0.2, 0.25))
 
 ggsave("Figures/Fig2.png", ggplot2::last_plot(), units = "cm", dpi = 600, width = 8.7 * 2, height = 8.7 * 1.75)
+
+pdf("Figures/pdf/Fig2.pdf", width = 8.7 * 2 / 2.54, height = 8.7 * 1.75 / 2.54)
+ggplot2::last_plot()
+dev.off()
 
 # EoF
