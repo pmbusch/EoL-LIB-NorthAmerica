@@ -15,7 +15,7 @@ If you identify any error in the source code or have any further suggestions ple
 
 # Instructions
 
-The repository is ~100Mb fully unzipped. Downloading and unzipping everything should take less than 5 minutes on a normal computer.
+The repository is ~15Mb fully unzipped. Downloading and unzipping everything should take less than 5 minutes on a normal computer.
 
 Users can run all the code for replication using the "EoL-LIB-NorthAmerica.Rproj.Rproj" file, or by setting their own working directory and running scripts independently.
 
