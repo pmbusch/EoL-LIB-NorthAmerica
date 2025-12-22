@@ -7,21 +7,20 @@ source("Scripts/Run Model/01-ModelParameters.R")
 
 url_drive <- "Inputs/Original/"
 
-
 ## Capacity -----
 # in metric tons
 cap <- read_excel(
   paste0(url_drive, "NA Recycling facilities 12.9.25.xlsx"),
   sheet = "US and CA cleaned data",
-  range = "X11:AB23"
+  range = "X13:AB29"
 )
 # expand to 2050
-cap_2030 <- cap %>% filter(Year == 2030)
-for (i in 2031:2050) {
-  aux <- cap_2030 %>% mutate(Year = i)
+cap_2032 <- cap %>% filter(Year == 2032)
+for (i in 2033:2050) {
+  aux <- cap_2032 %>% mutate(Year = i)
   cap <- rbind(cap, aux)
 }
-rm(aux, cap_2030)
+rm(aux, cap_2032)
 
 cap <- cap %>%
   dplyr::select(-`Refining Capacity No Delay`) |>
@@ -73,16 +72,22 @@ unique(df_all$chem)
 
 # consider scrap and max production
 df_all <- df_all %>%
-  mutate(ratio_cap = case_when(Flow != "LIB_scrap" ~ 1, ratio_cap > 1 ~ 1, T ~ ratio_cap)) %>%
+  mutate(ratio_cap = case_when(!str_detect(Flow, "LIB_scrap") ~ 1, ratio_cap > 1 ~ 1, T ~ ratio_cap)) %>%
   mutate(kwh = kwh * ratio_cap, battery_kg = battery_kg * ratio_cap, blackMass_kg = blackMass_kg * ratio_cap)
 
-# add scenario 18% scrap
+# add scenario 16% scrap, both downstream and midstream (in series)
 df_scrap <- df_all %>%
   filter(Scenario == "Momentum__reuse0") %>%
-  # scale it according to original scrap rate used
-  mutate(adj = if_else(Flow == "LIB_scrap", 0.18 / p.scrap, 1)) %>%
+  # scale it according to original scrap rate used - midstream and downstream
+  left_join(p.scrap_down) |>
+  left_join(p.scrap_mid) |>
+  mutate(
+    adj = case_when(Flow == "LIB_scrap_down" ~ 0.08 / scrap_down, Flow == "LIB_scrap_mid" ~ 0.08 / scrap_mid, T ~ 1),
+    scrap_down = NULL,
+    scrap_mid = NULL
+  ) %>%
   mutate(kwh = kwh * adj, battery_kg = battery_kg * adj, blackMass_kg = blackMass_kg * adj, adj = NULL) %>%
-  mutate(Scenario = "Scrap18")
+  mutate(Scenario = "Scrap16")
 
 df_all <- rbind(df_all, df_scrap)
 
@@ -106,7 +111,7 @@ scens_selected <- c(
   "Recycling" = "Momentum__reuse0Recycling",
   "Repurposing" = "Momentum__reuse0Repurposing", # Eol
   "50% reuse" = "Momentum__reuse50", # reuse
-  "18% Scrap" = "Scrap18",
+  "16% Scrap" = "Scrap16",
   "LFP " = "Momentum__reuse0_LFP",
   "NMC 811" = "Momentum__reuse0_NMC"
 )
@@ -179,18 +184,25 @@ data_fig %>%
 
 pa <- ggplot(data_fig, aes(Year, ktons)) +
   geom_col(aes(fill=type),position = "dodge") +
-  facet_wrap(~Stage) +
-  coord_cartesian(expand = F, ylim = c(0, max_v * 1.05), xlim = c(2024.5, year_limit + .5)) +
+  facet_wrap(~Stage, scales = "free_y") +
+  coord_cartesian(
+    expand = F,
+    # ylim = c(0, max_v * 1.05),
+    ylim = c(0, NA),
+    xlim = c(2024.5, year_limit + .5)
+  ) +
   scale_x_continuous(breaks = c(2025, 2030, 2040, 2050)) +
   scale_y_continuous(labels = scales::comma) +
   scale_fill_manual(values = c("Capacity" = "#B22222", "Feedstock" = "#006400")) +
-  guides(fill = guide_legend(ncol = 2)) +
+  guides(fill = guide_legend(ncol = 2, keywidth = 0.5, keyheight = 0.5)) +
   labs(x = "", y = "", tag = "(a)", fill = "", title = "North America Battery Feedstock and Processing Capacity") +
   theme(
     plot.tag = element_text(face = "bold"),
-    legend.position = c(0.7, 0.45),
+    legend.position = c(0.65, 0.47),
     legend.background = element_rect(fill = "transparent", color = NA),
     legend.key = element_rect(fill = "transparent", color = NA),
+    legend.key.size = unit(0.4, "cm"),
+    legend.text = element_text(size = 7),
     panel.spacing = unit(0.5, "cm")
   )
 pa
@@ -206,7 +218,10 @@ pa_zoom <- ggplot(filter(data_fig, Year <= 2030, str_detect(Stage, "Pre-processi
   guides(x = guide_axis(minor.ticks = TRUE)) +
   theme(legend.position = "none", plot.background = element_rect(fill = "transparent", color = NA))
 
-pa_zoom2 <- pa_zoom %+% filter(data_fig, Year <= 2030, str_detect(Stage, "Refining"))
+pa_zoom2 <- pa_zoom %+%
+  filter(data_fig, Year <= 2030, str_detect(Stage, "Refining")) +
+  coord_cartesian(expand = F, ylim = c(0, 420)) +
+  scale_y_continuous(labels = scales::comma, breaks = c(0, 200, 400))
 
 write.csv(data_fig, "Results/Data Figures/Fig4_a.csv", row.names = FALSE)
 
@@ -257,7 +272,7 @@ pb <- ggplot(data_fig2, aes(Year, net, col = Scenario)) +
   geom_hline(yintercept = 0, col = "black", linetype = "dashed") +
   geom_text(data=annotations,aes(x=x,y=y,label=label),fontface="italic",
             inherit.aes = F,col="black",size=9*5/14 * 0.8) +
-  facet_wrap(~Stage, scales = "free_x") +
+  facet_wrap(~Stage, scales = "free") +
   # coord_cartesian(expand = F,xlim = c(2025,year_limit+4),
   #                 ylim=range(data_fig2$net)*1.05)+
   scale_y_continuous(labels = scales::label_comma()) +
@@ -282,8 +297,9 @@ pb_zoom <- ggplot(
   guides(x = guide_axis(minor.ticks = TRUE)) +
   theme(legend.position = "none", plot.background = element_rect(fill = "transparent", color = NA))
 
-
-pb_zoom2 <- pb_zoom %+% filter(data_fig2, Year <= 2030, str_detect(Stage, "Refining"))
+pb_zoom2 <- pb_zoom %+%
+  filter(data_fig2, Year <= 2030, str_detect(Stage, "Refining")) +
+  coord_cartesian(expand = F, ylim = c(-240, 240))
 
 write.csv(data_fig2, "Results/Data Figures/Fig4_b.csv", row.names = FALSE)
 
@@ -307,12 +323,12 @@ pc <- ggplot(data_fig3, aes(Year, net, col = Country, group = Country)) +
   geom_line() +
   geom_hline(yintercept = 0, col = "black", linetype = "dashed") +
   # facet_grid(Country~Stage,scales="free_y")+
-  facet_wrap(~Stage) +
+  facet_wrap(~Stage, scales = "free_y") +
   scale_y_continuous(labels = scales::comma) +
   scale_x_continuous(breaks = c(2025, 2030, 2040, 2050)) +
-  geom_text(x=2045,size=8*5/14 * 0.8,y=-6000,label="United States",angle=-35,col="#3C3B6EFF",data= . %>% filter(Stage=="Pre-processing")) +
-  geom_text(x=2048,size=8*5/14 * 0.8,y=-450,label="Mexico",col="#006847FF",data= . %>% filter(Stage=="Pre-processing")) +
-  geom_text(x=2048,size=8*5/14 * 0.8,y=-2000,label="Canada",col="#B22222FF",data= . %>% filter(Stage=="Pre-processing")) +
+  geom_text(x=2045,size=8*5/14 * 0.8,y=-6000,label="United States",angle=-35,col="#3C3B6EFF",data= . %>% filter(str_detect(Stage,"Pre-processing"))) +
+  geom_text(x=2048,size=8*5/14 * 0.8,y=-1500,label="Mexico",col="#006847FF",data= . %>% filter(str_detect(Stage,"Pre-processing"))) +
+  geom_text(x=2048,size=8*5/14 * 0.8,y=-450,label="Canada",col="#B22222FF",data= . %>% filter(str_detect(Stage,"Pre-processing"))) +
   labs(x = "", y = "", tag = "(c)", title = "Net Processing Capacity by Country") +
   theme(plot.tag = element_text(face = "bold"), panel.spacing = unit(0.5, "cm"), legend.position = "none")
 pc
@@ -330,7 +346,9 @@ pc_zoom <- ggplot(
   guides(x = guide_axis(minor.ticks = TRUE)) +
   theme(legend.position = "none", plot.background = element_rect(fill = "transparent", color = NA))
 
-pc_zoom2 <- pc_zoom %+% filter(data_fig3, Year <= 2030, str_detect(Stage, "Refining"))
+pc_zoom2 <- pc_zoom %+%
+  filter(data_fig3, Year <= 2030, str_detect(Stage, "Refining")) +
+  coord_cartesian(expand = F, xlim = c(2025, 2030), ylim = c(-80, 80))
 
 write.csv(data_fig3, "Results/Data Figures/Fig4_c.csv", row.names = FALSE)
 
@@ -343,30 +361,33 @@ pc1 <- pc + theme(plot.margin = margin(-5, 5, -5, 5))
 library(cowplot)
 pa1_inset <- ggdraw() +
   draw_plot(pa1) +
-  draw_plot(pa_zoom, x = 0.11, y = 0.33, width = 0.25, height = 0.38) +
-  draw_plot(pa_zoom2, x = 0.56, y = 0.33, width = 0.25, height = 0.38)
+  draw_plot(pa_zoom, x = 0.10, y = 0.33, width = 0.25, height = 0.38) +
+  draw_plot(pa_zoom2, x = 0.565, y = 0.33, width = 0.25, height = 0.38)
 
 
 pb1_inset <- ggdraw() +
   draw_plot(pb1) +
-  draw_plot(pb_zoom, x = 0.11, y = 0.08, width = 0.25, height = 0.35) +
-  draw_plot(pb_zoom2, x = 0.56, y = 0.08, width = 0.25, height = 0.35)
+  draw_plot(pb_zoom, x = 0.10, y = 0.06, width = 0.25, height = 0.35) +
+  draw_plot(pb_zoom2, x = 0.565, y = 0.06, width = 0.25, height = 0.35)
 
 
 pc1_inset <- ggdraw() +
   draw_plot(pc1) +
-  draw_plot(pc_zoom, x = 0.11, y = 0.08, width = 0.25, height = 0.45) +
-  draw_plot(pc_zoom2, x = 0.56, y = 0.08, width = 0.25, height = 0.45)
+  draw_plot(pc_zoom, x = 0.10, y = 0.08, width = 0.25, height = 0.45) +
+  draw_plot(pc_zoom2, x = 0.565, y = 0.08, width = 0.25, height = 0.45)
 
 
 plot_grid(pa1_inset, pb1_inset, pc1_inset, ncol = 1, rel_heights = c(1, 1.4, 1), align = "v", axis = "lr")
 
 ggsave("Figures/Fig4.png", ggplot2::last_plot(), units = "cm", dpi = 600, width = 8.7 * 2, height = 8.7 * 2)
 
-pdf("Figures/pdf/Fig4.pdf", width = 8.7 * 2 / 2.54, height = 8.7 * 1.75 / 2.54)
+pdf("Figures/pdf/Fig4.pdf", width = 8.7 * 2 / 2.54, height = 8.7 * 2 / 2.54)
 ggplot2::last_plot()
 dev.off()
 
+# EoF
+
+##############3
 
 # OLD FIGURE ----
 

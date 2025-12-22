@@ -29,14 +29,21 @@ params <- rbind(params, mutate(filter(params, Country == "United States"), Count
 
 
 # Current LIB production capacity - assuming a 77% operating capacity
+# Separated into downstream and upstream
 cap_prod <- rbind(
   tibble(
     Country = "United States",
     Year = 2025:2050,
-    cap_ghw = c(647.25, 848.67, 1300.63, 1412.28, 1631.73, rep(1656.37, 21))
+    cap_ghw_down = c(475.65, 651.65, 849.36, 949.46, 949.46, rep(974.1, 21)),
+    cap_ghw_mid = c(171.61, 197.02, 451.27, 462.82, 682.27, rep(682.27, 21))
   ),
-  tibble(Country = "Mexico", Year = 2025:2050, cap_ghw = c(0, rep(13.48, 25))), # san luis potosi
-  tibble(Country = "Canada", Year = 2025:2050, cap_ghw = c(0.92, 59.17, 97.28, 97.28, rep(194.30, 22))) # Ontario and Quebec
+  tibble(Country = "Mexico", Year = 2025:2050, cap_ghw_down = c(0, rep(13.48, 25)), cap_ghw_mid = c(0, rep(13.48, 25))), # san luis potosi
+  tibble(
+    Country = "Canada", # Ontario and Quebec
+    Year = 2025:2050,
+    cap_ghw_down = c(0, rep(58.24, 25)),
+    cap_ghw_mid = c(0.92, 0.92, 39.04, 39.04, rep(136.06, 22))
+  )
 )
 
 
@@ -140,17 +147,34 @@ for (i in runs) {
           reframe(gwh = sum(kwh) / 1e6) %>%
           ungroup() %>%
           left_join(cap_prod) %>%
-          mutate(cap_ghw = if_else(is.na(cap_ghw), 0, cap_ghw)) %>%
-          mutate(ratio_cap = cap_ghw / gwh)
+          # midstream and downstream
+          mutate(
+            cap_ghw_down = if_else(is.na(cap_ghw_down), 0, cap_ghw_down),
+            ratio_cap_down = cap_ghw_down / gwh,
+            cap_ghw_mid = if_else(is.na(cap_ghw_mid), 0, cap_ghw_mid),
+            ratio_cap_mid = cap_ghw_mid / gwh
+          )
 
         # save ratio for later, for now assumed production 100% in NA
-        prod <- prod %>%
-          left_join(dplyr::select(prod_country, Year, Country, ratio_cap)) %>%
-          mutate(kwh = kwh * p.scrap) %>%
-          mutate(Flow = "LIB_scrap") %>%
-          mutate(FlowType = "LIB Recycling")
+        prod_down <- prod %>%
+          left_join(dplyr::select(prod_country, Year, Country, ratio_cap_down)) %>%
+          left_join(p.scrap_down) |>
+          mutate(kwh = kwh * scrap_down) %>%
+          mutate(Flow = "LIB_scrap_down") %>%
+          mutate(FlowType = "LIB Recycling") |>
+          dplyr::select(-scrap_down) |>
+          rename(ratio_cap = ratio_cap_down)
 
-        df <- rbind(mutate(df, ratio_cap = 1), prod)
+        prod_mid <- prod %>%
+          left_join(dplyr::select(prod_country, Year, Country, ratio_cap_mid)) %>%
+          left_join(p.scrap_mid) |>
+          mutate(kwh = kwh * scrap_mid) %>%
+          mutate(Flow = "LIB_scrap_mid") %>%
+          mutate(FlowType = "LIB Recycling") |>
+          dplyr::select(-scrap_mid) |>
+          rename(ratio_cap = ratio_cap_mid)
+
+        df <- rbind(mutate(df, ratio_cap = 1), prod_down, prod_mid)
 
         # to Black Mass -----
 

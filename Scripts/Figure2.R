@@ -43,11 +43,11 @@ ggsave("Figures/flows_EV.png", ggplot2::last_plot(), units = "cm", dpi = 600, wi
 
 # Prepare data
 data_fig0 <- df %>%
-  mutate(ratio_cap = case_when(Flow != "LIB_scrap" ~ 1, ratio_cap > 1 ~ 1, T ~ ratio_cap)) %>%
+  mutate(ratio_cap = case_when(!str_detect(Flow, "LIB_scrap") ~ 1, ratio_cap > 1 ~ 1, T ~ ratio_cap)) %>%
   mutate(kwh = kwh * ratio_cap) %>%
   mutate(
     Vehicle = case_when(
-      Flow == "LIB_scrap" ~ "Production Scrap",
+      str_detect(Flow, "LIB_scrap") ~ "Production Scrap",
       Flow == "addLIB" & Vehicle %in% c("Cars", "Vans") ~ "LIB Replacement - LDV",
       Flow == "addLIB" & Vehicle %in% c("Stationary Storage") ~ "LIB Replacement - SS",
       Flow == "addLIB" ~ "LIB Replacement - HDV",

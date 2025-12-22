@@ -1,157 +1,157 @@
 "Country","Year","Stage","ktons","capacity","net"
-"Canada",2025,"Pre-processing (ktons of battery)",2.64550111247006,20,17.3544988875299
-"Canada",2025,"Refining (ktons of black mass)",0.763392613605975,0,-0.763392613605975
-"Canada",2026,"Pre-processing (ktons of battery)",15.098397234564,20,4.90160276543601
-"Canada",2026,"Refining (ktons of black mass)",4.35888256619531,0,-4.35888256619531
-"Canada",2027,"Pre-processing (ktons of battery)",24.8468470393271,20,-4.84684703932706
-"Canada",2027,"Refining (ktons of black mass)",7.33022038116168,0,-7.33022038116168
-"Canada",2028,"Pre-processing (ktons of battery)",43.8564100892797,270,226.14358991072
-"Canada",2028,"Refining (ktons of black mass)",13.063675403777,0,-13.063675403777
-"Canada",2029,"Pre-processing (ktons of battery)",61.3255421824911,288,226.674457817509
-"Canada",2029,"Refining (ktons of black mass)",18.2716991167955,0,-18.2716991167955
-"Canada",2030,"Pre-processing (ktons of battery)",80.8829226902049,318,237.117077309795
-"Canada",2030,"Refining (ktons of black mass)",23.8775989005961,250,226.122401099404
-"Canada",2031,"Pre-processing (ktons of battery)",100.279639671589,318,217.720360328411
-"Canada",2031,"Refining (ktons of black mass)",29.4093324996556,250,220.590667500344
-"Canada",2032,"Pre-processing (ktons of battery)",120.512354942977,318,197.487645057023
-"Canada",2032,"Refining (ktons of black mass)",35.1956689449672,250,214.804331055033
-"Canada",2033,"Pre-processing (ktons of battery)",145.727282915242,318,172.272717084758
-"Canada",2033,"Refining (ktons of black mass)",42.3862321115285,250,207.613767888472
-"Canada",2034,"Pre-processing (ktons of battery)",172.342986541039,318,145.657013458961
-"Canada",2034,"Refining (ktons of black mass)",50.0013987784799,250,199.99860122152
-"Canada",2035,"Pre-processing (ktons of battery)",204.08949090524,318,113.91050909476
-"Canada",2035,"Refining (ktons of black mass)",59.0701440621154,250,190.929855937885
-"Canada",2036,"Pre-processing (ktons of battery)",239.923552564988,318,78.0764474350121
-"Canada",2036,"Refining (ktons of black mass)",69.3231552514025,250,180.676844748598
-"Canada",2037,"Pre-processing (ktons of battery)",279.91111081378,318,38.0888891862202
-"Canada",2037,"Refining (ktons of black mass)",80.732246204668,250,169.267753795332
-"Canada",2038,"Pre-processing (ktons of battery)",326.784036396103,318,-8.78403639610315
-"Canada",2038,"Refining (ktons of black mass)",94.0571644439372,250,155.942835556063
-"Canada",2039,"Pre-processing (ktons of battery)",389.606856979236,318,-71.6068569792357
-"Canada",2039,"Refining (ktons of black mass)",112.008504149441,250,137.991495850559
-"Canada",2040,"Pre-processing (ktons of battery)",462.060489039105,318,-144.060489039105
-"Canada",2040,"Refining (ktons of black mass)",132.648990830184,250,117.351009169816
-"Canada",2041,"Pre-processing (ktons of battery)",541.870140433648,318,-223.870140433648
-"Canada",2041,"Refining (ktons of black mass)",155.271607686387,250,94.7283923136128
-"Canada",2042,"Pre-processing (ktons of battery)",635.641364843138,318,-317.641364843138
-"Canada",2042,"Refining (ktons of black mass)",181.863322568588,250,68.1366774314116
-"Canada",2043,"Pre-processing (ktons of battery)",737.320829640273,318,-419.320829640273
-"Canada",2043,"Refining (ktons of black mass)",210.659661976009,250,39.3403380239911
-"Canada",2044,"Pre-processing (ktons of battery)",843.149668196825,318,-525.149668196825
-"Canada",2044,"Refining (ktons of black mass)",240.615167529531,250,9.38483247046875
-"Canada",2045,"Pre-processing (ktons of battery)",946.88629951719,318,-628.88629951719
-"Canada",2045,"Refining (ktons of black mass)",269.945081492058,250,-19.9450814920577
-"Canada",2046,"Pre-processing (ktons of battery)",1051.25457911379,318,-733.254579113785
-"Canada",2046,"Refining (ktons of black mass)",299.592151233999,250,-49.5921512339992
-"Canada",2047,"Pre-processing (ktons of battery)",1140.71000995537,318,-822.710009955369
-"Canada",2047,"Refining (ktons of black mass)",324.978912995199,250,-74.9789129951985
-"Canada",2048,"Pre-processing (ktons of battery)",1218.13609556087,318,-900.136095560871
-"Canada",2048,"Refining (ktons of black mass)",347.030879535455,250,-97.0308795354555
-"Canada",2049,"Pre-processing (ktons of battery)",1282.77976517777,318,-964.779765177775
-"Canada",2049,"Refining (ktons of black mass)",365.529244427645,250,-115.529244427645
-"Canada",2050,"Pre-processing (ktons of battery)",1335.63886228347,318,-1017.63886228347
-"Canada",2050,"Refining (ktons of black mass)",380.746929286757,250,-130.746929286757
+"Canada",2025,"Pre-processing (ktons of battery)",2.55790198212946,20,17.4420980178705
+"Canada",2025,"Refining (ktons of black mass)",0.738399809631095,0,-0.738399809631095
+"Canada",2026,"Pre-processing (ktons of battery)",8.86707171465279,20,11.1329282853472
+"Canada",2026,"Refining (ktons of black mass)",2.58666236091003,0,-2.58666236091003
+"Canada",2027,"Pre-processing (ktons of battery)",24.3850732078225,20,-4.38507320782254
+"Canada",2027,"Refining (ktons of black mass)",7.19919510272571,0,-7.19919510272571
+"Canada",2028,"Pre-processing (ktons of battery)",39.0007441181354,270,230.999255881865
+"Canada",2028,"Refining (ktons of black mass)",11.6936175566516,0,-11.6936175566516
+"Canada",2029,"Pre-processing (ktons of battery)",55.7059617670109,288,232.294038232989
+"Canada",2029,"Refining (ktons of black mass)",16.6906459113161,0,-16.6906459113161
+"Canada",2030,"Pre-processing (ktons of battery)",68.1556492417636,318,249.844350758236
+"Canada",2030,"Refining (ktons of black mass)",20.3039515479707,68.670583695574,48.3666321476033
+"Canada",2031,"Pre-processing (ktons of battery)",83.2053737160009,318,234.794626283999
+"Canada",2031,"Refining (ktons of black mass)",24.6199135869197,68.670583695574,44.0506701086543
+"Canada",2032,"Pre-processing (ktons of battery)",99.1320104030832,318,218.867989596917
+"Canada",2032,"Refining (ktons of black mass)",29.2001680399517,76.9110537390429,47.7108856990911
+"Canada",2033,"Pre-processing (ktons of battery)",117.486580159563,318,200.513419840437
+"Canada",2033,"Refining (ktons of black mass)",34.4727296690585,76.9110537390429,42.4383240699844
+"Canada",2034,"Pre-processing (ktons of battery)",140.372738180891,318,177.627261819109
+"Canada",2034,"Refining (ktons of black mass)",41.0378581026217,76.9110537390429,35.8731956364212
+"Canada",2035,"Pre-processing (ktons of battery)",168.319814120172,318,149.680185879828
+"Canada",2035,"Refining (ktons of black mass)",49.0364916262285,76.9110537390429,27.8745621128144
+"Canada",2036,"Pre-processing (ktons of battery)",202.174460540134,318,115.825539459866
+"Canada",2036,"Refining (ktons of black mass)",58.7154000393187,76.9110537390429,18.1956536997242
+"Canada",2037,"Pre-processing (ktons of battery)",242.107586860735,318,75.8924131392645
+"Canada",2037,"Refining (ktons of black mass)",70.093764504089,76.9110537390429,6.8172892349539
+"Canada",2038,"Pre-processing (ktons of battery)",288.930443011155,318,29.0695569888446
+"Canada",2038,"Refining (ktons of black mass)",83.3901805386084,76.9110537390429,-6.47912679956548
+"Canada",2039,"Pre-processing (ktons of battery)",351.68146136776,318,-33.6814613677596
+"Canada",2039,"Refining (ktons of black mass)",101.305085977393,76.9110537390429,-24.3940322383504
+"Canada",2040,"Pre-processing (ktons of battery)",424.065242825287,318,-106.065242825287
+"Canada",2040,"Refining (ktons of black mass)",121.910528928862,76.9110537390429,-44.9994751898187
+"Canada",2041,"Pre-processing (ktons of battery)",503.864192376332,318,-185.864192376332
+"Canada",2041,"Refining (ktons of black mass)",144.526144025764,76.9110537390429,-67.6150902867212
+"Canada",2042,"Pre-processing (ktons of battery)",597.618942478437,318,-279.618942478437
+"Canada",2042,"Refining (ktons of black mass)",171.108489051513,76.9110537390429,-94.1974353124699
+"Canada",2043,"Pre-processing (ktons of battery)",699.272262486634,318,-381.272262486634
+"Canada",2043,"Refining (ktons of black mass)",199.891371742768,76.9110537390429,-122.980318003725
+"Canada",2044,"Pre-processing (ktons of battery)",805.069576241971,318,-487.069576241971
+"Canada",2044,"Refining (ktons of black mass)",229.831299513574,76.9110537390429,-152.920245774531
+"Canada",2045,"Pre-processing (ktons of battery)",908.774166289794,318,-590.774166289794
+"Canada",2045,"Refining (ktons of black mass)",259.145791881012,76.9110537390429,-182.234738141969
+"Canada",2046,"Pre-processing (ktons of battery)",1013.10268971575,318,-695.102689715753
+"Canada",2046,"Refining (ktons of black mass)",288.774376519366,76.9110537390429,-211.863322780323
+"Canada",2047,"Pre-processing (ktons of battery)",1102.51696409819,318,-784.516964098191
+"Canada",2047,"Refining (ktons of black mass)",314.142650473258,76.9110537390429,-237.231596734215
+"Canada",2048,"Pre-processing (ktons of battery)",1179.9024388909,318,-861.902438890897
+"Canada",2048,"Refining (ktons of black mass)",336.176916891944,76.9110537390429,-259.265863152901
+"Canada",2049,"Pre-processing (ktons of battery)",1244.50451931031,318,-926.504519310305
+"Canada",2049,"Refining (ktons of black mass)",354.657646899391,76.9110537390429,-277.746593160348
+"Canada",2050,"Pre-processing (ktons of battery)",1297.32363203637,318,-979.323632036368
+"Canada",2050,"Refining (ktons of black mass)",369.858842185115,76.9110537390429,-292.947788446072
 "Mexico",2025,"Pre-processing (ktons of battery)",1.34189952216804,0,-1.34189952216804
 "Mexico",2025,"Refining (ktons of black mass)",0.39027292365278,0,-0.39027292365278
-"Mexico",2026,"Pre-processing (ktons of battery)",9.01667156469155,0,-9.01667156469155
-"Mexico",2026,"Refining (ktons of black mass)",2.69498007051101,0,-2.69498007051101
-"Mexico",2027,"Pre-processing (ktons of battery)",15.8374008038203,0,-15.8374008038203
-"Mexico",2027,"Refining (ktons of black mass)",4.80174215040959,0,-4.80174215040959
-"Mexico",2028,"Pre-processing (ktons of battery)",27.3068642007973,0,-27.3068642007973
-"Mexico",2028,"Refining (ktons of black mass)",8.35184205980887,0,-8.35184205980887
-"Mexico",2029,"Pre-processing (ktons of battery)",38.7198256314444,0,-38.7198256314444
-"Mexico",2029,"Refining (ktons of black mass)",11.8187014789897,0,-11.8187014789897
-"Mexico",2030,"Pre-processing (ktons of battery)",48.6905591240072,0,-48.6905591240072
-"Mexico",2030,"Refining (ktons of black mass)",14.7396758640207,0,-14.7396758640207
-"Mexico",2031,"Pre-processing (ktons of battery)",61.0734407328811,0,-61.0734407328811
-"Mexico",2031,"Refining (ktons of black mass)",18.3298238877251,0,-18.3298238877251
-"Mexico",2032,"Pre-processing (ktons of battery)",77.3933973781149,0,-77.3933973781149
-"Mexico",2032,"Refining (ktons of black mass)",23.0481636869451,0,-23.0481636869451
-"Mexico",2033,"Pre-processing (ktons of battery)",98.3470764694231,0,-98.3470764694231
-"Mexico",2033,"Refining (ktons of black mass)",29.0976852298579,0,-29.0976852298579
-"Mexico",2034,"Pre-processing (ktons of battery)",124.44599216974,0,-124.44599216974
-"Mexico",2034,"Refining (ktons of black mass)",36.6244622445663,0,-36.6244622445663
-"Mexico",2035,"Pre-processing (ktons of battery)",156.253604206479,0,-156.253604206479
-"Mexico",2035,"Refining (ktons of black mass)",45.7963795801806,0,-45.7963795801806
-"Mexico",2036,"Pre-processing (ktons of battery)",193.842941395023,0,-193.842941395023
-"Mexico",2036,"Refining (ktons of black mass)",56.6291902256413,0,-56.6291902256413
-"Mexico",2037,"Pre-processing (ktons of battery)",236.893265475674,0,-236.893265475674
-"Mexico",2037,"Refining (ktons of black mass)",69.0187802989127,0,-69.0187802989127
-"Mexico",2038,"Pre-processing (ktons of battery)",285.26304096396,0,-285.26304096396
-"Mexico",2038,"Refining (ktons of black mass)",82.9163795206749,0,-82.9163795206749
-"Mexico",2039,"Pre-processing (ktons of battery)",340.35221665759,0,-340.35221665759
-"Mexico",2039,"Refining (ktons of black mass)",98.7385576784384,0,-98.7385576784384
-"Mexico",2040,"Pre-processing (ktons of battery)",406.104271218151,0,-406.104271218151
-"Mexico",2040,"Refining (ktons of black mass)",117.665629073709,0,-117.665629073709
-"Mexico",2041,"Pre-processing (ktons of battery)",478.736552858943,0,-478.736552858943
-"Mexico",2041,"Refining (ktons of black mass)",138.56137732648,0,-138.56137732648
-"Mexico",2042,"Pre-processing (ktons of battery)",557.990581515805,0,-557.990581515805
-"Mexico",2042,"Refining (ktons of black mass)",161.349594080321,0,-161.349594080321
-"Mexico",2043,"Pre-processing (ktons of battery)",643.019017813776,0,-643.019017813776
-"Mexico",2043,"Refining (ktons of black mass)",185.793462761574,0,-185.793462761574
-"Mexico",2044,"Pre-processing (ktons of battery)",731.955550478448,0,-731.955550478448
-"Mexico",2044,"Refining (ktons of black mass)",211.351257748306,0,-211.351257748306
-"Mexico",2045,"Pre-processing (ktons of battery)",822.479973074048,0,-822.479973074048
-"Mexico",2045,"Refining (ktons of black mass)",237.350863853442,0,-237.350863853442
-"Mexico",2046,"Pre-processing (ktons of battery)",912.650022282323,0,-912.650022282323
-"Mexico",2046,"Refining (ktons of black mass)",263.239600386515,0,-263.239600386515
-"Mexico",2047,"Pre-processing (ktons of battery)",1001.18475697326,0,-1001.18475697326
-"Mexico",2047,"Refining (ktons of black mass)",288.659509445916,0,-288.659509445916
-"Mexico",2048,"Pre-processing (ktons of battery)",1087.35474324753,0,-1087.35474324753
-"Mexico",2048,"Refining (ktons of black mass)",313.404926219063,0,-313.404926219063
-"Mexico",2049,"Pre-processing (ktons of battery)",1170.91200361111,0,-1170.91200361111
-"Mexico",2049,"Refining (ktons of black mass)",337.406356210276,0,-337.406356210276
-"Mexico",2050,"Pre-processing (ktons of battery)",1251.92232487867,0,-1251.92232487867
-"Mexico",2050,"Refining (ktons of black mass)",360.68580426948,0,-360.68580426948
-"United States",2025,"Pre-processing (ktons of battery)",128.614584949031,302.423361849208,173.808776900176
-"United States",2025,"Refining (ktons of black mass)",37.2278954588258,0,-37.2278954588258
-"United States",2026,"Pre-processing (ktons of battery)",193.053864728479,475.528361849208,282.474497120728
-"United States",2026,"Refining (ktons of black mass)",56.2169436825685,24.0046259286089,-32.2123177539597
-"United States",2027,"Pre-processing (ktons of battery)",321.311018064992,514.528361849207,193.217343784216
-"United States",2027,"Refining (ktons of black mass)",95.1301591655683,352.336492482294,257.206333316726
-"United States",2028,"Pre-processing (ktons of battery)",519.113000910011,516.528361849207,-2.58463906080306
-"United States",2028,"Refining (ktons of black mass)",156.213385894777,551.847182742374,395.633796847598
-"United States",2029,"Pre-processing (ktons of battery)",722.58568313415,549.528361849207,-173.057321284943
-"United States",2029,"Refining (ktons of black mass)",217.606746771954,590.847182742374,373.24043597042
-"United States",2030,"Pre-processing (ktons of battery)",862.878325289252,600.387361849208,-262.490963440044
-"United States",2030,"Refining (ktons of black mass)",258.858336416187,1108.38088137732,849.522544961135
-"United States",2031,"Pre-processing (ktons of battery)",1037.63659497605,600.387361849208,-437.249233126841
-"United States",2031,"Refining (ktons of black mass)",309.509665035106,1108.38088137732,798.871216342216
-"United States",2032,"Pre-processing (ktons of battery)",1235.52495498897,600.387361849208,-635.137593139762
-"United States",2032,"Refining (ktons of black mass)",366.852019274532,1108.38088137732,741.52886210279
-"United States",2033,"Pre-processing (ktons of battery)",1469.36541341242,600.387361849208,-868.978051563213
-"United States",2033,"Refining (ktons of black mass)",434.4777786556,1108.38088137732,673.903102721722
-"United States",2034,"Pre-processing (ktons of battery)",1724.51452907269,600.387361849208,-1124.12716722348
-"United States",2034,"Refining (ktons of black mass)",508.264248802674,1108.38088137732,600.116632574648
-"United States",2035,"Pre-processing (ktons of battery)",2021.20836283066,600.387361849208,-1420.82100098145
-"United States",2035,"Refining (ktons of black mass)",593.771697353397,1108.38088137732,514.609184023925
-"United States",2036,"Pre-processing (ktons of battery)",2360.12662400305,600.387361849208,-1759.73926215384
-"United States",2036,"Refining (ktons of black mass)",691.421318453598,1108.38088137732,416.959562923724
-"United States",2037,"Pre-processing (ktons of battery)",2746.7531880577,600.387361849208,-2146.3658262085
-"United States",2037,"Refining (ktons of black mass)",802.302533496706,1108.38088137732,306.078347880616
-"United States",2038,"Pre-processing (ktons of battery)",3184.53327424244,600.387361849208,-2584.14591239324
-"United States",2038,"Refining (ktons of black mass)",927.388122572803,1108.38088137732,180.992758804519
-"United States",2039,"Pre-processing (ktons of battery)",3680.94457478717,600.387361849208,-3080.55721293796
-"United States",2039,"Refining (ktons of black mass)",1068.97180529705,1108.38088137732,39.4090760802744
-"United States",2040,"Pre-processing (ktons of battery)",4336.29493736109,600.387361849208,-3735.90757551188
-"United States",2040,"Refining (ktons of black mass)",1257.44976227884,1108.38088137732,-149.068880901513
-"United States",2041,"Pre-processing (ktons of battery)",5028.08254840649,600.387361849208,-4427.69518655728
-"United States",2041,"Refining (ktons of black mass)",1456.31120629985,1108.38088137732,-347.930324922529
-"United States",2042,"Pre-processing (ktons of battery)",5617.6599611649,600.387361849208,-5017.27259931569
-"United States",2042,"Refining (ktons of black mass)",1624.13615412555,1108.38088137732,-515.755272748225
-"United States",2043,"Pre-processing (ktons of battery)",6300.50694009481,600.387361849208,-5700.1195782456
-"United States",2043,"Refining (ktons of black mass)",1819.76198634021,1108.38088137732,-711.381104962889
-"United States",2044,"Pre-processing (ktons of battery)",6941.82904387303,600.387361849208,-6341.44168202382
-"United States",2044,"Refining (ktons of black mass)",2002.96768580726,1108.38088137732,-894.586804429936
-"United States",2045,"Pre-processing (ktons of battery)",7508.8022739952,600.387361849208,-6908.41491214599
-"United States",2045,"Refining (ktons of black mass)",2164.08533281767,1108.38088137732,-1055.70445144035
-"United States",2046,"Pre-processing (ktons of battery)",8044.65729751396,600.387361849208,-7444.26993566475
-"United States",2046,"Refining (ktons of black mass)",2316.49101268307,1108.38088137732,-1208.11013130575
-"United States",2047,"Pre-processing (ktons of battery)",8574.56112017379,600.387361849208,-7974.17375832458
-"United States",2047,"Refining (ktons of black mass)",2468.03089837756,1108.38088137732,-1359.65001700024
-"United States",2048,"Pre-processing (ktons of battery)",9090.2999202691,600.387361849208,-8489.91255841989
-"United States",2048,"Refining (ktons of black mass)",2616.40497789334,1108.38088137732,-1508.02409651602
-"United States",2049,"Pre-processing (ktons of battery)",9551.1746840221,600.387361849208,-8950.78732217289
-"United States",2049,"Refining (ktons of black mass)",2749.37556079149,1108.38088137732,-1640.99467941417
-"United States",2050,"Pre-processing (ktons of battery)",9815.64714865511,600.387361849208,-9215.2597868059
-"United States",2050,"Refining (ktons of black mass)",2824.35910865914,1108.38088137732,-1715.97822728182
+"Mexico",2026,"Pre-processing (ktons of battery)",9.22395107780418,0,-9.22395107780418
+"Mexico",2026,"Refining (ktons of black mass)",2.75677686539507,0,-2.75677686539507
+"Mexico",2027,"Pre-processing (ktons of battery)",15.633521451814,0,-15.633521451814
+"Mexico",2027,"Refining (ktons of black mass)",4.7413764064385,0,-4.7413764064385
+"Mexico",2028,"Pre-processing (ktons of battery)",26.7031445016014,0,-26.7031445016014
+"Mexico",2028,"Refining (ktons of black mass)",8.17487401045294,0,-8.17487401045294
+"Mexico",2029,"Pre-processing (ktons of battery)",37.7471612320752,0,-37.7471612320752
+"Mexico",2029,"Refining (ktons of black mass)",11.5362239360728,0,-11.5362239360728
+"Mexico",2030,"Pre-processing (ktons of battery)",47.3462535049271,0,-47.3462535049271
+"Mexico",2030,"Refining (ktons of black mass)",14.351137897312,0,-14.351137897312
+"Mexico",2031,"Pre-processing (ktons of battery)",59.7336351180434,0,-59.7336351180434
+"Mexico",2031,"Refining (ktons of black mass)",17.9427988699857,0,-17.9427988699857
+"Mexico",2032,"Pre-processing (ktons of battery)",76.0604371470975,0,-76.0604371470975
+"Mexico",2032,"Refining (ktons of black mass)",22.6637227535107,0,-22.6637227535107
+"Mexico",2033,"Pre-processing (ktons of battery)",97.0194223771228,0,-97.0194223771228
+"Mexico",2033,"Refining (ktons of black mass)",28.7151908851839,0,-28.7151908851839
+"Mexico",2034,"Pre-processing (ktons of battery)",123.124108591834,0,-123.124108591834
+"Mexico",2034,"Refining (ktons of black mass)",36.2441258701016,0,-36.2441258701016
+"Mexico",2035,"Pre-processing (ktons of battery)",154.931846043322,0,-154.931846043322
+"Mexico",2035,"Refining (ktons of black mass)",45.4159879631222,0,-45.4159879631222
+"Mexico",2036,"Pre-processing (ktons of battery)",192.525504519042,0,-192.525504519042
+"Mexico",2036,"Refining (ktons of black mass)",56.2504219075712,0,-56.2504219075712
+"Mexico",2037,"Pre-processing (ktons of battery)",235.579739390875,0,-235.579739390875
+"Mexico",2037,"Refining (ktons of black mass)",68.6414805434091,0,-68.6414805434091
+"Mexico",2038,"Pre-processing (ktons of battery)",283.950277668156,0,-283.950277668156
+"Mexico",2038,"Refining (ktons of black mass)",82.5393210967967,0,-82.5393210967967
+"Mexico",2039,"Pre-processing (ktons of battery)",339.04328442679,0,-339.04328442679
+"Mexico",2039,"Refining (ktons of black mass)",98.3629602370925,0,-98.3629602370925
+"Mexico",2040,"Pre-processing (ktons of battery)",404.796751396879,0,-404.796751396879
+"Mexico",2040,"Refining (ktons of black mass)",117.290539301252,0,-117.290539301252
+"Mexico",2041,"Pre-processing (ktons of battery)",477.429438593335,0,-477.429438593335
+"Mexico",2041,"Refining (ktons of black mass)",138.186413406062,0,-138.186413406062
+"Mexico",2042,"Pre-processing (ktons of battery)",556.683797550078,0,-556.683797550078
+"Mexico",2042,"Refining (ktons of black mass)",160.974726867844,0,-160.974726867844
+"Mexico",2043,"Pre-processing (ktons of battery)",641.712476685192,0,-641.712476685192
+"Mexico",2043,"Refining (ktons of black mass)",185.418656686304,0,-185.418656686304
+"Mexico",2044,"Pre-processing (ktons of battery)",730.649135542731,0,-730.649135542731
+"Mexico",2044,"Refining (ktons of black mass)",210.976468915086,0,-210.976468915086
+"Mexico",2045,"Pre-processing (ktons of battery)",821.173608142548,0,-821.173608142548
+"Mexico",2045,"Refining (ktons of black mass)",236.976063586764,0,-236.976063586764
+"Mexico",2046,"Pre-processing (ktons of battery)",911.343643016989,0,-911.343643016989
+"Mexico",2046,"Refining (ktons of black mass)",262.864764880362,0,-262.864764880362
+"Mexico",2047,"Pre-processing (ktons of battery)",999.87831225509,0,-999.87831225509
+"Mexico",2047,"Refining (ktons of black mass)",288.284620303197,0,-288.284620303197
+"Mexico",2048,"Pre-processing (ktons of battery)",1086.04777765486,0,-1086.04777765486
+"Mexico",2048,"Refining (ktons of black mass)",313.029806180075,0,-313.029806180075
+"Mexico",2049,"Pre-processing (ktons of battery)",1169.60445550543,0,-1169.60445550543
+"Mexico",2049,"Refining (ktons of black mass)",337.03098263556,0,-337.03098263556
+"Mexico",2050,"Pre-processing (ktons of battery)",1250.61374749617,0,-1250.61374749617
+"Mexico",2050,"Refining (ktons of black mass)",360.309988457249,0,-360.309988457249
+"United States",2025,"Pre-processing (ktons of battery)",108.597161502619,302.423361849208,193.826200346588
+"United States",2025,"Refining (ktons of black mass)",31.4326512367476,0,-31.4326512367476
+"United States",2026,"Pre-processing (ktons of battery)",154.163707055131,475.528361849208,321.364654794076
+"United States",2026,"Refining (ktons of black mass)",45.0381505737705,6.59364669564592,-38.4445038781246
+"United States",2027,"Pre-processing (ktons of battery)",310.704286269411,514.528361849207,203.824075579797
+"United States",2027,"Refining (ktons of black mass)",92.1085798962211,96.7806103840414,4.67203048782028
+"United States",2028,"Pre-processing (ktons of battery)",478.027494447546,516.528361849207,38.5008674016613
+"United States",2028,"Refining (ktons of black mass)",144.506775487435,151.582672598708,7.07589711127241
+"United States",2029,"Pre-processing (ktons of battery)",670.514756338917,549.528361849207,-120.98639448971
+"United States",2029,"Refining (ktons of black mass)",202.808795368655,162.295283655217,-40.5135117134377
+"United States",2030,"Pre-processing (ktons of battery)",768.328949243047,600.387361849208,-167.94158739384
+"United States",2030,"Refining (ktons of black mass)",231.996012889537,304.452648324782,72.4566354352444
+"United States",2031,"Pre-processing (ktons of battery)",903.626341655345,600.387361849208,-303.238979806137
+"United States",2031,"Refining (ktons of black mass)",271.442479619576,304.452648324782,33.0101687052064
+"United States",2032,"Pre-processing (ktons of battery)",1057.78063861848,600.387361849208,-457.39327676927
+"United States",2032,"Refining (ktons of black mass)",316.348370853166,307.748836342169,-8.59953451099642
+"United States",2033,"Pre-processing (ktons of battery)",1245.42909946505,600.387361849208,-645.041737615842
+"United States",2033,"Refining (ktons of black mass)",370.826674894106,307.748836342169,-63.0778385519364
+"United States",2034,"Pre-processing (ktons of battery)",1471.52907915441,600.387361849208,-871.141717305205
+"United States",2034,"Refining (ktons of black mass)",436.280507502309,307.748836342169,-128.53167116014
+"United States",2035,"Pre-processing (ktons of battery)",1741.32196915205,600.387361849208,-1140.93460730284
+"United States",2035,"Refining (ktons of black mass)",514.130157005127,307.748836342169,-206.381320662958
+"United States",2036,"Pre-processing (ktons of battery)",2059.04325928003,600.387361849208,-1458.65589743082
+"United States",2036,"Refining (ktons of black mass)",605.680228649446,307.748836342169,-297.931392307276
+"United States",2037,"Pre-processing (ktons of battery)",2429.45292067082,600.387361849208,-1829.06555882161
+"United States",2037,"Refining (ktons of black mass)",711.926136919017,307.748836342169,-404.177300576848
+"United States",2038,"Pre-processing (ktons of battery)",2851.96358956974,600.387361849208,-2251.57622772053
+"United States",2038,"Refining (ktons of black mass)",832.65419434287,307.748836342169,-524.905358000701
+"United States",2039,"Pre-processing (ktons of battery)",3330.12273623657,600.387361849208,-2729.73537438736
+"United States",2039,"Refining (ktons of black mass)",968.999670340886,307.748836342169,-661.250833998717
+"United States",2040,"Pre-processing (ktons of battery)",3968.94517074047,600.387361849208,-3368.55780889126
+"United States",2040,"Refining (ktons of black mass)",1152.70464307527,307.748836342169,-844.955806733098
+"United States",2041,"Pre-processing (ktons of battery)",4660.79896458871,600.387361849208,-4060.4116027395
+"United States",2041,"Refining (ktons of black mass)",1351.5597584317,307.748836342169,-1043.81092208953
+"United States",2042,"Pre-processing (ktons of battery)",5250.42643899706,600.387361849208,-4650.03907714785
+"United States",2042,"Refining (ktons of black mass)",1519.37901606836,307.748836342169,-1211.63017972619
+"United States",2043,"Pre-processing (ktons of battery)",5933.26931840773,600.387361849208,-5332.88195655852
+"United States",2043,"Refining (ktons of black mass)",1714.97829022685,307.748836342169,-1407.22945388468
+"United States",2044,"Pre-processing (ktons of battery)",6574.56063275551,600.387361849208,-5974.1732709063
+"United States",2044,"Refining (ktons of black mass)",1898.1508306297,307.748836342169,-1590.40199428753
+"United States",2045,"Pre-processing (ktons of battery)",7141.55907954559,600.387361849208,-6541.17171769638
+"United States",2045,"Refining (ktons of black mass)",2059.26607102611,307.748836342169,-1751.51723468394
+"United States",2046,"Pre-processing (ktons of battery)",7677.40849764701,600.387361849208,-7077.0211357978
+"United States",2046,"Refining (ktons of black mass)",2211.66105939281,307.748836342169,-1903.91222305064
+"United States",2047,"Pre-processing (ktons of battery)",8207.21903213134,600.387361849208,-7606.83167028213
+"United States",2047,"Refining (ktons of black mass)",2363.15655252761,307.748836342169,-2055.40771618544
+"United States",2048,"Pre-processing (ktons of battery)",8722.80915269761,600.387361849208,-8122.4217908484
+"United States",2048,"Refining (ktons of black mass)",2511.46524509389,307.748836342169,-2203.71640875172
+"United States",2049,"Pre-processing (ktons of battery)",9183.56189322882,600.387361849208,-8583.17453137961
+"United States",2049,"Refining (ktons of black mass)",2644.3881673898,307.748836342169,-2336.63933104763
+"United States",2050,"Pre-processing (ktons of battery)",9447.93257901265,600.387361849208,-8847.54521716344
+"United States",2050,"Refining (ktons of black mass)",2719.33496003456,307.748836342169,-2411.58612369239

@@ -13,15 +13,15 @@ url_drive <- "Inputs/Original/"
 cap <- read_excel(
   paste0(url_drive, "NA Recycling facilities 12.9.25.xlsx"),
   sheet = "US and CA cleaned data",
-  range = "X11:AB23"
+  range = "X13:AB29"
 )
 # expand to 2050
-cap_2030 <- cap %>% filter(Year == 2030)
-for (i in 2031:2050) {
-  aux <- cap_2030 %>% mutate(Year = i)
+cap_2032 <- cap %>% filter(Year == 2032)
+for (i in 2033:2050) {
+  aux <- cap_2032 %>% mutate(Year = i)
   cap <- rbind(cap, aux)
 }
-rm(aux, cap_2030)
+rm(aux, cap_2032)
 
 cap <- cap %>%
   dplyr::select(-`Refining Capacity No Delay`) |>
@@ -80,7 +80,7 @@ df_all <- df_all %>%
     eol = if_else(is.na(eol), "Reference", eol),
     Trade = if_else(is.na(Trade), "Reference", Trade)
   ) |>
-  filter(!str_detect("LFP|NMC"))
+  filter(!str_detect(Scenario, "LFP|NMC"))
 unique(df_all$Sales)
 unique(df_all$Size)
 unique(df_all$Lifetime)
@@ -100,12 +100,12 @@ df_all <- df_all %>% filter(Reuse == "reuse0" | eol == "50% Reuse")
 df_all$Scrap <- ""
 df_all$ScrapScen <- "All "
 df_scrap_limited <- df_all %>%
-  mutate(ratio_cap = case_when(Flow != "LIB_scrap" ~ 1, ratio_cap > 1 ~ 1, T ~ ratio_cap)) %>%
+  mutate(ratio_cap = case_when(!str_detect(Flow, "LIB_scrap") ~ 1, ratio_cap > 1 ~ 1, T ~ ratio_cap)) %>%
   mutate(kwh = kwh * ratio_cap, battery_kg = battery_kg * ratio_cap, blackMass_kg = blackMass_kg * ratio_cap) %>%
   mutate(ScrapScen = "")
 
 nrow(df_all) / 1e6
-scrap_scens <- seq(0.02, 0.24, 0.04) # 6 scenarios
+scrap_scens <- seq(0, 0.2, 0.04) # 6 scenarios
 
 # Multiple DF to include senarios
 df_orig <- df_all
@@ -113,8 +113,18 @@ df_orig2 <- df_scrap_limited
 for (s in scrap_scens) {
   df_aux <- rbind(df_orig, df_orig2)
   df_aux <- df_aux %>%
-    # scale it according to original scrap rate used
-    mutate(adj = if_else(Flow == "LIB_scrap", s / p.scrap, 1)) %>%
+    # scale it according to original scrap rate used - midstream and downstream
+    left_join(p.scrap_down) |>
+    left_join(p.scrap_mid) |>
+    mutate(
+      adj = case_when(
+        Flow == "LIB_scrap_down" ~ s / 2 / scrap_down, # scrap losses are on series
+        Flow == "LIB_scrap_mid" ~ s / 2 / scrap_mid,
+        T ~ 1
+      ),
+      scrap_down = NULL,
+      scrap_mid = NULL
+    ) %>%
     mutate(kwh = kwh * adj, battery_kg = battery_kg * adj, blackMass_kg = blackMass_kg * adj, adj = NULL) %>%
     mutate(Scrap = paste0(round(s * 100, 0), "%"))
   # JOIN
@@ -232,20 +242,7 @@ for (year_limit in seq(2025, 2050, 5)) {
     mutate(
       Scrap = factor(
         Scrap,
-        levels = c(
-          "2%",
-          "6%",
-          "10%",
-          "14%",
-          "18%",
-          "22%",
-          "All 2%",
-          "All 6%",
-          "All 10%",
-          "All 14%",
-          "All 18%",
-          "All 22%"
-        )
+        levels = c("0%", "4%", "8%", "12%", "16%", "20%", "All 0%", "All 4%", "All 8%", "All 12%", "All 16%", "All 20%")
       )
     )
 
@@ -287,7 +284,8 @@ for (year_limit in seq(2025, 2050, 5)) {
     # ) +
     scale_fill_gradientn(
       colours = rev(RColorBrewer::brewer.pal(8, "Spectral")),
-      values = scales::rescale(c(range_deficit[1], 0, range_deficit[2])),
+      # values = scales::rescale(c(range_deficit[1], 0, range_deficit[2])),
+      values = scales::rescale(c(range_deficit[1], range_deficit[2])),
       limits = range_deficit,
       breaks = seq(range_deficit[1], range_deficit[2], by = steps),
       labels = scales::label_comma()
@@ -402,7 +400,7 @@ data_fig |>
     eol == "Reference",
     Size == "Reference",
     Reuse == "reuse0",
-    Scrap == "6%",
+    Scrap == "4%",
     Lifetime == "Reference"
   ) |>
   mutate(def_pre = deficit / 20) |> # 20k plant
@@ -414,7 +412,7 @@ data_fig |>
     eol == "Reference",
     Size == "Reference",
     Reuse == "reuse0",
-    Scrap == "18%",
+    Scrap == "16%",
     Lifetime == "Short"
   ) |>
   mutate(ratio = deficit / cap)

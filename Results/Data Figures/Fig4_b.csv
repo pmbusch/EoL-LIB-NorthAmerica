@@ -1,625 +1,625 @@
 "Scenario","scen_name","Year","Stage","ktons","capacity","net"
-"Ambitious__reuse0","Ambitious",2025,"Pre-processing (ktons of battery)",172.039021414046,322.423361849208,150.384340435162
-"Ambitious__reuse0","Ambitious",2025,"Refining (ktons of black mass)",49.3143274143358,0,-49.3143274143358
-"Ambitious__reuse0","Ambitious",2026,"Pre-processing (ktons of battery)",259.428635831729,495.528361849208,236.099726017479
-"Ambitious__reuse0","Ambitious",2026,"Refining (ktons of black mass)",75.0070719809761,24.0046259286089,-51.0024460523673
-"Ambitious__reuse0","Ambitious",2027,"Pre-processing (ktons of battery)",403.558348121148,534.528361849207,130.97001372806
-"Ambitious__reuse0","Ambitious",2027,"Refining (ktons of black mass)",118.868287725952,352.336492482294,233.468204756342
-"Ambitious__reuse0","Ambitious",2028,"Pre-processing (ktons of battery)",657.355286322467,786.528361849207,129.17307552674
-"Ambitious__reuse0","Ambitious",2028,"Refining (ktons of black mass)",196.387139318322,551.847182742374,355.460043424052
-"Ambitious__reuse0","Ambitious",2029,"Pre-processing (ktons of battery)",905.871568294119,837.528361849207,-68.3432064449111
-"Ambitious__reuse0","Ambitious",2029,"Refining (ktons of black mass)",271.069120667882,590.847182742374,319.778062074492
-"Ambitious__reuse0","Ambitious",2030,"Pre-processing (ktons of battery)",1112.59223036542,918.387361849208,-194.204868516208
-"Ambitious__reuse0","Ambitious",2030,"Refining (ktons of black mass)",331.276918258183,1358.38088137732,1027.10396311914
-"Ambitious__reuse0","Ambitious",2031,"Pre-processing (ktons of battery)",1321.48389246059,918.387361849208,-403.096530611387
-"Ambitious__reuse0","Ambitious",2031,"Refining (ktons of black mass)",391.837512964796,1358.38088137732,966.543368412527
-"Ambitious__reuse0","Ambitious",2032,"Pre-processing (ktons of battery)",1577.4374820852,918.387361849208,-659.050120235991
-"Ambitious__reuse0","Ambitious",2032,"Refining (ktons of black mass)",465.894261355808,1358.38088137732,892.486620021514
-"Ambitious__reuse0","Ambitious",2033,"Pre-processing (ktons of battery)",1894.29250762277,918.387361849208,-975.905145773559
-"Ambitious__reuse0","Ambitious",2033,"Refining (ktons of black mass)",557.247007643795,1358.38088137732,801.133873733527
-"Ambitious__reuse0","Ambitious",2034,"Pre-processing (ktons of battery)",2268.28506367365,918.387361849208,-1349.89770182444
-"Ambitious__reuse0","Ambitious",2034,"Refining (ktons of black mass)",664.776322183267,1358.38088137732,693.604559194055
-"Ambitious__reuse0","Ambitious",2035,"Pre-processing (ktons of battery)",2681.12177201662,918.387361849208,-1762.73441016742
-"Ambitious__reuse0","Ambitious",2035,"Refining (ktons of black mass)",783.075183655016,1358.38088137732,575.305697722306
-"Ambitious__reuse0","Ambitious",2036,"Pre-processing (ktons of battery)",3140.24711957214,918.387361849208,-2221.85975772293
-"Ambitious__reuse0","Ambitious",2036,"Refining (ktons of black mass)",914.91673734242,1358.38088137732,443.464144034903
-"Ambitious__reuse0","Ambitious",2037,"Pre-processing (ktons of battery)",3685.90887039376,918.387361849208,-2767.52150854455
-"Ambitious__reuse0","Ambitious",2037,"Refining (ktons of black mass)",1070.76426918563,1358.38088137732,287.616612191696
-"Ambitious__reuse0","Ambitious",2038,"Pre-processing (ktons of battery)",4315.0781075188,918.387361849208,-3396.69074566959
-"Ambitious__reuse0","Ambitious",2038,"Refining (ktons of black mass)",1249.85334496281,1358.38088137732,108.527536414514
-"Ambitious__reuse0","Ambitious",2039,"Pre-processing (ktons of battery)",5030.19220846703,918.387361849208,-4111.80484661782
-"Ambitious__reuse0","Ambitious",2039,"Refining (ktons of black mass)",1453.16156780228,1358.38088137732,-94.7806864249592
-"Ambitious__reuse0","Ambitious",2040,"Pre-processing (ktons of battery)",6016.4783274716,918.387361849208,-5098.09096562239
-"Ambitious__reuse0","Ambitious",2040,"Refining (ktons of black mass)",1736.51649403542,1358.38088137732,-378.135612658093
-"Ambitious__reuse0","Ambitious",2041,"Pre-processing (ktons of battery)",6997.95978353421,918.387361849208,-6079.572421685
-"Ambitious__reuse0","Ambitious",2041,"Refining (ktons of black mass)",2017.27280941912,1358.38088137732,-658.891928041797
-"Ambitious__reuse0","Ambitious",2042,"Pre-processing (ktons of battery)",7894.59971408832,918.387361849208,-6976.21235223911
-"Ambitious__reuse0","Ambitious",2042,"Refining (ktons of black mass)",2271.89758835904,1358.38088137732,-913.516706981713
-"Ambitious__reuse0","Ambitious",2043,"Pre-processing (ktons of battery)",8890.08851483905,918.387361849208,-7971.70115298984
-"Ambitious__reuse0","Ambitious",2043,"Refining (ktons of black mass)",2555.99593483113,1358.38088137732,-1197.61505345381
-"Ambitious__reuse0","Ambitious",2044,"Pre-processing (ktons of battery)",9845.96427420306,918.387361849208,-8927.57691235385
-"Ambitious__reuse0","Ambitious",2044,"Refining (ktons of black mass)",2828.29564919914,1358.38088137732,-1469.91476782181
-"Ambitious__reuse0","Ambitious",2045,"Pre-processing (ktons of battery)",10724.4786924269,918.387361849208,-9806.09133057766
-"Ambitious__reuse0","Ambitious",2045,"Refining (ktons of black mass)",3077.65636293315,1358.38088137732,-1719.27548155583
-"Ambitious__reuse0","Ambitious",2046,"Pre-processing (ktons of battery)",11572.8782375156,918.387361849208,-10654.4908756664
-"Ambitious__reuse0","Ambitious",2046,"Refining (ktons of black mass)",3318.57675815629,1358.38088137732,-1960.19587677897
-"Ambitious__reuse0","Ambitious",2047,"Pre-processing (ktons of battery)",12401.2166012594,918.387361849208,-11482.8292394102
-"Ambitious__reuse0","Ambitious",2047,"Refining (ktons of black mass)",3554.23723240562,1358.38088137732,-2195.8563510283
-"Ambitious__reuse0","Ambitious",2048,"Pre-processing (ktons of battery)",13203.5984700373,918.387361849208,-12285.2111081881
-"Ambitious__reuse0","Ambitious",2048,"Refining (ktons of black mass)",3783.3961888158,1358.38088137732,-2425.01530743848
-"Ambitious__reuse0","Ambitious",2049,"Pre-processing (ktons of battery)",13929.9352915938,918.387361849208,-13011.5479297446
-"Ambitious__reuse0","Ambitious",2049,"Refining (ktons of black mass)",3991.28023652872,1358.38088137732,-2632.89935515139
-"Ambitious__reuse0","Ambitious",2050,"Pre-processing (ktons of battery)",14428.1637036894,918.387361849208,-13509.7763418402
-"Ambitious__reuse0","Ambitious",2050,"Refining (ktons of black mass)",4132.45645353196,1358.38088137732,-2774.07557215463
-"Momentum_Long_reuse0","Long life",2025,"Pre-processing (ktons of battery)",118.7627844287,322.423361849208,203.660577420507
-"Momentum_Long_reuse0","Long life",2025,"Refining (ktons of black mass)",34.4682065923861,0,-34.4682065923861
-"Momentum_Long_reuse0","Long life",2026,"Pre-processing (ktons of battery)",190.98635845567,495.528361849208,304.542003393538
-"Momentum_Long_reuse0","Long life",2026,"Refining (ktons of black mass)",55.8191588161174,24.0046259286089,-31.8145328875085
-"Momentum_Long_reuse0","Long life",2027,"Pre-processing (ktons of battery)",316.577986420759,534.528361849207,217.950375428449
-"Momentum_Long_reuse0","Long life",2027,"Refining (ktons of black mass)",94.2888212841723,352.336492482294,258.047671198122
-"Momentum_Long_reuse0","Long life",2028,"Pre-processing (ktons of battery)",515.848515170807,786.528361849207,270.679846678401
-"Momentum_Long_reuse0","Long life",2028,"Refining (ktons of black mass)",156.314747687612,551.847182742374,395.532435054762
-"Momentum_Long_reuse0","Long life",2029,"Pre-processing (ktons of battery)",706.474225161639,837.528361849207,131.054136687568
-"Momentum_Long_reuse0","Long life",2029,"Refining (ktons of black mass)",214.376777275092,590.847182742374,376.470405467282
-"Momentum_Long_reuse0","Long life",2030,"Pre-processing (ktons of battery)",819.638815159066,918.387361849208,98.748546690142
-"Momentum_Long_reuse0","Long life",2030,"Refining (ktons of black mass)",247.850125719893,1358.38088137732,1110.53075565743
-"Momentum_Long_reuse0","Long life",2031,"Pre-processing (ktons of battery)",951.848640007855,918.387361849208,-33.4612781586471
-"Momentum_Long_reuse0","Long life",2031,"Refining (ktons of black mass)",286.240268134694,1358.38088137732,1072.14061324263
-"Momentum_Long_reuse0","Long life",2032,"Pre-processing (ktons of battery)",1094.45912996368,918.387361849208,-176.071768114474
-"Momentum_Long_reuse0","Long life",2032,"Refining (ktons of black mass)",327.718159362556,1358.38088137732,1030.66272201477
-"Momentum_Long_reuse0","Long life",2033,"Pre-processing (ktons of battery)",1265.53531985161,918.387361849208,-347.147958002404
-"Momentum_Long_reuse0","Long life",2033,"Refining (ktons of black mass)",377.389455631212,1358.38088137732,980.99142574611
-"Momentum_Long_reuse0","Long life",2034,"Pre-processing (ktons of battery)",1448.24861306632,918.387361849208,-529.86125121711
-"Momentum_Long_reuse0","Long life",2034,"Refining (ktons of black mass)",430.602553846471,1358.38088137732,927.778327530851
-"Momentum_Long_reuse0","Long life",2035,"Pre-processing (ktons of battery)",1666.18120939564,918.387361849208,-747.793847546434
-"Momentum_Long_reuse0","Long life",2035,"Refining (ktons of black mass)",493.879564623593,1358.38088137732,864.501316753729
-"Momentum_Long_reuse0","Long life",2036,"Pre-processing (ktons of battery)",1918.61052450934,918.387361849208,-1000.22316266013
-"Momentum_Long_reuse0","Long life",2036,"Refining (ktons of black mass)",567.267787624864,1358.38088137732,791.113093752458
-"Momentum_Long_reuse0","Long life",2037,"Pre-processing (ktons of battery)",2215.55339626712,918.387361849208,-1297.16603441792
-"Momentum_Long_reuse0","Long life",2037,"Refining (ktons of black mass)",653.045263388479,1358.38088137732,705.335617988844
-"Momentum_Long_reuse0","Long life",2038,"Pre-processing (ktons of battery)",2562.95307809773,918.387361849208,-1644.56571624852
-"Momentum_Long_reuse0","Long life",2038,"Refining (ktons of black mass)",752.857327551758,1358.38088137732,605.523553825564
-"Momentum_Long_reuse0","Long life",2039,"Pre-processing (ktons of battery)",2979.41223249421,918.387361849208,-2061.024870645
-"Momentum_Long_reuse0","Long life",2039,"Refining (ktons of black mass)",872.211655388585,1358.38088137732,486.169225988737
-"Momentum_Long_reuse0","Long life",2040,"Pre-processing (ktons of battery)",3527.15734400947,918.387361849208,-2608.76998216026
-"Momentum_Long_reuse0","Long life",2040,"Refining (ktons of black mass)",1029.7965114414,1358.38088137732,328.584369935917
-"Momentum_Long_reuse0","Long life",2041,"Pre-processing (ktons of battery)",4193.81103062824,918.387361849208,-3275.42366877903
-"Momentum_Long_reuse0","Long life",2041,"Refining (ktons of black mass)",1221.73350509846,1358.38088137732,136.647376278864
-"Momentum_Long_reuse0","Long life",2042,"Pre-processing (ktons of battery)",4790.1549258638,918.387361849208,-3871.7675640146
-"Momentum_Long_reuse0","Long life",2042,"Refining (ktons of black mass)",1391.438429696,1358.38088137732,-33.0575483186747
-"Momentum_Long_reuse0","Long life",2043,"Pre-processing (ktons of battery)",5524.95364544508,918.387361849208,-4606.56628359587
-"Momentum_Long_reuse0","Long life",2043,"Refining (ktons of black mass)",1601.61633252663,1358.38088137732,-243.235451149308
-"Momentum_Long_reuse0","Long life",2044,"Pre-processing (ktons of battery)",6255.13029871367,918.387361849208,-5336.74293686446
-"Momentum_Long_reuse0","Long life",2044,"Refining (ktons of black mass)",1809.55534359826,1358.38088137732,-451.174462220939
-"Momentum_Long_reuse0","Long life",2045,"Pre-processing (ktons of battery)",6945.4664267581,918.387361849208,-6027.07906490889
-"Momentum_Long_reuse0","Long life",2045,"Refining (ktons of black mass)",2004.85403045206,1358.38088137732,-646.47314907474
-"Momentum_Long_reuse0","Long life",2046,"Pre-processing (ktons of battery)",7639.71982975158,918.387361849208,-6721.33246790238
-"Momentum_Long_reuse0","Long life",2046,"Refining (ktons of black mass)",2201.29228839929,1358.38088137732,-842.911407021963
-"Momentum_Long_reuse0","Long life",2047,"Pre-processing (ktons of battery)",8346.31465767871,918.387361849208,-7427.9272958295
-"Momentum_Long_reuse0","Long life",2047,"Refining (ktons of black mass)",2401.87531062812,1358.38088137732,-1043.4944292508
-"Momentum_Long_reuse0","Long life",2048,"Pre-processing (ktons of battery)",9057.30261244508,918.387361849208,-8138.91525059587
-"Momentum_Long_reuse0","Long life",2048,"Refining (ktons of black mass)",2604.58465984661,1358.38088137732,-1246.20377846929
-"Momentum_Long_reuse0","Long life",2049,"Pre-processing (ktons of battery)",9715.62091536382,918.387361849208,-8797.23355351461
-"Momentum_Long_reuse0","Long life",2049,"Refining (ktons of black mass)",2792.58787654886,1358.38088137732,-1434.20699517154
-"Momentum_Long_reuse0","Long life",2050,"Pre-processing (ktons of battery)",10158.7310501302,918.387361849208,-9240.34368828097
-"Momentum_Long_reuse0","Long life",2050,"Refining (ktons of black mass)",2917.30751541581,1358.38088137732,-1558.92663403849
-"Momentum_Short_reuse0","Short life",2025,"Pre-processing (ktons of battery)",206.007583313567,322.423361849208,116.415778535641
-"Momentum_Short_reuse0","Short life",2025,"Refining (ktons of black mass)",58.8981309027856,0,-58.8981309027856
-"Momentum_Short_reuse0","Short life",2026,"Pre-processing (ktons of battery)",340.464112210632,495.528361849208,155.064249638575
-"Momentum_Short_reuse0","Short life",2026,"Refining (ktons of black mass)",97.9412251112773,24.0046259286089,-73.9365991826685
-"Momentum_Short_reuse0","Short life",2027,"Pre-processing (ktons of battery)",556.113563375803,534.528361849207,-21.5852015265951
-"Momentum_Short_reuse0","Short life",2027,"Refining (ktons of black mass)",162.04270717634,352.336492482294,190.293785305954
-"Momentum_Short_reuse0","Short life",2028,"Pre-processing (ktons of battery)",881.458954311033,786.528361849207,-94.9305924618257
-"Momentum_Short_reuse0","Short life",2028,"Refining (ktons of black mass)",259.987288946604,551.847182742374,291.85989379577
-"Momentum_Short_reuse0","Short life",2029,"Pre-processing (ktons of battery)",1241.77585954613,837.528361849207,-404.247497696924
-"Momentum_Short_reuse0","Short life",2029,"Refining (ktons of black mass)",366.354493462713,590.847182742374,224.492689279661
-"Momentum_Short_reuse0","Short life",2030,"Pre-processing (ktons of battery)",1571.90250857501,918.387361849208,-653.5151467258
-"Momentum_Short_reuse0","Short life",2030,"Refining (ktons of black mass)",461.516822490535,1358.38088137732,896.864058886787
-"Momentum_Short_reuse0","Short life",2031,"Pre-processing (ktons of battery)",1976.65979800108,918.387361849208,-1058.27243615188
-"Momentum_Short_reuse0","Short life",2031,"Refining (ktons of black mass)",577.309443650606,1358.38088137732,781.071437726717
-"Momentum_Short_reuse0","Short life",2032,"Pre-processing (ktons of battery)",2446.54588290367,918.387361849208,-1528.15852105447
-"Momentum_Short_reuse0","Short life",2032,"Refining (ktons of black mass)",711.546360257453,1358.38088137732,646.834521119869
-"Momentum_Short_reuse0","Short life",2033,"Pre-processing (ktons of battery)",3000.24478765434,918.387361849208,-2081.85742580513
-"Momentum_Short_reuse0","Short life",2033,"Refining (ktons of black mass)",869.471634800683,1358.38088137732,488.909246576639
-"Momentum_Short_reuse0","Short life",2034,"Pre-processing (ktons of battery)",3614.31886424694,918.387361849208,-2695.93150239773
-"Momentum_Short_reuse0","Short life",2034,"Refining (ktons of black mass)",1044.55512399091,1358.38088137732,313.825757386415
-"Momentum_Short_reuse0","Short life",2035,"Pre-processing (ktons of battery)",4299.77130891309,918.387361849208,-3381.38394706388
-"Momentum_Short_reuse0","Short life",2035,"Refining (ktons of black mass)",1239.76028153967,1358.38088137732,118.620599837655
-"Momentum_Short_reuse0","Short life",2036,"Pre-processing (ktons of battery)",5030.03705518602,918.387361849208,-4111.64969333681
-"Momentum_Short_reuse0","Short life",2036,"Refining (ktons of black mass)",1447.81414822091,1358.38088137732,-89.4332668435845
-"Momentum_Short_reuse0","Short life",2037,"Pre-processing (ktons of battery)",5826.41360421448,918.387361849208,-4908.02624236527
-"Momentum_Short_reuse0","Short life",2037,"Refining (ktons of black mass)",1674.3401994463,1358.38088137732,-315.959318068976
-"Momentum_Short_reuse0","Short life",2038,"Pre-processing (ktons of battery)",6683.81862982967,918.387361849208,-5765.43126798046
-"Momentum_Short_reuse0","Short life",2038,"Refining (ktons of black mass)",1918.04552876495,1358.38088137732,-559.664647387623
-"Momentum_Short_reuse0","Short life",2039,"Pre-processing (ktons of battery)",7610.40363272736,918.387361849208,-6692.01627087816
-"Momentum_Short_reuse0","Short life",2039,"Refining (ktons of black mass)",2181.76185830579,1358.38088137732,-823.380976928472
-"Momentum_Short_reuse0","Short life",2040,"Pre-processing (ktons of battery)",8761.35182065969,918.387361849208,-7842.96445881048
-"Momentum_Short_reuse0","Short life",2040,"Refining (ktons of black mass)",2512.45624505957,1358.38088137732,-1154.07536368224
-"Momentum_Short_reuse0","Short life",2041,"Pre-processing (ktons of battery)",9870.16474195998,918.387361849208,-8951.77738011078
-"Momentum_Short_reuse0","Short life",2041,"Refining (ktons of black mass)",2830.37497266093,1358.38088137732,-1471.99409128361
-"Momentum_Short_reuse0","Short life",2042,"Pre-processing (ktons of battery)",10863.2653112741,918.387361849208,-9944.87794942492
-"Momentum_Short_reuse0","Short life",2042,"Refining (ktons of black mass)",3113.95457995796,1358.38088137732,-1755.57369858063
-"Momentum_Short_reuse0","Short life",2043,"Pre-processing (ktons of battery)",11913.0268347281,918.387361849208,-10994.6394728789
-"Momentum_Short_reuse0","Short life",2043,"Refining (ktons of black mass)",3415.2229305221,1358.38088137732,-2056.84204914477
-"Momentum_Short_reuse0","Short life",2044,"Pre-processing (ktons of battery)",12887.8002625923,918.387361849208,-11969.412900743
-"Momentum_Short_reuse0","Short life",2044,"Refining (ktons of black mass)",3694.85948073104,1358.38088137732,-2336.47859935372
-"Momentum_Short_reuse0","Short life",2045,"Pre-processing (ktons of battery)",13754.7960775836,918.387361849208,-12836.4087157344
-"Momentum_Short_reuse0","Short life",2045,"Refining (ktons of black mass)",3943.07573357173,1358.38088137732,-2584.69485219441
-"Momentum_Short_reuse0","Short life",2046,"Pre-processing (ktons of battery)",14566.3632632318,918.387361849208,-13647.9759013826
-"Momentum_Short_reuse0","Short life",2046,"Refining (ktons of black mass)",4175.72949910534,1358.38088137732,-2817.34861772801
-"Momentum_Short_reuse0","Short life",2047,"Pre-processing (ktons of battery)",15343.6780562865,918.387361849208,-14425.2906944372
-"Momentum_Short_reuse0","Short life",2047,"Refining (ktons of black mass)",4399.26755383927,1358.38088137732,-3040.88667246194
-"Momentum_Short_reuse0","Short life",2048,"Pre-processing (ktons of battery)",16090.949543885,918.387361849208,-15172.5621820358
-"Momentum_Short_reuse0","Short life",2048,"Refining (ktons of black mass)",4614.93733182646,1358.38088137732,-3256.55645044914
-"Momentum_Short_reuse0","Short life",2049,"Pre-processing (ktons of battery)",16772.7098059384,918.387361849208,-15854.3224440892
-"Momentum_Short_reuse0","Short life",2049,"Refining (ktons of black mass)",4812.00960834505,1358.38088137732,-3453.62872696773
-"Momentum_Short_reuse0","Short life",2050,"Pre-processing (ktons of battery)",17255.0841634036,918.387361849208,-16336.6968015544
-"Momentum_Short_reuse0","Short life",2050,"Refining (ktons of black mass)",4950.21781836943,1358.38088137732,-3591.83693699211
-"Momentum__reuse0","Reference",2025,"Pre-processing (ktons of battery)",132.601985583669,322.423361849208,189.821376265538
-"Momentum__reuse0","Reference",2025,"Refining (ktons of black mass)",38.3815609960845,0,-38.3815609960845
-"Momentum__reuse0","Reference",2026,"Pre-processing (ktons of battery)",217.168933527735,495.528361849208,278.359428321473
-"Momentum__reuse0","Reference",2026,"Refining (ktons of black mass)",63.2708063192749,24.0046259286089,-39.266180390666
-"Momentum__reuse0","Reference",2027,"Pre-processing (ktons of battery)",361.995265908139,534.528361849207,172.533095941068
-"Momentum__reuse0","Reference",2027,"Refining (ktons of black mass)",107.26212169714,352.336492482294,245.074370785154
-"Momentum__reuse0","Reference",2028,"Pre-processing (ktons of battery)",590.276275200088,786.528361849207,196.25208664912
-"Momentum__reuse0","Reference",2028,"Refining (ktons of black mass)",177.628903358363,551.847182742374,374.218279384012
-"Momentum__reuse0","Reference",2029,"Pre-processing (ktons of battery)",822.631050948086,837.528361849207,14.8973109011218
-"Momentum__reuse0","Reference",2029,"Refining (ktons of black mass)",247.697147367739,590.847182742374,343.150035374635
-"Momentum__reuse0","Reference",2030,"Pre-processing (ktons of battery)",992.451807103464,918.387361849208,-74.0644452542562
-"Momentum__reuse0","Reference",2030,"Refining (ktons of black mass)",297.475611180804,1358.38088137732,1060.90527019652
-"Momentum__reuse0","Reference",2031,"Pre-processing (ktons of battery)",1198.98967538052,918.387361849208,-280.602313531312
-"Momentum__reuse0","Reference",2031,"Refining (ktons of black mass)",357.248821422487,1358.38088137732,1001.13205995484
-"Momentum__reuse0","Reference",2032,"Pre-processing (ktons of battery)",1433.43070731006,918.387361849208,-515.043345460854
-"Momentum__reuse0","Reference",2032,"Refining (ktons of black mass)",425.095851906444,1358.38088137732,933.285029470878
-"Momentum__reuse0","Reference",2033,"Pre-processing (ktons of battery)",1713.43977279709,918.387361849208,-795.052410947879
-"Momentum__reuse0","Reference",2033,"Refining (ktons of black mass)",505.961695996986,1358.38088137732,852.419185380336
-"Momentum__reuse0","Reference",2034,"Pre-processing (ktons of battery)",2021.30350778347,918.387361849208,-1102.91614593426
-"Momentum__reuse0","Reference",2034,"Refining (ktons of black mass)",594.89010982572,1358.38088137732,763.490771551602
-"Momentum__reuse0","Reference",2035,"Pre-processing (ktons of battery)",2381.55145794237,918.387361849208,-1463.16409609317
-"Momentum__reuse0","Reference",2035,"Refining (ktons of black mass)",698.638220995693,1358.38088137732,659.742660381629
-"Momentum__reuse0","Reference",2036,"Pre-processing (ktons of battery)",2793.89311796306,918.387361849208,-1875.50575611385
-"Momentum__reuse0","Reference",2036,"Refining (ktons of black mass)",817.373663930642,1358.38088137732,541.007217446681
-"Momentum__reuse0","Reference",2037,"Pre-processing (ktons of battery)",3263.55756434716,918.387361849208,-2345.17020249795
-"Momentum__reuse0","Reference",2037,"Refining (ktons of black mass)",952.053560000287,1358.38088137732,406.327321377036
-"Momentum__reuse0","Reference",2038,"Pre-processing (ktons of battery)",3796.58035160251,918.387361849208,-2878.1929897533
-"Momentum__reuse0","Reference",2038,"Refining (ktons of black mass)",1104.36166653741,1358.38088137732,254.019214839907
-"Momentum__reuse0","Reference",2039,"Pre-processing (ktons of battery)",4410.903648424,918.387361849208,-3492.51628657479
-"Momentum__reuse0","Reference",2039,"Refining (ktons of black mass)",1279.71886712493,1358.38088137732,78.6620142523952
-"Momentum__reuse0","Reference",2040,"Pre-processing (ktons of battery)",5204.45969761835,918.387361849208,-4286.07233576914
-"Momentum__reuse0","Reference",2040,"Refining (ktons of black mass)",1507.76438218273,1358.38088137732,-149.383500805407
-"Momentum__reuse0","Reference",2041,"Pre-processing (ktons of battery)",6048.68924169908,918.387361849208,-5130.30187984987
-"Momentum__reuse0","Reference",2041,"Refining (ktons of black mass)",1750.14419131272,1358.38088137732,-391.763309935397
-"Momentum__reuse0","Reference",2042,"Pre-processing (ktons of battery)",6811.29190752384,918.387361849208,-5892.90454567464
-"Momentum__reuse0","Reference",2042,"Refining (ktons of black mass)",1967.34907077446,1358.38088137732,-608.968189397134
-"Momentum__reuse0","Reference",2043,"Pre-processing (ktons of battery)",7680.84678754885,918.387361849208,-6762.45942569965
-"Momentum__reuse0","Reference",2043,"Refining (ktons of black mass)",2216.21511107779,1358.38088137732,-857.834229700472
-"Momentum__reuse0","Reference",2044,"Pre-processing (ktons of battery)",8516.9342625483,918.387361849208,-7598.54690069909
-"Momentum__reuse0","Reference",2044,"Refining (ktons of black mass)",2454.9341110851,1358.38088137732,-1096.55322970777
-"Momentum__reuse0","Reference",2045,"Pre-processing (ktons of battery)",9278.16854658644,918.387361849208,-8359.78118473723
-"Momentum__reuse0","Reference",2045,"Refining (ktons of black mass)",2671.38127816317,1358.38088137732,-1313.00039678585
-"Momentum__reuse0","Reference",2046,"Pre-processing (ktons of battery)",10008.5618989101,918.387361849208,-9090.17453706086
-"Momentum__reuse0","Reference",2046,"Refining (ktons of black mass)",2879.32276430359,1358.38088137732,-1520.94188292626
-"Momentum__reuse0","Reference",2047,"Pre-processing (ktons of battery)",10716.4558871024,918.387361849208,-9798.06852525321
-"Momentum__reuse0","Reference",2047,"Refining (ktons of black mass)",3081.66932081868,1358.38088137732,-1723.28843944136
-"Momentum__reuse0","Reference",2048,"Pre-processing (ktons of battery)",11395.7907590775,918.387361849208,-10477.4033972283
-"Momentum__reuse0","Reference",2048,"Refining (ktons of black mass)",3276.84078364786,1358.38088137732,-1918.45990227054
-"Momentum__reuse0","Reference",2049,"Pre-processing (ktons of battery)",12004.866452811,918.387361849208,-11086.4790909618
-"Momentum__reuse0","Reference",2049,"Refining (ktons of black mass)",3452.31116142941,1358.38088137732,-2093.93028005209
-"Momentum__reuse0","Reference",2050,"Pre-processing (ktons of battery)",12403.2083358172,918.387361849208,-11484.820973968
-"Momentum__reuse0","Reference",2050,"Refining (ktons of black mass)",3565.79184221538,1358.38088137732,-2207.41096083806
-"Momentum__reuse0Large","Large LIB",2025,"Pre-processing (ktons of battery)",134.428940212783,322.423361849208,187.994421636424
-"Momentum__reuse0Large","Large LIB",2025,"Refining (ktons of black mass)",38.9012262468335,0,-38.9012262468335
-"Momentum__reuse0Large","Large LIB",2026,"Pre-processing (ktons of battery)",222.693921817571,495.528361849208,272.834440031637
-"Momentum__reuse0Large","Large LIB",2026,"Refining (ktons of black mass)",64.839844705006,24.0046259286089,-40.8352187763972
-"Momentum__reuse0Large","Large LIB",2027,"Pre-processing (ktons of battery)",373.20270383969,534.528361849207,161.325658009518
-"Momentum__reuse0Large","Large LIB",2027,"Refining (ktons of black mass)",110.444544766451,352.336492482294,241.891947715843
-"Momentum__reuse0Large","Large LIB",2028,"Pre-processing (ktons of battery)",609.448585345428,786.528361849207,177.07977650378
-"Momentum__reuse0Large","Large LIB",2028,"Refining (ktons of black mass)",183.093180310876,551.847182742374,368.754002431498
-"Momentum__reuse0Large","Large LIB",2029,"Pre-processing (ktons of battery)",854.618554988323,837.528361849207,-17.0901931391152
-"Momentum__reuse0Large","Large LIB",2029,"Refining (ktons of black mass)",256.823784308129,590.847182742374,334.023398434245
-"Momentum__reuse0Large","Large LIB",2030,"Pre-processing (ktons of battery)",1041.0694729593,918.387361849208,-122.682111110093
-"Momentum__reuse0Large","Large LIB",2030,"Refining (ktons of black mass)",311.391589602574,1358.38088137732,1046.98929177475
-"Momentum__reuse0Large","Large LIB",2031,"Pre-processing (ktons of battery)",1273.4473832868,918.387361849208,-355.06002143759
-"Momentum__reuse0Large","Large LIB",2031,"Refining (ktons of black mass)",378.631223179046,1358.38088137732,979.749658198276
-"Momentum__reuse0Large","Large LIB",2032,"Pre-processing (ktons of battery)",1539.44952839607,918.387361849208,-621.06216654686
-"Momentum__reuse0Large","Large LIB",2032,"Refining (ktons of black mass)",455.619780948128,1358.38088137732,902.761100429194
-"Momentum__reuse0Large","Large LIB",2033,"Pre-processing (ktons of battery)",1860.5737046961,918.387361849208,-942.186342846893
-"Momentum__reuse0Large","Large LIB",2033,"Refining (ktons of black mass)",548.436418180863,1358.38088137732,809.944463196459
-"Momentum__reuse0Large","Large LIB",2034,"Pre-processing (ktons of battery)",2214.40531289508,918.387361849208,-1296.01795104587
-"Momentum__reuse0Large","Large LIB",2034,"Refining (ktons of black mass)",650.844285835618,1358.38088137732,707.536595541704
-"Momentum__reuse0Large","Large LIB",2035,"Pre-processing (ktons of battery)",2624.8447347947,918.387361849208,-1706.4573729455
-"Momentum__reuse0Large","Large LIB",2035,"Refining (ktons of black mass)",769.394337896767,1358.38088137732,588.986543480555
-"Momentum__reuse0Large","Large LIB",2036,"Pre-processing (ktons of battery)",3080.46236677924,918.387361849208,-2162.07500493004
-"Momentum__reuse0Large","Large LIB",2036,"Refining (ktons of black mass)",901.073742913431,1358.38088137732,457.307138463891
-"Momentum__reuse0Large","Large LIB",2037,"Pre-processing (ktons of battery)",3618.16551790943,918.387361849208,-2699.77815606022
-"Momentum__reuse0Large","Large LIB",2037,"Refining (ktons of black mass)",1055.83780399712,1358.38088137732,302.543077380201
-"Momentum__reuse0Large","Large LIB",2038,"Pre-processing (ktons of battery)",4245.26628949823,918.387361849208,-3326.87892764903
-"Momentum__reuse0Large","Large LIB",2038,"Refining (ktons of black mass)",1235.79513685126,1358.38088137732,122.585744526062
-"Momentum__reuse0Large","Large LIB",2039,"Pre-processing (ktons of battery)",4972.98119931018,918.387361849208,-4054.59383746097
-"Momentum__reuse0Large","Large LIB",2039,"Refining (ktons of black mass)",1444.32619992514,1358.38088137732,-85.9453185478169
-"Momentum__reuse0Large","Large LIB",2040,"Pre-processing (ktons of battery)",5968.5103182674,918.387361849208,-5050.12295641819
-"Momentum__reuse0Large","Large LIB",2040,"Refining (ktons of black mass)",1731.7841837137,1358.38088137732,-373.403302336382
-"Momentum__reuse0Large","Large LIB",2041,"Pre-processing (ktons of battery)",7001.69614032419,918.387361849208,-6083.30877847498
-"Momentum__reuse0Large","Large LIB",2041,"Refining (ktons of black mass)",2029.01426861295,1358.38088137732,-670.633387235625
-"Momentum__reuse0Large","Large LIB",2042,"Pre-processing (ktons of battery)",7976.559175736,918.387361849208,-7058.1718138868
-"Momentum__reuse0Large","Large LIB",2042,"Refining (ktons of black mass)",2307.69133660649,1358.38088137732,-949.310455229166
-"Momentum__reuse0Large","Large LIB",2043,"Pre-processing (ktons of battery)",9071.45720209468,918.387361849208,-8153.06984024547
-"Momentum__reuse0Large","Large LIB",2043,"Refining (ktons of black mass)",2621.60251384034,1358.38088137732,-1263.22163246302
-"Momentum__reuse0Large","Large LIB",2044,"Pre-processing (ktons of battery)",10143.2808105343,918.387361849208,-9224.8934486851
-"Momentum__reuse0Large","Large LIB",2044,"Refining (ktons of black mass)",2928.19566762457,1358.38088137732,-1569.81478624725
-"Momentum__reuse0Large","Large LIB",2045,"Pre-processing (ktons of battery)",11144.5361956596,918.387361849208,-10226.1488338104
-"Momentum__reuse0Large","Large LIB",2045,"Refining (ktons of black mass)",3213.60326121489,1358.38088137732,-1855.22237983757
-"Momentum__reuse0Large","Large LIB",2046,"Pre-processing (ktons of battery)",12111.1478740159,918.387361849208,-11192.7605121667
-"Momentum__reuse0Large","Large LIB",2046,"Refining (ktons of black mass)",3489.30504546131,1358.38088137732,-2130.92416408399
-"Momentum__reuse0Large","Large LIB",2047,"Pre-processing (ktons of battery)",13043.3264479679,918.387361849208,-12124.9390861187
-"Momentum__reuse0Large","Large LIB",2047,"Refining (ktons of black mass)",3755.90888808816,1358.38088137732,-2397.52800671084
-"Momentum__reuse0Large","Large LIB",2048,"Pre-processing (ktons of battery)",13929.1180170349,918.387361849208,-13010.7306551857
-"Momentum__reuse0Large","Large LIB",2048,"Refining (ktons of black mass)",4010.26183846375,1358.38088137732,-2651.88095708643
-"Momentum__reuse0Large","Large LIB",2049,"Pre-processing (ktons of battery)",14722.2233246666,918.387361849208,-13803.8359628174
-"Momentum__reuse0Large","Large LIB",2049,"Refining (ktons of black mass)",4238.56533707026,1358.38088137732,-2880.18445569294
-"Momentum__reuse0Large","Large LIB",2050,"Pre-processing (ktons of battery)",15283.0775215136,918.387361849208,-14364.6901596644
-"Momentum__reuse0Large","Large LIB",2050,"Refining (ktons of black mass)",4398.85033634509,1358.38088137732,-3040.46945496777
-"Momentum__reuse0Recycling","Recycling",2025,"Pre-processing (ktons of battery)",134.475053658785,322.423361849208,187.948308190423
-"Momentum__reuse0Recycling","Recycling",2025,"Refining (ktons of black mass)",38.8955148179475,0,-38.8955148179475
-"Momentum__reuse0Recycling","Recycling",2026,"Pre-processing (ktons of battery)",220.668403955514,495.528361849208,274.859957893694
-"Momentum__reuse0Recycling","Recycling",2026,"Refining (ktons of black mass)",64.2416112596531,24.0046259286089,-40.2369853310443
-"Momentum__reuse0Recycling","Recycling",2027,"Pre-processing (ktons of battery)",367.327668568492,534.528361849207,167.200693280715
-"Momentum__reuse0Recycling","Recycling",2027,"Refining (ktons of black mass)",108.742493219178,352.336492482294,243.593999263115
-"Momentum__reuse0Recycling","Recycling",2028,"Pre-processing (ktons of battery)",598.235822604235,786.528361849207,188.292539244972
-"Momentum__reuse0Recycling","Recycling",2028,"Refining (ktons of black mass)",179.839715438266,551.847182742374,372.007467304108
-"Momentum__reuse0Recycling","Recycling",2029,"Pre-processing (ktons of battery)",834.460237708255,837.528361849207,3.06812414095225
-"Momentum__reuse0Recycling","Recycling",2029,"Refining (ktons of black mass)",250.984317745806,590.847182742374,339.862864996568
-"Momentum__reuse0Recycling","Recycling",2030,"Pre-processing (ktons of battery)",1009.00612627649,918.387361849208,-90.6187644272852
-"Momentum__reuse0Recycling","Recycling",2030,"Refining (ktons of black mass)",302.078946933281,1358.38088137732,1056.30193444404
-"Momentum__reuse0Recycling","Recycling",2031,"Pre-processing (ktons of battery)",1222.59133377262,918.387361849208,-304.203971923408
-"Momentum__reuse0Recycling","Recycling",2031,"Refining (ktons of black mass)",363.815297124156,1358.38088137732,994.565584253166
-"Momentum__reuse0Recycling","Recycling",2032,"Pre-processing (ktons of battery)",1467.32037970113,918.387361849208,-548.933017851922
-"Momentum__reuse0Recycling","Recycling",2032,"Refining (ktons of black mass)",434.527841028697,1358.38088137732,923.853040348625
-"Momentum__reuse0Recycling","Recycling",2033,"Pre-processing (ktons of battery)",1760.65864813871,918.387361849208,-842.2712862895
-"Momentum__reuse0Recycling","Recycling",2033,"Refining (ktons of black mass)",519.111203123019,1358.38088137732,839.269678254303
-"Momentum__reuse0Recycling","Recycling",2034,"Pre-processing (ktons of battery)",2085.45768937101,918.387361849208,-1167.0703275218
-"Momentum__reuse0Recycling","Recycling",2034,"Refining (ktons of black mass)",612.771019124386,1358.38088137732,745.609862252937
-"Momentum__reuse0Recycling","Recycling",2035,"Pre-processing (ktons of battery)",2467.46749944416,918.387361849208,-1549.08013759495
-"Momentum__reuse0Recycling","Recycling",2035,"Refining (ktons of black mass)",722.611052294587,1358.38088137732,635.769829082735
-"Momentum__reuse0Recycling","Recycling",2036,"Pre-processing (ktons of battery)",2909.95112347323,918.387361849208,-1991.56376162402
-"Momentum__reuse0Recycling","Recycling",2036,"Refining (ktons of black mass)",849.788279402806,1358.38088137732,508.592601974516
-"Momentum__reuse0Recycling","Recycling",2037,"Pre-processing (ktons of battery)",3413.02486697358,918.387361849208,-2494.63750512437
-"Momentum__reuse0Recycling","Recycling",2037,"Refining (ktons of black mass)",993.852397102943,1358.38088137732,364.528484274379
-"Momentum__reuse0Recycling","Recycling",2038,"Pre-processing (ktons of battery)",3984.94906709666,918.387361849208,-3066.56170524745
-"Momentum__reuse0Recycling","Recycling",2038,"Refining (ktons of black mass)",1157.10259940465,1358.38088137732,201.278281972673
-"Momentum__reuse0Recycling","Recycling",2039,"Pre-processing (ktons of battery)",4633.14418225358,918.387361849208,-3714.75682040437
-"Momentum__reuse0Recycling","Recycling",2039,"Refining (ktons of black mass)",1341.82905350446,1358.38088137732,16.5518278728628
-"Momentum__reuse0Recycling","Recycling",2040,"Pre-processing (ktons of battery)",5335.12100256784,918.387361849208,-4416.73364071864
-"Momentum__reuse0Recycling","Recycling",2040,"Refining (ktons of black mass)",1541.58836096503,1358.38088137732,-183.207479587708
-"Momentum__reuse0Recycling","Recycling",2041,"Pre-processing (ktons of battery)",6084.16947011846,918.387361849208,-5165.78210826925
-"Momentum__reuse0Recycling","Recycling",2041,"Refining (ktons of black mass)",1754.43123766521,1358.38088137732,-396.050356287891
-"Momentum__reuse0Recycling","Recycling",2042,"Pre-processing (ktons of battery)",6871.51110383888,918.387361849208,-5953.12374198968
-"Momentum__reuse0Recycling","Recycling",2042,"Refining (ktons of black mass)",1978.0860155687,1358.38088137732,-619.705134191379
-"Momentum__reuse0Recycling","Recycling",2043,"Pre-processing (ktons of battery)",7675.47359815219,918.387361849208,-6757.08623630298
-"Momentum__reuse0Recycling","Recycling",2043,"Refining (ktons of black mass)",2206.28962976336,1358.38088137732,-847.908748386038
-"Momentum__reuse0Recycling","Recycling",2044,"Pre-processing (ktons of battery)",8472.79932579043,918.387361849208,-7554.41196394122
-"Momentum__reuse0Recycling","Recycling",2044,"Refining (ktons of black mass)",2432.4511169132,1358.38088137732,-1074.07023553587
-"Momentum__reuse0Recycling","Recycling",2045,"Pre-processing (ktons of battery)",9239.43181670538,918.387361849208,-8321.04445485617
-"Momentum__reuse0Recycling","Recycling",2045,"Refining (ktons of black mass)",2649.70788235756,1358.38088137732,-1291.32700098024
-"Momentum__reuse0Recycling","Recycling",2046,"Pre-processing (ktons of battery)",9957.61164834852,918.387361849208,-9039.22428649932
-"Momentum__reuse0Recycling","Recycling",2046,"Refining (ktons of black mass)",2853.19411276017,1358.38088137732,-1494.81323138285
-"Momentum__reuse0Recycling","Recycling",2047,"Pre-processing (ktons of battery)",10619.6327942379,918.387361849208,-9701.24543238874
-"Momentum__reuse0Recycling","Recycling",2047,"Refining (ktons of black mass)",3041.04573743444,1358.38088137732,-1682.66485605711
-"Momentum__reuse0Recycling","Recycling",2048,"Pre-processing (ktons of battery)",11215.524563001,918.387361849208,-10297.1372011518
-"Momentum__reuse0Recycling","Recycling",2048,"Refining (ktons of black mass)",3210.48150912411,1358.38088137732,-1852.10062774679
-"Momentum__reuse0Recycling","Recycling",2049,"Pre-processing (ktons of battery)",11742.5758827269,918.387361849208,-10824.1885208777
-"Momentum__reuse0Recycling","Recycling",2049,"Refining (ktons of black mass)",3360.70658715932,1358.38088137732,-2002.325705782
-"Momentum__reuse0Recycling","Recycling",2050,"Pre-processing (ktons of battery)",12205.1603532604,918.387361849208,-11286.7729914112
-"Momentum__reuse0Recycling","Recycling",2050,"Refining (ktons of black mass)",3492.97870378006,1358.38088137732,-2134.59782240274
-"Momentum__reuse0Repurposing","Repurposing",2025,"Pre-processing (ktons of battery)",131.4781447386,322.423361849208,190.945217110608
-"Momentum__reuse0Repurposing","Repurposing",2025,"Refining (ktons of black mass)",38.0731887029666,0,-38.0731887029666
-"Momentum__reuse0Repurposing","Repurposing",2026,"Pre-processing (ktons of battery)",215.069251271067,495.528361849208,280.45911057814
-"Momentum__reuse0Repurposing","Repurposing",2026,"Refining (ktons of black mass)",62.6883233550479,24.0046259286089,-38.683697426439
-"Momentum__reuse0Repurposing","Repurposing",2027,"Pre-processing (ktons of battery)",358.79582429918,534.528361849207,175.732537550028
-"Momentum__reuse0Repurposing","Repurposing",2027,"Refining (ktons of black mass)",106.37389877619,352.336492482294,245.962593706104
-"Momentum__reuse0Repurposing","Repurposing",2028,"Pre-processing (ktons of battery)",585.500546689933,786.528361849207,201.027815159274
-"Momentum__reuse0Repurposing","Repurposing",2028,"Refining (ktons of black mass)",176.302416081791,551.847182742374,375.544766660583
-"Momentum__reuse0Repurposing","Repurposing",2029,"Pre-processing (ktons of battery)",815.533538692056,837.528361849207,21.9948231571512
-"Momentum__reuse0Repurposing","Repurposing",2029,"Refining (ktons of black mass)",245.724845059426,590.847182742374,345.122337682948
-"Momentum__reuse0Repurposing","Repurposing",2030,"Pre-processing (ktons of battery)",982.51921523985,918.387361849208,-64.131853390643
-"Momentum__reuse0Repurposing","Repurposing",2030,"Refining (ktons of black mass)",294.713609585019,1358.38088137732,1063.6672717923
-"Momentum__reuse0Repurposing","Repurposing",2031,"Pre-processing (ktons of battery)",1184.82867967243,918.387361849208,-266.441317823222
-"Momentum__reuse0Repurposing","Repurposing",2031,"Refining (ktons of black mass)",353.308935732944,1358.38088137732,1005.07194564438
-"Momentum__reuse0Repurposing","Repurposing",2032,"Pre-processing (ktons of battery)",1413.09690256992,918.387361849208,-494.709540720708
-"Momentum__reuse0Repurposing","Repurposing",2032,"Refining (ktons of black mass)",419.436657913266,1358.38088137732,938.944223464056
-"Momentum__reuse0Repurposing","Repurposing",2033,"Pre-processing (ktons of battery)",1685.10844516132,918.387361849208,-766.721083312111
-"Momentum__reuse0Repurposing","Repurposing",2033,"Refining (ktons of black mass)",498.071990755956,1358.38088137732,860.308890621366
-"Momentum__reuse0Repurposing","Repurposing",2034,"Pre-processing (ktons of battery)",1982.81099433976,918.387361849208,-1064.42363249055
-"Momentum__reuse0Repurposing","Repurposing",2034,"Refining (ktons of black mass)",584.16156246638,1358.38088137732,774.219318910943
-"Momentum__reuse0Repurposing","Repurposing",2035,"Pre-processing (ktons of battery)",2330.00182560586,918.387361849208,-1411.61446375665
-"Momentum__reuse0Repurposing","Repurposing",2035,"Refining (ktons of black mass)",684.254519273846,1358.38088137732,674.126362103476
-"Momentum__reuse0Repurposing","Repurposing",2036,"Pre-processing (ktons of battery)",2724.07394065098,918.387361849208,-1805.68657880177
-"Momentum__reuse0Repurposing","Repurposing",2036,"Refining (ktons of black mass)",797.873008598438,1358.38088137732,560.507872778884
-"Momentum__reuse0Repurposing","Repurposing",2037,"Pre-processing (ktons of battery)",3180.22788997254,918.387361849208,-2261.84052812334
-"Momentum__reuse0Repurposing","Repurposing",2037,"Refining (ktons of black mass)",928.883668393343,1358.38088137732,429.497212983979
-"Momentum__reuse0Repurposing","Repurposing",2038,"Pre-processing (ktons of battery)",3698.22842407453,918.387361849208,-2779.84106222533
-"Momentum__reuse0Repurposing","Repurposing",2038,"Refining (ktons of black mass)",1077.12733248373,1358.38088137732,281.25354889359
-"Momentum__reuse0Repurposing","Repurposing",2039,"Pre-processing (ktons of battery)",4400.15744058335,918.387361849208,-3481.77007873414
-"Momentum__reuse0Repurposing","Repurposing",2039,"Refining (ktons of black mass)",1279.24139741086,1358.38088137732,79.139483966459
-"Momentum__reuse0Repurposing","Repurposing",2040,"Pre-processing (ktons of battery)",5278.76002103214,918.387361849208,-4360.37265918294
-"Momentum__reuse0Repurposing","Repurposing",2040,"Refining (ktons of black mass)",1533.36781163121,1358.38088137732,-174.98693025389
-"Momentum__reuse0Repurposing","Repurposing",2041,"Pre-processing (ktons of battery)",6134.16922272373,918.387361849208,-5215.78186087452
-"Momentum__reuse0Repurposing","Repurposing",2041,"Refining (ktons of black mass)",1779.66492471149,1358.38088137732,-421.284043334167
-"Momentum__reuse0Repurposing","Repurposing",2042,"Pre-processing (ktons of battery)",6916.5316048386,918.387361849208,-5998.14424298939
-"Momentum__reuse0Repurposing","Repurposing",2042,"Refining (ktons of black mass)",2003.39941959099,1358.38088137732,-645.018538213666
-"Momentum__reuse0Repurposing","Repurposing",2043,"Pre-processing (ktons of battery)",7804.44263785808,918.387361849208,-6886.05527600888
-"Momentum__reuse0Repurposing","Repurposing",2043,"Refining (ktons of black mass)",2258.35044795133,1358.38088137732,-899.969566574006
-"Momentum__reuse0Repurposing","Repurposing",2044,"Pre-processing (ktons of battery)",8661.96886770798,918.387361849208,-7743.58150585878
-"Momentum__reuse0Repurposing","Repurposing",2044,"Refining (ktons of black mass)",2504.0565353299,1358.38088137732,-1145.67565395258
-"Momentum__reuse0Repurposing","Repurposing",2045,"Pre-processing (ktons of battery)",9448.02211607852,918.387361849208,-8529.63475422931
-"Momentum__reuse0Repurposing","Repurposing",2045,"Refining (ktons of black mass)",2728.44924189957,1358.38088137732,-1370.06836052225
-"Momentum__reuse0Repurposing","Repurposing",2046,"Pre-processing (ktons of battery)",10204.2915000805,918.387361849208,-9285.90413823133
-"Momentum__reuse0Repurposing","Repurposing",2046,"Refining (ktons of black mass)",2944.63675434995,1358.38088137732,-1586.25587297263
-"Momentum__reuse0Repurposing","Repurposing",2047,"Pre-processing (ktons of battery)",10938.6920206272,918.387361849208,-10020.304658778
-"Momentum__reuse0Repurposing","Repurposing",2047,"Refining (ktons of black mass)",3155.37304075139,1358.38088137732,-1796.99215937406
-"Momentum__reuse0Repurposing","Repurposing",2048,"Pre-processing (ktons of battery)",11644.5684043057,918.387361849208,-10726.1810424565
-"Momentum__reuse0Repurposing","Repurposing",2048,"Refining (ktons of black mass)",3358.91505002724,1358.38088137732,-2000.53416864991
-"Momentum__reuse0Repurposing","Repurposing",2049,"Pre-processing (ktons of battery)",12282.0189282498,918.387361849208,-11363.6315664006
-"Momentum__reuse0Repurposing","Repurposing",2049,"Refining (ktons of black mass)",3543.26832760172,1358.38088137732,-2184.8874462244
-"Momentum__reuse0Repurposing","Repurposing",2050,"Pre-processing (ktons of battery)",12713.5163925872,918.387361849208,-11795.129030738
-"Momentum__reuse0Repurposing","Repurposing",2050,"Refining (ktons of black mass)",3667.01906972693,1358.38088137732,-2308.63818834961
-"Momentum__reuse0Small","Small LIB",2025,"Pre-processing (ktons of battery)",130.614669921198,322.423361849208,191.80869192801
-"Momentum__reuse0Small","Small LIB",2025,"Refining (ktons of black mass)",37.8104653272888,0,-37.8104653272888
-"Momentum__reuse0Small","Small LIB",2026,"Pre-processing (ktons of battery)",211.195751571286,495.528361849208,284.332610277921
-"Momentum__reuse0Small","Small LIB",2026,"Refining (ktons of black mass)",61.5594047300433,24.0046259286089,-37.5547788014345
-"Momentum__reuse0Small","Small LIB",2027,"Pre-processing (ktons of battery)",349.954417542301,534.528361849207,184.573944306907
-"Momentum__reuse0Small","Small LIB",2027,"Refining (ktons of black mass)",103.813600455731,352.336492482294,248.522892026563
-"Momentum__reuse0Small","Small LIB",2028,"Pre-processing (ktons of battery)",569.23889579992,786.528361849207,217.289466049287
-"Momentum__reuse0Small","Small LIB",2028,"Refining (ktons of black mass)",171.580958079722,551.847182742374,380.266224662652
-"Momentum__reuse0Small","Small LIB",2029,"Pre-processing (ktons of battery)",787.301306626101,837.528361849207,50.2270552231068
-"Momentum__reuse0Small","Small LIB",2029,"Refining (ktons of black mass)",237.529601997444,590.847182742374,353.317580744931
-"Momentum__reuse0Small","Small LIB",2030,"Pre-processing (ktons of battery)",937.738645409054,918.387361849208,-19.351283559846
-"Momentum__reuse0Small","Small LIB",2030,"Refining (ktons of black mass)",281.682070241273,1358.38088137732,1076.69881113605
-"Momentum__reuse0Small","Small LIB",2031,"Pre-processing (ktons of battery)",1114.56849756149,918.387361849208,-196.181135712279
-"Momentum__reuse0Small","Small LIB",2031,"Refining (ktons of black mass)",332.811594628849,1358.38088137732,1025.56928674847
-"Momentum__reuse0Small","Small LIB",2032,"Pre-processing (ktons of battery)",1311.68936177805,918.387361849208,-393.30199992884
-"Momentum__reuse0Small","Small LIB",2032,"Refining (ktons of black mass)",389.773334721401,1358.38088137732,968.607546655921
-"Momentum__reuse0Small","Small LIB",2033,"Pre-processing (ktons of battery)",1541.02801409966,918.387361849208,-622.640652250456
-"Momentum__reuse0Small","Small LIB",2033,"Refining (ktons of black mass)",455.827942318713,1358.38088137732,902.55293905861
-"Momentum__reuse0Small","Small LIB",2034,"Pre-processing (ktons of battery)",1785.59224448994,918.387361849208,-867.204882640737
-"Momentum__reuse0Small","Small LIB",2034,"Refining (ktons of black mass)",526.178290906619,1358.38088137732,832.202590470703
-"Momentum__reuse0Small","Small LIB",2035,"Pre-processing (ktons of battery)",2062.97649587534,918.387361849208,-1144.58913402613
-"Momentum__reuse0Small","Small LIB",2035,"Refining (ktons of black mass)",605.60161163775,1358.38088137732,752.779269739573
-"Momentum__reuse0Small","Small LIB",2036,"Pre-processing (ktons of battery)",2384.94683535776,918.387361849208,-1466.55947350856
-"Momentum__reuse0Small","Small LIB",2036,"Refining (ktons of black mass)",697.705764412491,1358.38088137732,660.675116964831
-"Momentum__reuse0Small","Small LIB",2037,"Pre-processing (ktons of battery)",2743.89817793979,918.387361849208,-1825.51081609058
-"Momentum__reuse0Small","Small LIB",2037,"Refining (ktons of black mass)",799.793667436243,1358.38088137732,558.587213941079
-"Momentum__reuse0Small","Small LIB",2038,"Pre-processing (ktons of battery)",3141.54509153495,918.387361849208,-2223.15772968574
-"Momentum__reuse0Small","Small LIB",2038,"Refining (ktons of black mass)",912.34007161517,1358.38088137732,446.040809762152
-"Momentum__reuse0Small","Small LIB",2039,"Pre-processing (ktons of battery)",3587.52682452984,918.387361849208,-2669.13946268064
-"Momentum__reuse0Small","Small LIB",2039,"Refining (ktons of black mass)",1038.32411252987,1358.38088137732,320.056768847452
-"Momentum__reuse0Small","Small LIB",2040,"Pre-processing (ktons of battery)",4114.29223327392,918.387361849208,-3195.90487142471
-"Momentum__reuse0Small","Small LIB",2040,"Refining (ktons of black mass)",1187.7276564007,1358.38088137732,170.653224976619
-"Momentum__reuse0Small","Small LIB",2041,"Pre-processing (ktons of battery)",4748.09313229818,918.387361849208,-3829.70577044897
-"Momentum__reuse0Small","Small LIB",2041,"Refining (ktons of black mass)",1368.56223166952,1358.38088137732,-10.1813502921937
-"Momentum__reuse0Small","Small LIB",2042,"Pre-processing (ktons of battery)",5272.83909695871,918.387361849208,-4354.4517351095
-"Momentum__reuse0Small","Small LIB",2042,"Refining (ktons of black mass)",1516.36979383173,1358.38088137732,-157.988912454404
-"Momentum__reuse0Small","Small LIB",2043,"Pre-processing (ktons of battery)",5893.47162647738,918.387361849208,-4975.08426462817
-"Momentum__reuse0Small","Small LIB",2043,"Refining (ktons of black mass)",1692.87316554558,1358.38088137732,-334.492284168259
-"Momentum__reuse0Small","Small LIB",2044,"Pre-processing (ktons of battery)",6469.66745833988,918.387361849208,-5551.28009649067
-"Momentum__reuse0Small","Small LIB",2044,"Refining (ktons of black mass)",1856.23459780818,1358.38088137732,-497.853716430853
-"Momentum__reuse0Small","Small LIB",2045,"Pre-processing (ktons of battery)",6969.18746168219,918.387361849208,-6050.80009983298
-"Momentum__reuse0Small","Small LIB",2045,"Refining (ktons of black mass)",1996.95805830501,1358.38088137732,-638.577176927689
-"Momentum__reuse0Small","Small LIB",2046,"Pre-processing (ktons of battery)",7442.48272920146,918.387361849208,-6524.09536735225
-"Momentum__reuse0Small","Small LIB",2046,"Refining (ktons of black mass)",2130.64290270017,1358.38088137732,-772.262021322849
-"Momentum__reuse0Small","Small LIB",2047,"Pre-processing (ktons of battery)",7906.21022931814,918.387361849208,-6987.82286746893
-"Momentum__reuse0Small","Small LIB",2047,"Refining (ktons of black mass)",2262.56786550387,1358.38088137732,-904.186984126548
-"Momentum__reuse0Small","Small LIB",2048,"Pre-processing (ktons of battery)",8360.08111871927,918.387361849208,-7441.69375687006
-"Momentum__reuse0Small","Small LIB",2048,"Refining (ktons of black mass)",2392.69391790327,1358.38088137732,-1034.31303652595
-"Momentum__reuse0Small","Small LIB",2049,"Pre-processing (ktons of battery)",8766.70861148077,918.387361849208,-7848.32124963156
-"Momentum__reuse0Small","Small LIB",2049,"Refining (ktons of black mass)",2509.67551170811,1358.38088137732,-1151.29463033079
-"Momentum__reuse0Small","Small LIB",2050,"Pre-processing (ktons of battery)",8983.8923594421,918.387361849208,-8065.5049975929
-"Momentum__reuse0Small","Small LIB",2050,"Refining (ktons of black mass)",2570.64909141795,1358.38088137732,-1212.26821004063
+"Ambitious__reuse0","Ambitious",2025,"Pre-processing (ktons of battery)",127.333438958056,322.423361849208,195.089922891151
+"Ambitious__reuse0","Ambitious",2025,"Refining (ktons of black mass)",36.5192458948439,0,-36.5192458948439
+"Ambitious__reuse0","Ambitious",2026,"Pre-processing (ktons of battery)",189.141652277488,495.528361849208,306.38670957172
+"Ambitious__reuse0","Ambitious",2026,"Refining (ktons of black mass)",54.978137467795,6.59364669564592,-48.3844907721491
+"Ambitious__reuse0","Ambitious",2027,"Pre-processing (ktons of battery)",369.483058758448,534.528361849207,165.04530309076
+"Ambitious__reuse0","Ambitious",2027,"Refining (ktons of black mass)",109.200600575043,96.7806103840414,-12.4199901910012
+"Ambitious__reuse0","Ambitious",2028,"Pre-processing (ktons of battery)",572.294489858862,786.528361849207,214.233871990345
+"Ambitious__reuse0","Ambitious",2028,"Refining (ktons of black mass)",172.289852708421,151.582672598708,-20.7071801097134
+"Ambitious__reuse0","Ambitious",2029,"Pre-processing (ktons of battery)",805.224373849625,837.528361849207,32.3039879995823
+"Ambitious__reuse0","Ambitious",2029,"Refining (ktons of black mass)",242.593111896309,162.295283655217,-80.2978282410922
+"Ambitious__reuse0","Ambitious",2030,"Pre-processing (ktons of battery)",940.902263040318,918.387361849208,-22.5149011911102
+"Ambitious__reuse0","Ambitious",2030,"Refining (ktons of black mass)",282.749587324571,373.123232020356,90.3736446957849
+"Ambitious__reuse0","Ambitious",2031,"Pre-processing (ktons of battery)",1107.40345136506,918.387361849208,-189.016089515853
+"Ambitious__reuse0","Ambitious",2031,"Refining (ktons of black mass)",331.29637855258,373.123232020356,41.8268534677763
+"Ambitious__reuse0","Ambitious",2032,"Pre-processing (ktons of battery)",1317.14549524961,918.387361849208,-398.758133400405
+"Ambitious__reuse0","Ambitious",2032,"Refining (ktons of black mass)",392.233315593555,384.659890081212,-7.57342551234228
+"Ambitious__reuse0","Ambitious",2033,"Pre-processing (ktons of battery)",1577.45233726679,918.387361849208,-659.064975417583
+"Ambitious__reuse0","Ambitious",2033,"Refining (ktons of black mass)",467.559549061181,384.659890081212,-82.8996589799685
+"Ambitious__reuse0","Ambitious",2034,"Pre-processing (ktons of battery)",1895.16466024775,918.387361849208,-976.777298398547
+"Ambitious__reuse0","Ambitious",2034,"Refining (ktons of black mass)",559.159789485119,384.659890081212,-174.499899403906
+"Ambitious__reuse0","Ambitious",2035,"Pre-processing (ktons of battery)",2279.31996153664,918.387361849208,-1360.93259968743
+"Ambitious__reuse0","Ambitious",2035,"Refining (ktons of black mass)",669.521056551372,384.659890081212,-284.861166470159
+"Ambitious__reuse0","Ambitious",2036,"Pre-processing (ktons of battery)",2737.57345463303,918.387361849208,-1819.18609278382
+"Ambitious__reuse0","Ambitious",2036,"Refining (ktons of black mass)",801.014567397171,384.659890081212,-416.354677315958
+"Ambitious__reuse0","Ambitious",2037,"Pre-processing (ktons of battery)",3283.37462855418,918.387361849208,-2364.98726670497
+"Ambitious__reuse0","Ambitious",2037,"Refining (ktons of black mass)",956.855753188601,384.659890081212,-572.195863107389
+"Ambitious__reuse0","Ambitious",2038,"Pre-processing (ktons of battery)",3912.83294162374,918.387361849208,-2994.44557977453
+"Ambitious__reuse0","Ambitious",2038,"Refining (ktons of black mass)",1135.99949322809,384.659890081212,-751.33960314688
+"Ambitious__reuse0","Ambitious",2039,"Pre-processing (ktons of battery)",4627.87875967432,918.387361849208,-3709.49139782511
+"Ambitious__reuse0","Ambitious",2039,"Refining (ktons of black mass)",1339.22612546083,384.659890081212,-954.566235379617
+"Ambitious__reuse0","Ambitious",2040,"Pre-processing (ktons of battery)",5613.63950489688,918.387361849208,-4695.25214304767
+"Ambitious__reuse0","Ambitious",2040,"Refining (ktons of black mass)",1622.31699963555,384.659890081212,-1237.65710955434
+"Ambitious__reuse0","Ambitious",2041,"Pre-processing (ktons of battery)",6595.01476544523,918.387361849208,-5676.62740359603
+"Ambitious__reuse0","Ambitious",2041,"Refining (ktons of black mass)",1902.99942972713,384.659890081212,-1518.33953964592
+"Ambitious__reuse0","Ambitious",2042,"Pre-processing (ktons of battery)",7491.54692362313,918.387361849208,-6573.15956177392
+"Ambitious__reuse0","Ambitious",2042,"Refining (ktons of black mass)",2157.55451463077,384.659890081212,-1772.89462454956
+"Ambitious__reuse0","Ambitious",2043,"Pre-processing (ktons of battery)",8486.89351504022,918.387361849208,-7568.50615319101
+"Ambitious__reuse0","Ambitious",2043,"Refining (ktons of black mass)",2441.57069388398,384.659890081212,-2056.91080380276
+"Ambitious__reuse0","Ambitious",2044,"Pre-processing (ktons of battery)",9442.6198863265,918.387361849208,-8524.23252447729
+"Ambitious__reuse0","Ambitious",2044,"Refining (ktons of black mass)",2713.78949419951,384.659890081212,-2329.1296041183
+"Ambitious__reuse0","Ambitious",2045,"Pre-processing (ktons of battery)",10321.0289538648,918.387361849208,-9402.64159201555
+"Ambitious__reuse0","Ambitious",2045,"Refining (ktons of black mass)",2963.09362982428,384.659890081212,-2578.43373974307
+"Ambitious__reuse0","Ambitious",2046,"Pre-processing (ktons of battery)",11169.2420709276,918.387361849208,-10250.8547090784
+"Ambitious__reuse0","Ambitious",2046,"Refining (ktons of black mass)",3203.92605584617,384.659890081212,-2819.26616576496
+"Ambitious__reuse0","Ambitious",2047,"Pre-processing (ktons of battery)",11997.3123094033,918.387361849208,-11078.9249475541
+"Ambitious__reuse0","Ambitious",2047,"Refining (ktons of black mass)",3439.46711915077,384.659890081212,-3054.80722906956
+"Ambitious__reuse0","Ambitious",2048,"Pre-processing (ktons of battery)",12799.3731621346,918.387361849208,-11880.9858002854
+"Ambitious__reuse0","Ambitious",2048,"Refining (ktons of black mass)",3668.48660688501,384.659890081212,-3283.8267168038
+"Ambitious__reuse0","Ambitious",2049,"Pre-processing (ktons of battery)",13525.4106923782,918.387361849208,-12607.023330529
+"Ambitious__reuse0","Ambitious",2049,"Refining (ktons of black mass)",3876.24613435058,384.659890081212,-3491.58624426937
+"Ambitious__reuse0","Ambitious",2050,"Pre-processing (ktons of battery)",14023.3574677276,918.387361849208,-13104.9701058784
+"Ambitious__reuse0","Ambitious",2050,"Refining (ktons of black mass)",4017.30791579175,384.659890081212,-3632.64802571053
+"Momentum_Long_reuse0","Long life",2025,"Pre-processing (ktons of battery)",99.1245019951239,322.423361849208,223.298859854084
+"Momentum_Long_reuse0","Long life",2025,"Refining (ktons of black mass)",28.7821700196468,0,-28.7821700196468
+"Momentum_Long_reuse0","Long life",2026,"Pre-processing (ktons of battery)",146.990913542262,495.528361849208,348.537448306946
+"Momentum_Long_reuse0","Long life",2026,"Refining (ktons of black mass)",43.1926454747239,6.59364669564592,-36.598998779078
+"Momentum_Long_reuse0","Long life",2027,"Pre-processing (ktons of battery)",306.814149672866,534.528361849207,227.714212176342
+"Momentum_Long_reuse0","Long life",2027,"Refining (ktons of black mass)",91.5057072430994,96.7806103840414,5.27490314094196
+"Momentum_Long_reuse0","Long life",2028,"Pre-processing (ktons of battery)",471.984390934581,786.528361849207,314.543970914626
+"Momentum_Long_reuse0","Long life",2028,"Refining (ktons of black mass)",143.825903859808,151.582672598708,7.75676873890009
+"Momentum_Long_reuse0","Long life",2029,"Pre-processing (ktons of battery)",651.887012112406,837.528361849207,185.641349736801
+"Momentum_Long_reuse0","Long life",2029,"Refining (ktons of black mass)",198.877170149846,162.295283655217,-36.5818864946291
+"Momentum_Long_reuse0","Long life",2030,"Pre-processing (ktons of battery)",717.236611180967,918.387361849208,201.150750668241
+"Momentum_Long_reuse0","Long life",2030,"Refining (ktons of black mass)",218.802714684629,373.123232020356,154.320517335727
+"Momentum_Long_reuse0","Long life",2031,"Pre-processing (ktons of battery)",808.303395530173,918.387361849208,110.083966319035
+"Momentum_Long_reuse0","Long life",2031,"Refining (ktons of black mass)",245.537234816078,373.123232020356,127.585997204278
+"Momentum_Long_reuse0","Long life",2032,"Pre-processing (ktons of battery)",910.543670443735,918.387361849208,7.84369140547301
+"Momentum_Long_reuse0","Long life",2032,"Refining (ktons of black mass)",275.560645268441,384.659890081212,109.099244812772
+"Momentum_Long_reuse0","Long life",2033,"Pre-processing (ktons of battery)",1033.55011064285,918.387361849208,-115.162748793645
+"Momentum_Long_reuse0","Long life",2033,"Refining (ktons of black mass)",311.594767571085,384.659890081212,73.0651225101274
+"Momentum_Long_reuse0","Long life",2034,"Pre-processing (ktons of battery)",1188.99111323039,918.387361849208,-270.603751381183
+"Momentum_Long_reuse0","Long life",2034,"Refining (ktons of black mass)",357.002503872431,384.659890081212,27.6573862087811
+"Momentum_Long_reuse0","Long life",2035,"Pre-processing (ktons of battery)",1382.61978673941,918.387361849208,-464.232424890199
+"Momentum_Long_reuse0","Long life",2035,"Refining (ktons of black mass)",413.373985234528,384.659890081212,-28.7140951533153
+"Momentum_Long_reuse0","Long life",2036,"Pre-processing (ktons of battery)",1618.1577054717,918.387361849208,-699.77034362249
+"Momentum_Long_reuse0","Long life",2036,"Refining (ktons of black mass)",481.884803385781,384.659890081212,-97.2249133045686
+"Momentum_Long_reuse0","Long life",2037,"Pre-processing (ktons of battery)",1903.17860741555,918.387361849208,-984.791245566346
+"Momentum_Long_reuse0","Long life",2037,"Refining (ktons of black mass)",564.244213706411,384.659890081212,-179.584323625198
+"Momentum_Long_reuse0","Long life",2038,"Pre-processing (ktons of battery)",2239.08371895862,918.387361849208,-1320.69635710941
+"Momentum_Long_reuse0","Long life",2038,"Refining (ktons of black mass)",660.767448079776,384.659890081212,-276.107557998564
+"Momentum_Long_reuse0","Long life",2039,"Pre-processing (ktons of battery)",2641.87649095953,918.387361849208,-1723.48912911032
+"Momentum_Long_reuse0","Long life",2039,"Refining (ktons of black mass)",776.178056471824,384.659890081212,-391.518166390612
+"Momentum_Long_reuse0","Long life",2040,"Pre-processing (ktons of battery)",3176.16298131798,918.387361849208,-2257.77561946877
+"Momentum_Long_reuse0","Long life",2040,"Refining (ktons of black mass)",929.874780811458,384.659890081212,-545.214890730245
+"Momentum_Long_reuse0","Long life",2041,"Pre-processing (ktons of battery)",3832.24532889141,918.387361849208,-2913.8579670422
+"Momentum_Long_reuse0","Long life",2041,"Refining (ktons of black mass)",1118.77263726389,384.659890081212,-734.112747182676
+"Momentum_Long_reuse0","Long life",2042,"Pre-processing (ktons of battery)",4418.62648054483,918.387361849208,-3500.23911869563
+"Momentum_Long_reuse0","Long life",2042,"Refining (ktons of black mass)",1285.61723479428,384.659890081212,-900.957344713072
+"Momentum_Long_reuse0","Long life",2043,"Pre-processing (ktons of battery)",5143.68302429504,918.387361849208,-4225.29566244583
+"Momentum_Long_reuse0","Long life",2043,"Refining (ktons of black mass)",1492.99100658344,384.659890081212,-1108.33111650223
+"Momentum_Long_reuse0","Long life",2044,"Pre-processing (ktons of battery)",5864.39417547277,918.387361849208,-4946.00681362356
+"Momentum_Long_reuse0","Long life",2044,"Refining (ktons of black mass)",1698.20655330781,384.659890081212,-1313.5466632266
+"Momentum_Long_reuse0","Long life",2045,"Pre-processing (ktons of battery)",6543.72629825717,918.387361849208,-5625.33893640796
+"Momentum_Long_reuse0","Long life",2045,"Refining (ktons of black mass)",1890.35698821481,384.659890081212,-1505.69709813359
+"Momentum_Long_reuse0","Long life",2046,"Pre-processing (ktons of battery)",7232.15539689476,918.387361849208,-6313.76803504556
+"Momentum_Long_reuse0","Long life",2046,"Refining (ktons of black mass)",2085.12312850901,384.659890081212,-1700.4632384278
+"Momentum_Long_reuse0","Long life",2047,"Pre-processing (ktons of battery)",7938.61586981099,918.387361849208,-7020.22850796178
+"Momentum_Long_reuse0","Long life",2047,"Refining (ktons of black mass)",2285.64459915554,384.659890081212,-1900.98470907432
+"Momentum_Long_reuse0","Long life",2048,"Pre-processing (ktons of battery)",8649.40501167846,918.387361849208,-7731.01764982925
+"Momentum_Long_reuse0","Long life",2048,"Refining (ktons of black mass)",2488.26624338385,384.659890081212,-2103.60635330264
+"Momentum_Long_reuse0","Long life",2049,"Pre-processing (ktons of battery)",9307.55855852326,918.387361849208,-8389.17119667405
+"Momentum_Long_reuse0","Long life",2049,"Refining (ktons of black mass)",2676.20184496674,384.659890081212,-2291.54195488552
+"Momentum_Long_reuse0","Long life",2050,"Pre-processing (ktons of battery)",9750.53801492575,918.387361849208,-8832.15065307654
+"Momentum_Long_reuse0","Long life",2050,"Refining (ktons of black mass)",2800.86966424224,384.659890081212,-2416.20977416102
+"Momentum_Short_reuse0","Short life",2025,"Pre-processing (ktons of battery)",183.403506334871,322.423361849208,139.019855514337
+"Momentum_Short_reuse0","Short life",2025,"Refining (ktons of black mass)",52.3623356405845,0,-52.3623356405845
+"Momentum_Short_reuse0","Short life",2026,"Pre-processing (ktons of battery)",291.023618810302,495.528361849208,204.504743038906
+"Momentum_Short_reuse0","Short life",2026,"Refining (ktons of black mass)",83.7666933234747,6.59364669564592,-77.1730466278287
+"Momentum_Short_reuse0","Short life",2027,"Pre-processing (ktons of battery)",537.970298239164,534.528361849207,-3.44193638995614
+"Momentum_Short_reuse0","Short life",2027,"Refining (ktons of black mass)",156.875505113886,96.7806103840414,-60.0948947298444
+"Momentum_Short_reuse0","Short life",2028,"Pre-processing (ktons of battery)",823.556178252801,786.528361849207,-37.0278164035938
+"Momentum_Short_reuse0","Short life",2028,"Refining (ktons of black mass)",243.509762627818,151.582672598708,-91.9270900291105
+"Momentum_Short_reuse0","Short life",2029,"Pre-processing (ktons of battery)",1166.87461527622,837.528361849207,-329.34625342701
+"Momentum_Short_reuse0","Short life",2029,"Refining (ktons of black mass)",345.08904234259,162.295283655217,-182.793758687372
+"Momentum_Short_reuse0","Short life",2030,"Pre-processing (ktons of battery)",1440.16747305979,918.387361849208,-521.780111210584
+"Momentum_Short_reuse0","Short life",2030,"Refining (ktons of black mass)",424.146053593696,373.123232020356,-51.0228215733398
+"Momentum_Short_reuse0","Short life",2031,"Pre-processing (ktons of battery)",1784.54381203511,918.387361849208,-866.156450185901
+"Momentum_Short_reuse0","Short life",2031,"Refining (ktons of black mass)",522.827169262885,373.123232020356,-149.703937242529
+"Momentum_Short_reuse0","Short life",2032,"Pre-processing (ktons of battery)",2191.05166533104,918.387361849208,-1272.66430348183
+"Momentum_Short_reuse0","Short life",2032,"Refining (ktons of black mass)",639.094697759762,384.659890081212,-254.434807678549
+"Momentum_Short_reuse0","Short life",2033,"Pre-processing (ktons of battery)",2677.30703371547,918.387361849208,-1758.91967186627
+"Momentum_Short_reuse0","Short life",2033,"Refining (ktons of black mass)",777.900581658477,384.659890081212,-393.240691577265
+"Momentum_Short_reuse0","Short life",2034,"Pre-processing (ktons of battery)",3244.87556081248,918.387361849208,-2326.48819896327
+"Momentum_Short_reuse0","Short life",2034,"Refining (ktons of black mass)",939.727412811651,384.659890081212,-555.067522730438
+"Momentum_Short_reuse0","Short life",2035,"Pre-processing (ktons of battery)",3895.37909996047,918.387361849208,-2976.99173811126
+"Momentum_Short_reuse0","Short life",2035,"Refining (ktons of black mass)",1125.02926780582,384.659890081212,-740.36937772461
+"Momentum_Short_reuse0","Short life",2036,"Pre-processing (ktons of battery)",4625.71569973523,918.387361849208,-3707.32833788602
+"Momentum_Short_reuse0","Short life",2036,"Refining (ktons of black mass)",1333.05388477795,384.659890081212,-948.393994696737
+"Momentum_Short_reuse0","Short life",2037,"Pre-processing (ktons of battery)",5422.73852250505,918.387361849208,-4504.35116065584
+"Momentum_Short_reuse0","Short life",2037,"Refining (ktons of black mass)",1559.77211248374,384.659890081212,-1175.11222240252
+"Momentum_Short_reuse0","Short life",2038,"Pre-processing (ktons of battery)",6280.8309661042,918.387361849208,-5362.443604255
+"Momentum_Short_reuse0","Short life",2038,"Refining (ktons of black mass)",1803.68592076864,384.659890081212,-1419.02603068742
+"Momentum_Short_reuse0","Short life",2039,"Pre-processing (ktons of battery)",7207.6965490821,918.387361849208,-6289.3091872329
+"Momentum_Short_reuse0","Short life",2039,"Refining (ktons of black mass)",2067.46335846321,384.659890081212,-1682.80346838199
+"Momentum_Short_reuse0","Short life",2040,"Pre-processing (ktons of battery)",8358.4209829238,918.387361849208,-7440.03362107459
+"Momentum_Short_reuse0","Short life",2040,"Refining (ktons of black mass)",2398.01725675504,384.659890081212,-2013.35736667383
+"Momentum_Short_reuse0","Short life",2041,"Pre-processing (ktons of battery)",9467.40376761531,918.387361849208,-8549.01640576611
+"Momentum_Short_reuse0","Short life",2041,"Refining (ktons of black mass)",2715.97278861385,384.659890081212,-2331.31289853264
+"Momentum_Short_reuse0","Short life",2042,"Pre-processing (ktons of battery)",10460.6054429931,918.387361849208,-9542.21808114389
+"Momentum_Short_reuse0","Short life",2042,"Refining (ktons of black mass)",2999.56678874206,384.659890081212,-2614.90689866085
+"Momentum_Short_reuse0","Short life",2043,"Pre-processing (ktons of battery)",11510.3792823054,918.387361849208,-10591.9919204562
+"Momentum_Short_reuse0","Short life",2043,"Refining (ktons of black mass)",3300.81401122926,384.659890081212,-2916.15412114804
+"Momentum_Short_reuse0","Short life",2044,"Pre-processing (ktons of battery)",12485.108080341,918.387361849208,-11566.7207184918
+"Momentum_Short_reuse0","Short life",2044,"Refining (ktons of black mass)",3580.40978434416,384.659890081212,-3195.74989426295
+"Momentum_Short_reuse0","Short life",2045,"Pre-processing (ktons of battery)",13352.0863007251,918.387361849208,-12433.6989388759
+"Momentum_Short_reuse0","Short life",2045,"Refining (ktons of black mass)",3828.60430377082,384.659890081212,-3443.94441368961
+"Momentum_Short_reuse0","Short life",2046,"Pre-processing (ktons of battery)",14163.6006669463,918.387361849208,-13245.2133050971
+"Momentum_Short_reuse0","Short life",2046,"Refining (ktons of black mass)",4061.22664243629,384.659890081212,-3676.56675235508
+"Momentum_Short_reuse0","Short life",2047,"Pre-processing (ktons of battery)",14940.7969664122,918.387361849208,-14022.409604563
+"Momentum_Short_reuse0","Short life",2047,"Refining (ktons of black mass)",4284.70990800601,384.659890081212,-3900.05001792479
+"Momentum_Short_reuse0","Short life",2048,"Pre-processing (ktons of battery)",15687.901730922,918.387361849208,-14769.5143690728
+"Momentum_Short_reuse0","Short life",2048,"Refining (ktons of black mass)",4500.30793424289,384.659890081212,-4115.64804416167
+"Momentum_Short_reuse0","Short life",2049,"Pre-processing (ktons of battery)",16369.4993138609,918.387361849208,-15451.1119520117
+"Momentum_Short_reuse0","Short life",2049,"Refining (ktons of black mass)",4697.31657053324,384.659890081212,-4312.65668045203
+"Momentum_Short_reuse0","Short life",2050,"Pre-processing (ktons of battery)",16851.7054303649,918.387361849208,-15933.3180685157
+"Momentum_Short_reuse0","Short life",2050,"Refining (ktons of black mass)",4835.46212660341,384.659890081212,-4450.8022365222
+"Momentum__reuse0","Reference",2025,"Pre-processing (ktons of battery)",112.496963006917,322.423361849208,209.926398842291
+"Momentum__reuse0","Reference",2025,"Refining (ktons of black mass)",32.5613239700315,0,-32.5613239700315
+"Momentum__reuse0","Reference",2026,"Pre-processing (ktons of battery)",172.254729847588,495.528361849208,323.273632001619
+"Momentum__reuse0","Reference",2026,"Refining (ktons of black mass)",50.3815898000756,6.59364669564592,-43.7879431044297
+"Momentum__reuse0","Reference",2027,"Pre-processing (ktons of battery)",350.722880929047,534.528361849207,183.80548092016
+"Momentum__reuse0","Reference",2027,"Refining (ktons of black mass)",104.049151405385,96.7806103840414,-7.26854102134394
+"Momentum__reuse0","Reference",2028,"Pre-processing (ktons of battery)",543.731383067283,786.528361849207,242.796978781925
+"Momentum__reuse0","Reference",2028,"Refining (ktons of black mass)",164.37526705454,151.582672598708,-12.7925944558322
+"Momentum__reuse0","Reference",2029,"Pre-processing (ktons of battery)",763.967879338003,837.528361849207,73.5604825112042
+"Momentum__reuse0","Reference",2029,"Refining (ktons of black mass)",231.035665216044,162.295283655217,-68.7403815608265
+"Momentum__reuse0","Reference",2030,"Pre-processing (ktons of battery)",883.830851989738,918.387361849208,34.5565098594697
+"Momentum__reuse0","Reference",2030,"Refining (ktons of black mass)",266.65110233482,373.123232020356,106.472129685536
+"Momentum__reuse0","Reference",2031,"Pre-processing (ktons of battery)",1046.56535048939,918.387361849208,-128.177988640182
+"Momentum__reuse0","Reference",2031,"Refining (ktons of black mass)",314.005192076481,373.123232020356,59.1180399438749
+"Momentum__reuse0","Reference",2032,"Pre-processing (ktons of battery)",1232.97308616866,918.387361849208,-314.58572431945
+"Momentum__reuse0","Reference",2032,"Refining (ktons of black mass)",368.212261646628,384.659890081212,16.447628434584
+"Momentum__reuse0","Reference",2033,"Pre-processing (ktons of battery)",1459.93510200173,918.387361849208,-541.547740152527
+"Momentum__reuse0","Reference",2033,"Refining (ktons of black mass)",434.014595448348,384.659890081212,-49.3547053671359
+"Momentum__reuse0","Reference",2034,"Pre-processing (ktons of battery)",1735.02592592714,918.387361849208,-816.63856407793
+"Momentum__reuse0","Reference",2034,"Refining (ktons of black mass)",513.562491475033,384.659890081212,-128.90260139382
+"Momentum__reuse0","Reference",2035,"Pre-processing (ktons of battery)",2064.57362931554,918.387361849208,-1146.18626746633
+"Momentum__reuse0","Reference",2035,"Refining (ktons of black mass)",608.582636594478,384.659890081212,-223.922746513266
+"Momentum__reuse0","Reference",2036,"Pre-processing (ktons of battery)",2453.74322433921,918.387361849208,-1535.35586249
+"Momentum__reuse0","Reference",2036,"Refining (ktons of black mass)",720.646050596336,384.659890081212,-335.986160515123
+"Momentum__reuse0","Reference",2037,"Pre-processing (ktons of battery)",2907.14024692243,918.387361849208,-1988.75288507322
+"Momentum__reuse0","Reference",2037,"Refining (ktons of black mass)",850.661381966515,384.659890081212,-466.001491885303
+"Momentum__reuse0","Reference",2038,"Pre-processing (ktons of battery)",3424.84431024905,918.387361849208,-2506.45694839985
+"Momentum__reuse0","Reference",2038,"Refining (ktons of black mass)",998.583695978275,384.659890081212,-613.923805897063
+"Momentum__reuse0","Reference",2039,"Pre-processing (ktons of battery)",4020.84748203112,918.387361849208,-3102.46012018191
+"Momentum__reuse0","Reference",2039,"Refining (ktons of black mass)",1168.66771655537,384.659890081212,-784.00782647416
+"Momentum__reuse0","Reference",2040,"Pre-processing (ktons of battery)",4797.80716496263,918.387361849208,-3879.41980311343
+"Momentum__reuse0","Reference",2040,"Refining (ktons of black mass)",1391.90571130538,384.659890081212,-1007.24582122417
+"Momentum__reuse0","Reference",2041,"Pre-processing (ktons of battery)",5642.09259555838,918.387361849208,-4723.70523370917
+"Momentum__reuse0","Reference",2041,"Refining (ktons of black mass)",1634.27231586352,384.659890081212,-1249.61242578231
+"Momentum__reuse0","Reference",2042,"Pre-processing (ktons of battery)",6404.72917902557,918.387361849208,-5486.34181717636
+"Momentum__reuse0","Reference",2042,"Refining (ktons of black mass)",1851.46223198771,384.659890081212,-1466.8023419065
+"Momentum__reuse0","Reference",2043,"Pre-processing (ktons of battery)",7274.25405757956,918.387361849208,-6355.86669573035
+"Momentum__reuse0","Reference",2043,"Refining (ktons of black mass)",2100.28831865592,384.659890081212,-1715.62842857471
+"Momentum__reuse0","Reference",2044,"Pre-processing (ktons of battery)",8110.27934454021,918.387361849208,-7191.891982691
+"Momentum__reuse0","Reference",2044,"Refining (ktons of black mass)",2338.95859905836,384.659890081212,-1954.29870897714
+"Momentum__reuse0","Reference",2045,"Pre-processing (ktons of battery)",8871.50685397793,918.387361849208,-7953.11949212872
+"Momentum__reuse0","Reference",2045,"Refining (ktons of black mass)",2555.38792649388,384.659890081212,-2170.72803641267
+"Momentum__reuse0","Reference",2046,"Pre-processing (ktons of battery)",9601.85483037975,918.387361849208,-8683.46746853055
+"Momentum__reuse0","Reference",2046,"Refining (ktons of black mass)",2763.30020079253,384.659890081212,-2378.64031071132
+"Momentum__reuse0","Reference",2047,"Pre-processing (ktons of battery)",10309.6143084846,918.387361849208,-9391.22694663541
+"Momentum__reuse0","Reference",2047,"Refining (ktons of black mass)",2965.58382330406,384.659890081212,-2580.92393322285
+"Momentum__reuse0","Reference",2048,"Pre-processing (ktons of battery)",10988.7593692434,918.387361849208,-10070.3720073942
+"Momentum__reuse0","Reference",2048,"Refining (ktons of black mass)",3160.67196816591,384.659890081212,-2776.0120780847
+"Momentum__reuse0","Reference",2049,"Pre-processing (ktons of battery)",11597.6708680446,918.387361849208,-10679.2835061953
+"Momentum__reuse0","Reference",2049,"Refining (ktons of black mass)",3336.07679692475,384.659890081212,-2951.41690684353
+"Momentum__reuse0","Reference",2050,"Pre-processing (ktons of battery)",11995.8699585452,918.387361849208,-11077.482596696
+"Momentum__reuse0","Reference",2050,"Refining (ktons of black mass)",3449.50379067693,384.659890081212,-3064.84390059571
+"Momentum__reuse0Large","Large LIB",2025,"Pre-processing (ktons of battery)",113.229750041338,322.423361849208,209.19361180787
+"Momentum__reuse0Large","Large LIB",2025,"Refining (ktons of black mass)",32.7662384186397,0,-32.7662384186397
+"Momentum__reuse0Large","Large LIB",2026,"Pre-processing (ktons of battery)",174.606120034573,495.528361849208,320.922241814635
+"Momentum__reuse0Large","Large LIB",2026,"Refining (ktons of black mass)",51.0469117139739,6.59364669564592,-44.453265018328
+"Momentum__reuse0Large","Large LIB",2027,"Pre-processing (ktons of battery)",355.784463477162,534.528361849207,178.743898372045
+"Momentum__reuse0Large","Large LIB",2027,"Refining (ktons of black mass)",105.483426963667,96.7806103840414,-8.70281657962532
+"Momentum__reuse0Large","Large LIB",2028,"Pre-processing (ktons of battery)",552.054936023685,786.528361849207,234.473425825523
+"Momentum__reuse0Large","Large LIB",2028,"Refining (ktons of black mass)",166.760984814325,151.582672598708,-15.1783122156174
+"Momentum__reuse0Large","Large LIB",2029,"Pre-processing (ktons of battery)",778.8925475642,837.528361849207,58.6358142850073
+"Momentum__reuse0Large","Large LIB",2029,"Refining (ktons of black mass)",235.329738360818,162.295283655217,-73.0344547056004
+"Momentum__reuse0Large","Large LIB",2030,"Pre-processing (ktons of battery)",907.866171077783,918.387361849208,10.5211907714248
+"Momentum__reuse0Large","Large LIB",2030,"Refining (ktons of black mass)",273.611776549498,373.123232020356,99.5114554708579
+"Momentum__reuse0Large","Large LIB",2031,"Pre-processing (ktons of battery)",1075.09575777138,918.387361849208,-156.70839592217
+"Momentum__reuse0Large","Large LIB",2031,"Refining (ktons of black mass)",322.380605214867,373.123232020356,50.7426268054887
+"Momentum__reuse0Large","Large LIB",2032,"Pre-processing (ktons of battery)",1276.09438234134,918.387361849208,-357.707020492131
+"Momentum__reuse0Large","Large LIB",2032,"Refining (ktons of black mass)",380.926264667002,384.659890081212,3.73362541421056
+"Momentum__reuse0Large","Large LIB",2033,"Pre-processing (ktons of battery)",1528.72992830742,918.387361849208,-610.342566458212
+"Momentum__reuse0Large","Large LIB",2033,"Refining (ktons of black mass)",454.295825558699,384.659890081212,-69.6359354774866
+"Momentum__reuse0Large","Large LIB",2034,"Pre-processing (ktons of battery)",1840.21235315187,918.387361849208,-921.824991302661
+"Momentum__reuse0Large","Large LIB",2034,"Refining (ktons of black mass)",544.558545717498,384.659890081212,-159.898655636285
+"Momentum__reuse0Large","Large LIB",2035,"Pre-processing (ktons of battery)",2220.04072851028,918.387361849208,-1301.65336666108
+"Momentum__reuse0Large","Large LIB",2035,"Refining (ktons of black mass)",654.368442289339,384.659890081212,-269.708552208127
+"Momentum__reuse0Large","Large LIB",2036,"Pre-processing (ktons of battery)",2675.27936163811,918.387361849208,-1756.8919997889
+"Momentum__reuse0Large","Large LIB",2036,"Refining (ktons of black mass)",785.822376624693,384.659890081212,-401.16248654348
+"Momentum__reuse0Large","Large LIB",2037,"Pre-processing (ktons of battery)",3213.19607238621,918.387361849208,-2294.808710537
+"Momentum__reuse0Large","Large LIB",2037,"Refining (ktons of black mass)",940.585464105394,384.659890081212,-555.925574024182
+"Momentum__reuse0Large","Large LIB",2038,"Pre-processing (ktons of battery)",3840.60143472437,918.387361849208,-2922.21407287516
+"Momentum__reuse0Large","Large LIB",2038,"Refining (ktons of black mass)",1120.57469280369,384.659890081212,-735.914802722473
+"Momentum__reuse0Large","Large LIB",2039,"Pre-processing (ktons of battery)",4568.30686293615,918.387361849208,-3649.91950108695
+"Momentum__reuse0Large","Large LIB",2039,"Refining (ktons of black mass)",1329.02742565039,384.659890081212,-944.367535569178
+"Momentum__reuse0Large","Large LIB",2040,"Pre-processing (ktons of battery)",5563.44087677414,918.387361849208,-4645.05351492494
+"Momentum__reuse0Large","Large LIB",2040,"Refining (ktons of black mass)",1616.2519106791,384.659890081212,-1231.59202059789
+"Momentum__reuse0Large","Large LIB",2041,"Pre-processing (ktons of battery)",6596.62105424687,918.387361849208,-5678.23369239767
+"Momentum__reuse0Large","Large LIB",2041,"Refining (ktons of black mass)",1913.43855546504,384.659890081212,-1528.77866538383
+"Momentum__reuse0Large","Large LIB",2042,"Pre-processing (ktons of battery)",7571.47055349517,918.387361849208,-6653.08319164597
+"Momentum__reuse0Large","Large LIB",2042,"Refining (ktons of black mass)",2192.07667018204,384.659890081212,-1807.41678010083
+"Momentum__reuse0Large","Large LIB",2043,"Pre-processing (ktons of battery)",8666.30099180824,918.387361849208,-7747.91362995903
+"Momentum__reuse0Large","Large LIB",2043,"Refining (ktons of black mass)",2505.92869254237,384.659890081212,-2121.26880246115
+"Momentum__reuse0Large","Large LIB",2044,"Pre-processing (ktons of battery)",9738.03409678006,918.387361849208,-8819.64673493086
+"Momentum__reuse0Large","Large LIB",2044,"Refining (ktons of black mass)",2812.45895644033,384.659890081212,-2427.79906635911
+"Momentum__reuse0Large","Large LIB",2045,"Pre-processing (ktons of battery)",10739.2531617979,918.387361849208,-9820.86579994865
+"Momentum__reuse0Large","Large LIB",2045,"Refining (ktons of black mass)",3097.83642616979,384.659890081212,-2713.17653608858
+"Momentum__reuse0Large","Large LIB",2046,"Pre-processing (ktons of battery)",11705.7936615149,918.387361849208,-10787.4062996657
+"Momentum__reuse0Large","Large LIB",2046,"Refining (ktons of black mass)",3373.4994988053,384.659890081212,-2988.83960872409
+"Momentum__reuse0Large","Large LIB",2047,"Pre-processing (ktons of battery)",12637.8212804502,918.387361849208,-11719.433918601
+"Momentum__reuse0Large","Large LIB",2047,"Refining (ktons of black mass)",3640.03454248137,384.659890081212,-3255.37465240016
+"Momentum__reuse0Large","Large LIB",2048,"Pre-processing (ktons of battery)",13523.4134178048,918.387361849208,-12605.0260559556
+"Momentum__reuse0Large","Large LIB",2048,"Refining (ktons of black mass)",3894.30099451458,384.659890081212,-3509.64110443337
+"Momentum__reuse0Large","Large LIB",2049,"Pre-processing (ktons of battery)",14316.3474469393,918.387361849208,-13397.9600850901
+"Momentum__reuse0Large","Large LIB",2049,"Refining (ktons of black mass)",4122.53762619551,384.659890081212,-3737.8777361143
+"Momentum__reuse0Large","Large LIB",2050,"Pre-processing (ktons of battery)",14877.0487339684,918.387361849208,-13958.6613721192
+"Momentum__reuse0Large","Large LIB",2050,"Refining (ktons of black mass)",4282.76694620214,384.659890081212,-3898.10705612093
+"Momentum__reuse0Recycling","Recycling",2025,"Pre-processing (ktons of battery)",114.300334698462,322.423361849208,208.123027150746
+"Momentum__reuse0Recycling","Recycling",2025,"Refining (ktons of black mass)",33.0548613001907,0,-33.0548613001907
+"Momentum__reuse0Recycling","Recycling",2026,"Pre-processing (ktons of battery)",175.621930410661,495.528361849208,319.906431438547
+"Momentum__reuse0Recycling","Recycling",2026,"Refining (ktons of black mass)",51.3135023044192,6.59364669564592,-44.7198556087732
+"Momentum__reuse0Recycling","Recycling",2027,"Pre-processing (ktons of battery)",355.876288069536,534.528361849207,178.652073779671
+"Momentum__reuse0Recycling","Recycling",2027,"Refining (ktons of black mass)",105.478209618877,96.7806103840414,-8.69759923483564
+"Momentum__reuse0Recycling","Recycling",2028,"Pre-processing (ktons of battery)",551.379390516942,786.528361849207,235.148971332265
+"Momentum__reuse0Recycling","Recycling",2028,"Refining (ktons of black mass)",166.495700582379,151.582672598708,-14.9130279836718
+"Momentum__reuse0Recycling","Recycling",2029,"Pre-processing (ktons of battery)",775.336777451214,837.528361849207,62.1915843979934
+"Momentum__reuse0Recycling","Recycling",2029,"Refining (ktons of black mass)",234.189513072394,162.295283655217,-71.8942294171766
+"Momentum__reuse0Recycling","Recycling",2030,"Pre-processing (ktons of battery)",899.697627546816,918.387361849208,18.689734302392
+"Momentum__reuse0Recycling","Recycling",2030,"Refining (ktons of black mass)",271.053403638803,373.123232020356,102.069828381553
+"Momentum__reuse0Recycling","Recycling",2031,"Pre-processing (ktons of battery)",1069.18126958081,918.387361849208,-150.793907731605
+"Momentum__reuse0Recycling","Recycling",2031,"Refining (ktons of black mass)",320.282116079518,373.123232020356,52.841115940838
+"Momentum__reuse0Recycling","Recycling",2032,"Pre-processing (ktons of battery)",1264.96485503203,918.387361849208,-346.577493182827
+"Momentum__reuse0Recycling","Recycling",2032,"Refining (ktons of black mass)",377.089560459736,384.659890081212,7.57032962147667
+"Momentum__reuse0Recycling","Recycling",2033,"Pre-processing (ktons of battery)",1504.50474385509,918.387361849208,-586.117382005885
+"Momentum__reuse0Recycling","Recycling",2033,"Refining (ktons of black mass)",446.387208340021,384.659890081212,-61.7273182588084
+"Momentum__reuse0Recycling","Recycling",2034,"Pre-processing (ktons of battery)",1795.58491709574,918.387361849208,-877.197555246535
+"Momentum__reuse0Recycling","Recycling",2034,"Refining (ktons of black mass)",530.386982053349,384.659890081212,-145.727091972136
+"Momentum__reuse0Recycling","Recycling",2035,"Pre-processing (ktons of battery)",2145.68825631086,918.387361849208,-1227.30089446165
+"Momentum__reuse0Recycling","Recycling",2035,"Refining (ktons of black mass)",631.142635977001,384.659890081212,-246.482745895788
+"Momentum__reuse0Recycling","Recycling",2036,"Pre-processing (ktons of battery)",2563.84556698511,918.387361849208,-1645.4582051359
+"Momentum__reuse0Recycling","Recycling",2036,"Refining (ktons of black mass)",751.299068567812,384.659890081212,-366.6391784866
+"Momentum__reuse0Recycling","Recycling",2037,"Pre-processing (ktons of battery)",3048.98594764152,918.387361849208,-2130.59858579231
+"Momentum__reuse0Recycling","Recycling",2037,"Refining (ktons of black mass)",890.204511330064,384.659890081212,-505.544621248852
+"Momentum__reuse0Recycling","Recycling",2038,"Pre-processing (ktons of battery)",3603.68329453267,918.387361849208,-2685.29593268346
+"Momentum__reuse0Recycling","Recycling",2038,"Refining (ktons of black mass)",1048.50266362813,384.659890081212,-663.842773546915
+"Momentum__reuse0Recycling","Recycling",2039,"Pre-processing (ktons of battery)",4231.53643805566,918.387361849208,-3313.14907620646
+"Momentum__reuse0Recycling","Recycling",2039,"Refining (ktons of black mass)",1227.3576320517,384.659890081212,-842.697741970484
+"Momentum__reuse0Recycling","Recycling",2040,"Pre-processing (ktons of battery)",4927.45188296968,918.387361849208,-4009.06452112047
+"Momentum__reuse0Recycling","Recycling",2040,"Refining (ktons of black mass)",1425.3429838541,384.659890081212,-1040.68309377288
+"Momentum__reuse0Recycling","Recycling",2041,"Pre-processing (ktons of battery)",5676.9689433532,918.387361849208,-4758.581581504
+"Momentum__reuse0Recycling","Recycling",2041,"Refining (ktons of black mass)",1638.32987761699,384.659890081212,-1253.66998753577
+"Momentum__reuse0Recycling","Recycling",2042,"Pre-processing (ktons of battery)",6464.15595462369,918.387361849208,-5545.76859277449
+"Momentum__reuse0Recycling","Recycling",2042,"Refining (ktons of black mass)",1861.89837292703,384.659890081212,-1477.23848284582
+"Momentum__reuse0Recycling","Recycling",2043,"Pre-processing (ktons of battery)",7268.34524168372,918.387361849208,-6349.95787983451
+"Momentum__reuse0Recycling","Recycling",2043,"Refining (ktons of black mass)",2090.1596953685,384.659890081212,-1705.49980528729
+"Momentum__reuse0Recycling","Recycling",2044,"Pre-processing (ktons of battery)",8065.73213418656,918.387361849208,-7147.34477233735
+"Momentum__reuse0Recycling","Recycling",2044,"Refining (ktons of black mass)",2316.31937806269,384.659890081212,-1931.65948798148
+"Momentum__reuse0Recycling","Recycling",2045,"Pre-processing (ktons of battery)",8832.27386910329,918.387361849208,-7913.88650725408
+"Momentum__reuse0Recycling","Recycling",2045,"Refining (ktons of black mass)",2533.52659972075,384.659890081212,-2148.86670963954
+"Momentum__reuse0Recycling","Recycling",2046,"Pre-processing (ktons of battery)",9550.40905423916,918.387361849208,-8632.02169238996
+"Momentum__reuse0Recycling","Recycling",2046,"Refining (ktons of black mass)",2736.98397967872,384.659890081212,-2352.32408959751
+"Momentum__reuse0Recycling","Recycling",2047,"Pre-processing (ktons of battery)",10212.4564299047,918.387361849208,-9294.06906805553
+"Momentum__reuse0Recycling","Recycling",2047,"Refining (ktons of black mass)",2924.83356001101,384.659890081212,-2540.1736699298
+"Momentum__reuse0Recycling","Recycling",2048,"Pre-processing (ktons of battery)",10808.4885009797,918.387361849208,-9890.10113913052
+"Momentum__reuse0Recycling","Recycling",2048,"Refining (ktons of black mass)",3094.31091689207,384.659890081212,-2709.65102681086
+"Momentum__reuse0Recycling","Recycling",2049,"Pre-processing (ktons of battery)",11335.6972428137,918.387361849208,-10417.3098809645
+"Momentum__reuse0Recycling","Recycling",2049,"Refining (ktons of black mass)",3244.59207475721,384.659890081212,-2859.93218467599
+"Momentum__reuse0Recycling","Recycling",2050,"Pre-processing (ktons of battery)",11797.807602937,918.387361849208,-10879.4202410877
+"Momentum__reuse0Recycling","Recycling",2050,"Refining (ktons of black mass)",3376.6851757079,384.659890081212,-2992.02528562669
+"Momentum__reuse0Repurposing","Repurposing",2025,"Pre-processing (ktons of battery)",111.414935378299,322.423361849208,211.008426470908
+"Momentum__reuse0Repurposing","Repurposing",2025,"Refining (ktons of black mass)",32.2651996997883,0,-32.2651996997883
+"Momentum__reuse0Repurposing","Repurposing",2026,"Pre-processing (ktons of battery)",170.234399530177,495.528361849208,325.293962319031
+"Momentum__reuse0Repurposing","Repurposing",2026,"Refining (ktons of black mass)",49.8224383047975,6.59364669564592,-43.2287916091515
+"Momentum__reuse0Repurposing","Repurposing",2027,"Pre-processing (ktons of battery)",347.630798109246,534.528361849207,186.897563739961
+"Momentum__reuse0Repurposing","Repurposing",2027,"Refining (ktons of black mass)",103.191701204538,96.7806103840414,-6.41109082049709
+"Momentum__reuse0Repurposing","Repurposing",2028,"Pre-processing (ktons of battery)",539.142513992239,786.528361849207,247.385847856969
+"Momentum__reuse0Repurposing","Repurposing",2028,"Refining (ktons of black mass)",163.102981495637,151.582672598708,-11.5203088969293
+"Momentum__reuse0Repurposing","Repurposing",2029,"Pre-processing (ktons of battery)",757.146423127941,837.528361849207,80.3819387212662
+"Momentum__reuse0Repurposing","Repurposing",2029,"Refining (ktons of black mass)",229.143310464178,162.295283655217,-66.8480268089605
+"Momentum__reuse0Repurposing","Repurposing",2030,"Pre-processing (ktons of battery)",874.310627081047,918.387361849208,44.0767347681607
+"Momentum__reuse0Repurposing","Repurposing",2030,"Refining (ktons of black mass)",264.009659176695,373.123232020356,109.113572843661
+"Momentum__reuse0Repurposing","Repurposing",2031,"Pre-processing (ktons of battery)",1032.99557089552,918.387361849208,-114.608209046311
+"Momentum__reuse0Repurposing","Repurposing",2031,"Refining (ktons of black mass)",310.238948971533,373.123232020356,62.8842830488229
+"Momentum__reuse0Repurposing","Repurposing",2032,"Pre-processing (ktons of battery)",1213.77735306051,918.387361849208,-295.3899912113
+"Momentum__reuse0Repurposing","Repurposing",2032,"Refining (ktons of black mass)",362.885621592847,384.659890081212,21.7742684883651
+"Momentum__reuse0Repurposing","Repurposing",2033,"Pre-processing (ktons of battery)",1433.19230104728,918.387361849208,-514.804939198076
+"Momentum__reuse0Repurposing","Repurposing",2033,"Refining (ktons of black mass)",426.590634423192,384.659890081212,-41.9307443419798
+"Momentum__reuse0Repurposing","Repurposing",2034,"Pre-processing (ktons of battery)",1698.68891848045,918.387361849208,-780.30155663124
+"Momentum__reuse0Repurposing","Repurposing",2034,"Refining (ktons of black mass)",503.46717473579,384.659890081212,-118.807284654577
+"Momentum__reuse0Repurposing","Repurposing",2035,"Pre-processing (ktons of battery)",2015.90229735358,918.387361849208,-1097.51493550437
+"Momentum__reuse0Repurposing","Repurposing",2035,"Refining (ktons of black mass)",595.045653555981,384.659890081212,-210.385763474769
+"Momentum__reuse0Repurposing","Repurposing",2036,"Pre-processing (ktons of battery)",2387.67759243573,918.387361849208,-1469.29023058652
+"Momentum__reuse0Repurposing","Repurposing",2036,"Refining (ktons of black mass)",702.252617334481,384.659890081212,-317.592727253269
+"Momentum__reuse0Repurposing","Repurposing",2037,"Pre-processing (ktons of battery)",2828.34800904406,918.387361849208,-1909.96064719485
+"Momentum__reuse0Repurposing","Repurposing",2037,"Refining (ktons of black mass)",828.831272449438,384.659890081212,-444.171382368226
+"Momentum__reuse0Repurposing","Repurposing",2038,"Pre-processing (ktons of battery)",3332.13405182688,918.387361849208,-2413.74668997767
+"Momentum__reuse0Repurposing","Repurposing",2038,"Refining (ktons of black mass)",973.0133669894,384.659890081212,-588.353476908187
+"Momentum__reuse0Repurposing","Repurposing",2039,"Pre-processing (ktons of battery)",4012.7978097175,918.387361849208,-3094.41044786829
+"Momentum__reuse0Repurposing","Repurposing",2039,"Refining (ktons of black mass)",1168.98577382969,384.659890081212,-784.32588374848
+"Momentum__reuse0Repurposing","Repurposing",2040,"Pre-processing (ktons of battery)",4872.00014069313,918.387361849208,-3953.61277884392
+"Momentum__reuse0Repurposing","Repurposing",2040,"Refining (ktons of black mass)",1417.46830771879,384.659890081212,-1032.80841763757
+"Momentum__reuse0Repurposing","Repurposing",2041,"Pre-processing (ktons of battery)",5727.42991070936,918.387361849208,-4809.04254886015
+"Momentum__reuse0Repurposing","Repurposing",2041,"Refining (ktons of black mass)",1663.73884636423,384.659890081212,-1279.07895628302
+"Momentum__reuse0Repurposing","Repurposing",2042,"Pre-processing (ktons of battery)",6509.78264770147,918.387361849208,-5591.39528585226
+"Momentum__reuse0Repurposing","Repurposing",2042,"Refining (ktons of black mass)",1887.44189465898,384.659890081212,-1502.78200457777
+"Momentum__reuse0Repurposing","Repurposing",2043,"Pre-processing (ktons of battery)",7397.61168493972,918.387361849208,-6479.22432309051
+"Momentum__reuse0Repurposing","Repurposing",2043,"Refining (ktons of black mass)",2142.3333224074,384.659890081212,-1757.67343232619
+"Momentum__reuse0Repurposing","Repurposing",2044,"Pre-processing (ktons of battery)",8255.01527132596,918.387361849208,-7336.62790947676
+"Momentum__reuse0Repurposing","Repurposing",2044,"Refining (ktons of black mass)",2387.96786280517,384.659890081212,-2003.30797272396
+"Momentum__reuse0Repurposing","Repurposing",2045,"Pre-processing (ktons of battery)",9040.99426047443,918.387361849208,-8122.60689862522
+"Momentum__reuse0Repurposing","Repurposing",2045,"Refining (ktons of black mass)",2612.31723308374,384.659890081212,-2227.65734300253
+"Momentum__reuse0Repurposing","Repurposing",2046,"Pre-processing (ktons of battery)",9797.14358837403,918.387361849208,-8878.75622652482
+"Momentum__reuse0Repurposing","Repurposing",2046,"Refining (ktons of black mass)",2828.44732160034,384.659890081212,-2443.78743151913
+"Momentum__reuse0Repurposing","Repurposing",2047,"Pre-processing (ktons of battery)",10531.3290318468,918.387361849208,-9612.94166999757
+"Momentum__reuse0Repurposing","Repurposing",2047,"Refining (ktons of black mass)",3039.09025873026,384.659890081212,-2654.43036864904
+"Momentum__reuse0Repurposing","Repurposing",2048,"Pre-processing (ktons of battery)",11236.9300863643,918.387361849208,-10318.5427245151
+"Momentum__reuse0Repurposing","Repurposing",2048,"Refining (ktons of black mass)",3242.51668439169,384.659890081212,-2857.85679431048
+"Momentum__reuse0Repurposing","Repurposing",2049,"Pre-processing (ktons of battery)",11874.1268192472,918.387361849208,-10955.739457398
+"Momentum__reuse0Repurposing","Repurposing",2049,"Refining (ktons of black mass)",3426.77055828315,384.659890081212,-3042.11066820194
+"Momentum__reuse0Repurposing","Repurposing",2050,"Pre-processing (ktons of battery)",12305.3894619327,918.387361849208,-11387.0021000835
+"Momentum__reuse0Repurposing","Repurposing",2050,"Refining (ktons of black mass)",3550.43280860992,384.659890081212,-3165.7729185287
+"Momentum__reuse0Small","Small LIB",2025,"Pre-processing (ktons of battery)",111.667294234029,322.423361849208,210.756067615178
+"Momentum__reuse0Small","Small LIB",2025,"Refining (ktons of black mass)",32.3243013495901,0,-32.3243013495901
+"Momentum__reuse0Small","Small LIB",2026,"Pre-processing (ktons of battery)",169.561284326612,495.528361849208,325.967077522595
+"Momentum__reuse0Small","Small LIB",2026,"Refining (ktons of black mass)",49.6079754804598,6.59364669564592,-43.0143287848139
+"Momentum__reuse0Small","Small LIB",2027,"Pre-processing (ktons of battery)",343.416632627112,534.528361849207,191.111729222095
+"Momentum__reuse0Small","Small LIB",2027,"Refining (ktons of black mass)",101.948999782288,96.7806103840414,-5.1683893982465
+"Momentum__reuse0Small","Small LIB",2028,"Pre-processing (ktons of battery)",533.956521224598,786.528361849207,252.57184062461
+"Momentum__reuse0Small","Small LIB",2028,"Refining (ktons of black mass)",161.532457646941,151.582672598708,-9.94978504823342
+"Momentum__reuse0Small","Small LIB",2029,"Pre-processing (ktons of battery)",738.765743298468,837.528361849207,98.7626185507399
+"Momentum__reuse0Small","Small LIB",2029,"Refining (ktons of black mass)",223.743071850023,162.295283655217,-61.447788194806
+"Momentum__reuse0Small","Small LIB",2030,"Pre-processing (ktons of battery)",854.653383139041,918.387361849208,63.7339787101666
+"Momentum__reuse0Small","Small LIB",2030,"Refining (ktons of black mass)",258.110907171149,373.123232020356,115.012324849207
+"Momentum__reuse0Small","Small LIB",2031,"Pre-processing (ktons of battery)",998.3343256448,918.387361849208,-79.9469637955922
+"Momentum__reuse0Small","Small LIB",2031,"Refining (ktons of black mass)",299.857148155057,373.123232020356,73.2660838652984
+"Momentum__reuse0Small","Small LIB",2032,"Pre-processing (ktons of battery)",1169.38681848697,918.387361849208,-250.999456637759
+"Momentum__reuse0Small","Small LIB",2032,"Refining (ktons of black mass)",349.424959562948,384.659890081212,35.2349305182643
+"Momentum__reuse0Small","Small LIB",2033,"Pre-processing (ktons of battery)",1369.98100769552,918.387361849208,-451.593645846309
+"Momentum__reuse0Small","Small LIB",2033,"Refining (ktons of black mass)",407.330337620051,384.659890081212,-22.6704475388383
+"Momentum__reuse0Small","Small LIB",2034,"Pre-processing (ktons of battery)",1599.4727900023,918.387361849208,-681.085428153091
+"Momentum__reuse0Small","Small LIB",2034,"Refining (ktons of black mass)",473.373345438408,384.659890081212,-88.7134553571959
+"Momentum__reuse0Small","Small LIB",2035,"Pre-processing (ktons of battery)",1865.65136240369,918.387361849208,-947.264000554478
+"Momentum__reuse0Small","Small LIB",2035,"Refining (ktons of black mass)",549.650881320655,384.659890081212,-164.990991239443
+"Momentum__reuse0Small","Small LIB",2036,"Pre-processing (ktons of battery)",2172.04462956814,918.387361849208,-1253.65726771894
+"Momentum__reuse0Small","Small LIB",2036,"Refining (ktons of black mass)",637.30413104685,384.659890081212,-252.644240965638
+"Momentum__reuse0Small","Small LIB",2037,"Pre-processing (ktons of battery)",2520.77128922413,918.387361849208,-1602.38392737492
+"Momentum__reuse0Small","Small LIB",2037,"Refining (ktons of black mass)",736.50605710098,384.659890081212,-351.846167019768
+"Momentum__reuse0Small","Small LIB",2038,"Pre-processing (ktons of battery)",2909.67624213564,918.387361849208,-1991.28888028643
+"Momentum__reuse0Small","Small LIB",2038,"Refining (ktons of black mass)",846.599457873718,384.659890081212,-461.939567792506
+"Momentum__reuse0Small","Small LIB",2039,"Pre-processing (ktons of battery)",3344.11439531505,918.387361849208,-2425.72703346584
+"Momentum__reuse0Small","Small LIB",2039,"Refining (ktons of black mass)",969.309143764855,384.659890081212,-584.649253683643
+"Momentum__reuse0Small","Small LIB",2040,"Pre-processing (ktons of battery)",3861.35234104926,918.387361849208,-2942.96497920005
+"Momentum__reuse0Small","Small LIB",2040,"Refining (ktons of black mass)",1116.02446799924,384.659890081212,-731.364577918024
+"Momentum__reuse0Small","Small LIB",2041,"Pre-processing (ktons of battery)",4485.49073484626,918.387361849208,-3567.10337299705
+"Momentum__reuse0Small","Small LIB",2041,"Refining (ktons of black mass)",1294.1228546185,384.659890081212,-909.462964537288
+"Momentum__reuse0Small","Small LIB",2042,"Pre-processing (ktons of battery)",5001.60857269186,918.387361849208,-4083.22121084266
+"Momentum__reuse0Small","Small LIB",2042,"Refining (ktons of black mass)",1439.48793209499,384.659890081212,-1054.82804201378
+"Momentum__reuse0Small","Small LIB",2043,"Pre-processing (ktons of battery)",5614.33617444357,918.387361849208,-4695.94881259437
+"Momentum__reuse0Small","Small LIB",2043,"Refining (ktons of black mass)",1613.7460062049,384.659890081212,-1229.08611612369
+"Momentum__reuse0Small","Small LIB",2044,"Pre-processing (ktons of battery)",6183.04466176281,918.387361849208,-5264.6572999136
+"Momentum__reuse0Small","Small LIB",2044,"Refining (ktons of black mass)",1774.97612232719,384.659890081212,-1390.31623224598
+"Momentum__reuse0Small","Small LIB",2045,"Pre-processing (ktons of battery)",6673.14579992225,918.387361849208,-5754.75843807304
+"Momentum__reuse0Small","Small LIB",2045,"Refining (ktons of black mass)",1913.02534305557,384.659890081212,-1528.36545297436
+"Momentum__reuse0Small","Small LIB",2046,"Pre-processing (ktons of battery)",7137.17528697608,918.387361849208,-6218.78792512687
+"Momentum__reuse0Small","Small LIB",2046,"Refining (ktons of black mass)",2044.07383944157,384.659890081212,-1659.41394936036
+"Momentum__reuse0Small","Small LIB",2047,"Pre-processing (ktons of battery)",7592.07155773911,918.387361849208,-6673.6841958899
+"Momentum__reuse0Small","Small LIB",2047,"Refining (ktons of black mass)",2173.47670463377,384.659890081212,-1788.81681455256
+"Momentum__reuse0Small","Small LIB",2048,"Pre-processing (ktons of battery)",8037.28670412766,918.387361849208,-7118.89934227845
+"Momentum__reuse0Small","Small LIB",2048,"Refining (ktons of black mass)",2301.12457096252,384.659890081212,-1916.46468088131
+"Momentum__reuse0Small","Small LIB",2049,"Pre-processing (ktons of battery)",8434.53526646381,918.387361849208,-7516.14790461461
+"Momentum__reuse0Small","Small LIB",2049,"Refining (ktons of black mass)",2415.42725439219,384.659890081212,-2030.76736431098
+"Momentum__reuse0Small","Small LIB",2050,"Pre-processing (ktons of battery)",8641.17423043378,918.387361849208,-7722.78686858457
+"Momentum__reuse0Small","Small LIB",2050,"Refining (ktons of black mass)",2473.39399747684,384.659890081212,-2088.73410739563
 "Momentum__reuse0_LFP","LFP ",2025,"Pre-processing (ktons of battery)",154.983457050352,322.423361849208,167.439904798855
 "Momentum__reuse0_LFP","LFP ",2025,"Refining (ktons of black mass)",46.9419252446228,0,-46.9419252446228
 "Momentum__reuse0_LFP","LFP ",2026,"Pre-processing (ktons of battery)",251.932053632478,495.528361849208,243.59630821673
-"Momentum__reuse0_LFP","LFP ",2026,"Refining (ktons of black mass)",76.5693591831592,24.0046259286089,-52.5647332545503
+"Momentum__reuse0_LFP","LFP ",2026,"Refining (ktons of black mass)",76.5693591831592,6.59364669564592,-69.9757124875132
 "Momentum__reuse0_LFP","LFP ",2027,"Pre-processing (ktons of battery)",411.414108388324,534.528361849207,123.114253460883
-"Momentum__reuse0_LFP","LFP ",2027,"Refining (ktons of black mass)",126.126053726794,352.336492482294,226.2104387555
+"Momentum__reuse0_LFP","LFP ",2027,"Refining (ktons of black mass)",126.126053726794,96.7806103840414,-29.3454433427525
 "Momentum__reuse0_LFP","LFP ",2028,"Pre-processing (ktons of battery)",654.619866987452,786.528361849207,131.908494861755
-"Momentum__reuse0_LFP","LFP ",2028,"Refining (ktons of black mass)",202.053556311211,551.847182742374,349.793626431163
+"Momentum__reuse0_LFP","LFP ",2028,"Refining (ktons of black mass)",202.053556311211,151.582672598708,-50.4708837125033
 "Momentum__reuse0_LFP","LFP ",2029,"Pre-processing (ktons of battery)",911.013493127133,837.528361849207,-73.4851312779259
-"Momentum__reuse0_LFP","LFP ",2029,"Refining (ktons of black mass)",281.163157460398,590.847182742374,309.684025281976
+"Momentum__reuse0_LFP","LFP ",2029,"Refining (ktons of black mass)",281.163157460398,162.295283655217,-118.867873805181
 "Momentum__reuse0_LFP","LFP ",2030,"Pre-processing (ktons of battery)",1106.60594708002,918.387361849208,-188.218585230813
-"Momentum__reuse0_LFP","LFP ",2030,"Refining (ktons of black mass)",340.491190178224,1358.38088137732,1017.8896911991
+"Momentum__reuse0_LFP","LFP ",2030,"Refining (ktons of black mass)",340.491190178224,373.123232020356,32.6320418421323
 "Momentum__reuse0_LFP","LFP ",2031,"Pre-processing (ktons of battery)",1348.75832419795,918.387361849208,-430.370962348743
-"Momentum__reuse0_LFP","LFP ",2031,"Refining (ktons of black mass)",413.442139607457,1358.38088137732,944.938741769865
+"Momentum__reuse0_LFP","LFP ",2031,"Refining (ktons of black mass)",413.442139607457,373.123232020356,-40.3189075871015
 "Momentum__reuse0_LFP","LFP ",2032,"Pre-processing (ktons of battery)",1623.49405003356,918.387361849208,-705.106688184351
-"Momentum__reuse0_LFP","LFP ",2032,"Refining (ktons of black mass)",496.175690851782,1358.38088137732,862.20519052554
+"Momentum__reuse0_LFP","LFP ",2032,"Refining (ktons of black mass)",496.175690851782,384.659890081212,-111.51580077057
 "Momentum__reuse0_LFP","LFP ",2033,"Pre-processing (ktons of battery)",1952.84405085349,918.387361849208,-1034.45668900428
-"Momentum__reuse0_LFP","LFP ",2033,"Refining (ktons of black mass)",595.270607179676,1358.38088137732,763.110274197647
+"Momentum__reuse0_LFP","LFP ",2033,"Refining (ktons of black mass)",595.270607179676,384.659890081212,-210.610717098463
 "Momentum__reuse0_LFP","LFP ",2034,"Pre-processing (ktons of battery)",2315.54765100217,918.387361849208,-1397.16028915296
-"Momentum__reuse0_LFP","LFP ",2034,"Refining (ktons of black mass)",704.402758194457,1358.38088137732,653.978123182865
+"Momentum__reuse0_LFP","LFP ",2034,"Refining (ktons of black mass)",704.402758194457,384.659890081212,-319.742868113245
 "Momentum__reuse0_LFP","LFP ",2035,"Pre-processing (ktons of battery)",2743.34061550454,918.387361849208,-1824.95325365534
-"Momentum__reuse0_LFP","LFP ",2035,"Refining (ktons of black mass)",833.156968503129,1358.38088137732,525.223912874193
+"Momentum__reuse0_LFP","LFP ",2035,"Refining (ktons of black mass)",833.156968503129,384.659890081212,-448.497078421917
 "Momentum__reuse0_LFP","LFP ",2036,"Pre-processing (ktons of battery)",3232.99175286699,918.387361849208,-2314.60439101778
-"Momentum__reuse0_LFP","LFP ",2036,"Refining (ktons of black mass)",980.587772725117,1358.38088137732,377.793108652205
+"Momentum__reuse0_LFP","LFP ",2036,"Refining (ktons of black mass)",980.587772725117,384.659890081212,-595.927882643905
 "Momentum__reuse0_LFP","LFP ",2037,"Pre-processing (ktons of battery)",3795.12575288051,918.387361849208,-2876.7383910313
-"Momentum__reuse0_LFP","LFP ",2037,"Refining (ktons of black mass)",1149.74615326233,1358.38088137732,208.63472811499
+"Momentum__reuse0_LFP","LFP ",2037,"Refining (ktons of black mass)",1149.74615326233,384.659890081212,-765.086263181119
 "Momentum__reuse0_LFP","LFP ",2038,"Pre-processing (ktons of battery)",4436.58329066554,918.387361849208,-3518.19592881633
-"Momentum__reuse0_LFP","LFP ",2038,"Refining (ktons of black mass)",1342.62847881721,1358.38088137732,15.7524025601119
+"Momentum__reuse0_LFP","LFP ",2038,"Refining (ktons of black mass)",1342.62847881721,384.659890081212,-957.968588735998
 "Momentum__reuse0_LFP","LFP ",2039,"Pre-processing (ktons of battery)",5175.20857988774,918.387361849208,-4256.82121803853
-"Momentum__reuse0_LFP","LFP ",2039,"Refining (ktons of black mass)",1564.6536592993,1358.38088137732,-206.272777921981
+"Momentum__reuse0_LFP","LFP ",2039,"Refining (ktons of black mass)",1564.6536592993,384.659890081212,-1179.99376921809
 "Momentum__reuse0_LFP","LFP ",2040,"Pre-processing (ktons of battery)",6106.23796213719,918.387361849208,-5187.85060028798
-"Momentum__reuse0_LFP","LFP ",2040,"Refining (ktons of black mass)",1844.40948316861,1358.38088137732,-486.028601791293
+"Momentum__reuse0_LFP","LFP ",2040,"Refining (ktons of black mass)",1844.40948316861,384.659890081212,-1459.7495930874
 "Momentum__reuse0_LFP","LFP ",2041,"Pre-processing (ktons of battery)",7096.40370093513,918.387361849208,-6178.01633908592
-"Momentum__reuse0_LFP","LFP ",2041,"Refining (ktons of black mass)",2141.87359982867,1358.38088137732,-783.492718451344
+"Momentum__reuse0_LFP","LFP ",2041,"Refining (ktons of black mass)",2141.87359982867,384.659890081212,-1757.21370974745
 "Momentum__reuse0_LFP","LFP ",2042,"Pre-processing (ktons of battery)",8012.71524604109,918.387361849208,-7094.32788419188
-"Momentum__reuse0_LFP","LFP ",2042,"Refining (ktons of black mass)",2417.1928046075,1358.38088137732,-1058.81192323018
+"Momentum__reuse0_LFP","LFP ",2042,"Refining (ktons of black mass)",2417.1928046075,384.659890081212,-2032.53291452629
 "Momentum__reuse0_LFP","LFP ",2043,"Pre-processing (ktons of battery)",9040.37625204229,918.387361849208,-8121.98889019308
-"Momentum__reuse0_LFP","LFP ",2043,"Refining (ktons of black mass)",2725.9043385336,1358.38088137732,-1367.52345715628
+"Momentum__reuse0_LFP","LFP ",2043,"Refining (ktons of black mass)",2725.9043385336,384.659890081212,-2341.24444845239
 "Momentum__reuse0_LFP","LFP ",2044,"Pre-processing (ktons of battery)",10034.2425863925,918.387361849208,-9115.85522454332
-"Momentum__reuse0_LFP","LFP ",2044,"Refining (ktons of black mass)",3024.37729933714,1358.38088137732,-1665.99641795981
+"Momentum__reuse0_LFP","LFP ",2044,"Refining (ktons of black mass)",3024.37729933714,384.659890081212,-2639.71740925592
 "Momentum__reuse0_LFP","LFP ",2045,"Pre-processing (ktons of battery)",10948.5262842449,918.387361849208,-10030.1389223957
-"Momentum__reuse0_LFP","LFP ",2045,"Refining (ktons of black mass)",3298.79495848221,1358.38088137732,-1940.41407710488
+"Momentum__reuse0_LFP","LFP ",2045,"Refining (ktons of black mass)",3298.79495848221,384.659890081212,-2914.13506840099
 "Momentum__reuse0_LFP","LFP ",2046,"Pre-processing (ktons of battery)",11821.5949150061,918.387361849208,-10903.2075531569
-"Momentum__reuse0_LFP","LFP ",2046,"Refining (ktons of black mass)",3560.72597725924,1358.38088137732,-2202.34509588192
+"Momentum__reuse0_LFP","LFP ",2046,"Refining (ktons of black mass)",3560.72597725924,384.659890081212,-3176.06608717803
 "Momentum__reuse0_LFP","LFP ",2047,"Pre-processing (ktons of battery)",12658.1473885286,918.387361849208,-11739.7600266794
-"Momentum__reuse0_LFP","LFP ",2047,"Refining (ktons of black mass)",3811.68083769165,1358.38088137732,-2453.29995631433
+"Momentum__reuse0_LFP","LFP ",2047,"Refining (ktons of black mass)",3811.68083769165,384.659890081212,-3427.02094761044
 "Momentum__reuse0_LFP","LFP ",2048,"Pre-processing (ktons of battery)",13449.4954982119,918.387361849208,-12531.1081363627
-"Momentum__reuse0_LFP","LFP ",2048,"Refining (ktons of black mass)",4049.07453159549,1358.38088137732,-2690.69365021816
+"Momentum__reuse0_LFP","LFP ",2048,"Refining (ktons of black mass)",4049.07453159549,384.659890081212,-3664.41464151427
 "Momentum__reuse0_LFP","LFP ",2049,"Pre-processing (ktons of battery)",14153.7925335045,918.387361849208,-13235.4051716553
-"Momentum__reuse0_LFP","LFP ",2049,"Refining (ktons of black mass)",4260.35275377517,1358.38088137732,-2901.97187239785
+"Momentum__reuse0_LFP","LFP ",2049,"Refining (ktons of black mass)",4260.35275377517,384.659890081212,-3875.69286369396
 "Momentum__reuse0_LFP","LFP ",2050,"Pre-processing (ktons of battery)",14632.1554864424,918.387361849208,-13713.7681245932
-"Momentum__reuse0_LFP","LFP ",2050,"Refining (ktons of black mass)",4403.8499219351,1358.38088137732,-3045.46904055778
+"Momentum__reuse0_LFP","LFP ",2050,"Refining (ktons of black mass)",4403.8499219351,384.659890081212,-4019.19003185389
 "Momentum__reuse0_NMC","NMC 811",2025,"Pre-processing (ktons of battery)",125.833684879921,322.423361849208,196.589676969286
 "Momentum__reuse0_NMC","NMC 811",2025,"Refining (ktons of black mass)",34.712984895758,0,-34.712984895758
 "Momentum__reuse0_NMC","NMC 811",2026,"Pre-processing (ktons of battery)",206.097599045947,495.528361849208,289.430762803261
-"Momentum__reuse0_NMC","NMC 811",2026,"Refining (ktons of black mass)",57.3408448817679,24.0046259286089,-33.336218953159
+"Momentum__reuse0_NMC","NMC 811",2026,"Refining (ktons of black mass)",57.3408448817679,6.59364669564592,-50.747198186122
 "Momentum__reuse0_NMC","NMC 811",2027,"Pre-processing (ktons of battery)",345.670685647081,534.528361849207,188.857676202127
-"Momentum__reuse0_NMC","NMC 811",2027,"Refining (ktons of black mass)",98.5453100306771,352.336492482294,253.791182451617
+"Momentum__reuse0_NMC","NMC 811",2027,"Refining (ktons of black mass)",98.5453100306771,96.7806103840414,-1.76469964663573
 "Momentum__reuse0_NMC","NMC 811",2028,"Pre-processing (ktons of battery)",567.602843175564,786.528361849207,218.925518673644
-"Momentum__reuse0_NMC","NMC 811",2028,"Refining (ktons of black mass)",165.548091112044,551.847182742374,386.29909163033
+"Momentum__reuse0_NMC","NMC 811",2028,"Refining (ktons of black mass)",165.548091112044,151.582672598708,-13.9654185133361
 "Momentum__reuse0_NMC","NMC 811",2029,"Pre-processing (ktons of battery)",790.321796245955,837.528361849207,47.2065656032527
-"Momentum__reuse0_NMC","NMC 811",2029,"Refining (ktons of black mass)",230.530461152042,590.847182742374,360.316721590332
+"Momentum__reuse0_NMC","NMC 811",2029,"Refining (ktons of black mass)",230.530461152042,162.295283655217,-68.2351774968251
 "Momentum__reuse0_NMC","NMC 811",2030,"Pre-processing (ktons of battery)",948.472684516511,918.387361849208,-30.0853226673036
-"Momentum__reuse0_NMC","NMC 811",2030,"Refining (ktons of black mass)",274.150972362657,1358.38088137732,1084.22990901466
+"Momentum__reuse0_NMC","NMC 811",2030,"Refining (ktons of black mass)",274.150972362657,373.123232020356,98.9722596576987
 "Momentum__reuse0_NMC","NMC 811",2031,"Pre-processing (ktons of battery)",1138.52539670543,918.387361849208,-220.138034856218
-"Momentum__reuse0_NMC","NMC 811",2031,"Refining (ktons of black mass)",325.245020445024,1358.38088137732,1033.1358609323
+"Momentum__reuse0_NMC","NMC 811",2031,"Refining (ktons of black mass)",325.245020445024,373.123232020356,47.8782115753315
 "Momentum__reuse0_NMC","NMC 811",2032,"Pre-processing (ktons of battery)",1353.76867114018,918.387361849208,-435.381309290972
-"Momentum__reuse0_NMC","NMC 811",2032,"Refining (ktons of black mass)",383.020241478907,1358.38088137732,975.360639898415
+"Momentum__reuse0_NMC","NMC 811",2032,"Refining (ktons of black mass)",383.020241478907,384.659890081212,1.63964860230533
 "Momentum__reuse0_NMC","NMC 811",2033,"Pre-processing (ktons of battery)",1610.26981072789,918.387361849208,-691.882448878678
-"Momentum__reuse0_NMC","NMC 811",2033,"Refining (ktons of black mass)",451.553533747342,1358.38088137732,906.827347629981
+"Momentum__reuse0_NMC","NMC 811",2033,"Refining (ktons of black mass)",451.553533747342,384.659890081212,-66.8936436661293
 "Momentum__reuse0_NMC","NMC 811",2034,"Pre-processing (ktons of battery)",1891.16850232007,918.387361849208,-972.781140470859
-"Momentum__reuse0_NMC","NMC 811",2034,"Refining (ktons of black mass)",526.366811148538,1358.38088137732,832.014070228784
+"Momentum__reuse0_NMC","NMC 811",2034,"Refining (ktons of black mass)",526.366811148538,384.659890081212,-141.706921067326
 "Momentum__reuse0_NMC","NMC 811",2035,"Pre-processing (ktons of battery)",2219.51436518918,918.387361849208,-1301.12700333997
-"Momentum__reuse0_NMC","NMC 811",2035,"Refining (ktons of black mass)",613.400878101366,1358.38088137732,744.980003275956
+"Momentum__reuse0_NMC","NMC 811",2035,"Refining (ktons of black mass)",613.400878101366,384.659890081212,-228.740988020154
 "Momentum__reuse0_NMC","NMC 811",2036,"Pre-processing (ktons of battery)",2595.90673532219,918.387361849208,-1677.51937347299
-"Momentum__reuse0_NMC","NMC 811",2036,"Refining (ktons of black mass)",713.317255783867,1358.38088137732,645.063625593455
+"Momentum__reuse0_NMC","NMC 811",2036,"Refining (ktons of black mass)",713.317255783867,384.659890081212,-328.657365702654
 "Momentum__reuse0_NMC","NMC 811",2037,"Pre-processing (ktons of battery)",3024.53281973468,918.387361849208,-2106.14545788547
-"Momentum__reuse0_NMC","NMC 811",2037,"Refining (ktons of black mass)",826.466267656363,1358.38088137732,531.914613720959
+"Momentum__reuse0_NMC","NMC 811",2037,"Refining (ktons of black mass)",826.466267656363,384.659890081212,-441.806377575151
 "Momentum__reuse0_NMC","NMC 811",2038,"Pre-processing (ktons of battery)",3511.31476116897,918.387361849208,-2592.92739931976
-"Momentum__reuse0_NMC","NMC 811",2038,"Refining (ktons of black mass)",954.458938837989,1358.38088137732,403.921942539333
+"Momentum__reuse0_NMC","NMC 811",2038,"Refining (ktons of black mass)",954.458938837989,384.659890081212,-569.799048756777
 "Momentum__reuse0_NMC","NMC 811",2039,"Pre-processing (ktons of battery)",4074.67431806622,918.387361849208,-3156.28695621702
-"Momentum__reuse0_NMC","NMC 811",2039,"Refining (ktons of black mass)",1102.95647137586,1358.38088137732,255.42441000146
+"Momentum__reuse0_NMC","NMC 811",2039,"Refining (ktons of black mass)",1102.95647137586,384.659890081212,-718.29658129465
 "Momentum__reuse0_NMC","NMC 811",2040,"Pre-processing (ktons of battery)",4813.06842215263,918.387361849208,-3894.68106030342
-"Momentum__reuse0_NMC","NMC 811",2040,"Refining (ktons of black mass)",1301.89775878946,1358.38088137732,56.4831225878611
+"Momentum__reuse0_NMC","NMC 811",2040,"Refining (ktons of black mass)",1301.89775878946,384.659890081212,-917.237868708249
 "Momentum__reuse0_NMC","NMC 811",2041,"Pre-processing (ktons of battery)",5600.75248773742,918.387361849208,-4682.36512588822
-"Momentum__reuse0_NMC","NMC 811",2041,"Refining (ktons of black mass)",1514.41656990872,1358.38088137732,-156.035688531397
+"Momentum__reuse0_NMC","NMC 811",2041,"Refining (ktons of black mass)",1514.41656990872,384.659890081212,-1129.75667982751
 "Momentum__reuse0_NMC","NMC 811",2042,"Pre-processing (ktons of battery)",6304.84205826789,918.387361849208,-5386.45469641868
-"Momentum__reuse0_NMC","NMC 811",2042,"Refining (ktons of black mass)",1700.7042085872,1358.38088137732,-342.323327209882
+"Momentum__reuse0_NMC","NMC 811",2042,"Refining (ktons of black mass)",1700.7042085872,384.659890081212,-1316.04431850599
 "Momentum__reuse0_NMC","NMC 811",2043,"Pre-processing (ktons of battery)",7114.91265966086,918.387361849208,-6196.52529781166
-"Momentum__reuse0_NMC","NMC 811",2043,"Refining (ktons of black mass)",1918.13200750221,1358.38088137732,-559.75112612489
+"Momentum__reuse0_NMC","NMC 811",2043,"Refining (ktons of black mass)",1918.13200750221,384.659890081212,-1533.472117421
 "Momentum__reuse0_NMC","NMC 811",2044,"Pre-processing (ktons of battery)",7891.90610427338,918.387361849208,-6973.51874242417
-"Momentum__reuse0_NMC","NMC 811",2044,"Refining (ktons of black mass)",2125.62224582056,1358.38088137732,-767.241364443239
+"Momentum__reuse0_NMC","NMC 811",2044,"Refining (ktons of black mass)",2125.62224582056,384.659890081212,-1740.96235573935
 "Momentum__reuse0_NMC","NMC 811",2045,"Pre-processing (ktons of battery)",8595.74957013922,918.387361849208,-7677.36220829001
-"Momentum__reuse0_NMC","NMC 811",2045,"Refining (ktons of black mass)",2311.75581722327,1358.38088137732,-953.374935845949
+"Momentum__reuse0_NMC","NMC 811",2045,"Refining (ktons of black mass)",2311.75581722327,384.659890081212,-1927.09592714206
 "Momentum__reuse0_NMC","NMC 811",2046,"Pre-processing (ktons of battery)",9271.88718609667,918.387361849208,-8353.49982424746
-"Momentum__reuse0_NMC","NMC 811",2046,"Refining (ktons of black mass)",2491.07014799339,1358.38088137732,-1132.68926661607
+"Momentum__reuse0_NMC","NMC 811",2046,"Refining (ktons of black mass)",2491.07014799339,384.659890081212,-2106.41025791218
 "Momentum__reuse0_NMC","NMC 811",2047,"Pre-processing (ktons of battery)",9929.73066265161,918.387361849208,-9011.3433008024
-"Momentum__reuse0_NMC","NMC 811",2047,"Refining (ktons of black mass)",2667.0528387998,1358.38088137732,-1308.67195742248
+"Momentum__reuse0_NMC","NMC 811",2047,"Refining (ktons of black mass)",2667.0528387998,384.659890081212,-2282.39294871859
 "Momentum__reuse0_NMC","NMC 811",2048,"Pre-processing (ktons of battery)",10564.0127286982,918.387361849208,-9645.62536684901
-"Momentum__reuse0_NMC","NMC 811",2048,"Refining (ktons of black mass)",2838.55403559471,1358.38088137732,-1480.17315421739
+"Momentum__reuse0_NMC","NMC 811",2048,"Refining (ktons of black mass)",2838.55403559471,384.659890081212,-2453.8941455135
 "Momentum__reuse0_NMC","NMC 811",2049,"Pre-processing (ktons of battery)",11133.3319895994,918.387361849208,-10214.9446277502
-"Momentum__reuse0_NMC","NMC 811",2049,"Refining (ktons of black mass)",2993.20625254169,1358.38088137732,-1634.82537116437
+"Momentum__reuse0_NMC","NMC 811",2049,"Refining (ktons of black mass)",2993.20625254169,384.659890081212,-2608.54636246048
 "Momentum__reuse0_NMC","NMC 811",2050,"Pre-processing (ktons of battery)",11496.7844554483,918.387361849208,-10578.3970935991
-"Momentum__reuse0_NMC","NMC 811",2050,"Refining (ktons of black mass)",3088.49606306417,1358.38088137732,-1730.11518168685
-"Momentum__reuse50","50% reuse",2025,"Pre-processing (ktons of battery)",131.524920039493,322.423361849208,190.898441809714
-"Momentum__reuse50","50% reuse",2025,"Refining (ktons of black mass)",38.0834526890906,0,-38.0834526890906
-"Momentum__reuse50","50% reuse",2026,"Pre-processing (ktons of battery)",215.692558878137,495.528361849208,279.835802971071
-"Momentum__reuse50","50% reuse",2026,"Refining (ktons of black mass)",62.8659655843868,24.0046259286089,-38.861339655778
-"Momentum__reuse50","50% reuse",2027,"Pre-processing (ktons of battery)",359.79185356009,534.528361849207,174.736508289118
-"Momentum__reuse50","50% reuse",2027,"Refining (ktons of black mass)",106.657348898282,352.336492482294,245.679143584012
-"Momentum__reuse50","50% reuse",2028,"Pre-processing (ktons of battery)",587.041144626876,786.528361849207,199.487217222332
-"Momentum__reuse50","50% reuse",2028,"Refining (ktons of black mass)",176.740815543743,551.847182742374,375.106367198631
-"Momentum__reuse50","50% reuse",2029,"Pre-processing (ktons of battery)",818.010500045255,837.528361849207,19.5178618039529
-"Momentum__reuse50","50% reuse",2029,"Refining (ktons of black mass)",246.42530563792,590.847182742374,344.421877104454
-"Momentum__reuse50","50% reuse",2030,"Pre-processing (ktons of battery)",985.901410793126,918.387361849208,-67.5140489439185
-"Momentum__reuse50","50% reuse",2030,"Refining (ktons of black mass)",295.670815605178,1358.38088137732,1062.71006577214
-"Momentum__reuse50","50% reuse",2031,"Pre-processing (ktons of battery)",1189.50566043327,918.387361849208,-271.118298584065
-"Momentum__reuse50","50% reuse",2031,"Refining (ktons of black mass)",354.633270980001,1358.38088137732,1003.74761039732
-"Momentum__reuse50","50% reuse",2032,"Pre-processing (ktons of battery)",1419.66737946121,918.387361849208,-501.280017612007
-"Momentum__reuse50","50% reuse",2032,"Refining (ktons of black mass)",421.283512015917,1358.38088137732,937.097369361405
-"Momentum__reuse50","50% reuse",2033,"Pre-processing (ktons of battery)",1694.88868749533,918.387361849208,-776.501325646127
-"Momentum__reuse50","50% reuse",2033,"Refining (ktons of black mass)",500.816729910857,1358.38088137732,857.564151466465
-"Momentum__reuse50","50% reuse",2034,"Pre-processing (ktons of battery)",1996.71909854743,918.387361849208,-1078.33173669823
-"Momentum__reuse50","50% reuse",2034,"Refining (ktons of black mass)",588.061127508445,1358.38088137732,770.319753868878
-"Momentum__reuse50","50% reuse",2035,"Pre-processing (ktons of battery)",2348.35062659101,918.387361849208,-1429.96326474181
-"Momentum__reuse50","50% reuse",2035,"Refining (ktons of black mass)",689.401177137716,1358.38088137732,668.979704239606
-"Momentum__reuse50","50% reuse",2036,"Pre-processing (ktons of battery)",2751.65410218518,918.387361849208,-1833.26674033597
-"Momentum__reuse50","50% reuse",2036,"Refining (ktons of black mass)",805.594240162015,1358.38088137732,552.786641215307
-"Momentum__reuse50","50% reuse",2037,"Pre-processing (ktons of battery)",3211.04459709187,918.387361849208,-2292.65723524266
-"Momentum__reuse50","50% reuse",2037,"Refining (ktons of black mass)",937.364477664905,1358.38088137732,421.016403712417
-"Momentum__reuse50","50% reuse",2038,"Pre-processing (ktons of battery)",3732.54139410888,918.387361849208,-2814.15403225968
-"Momentum__reuse50","50% reuse",2038,"Refining (ktons of black mass)",1086.38536522975,1358.38088137732,271.99551614757
-"Momentum__reuse50","50% reuse",2039,"Pre-processing (ktons of battery)",4324.09304103474,918.387361849208,-3405.70567918553
-"Momentum__reuse50","50% reuse",2039,"Refining (ktons of black mass)",1255.10222085964,1358.38088137732,103.278660517686
-"Momentum__reuse50","50% reuse",2040,"Pre-processing (ktons of battery)",4974.20734513948,918.387361849208,-4055.81998329028
-"Momentum__reuse50","50% reuse",2040,"Refining (ktons of black mass)",1440.23390718124,1358.38088137732,-81.8530258039191
-"Momentum__reuse50","50% reuse",2041,"Pre-processing (ktons of battery)",5732.80198859236,918.387361849208,-4814.41462674315
-"Momentum__reuse50","50% reuse",2041,"Refining (ktons of black mass)",1656.93002847034,1358.38088137732,-298.549147093021
-"Momentum__reuse50","50% reuse",2042,"Pre-processing (ktons of battery)",6437.97626993435,918.387361849208,-5519.58890808515
-"Momentum__reuse50","50% reuse",2042,"Refining (ktons of black mass)",1857.02933589818,1358.38088137732,-498.64845452086
-"Momentum__reuse50","50% reuse",2043,"Pre-processing (ktons of battery)",7261.21510661442,918.387361849208,-6342.82774476521
-"Momentum__reuse50","50% reuse",2043,"Refining (ktons of black mass)",2092.09726642105,1358.38088137732,-733.716385043723
-"Momentum__reuse50","50% reuse",2044,"Pre-processing (ktons of battery)",8047.18185096703,918.387361849208,-7128.79448911782
-"Momentum__reuse50","50% reuse",2044,"Refining (ktons of black mass)",2315.83617047835,1358.38088137732,-957.455289101031
-"Momentum__reuse50","50% reuse",2045,"Pre-processing (ktons of battery)",8750.95186255297,918.387361849208,-7832.56450070376
-"Momentum__reuse50","50% reuse",2045,"Refining (ktons of black mass)",2515.09019727162,1358.38088137732,-1156.70931589429
-"Momentum__reuse50","50% reuse",2046,"Pre-processing (ktons of battery)",9425.04458600824,918.387361849208,-8506.65722415903
-"Momentum__reuse50","50% reuse",2046,"Refining (ktons of black mass)",2706.17141193861,1358.38088137732,-1347.79053056129
-"Momentum__reuse50","50% reuse",2047,"Pre-processing (ktons of battery)",10080.3413811029,918.387361849208,-9161.9540192537
-"Momentum__reuse50","50% reuse",2047,"Refining (ktons of black mass)",2892.75894959942,1358.38088137732,-1534.3780682221
-"Momentum__reuse50","50% reuse",2048,"Pre-processing (ktons of battery)",10711.2537108152,918.387361849208,-9792.86634896603
-"Momentum__reuse50","50% reuse",2048,"Refining (ktons of black mass)",3073.40867284411,1358.38088137732,-1715.02779146678
-"Momentum__reuse50","50% reuse",2049,"Pre-processing (ktons of battery)",11272.292534701,918.387361849208,-10353.9051728518
-"Momentum__reuse50","50% reuse",2049,"Refining (ktons of black mass)",3234.45047492975,1358.38088137732,-1876.06959355242
-"Momentum__reuse50","50% reuse",2050,"Pre-processing (ktons of battery)",11609.8935103528,918.387361849208,-10691.5061485036
-"Momentum__reuse50","50% reuse",2050,"Refining (ktons of black mass)",3329.6618768875,1358.38088137732,-1971.28099551017
-"Scrap18","18% Scrap",2025,"Pre-processing (ktons of battery)",348.20497597079,322.423361849208,-25.781614121582
-"Scrap18","18% Scrap",2025,"Refining (ktons of black mass)",100.798056238753,0,-100.798056238753
-"Scrap18","18% Scrap",2026,"Pre-processing (ktons of battery)",518.255137775774,495.528361849208,-22.7267759265665
-"Scrap18","18% Scrap",2026,"Refining (ktons of black mass)",149.865962900342,24.0046259286089,-125.861336971733
-"Scrap18","18% Scrap",2027,"Pre-processing (ktons of battery)",722.337606528417,534.528361849207,-187.80924467921
-"Scrap18","18% Scrap",2027,"Refining (ktons of black mass)",210.006219408365,352.336492482294,142.330273073929
-"Scrap18","18% Scrap",2028,"Pre-processing (ktons of battery)",1019.0342738825,786.528361849207,-232.505912033291
-"Scrap18","18% Scrap",2028,"Refining (ktons of black mass)",299.780472151061,551.847182742374,252.066710591314
-"Scrap18","18% Scrap",2029,"Pre-processing (ktons of battery)",1361.85410081081,837.528361849207,-524.325738961604
-"Scrap18","18% Scrap",2029,"Refining (ktons of black mass)",400.868161626567,590.847182742374,189.979021115807
-"Scrap18","18% Scrap",2030,"Pre-processing (ktons of battery)",1613.83203732945,918.387361849208,-695.444675480242
-"Scrap18","18% Scrap",2030,"Refining (ktons of black mass)",473.842433287932,1358.38088137732,884.53844808939
-"Scrap18","18% Scrap",2031,"Pre-processing (ktons of battery)",1941.0165918317,918.387361849208,-1022.62922998249
-"Scrap18","18% Scrap",2031,"Refining (ktons of black mass)",567.782300470541,1358.38088137732,790.598580906781
-"Scrap18","18% Scrap",2032,"Pre-processing (ktons of battery)",2276.87609772406,918.387361849208,-1358.48873587485
-"Scrap18","18% Scrap",2032,"Refining (ktons of black mass)",664.440221886832,1358.38088137732,693.94065949049
-"Scrap18","18% Scrap",2033,"Pre-processing (ktons of battery)",2662.4672119801,918.387361849208,-1744.07985013089
-"Scrap18","18% Scrap",2033,"Refining (ktons of black mass)",775.314009805892,1358.38088137732,583.06687157143
-"Scrap18","18% Scrap",2034,"Pre-processing (ktons of battery)",3036.09386661328,918.387361849208,-2117.70650476407
-"Scrap18","18% Scrap",2034,"Refining (ktons of black mass)",883.185419638913,1358.38088137732,475.195461738409
-"Scrap18","18% Scrap",2035,"Pre-processing (ktons of battery)",3456.9612751374,918.387361849208,-2538.57391328819
-"Scrap18","18% Scrap",2035,"Refining (ktons of black mass)",1004.1794894095,1358.38088137732,354.201391967826
-"Scrap18","18% Scrap",2036,"Pre-processing (ktons of battery)",3916.01556221297,918.387361849208,-2997.62820036376
-"Scrap18","18% Scrap",2036,"Refining (ktons of black mass)",1136.47360899861,1358.38088137732,221.90727237871
-"Scrap18","18% Scrap",2037,"Pre-processing (ktons of battery)",4417.86372139776,918.387361849208,-3499.47635954855
-"Scrap18","18% Scrap",2037,"Refining (ktons of black mass)",1280.42225529675,1358.38088137732,77.9586260805677
-"Scrap18","18% Scrap",2038,"Pre-processing (ktons of battery)",4981.05724686304,918.387361849208,-4062.66988501383
-"Scrap18","18% Scrap",2038,"Refining (ktons of black mass)",1441.39794183033,1358.38088137732,-83.0170604530072
-"Scrap18","18% Scrap",2039,"Pre-processing (ktons of battery)",5631.98345054198,918.387361849208,-4713.59608869277
-"Scrap18","18% Scrap",2039,"Refining (ktons of black mass)",1627.35325777492,1358.38088137732,-268.972376397596
-"Scrap18","18% Scrap",2040,"Pre-processing (ktons of battery)",6458.83262836262,918.387361849208,-5540.44526651341
-"Scrap18","18% Scrap",2040,"Refining (ktons of black mass)",1865.12821464489,1358.38088137732,-506.747333267565
-"Scrap18","18% Scrap",2041,"Pre-processing (ktons of battery)",7302.89400602483,918.387361849208,-6384.50664417562
-"Scrap18","18% Scrap",2041,"Refining (ktons of black mass)",2107.54992240245,1358.38088137732,-749.169041025127
-"Scrap18","18% Scrap",2042,"Pre-processing (ktons of battery)",8065.39749808754,918.387361849208,-7147.01013623833
-"Scrap18","18% Scrap",2042,"Refining (ktons of black mass)",2324.80293935083,1358.38088137732,-966.422057973505
-"Scrap18","18% Scrap",2043,"Pre-processing (ktons of battery)",8935.0510772315,918.387361849208,-8016.66371538229
-"Scrap18","18% Scrap",2043,"Refining (ktons of black mass)",2573.79458410512,1358.38088137732,-1215.41370272779
-"Scrap18","18% Scrap",2044,"Pre-processing (ktons of battery)",9771.33736029135,918.387361849208,-8852.94999844215
-"Scrap18","18% Scrap",2044,"Refining (ktons of black mass)",2812.66671677396,1358.38088137732,-1454.28583539663
-"Scrap18","18% Scrap",2045,"Pre-processing (ktons of battery)",10532.6024359371,918.387361849208,-9614.21507408791
-"Scrap18","18% Scrap",2045,"Refining (ktons of black mass)",3029.17318500663,1358.38088137732,-1670.79230362931
-"Scrap18","18% Scrap",2046,"Pre-processing (ktons of battery)",11263.1467338642,918.387361849208,-10344.759372015
-"Scrap18","18% Scrap",2046,"Refining (ktons of black mass)",3237.20964741009,1358.38088137732,-1878.82876603277
-"Scrap18","18% Scrap",2047,"Pre-processing (ktons of battery)",11971.4633786711,918.387361849208,-11053.0760168219
-"Scrap18","18% Scrap",2047,"Refining (ktons of black mass)",3439.75380168099,1358.38088137732,-2081.37292030366
-"Scrap18","18% Scrap",2048,"Pre-processing (ktons of battery)",12651.3907991548,918.387361849208,-11733.0034373056
-"Scrap18","18% Scrap",2048,"Refining (ktons of black mass)",3635.18533325403,1358.38088137732,-2276.80445187671
-"Scrap18","18% Scrap",2049,"Pre-processing (ktons of battery)",13260.9817222062,918.387361849208,-12342.594360357
-"Scrap18","18% Scrap",2049,"Refining (ktons of black mass)",3810.86182097137,1358.38088137732,-2452.48093959405
-"Scrap18","18% Scrap",2050,"Pre-processing (ktons of battery)",13659.7751034181,918.387361849208,-12741.3877415689
-"Scrap18","18% Scrap",2050,"Refining (ktons of black mass)",3924.51295985977,1358.38088137732,-2566.13207848244
+"Momentum__reuse0_NMC","NMC 811",2050,"Refining (ktons of black mass)",3088.49606306417,384.659890081212,-2703.83617298295
+"Momentum__reuse50","50% reuse",2025,"Pre-processing (ktons of battery)",111.437112120364,322.423361849208,210.986249728844
+"Momentum__reuse50","50% reuse",2025,"Refining (ktons of black mass)",32.2678769445533,0,-32.2678769445533
+"Momentum__reuse50","50% reuse",2026,"Pre-processing (ktons of battery)",170.818075725912,495.528361849208,324.710286123295
+"Momentum__reuse50","50% reuse",2026,"Refining (ktons of black mass)",49.9871857169335,6.59364669564592,-43.3935390212876
+"Momentum__reuse50","50% reuse",2027,"Pre-processing (ktons of battery)",348.59561145041,534.528361849207,185.932750398798
+"Momentum__reuse50","50% reuse",2027,"Refining (ktons of black mass)",103.465782422709,96.7806103840414,-6.68517203866783
+"Momentum__reuse50","50% reuse",2028,"Pre-processing (ktons of battery)",540.625687240711,786.528361849207,245.902674608496
+"Momentum__reuse50","50% reuse",2028,"Refining (ktons of black mass)",163.522509433548,151.582672598708,-11.9398368348407
+"Momentum__reuse50","50% reuse",2029,"Pre-processing (ktons of battery)",759.543462095429,837.528361849207,77.9848997537787
+"Momentum__reuse50","50% reuse",2029,"Refining (ktons of black mass)",229.817433724798,162.295283655217,-67.5221500695805
+"Momentum__reuse50","50% reuse",2030,"Pre-processing (ktons of battery)",877.555614876815,918.387361849208,40.8317469723927
+"Momentum__reuse50","50% reuse",2030,"Refining (ktons of black mass)",264.919662424964,373.123232020356,108.203569595391
+"Momentum__reuse50","50% reuse",2031,"Pre-processing (ktons of battery)",1037.47850998454,918.387361849208,-119.091148135336
+"Momentum__reuse50","50% reuse",2031,"Refining (ktons of black mass)",311.494297955542,373.123232020356,61.6289340648141
+"Momentum__reuse50","50% reuse",2032,"Pre-processing (ktons of battery)",1220.05557993324,918.387361849208,-301.668218084036
+"Momentum__reuse50","50% reuse",2032,"Refining (ktons of black mass)",364.627103499783,384.659890081212,20.0327865814291
+"Momentum__reuse50","50% reuse",2033,"Pre-processing (ktons of battery)",1442.53639933369,918.387361849208,-524.149037484487
+"Momentum__reuse50","50% reuse",2033,"Refining (ktons of black mass)",429.17725758819,384.659890081212,-44.5173675069781
+"Momentum__reuse50","50% reuse",2034,"Pre-processing (ktons of battery)",1712.05317710677,918.387361849208,-793.665815257558
+"Momentum__reuse50","50% reuse",2034,"Refining (ktons of black mass)",507.163914226751,384.659890081212,-122.504024145539
+"Momentum__reuse50","50% reuse",2035,"Pre-processing (ktons of battery)",2033.54534317566,918.387361849208,-1115.15798132645
+"Momentum__reuse50","50% reuse",2035,"Refining (ktons of black mass)",599.924652488392,384.659890081212,-215.264762407179
+"Momentum__reuse50","50% reuse",2036,"Pre-processing (ktons of battery)",2414.29523378123,918.387361849208,-1495.90787193202
+"Momentum__reuse50","50% reuse",2036,"Refining (ktons of black mass)",709.611705984758,384.659890081212,-324.951815903546
+"Momentum__reuse50","50% reuse",2037,"Pre-processing (ktons of battery)",2857.9424842997,918.387361849208,-1939.55512245049
+"Momentum__reuse50","50% reuse",2037,"Refining (ktons of black mass)",836.855128991222,384.659890081212,-452.195238910009
+"Momentum__reuse50","50% reuse",2038,"Pre-processing (ktons of battery)",3364.88658352745,918.387361849208,-2446.49922167825
+"Momentum__reuse50","50% reuse",2038,"Refining (ktons of black mass)",981.695419870258,384.659890081212,-597.035529789046
+"Momentum__reuse50","50% reuse",2039,"Pre-processing (ktons of battery)",3939.02433570087,918.387361849208,-3020.63697385167
+"Momentum__reuse50","50% reuse",2039,"Refining (ktons of black mass)",1145.38546657585,384.659890081212,-760.725576494637
+"Momentum__reuse50","50% reuse",2040,"Pre-processing (ktons of battery)",4574.72057922572,918.387361849208,-3656.33321737652
+"Momentum__reuse50","50% reuse",2040,"Refining (ktons of black mass)",1326.37041621764,384.659890081212,-941.710526136424
+"Momentum__reuse50","50% reuse",2041,"Pre-processing (ktons of battery)",5325.90112901013,918.387361849208,-4407.51376716092
+"Momentum__reuse50","50% reuse",2041,"Refining (ktons of black mass)",1540.9442057752,384.659890081212,-1156.28431569399
+"Momentum__reuse50","50% reuse",2042,"Pre-processing (ktons of battery)",6031.10926937665,918.387361849208,-5112.72190752745
+"Momentum__reuse50","50% reuse",2042,"Refining (ktons of black mass)",1741.0303801857,384.659890081212,-1356.37049010449
+"Momentum__reuse50","50% reuse",2043,"Pre-processing (ktons of battery)",6854.32108357933,918.387361849208,-5935.93372173012
+"Momentum__reuse50","50% reuse",2043,"Refining (ktons of black mass)",1976.06143408349,384.659890081212,-1591.40154400228
+"Momentum__reuse50","50% reuse",2044,"Pre-processing (ktons of battery)",7640.23889837496,918.387361849208,-6721.85153652575
+"Momentum__reuse50","50% reuse",2044,"Refining (ktons of black mass)",2199.7589596831,384.659890081212,-1815.09906960189
+"Momentum__reuse50","50% reuse",2045,"Pre-processing (ktons of battery)",8344.02661311351,918.387361849208,-7425.6392512643
+"Momentum__reuse50","50% reuse",2045,"Refining (ktons of black mass)",2399.00717351703,384.659890081212,-2014.34728343582
+"Momentum__reuse50","50% reuse",2046,"Pre-processing (ktons of battery)",9018.1055143264,918.387361849208,-8099.71815247719
+"Momentum__reuse50","50% reuse",2046,"Refining (ktons of black mass)",2590.07414809946,384.659890081212,-2205.41425801825
+"Momentum__reuse50","50% reuse",2047,"Pre-processing (ktons of battery)",9673.30385468583,918.387361849208,-8754.91649283663
+"Momentum__reuse50","50% reuse",2047,"Refining (ktons of black mass)",2776.61549424898,384.659890081212,-2391.95560416777
+"Momentum__reuse50","50% reuse",2048,"Pre-processing (ktons of battery)",10304.0671804676,918.387361849208,-9385.67981861836
+"Momentum__reuse50","50% reuse",2048,"Refining (ktons of black mass)",2957.20045750072,384.659890081212,-2572.54056741951
+"Momentum__reuse50","50% reuse",2049,"Pre-processing (ktons of battery)",10864.9931519475,918.387361849208,-9946.60579009834
+"Momentum__reuse50","50% reuse",2049,"Refining (ktons of black mass)",3118.1995204991,384.659890081212,-2733.53963041788
+"Momentum__reuse50","50% reuse",2050,"Pre-processing (ktons of battery)",11202.5133955601,918.387361849208,-10284.1260337109
+"Momentum__reuse50","50% reuse",2050,"Refining (ktons of black mass)",3213.38407048661,384.659890081212,-2828.7241804054
+"Scrap16","16% Scrap",2025,"Pre-processing (ktons of battery)",251.72043736113,322.423361849208,70.702924488078
+"Scrap16","16% Scrap",2025,"Refining (ktons of black mass)",72.8670893870142,0,-72.8670893870142
+"Scrap16","16% Scrap",2026,"Pre-processing (ktons of battery)",367.954343999579,495.528361849208,127.574017849628
+"Scrap16","16% Scrap",2026,"Refining (ktons of black mass)",106.694135278543,6.59364669564592,-100.100488582897
+"Scrap16","16% Scrap",2027,"Pre-processing (ktons of battery)",652.991563693399,534.528361849207,-118.463201844192
+"Scrap16","16% Scrap",2027,"Refining (ktons of black mass)",190.236014997723,96.7806103840414,-93.4554046136817
+"Scrap16","16% Scrap",2028,"Pre-processing (ktons of battery)",898.469191681006,786.528361849207,-111.940829831799
+"Scrap16","16% Scrap",2028,"Refining (ktons of black mass)",265.447766858934,151.582672598708,-113.865094260226
+"Scrap16","16% Scrap",2029,"Pre-processing (ktons of battery)",1255.25014546613,837.528361849207,-417.72178361692
+"Scrap16","16% Scrap",2029,"Refining (ktons of black mass)",370.598660235308,162.295283655217,-208.30337658009
+"Scrap16","16% Scrap",2030,"Pre-processing (ktons of battery)",1437.45276750431,918.387361849208,-519.0654056551
+"Scrap16","16% Scrap",2030,"Refining (ktons of black mass)",423.822640153247,373.123232020356,-50.6994081328908
+"Scrap16","16% Scrap",2031,"Pre-processing (ktons of battery)",1662.74604708055,918.387361849208,-744.358685231341
+"Scrap16","16% Scrap",2031,"Refining (ktons of black mass)",488.883500736539,373.123232020356,-115.760268716183
+"Scrap16","16% Scrap",2032,"Pre-processing (ktons of battery)",1857.18863619108,918.387361849208,-938.801274341874
+"Scrap16","16% Scrap",2032,"Refining (ktons of black mass)",545.395710103725,384.659890081212,-160.735820022513
+"Scrap16","16% Scrap",2033,"Pre-processing (ktons of battery)",2083.45277778661,918.387361849208,-1165.0654159374
+"Scrap16","16% Scrap",2033,"Refining (ktons of black mass)",611.041292765086,384.659890081212,-226.381402683873
+"Scrap16","16% Scrap",2034,"Pre-processing (ktons of battery)",2358.86000362478,918.387361849208,-1440.47264177557
+"Scrap16","16% Scrap",2034,"Refining (ktons of black mass)",690.851068242454,384.659890081212,-306.191178161241
+"Scrap16","16% Scrap",2035,"Pre-processing (ktons of battery)",2687.27913167176,918.387361849208,-1768.89176982255
+"Scrap16","16% Scrap",2035,"Refining (ktons of black mass)",785.565653969342,384.659890081212,-400.90576388813
+"Scrap16","16% Scrap",2036,"Pre-processing (ktons of battery)",3076.94885862759,918.387361849208,-2158.56149677839
+"Scrap16","16% Scrap",2036,"Refining (ktons of black mass)",897.922798790305,384.659890081212,-513.262908709093
+"Scrap16","16% Scrap",2037,"Pre-processing (ktons of battery)",3529.81704800249,918.387361849208,-2611.42968615328
+"Scrap16","16% Scrap",2037,"Refining (ktons of black mass)",1027.83874475784,384.659890081212,-643.178854676629
+"Scrap16","16% Scrap",2038,"Pre-processing (ktons of battery)",4046.82505780104,918.387361849208,-3128.43769595183
+"Scrap16","16% Scrap",2038,"Refining (ktons of black mass)",1175.59877184128,384.659890081212,-790.938881760067
+"Scrap16","16% Scrap",2039,"Pre-processing (ktons of battery)",4642.74640230098,918.387361849208,-3724.35904045178
+"Scrap16","16% Scrap",2039,"Refining (ktons of black mass)",1345.74336526738,384.659890081212,-961.083475186172
+"Scrap16","16% Scrap",2040,"Pre-processing (ktons of battery)",5419.82315308587,918.387361849208,-4501.43579123666
+"Scrap16","16% Scrap",2040,"Refining (ktons of black mass)",1569.13268248043,384.659890081212,-1184.47279239922
+"Scrap16","16% Scrap",2041,"Pre-processing (ktons of battery)",6264.02271494506,918.387361849208,-5345.63535309585
+"Scrap16","16% Scrap",2041,"Refining (ktons of black mass)",1811.51886819917,384.659890081212,-1426.85897811795
+"Scrap16","16% Scrap",2042,"Pre-processing (ktons of battery)",7026.60726000283,918.387361849208,-6108.21989815362
+"Scrap16","16% Scrap",2042,"Refining (ktons of black mass)",2028.73130451298,384.659890081212,-1644.07141443176
+"Scrap16","16% Scrap",2043,"Pre-processing (ktons of battery)",7896.1774195815,918.387361849208,-6977.7900577323
+"Scrap16","16% Scrap",2043,"Refining (ktons of black mass)",2277.61798425433,384.659890081212,-1892.95809417312
+"Scrap16","16% Scrap",2044,"Pre-processing (ktons of battery)",8732.29742109929,918.387361849208,-7813.91005925008
+"Scrap16","16% Scrap",2044,"Refining (ktons of black mass)",2516.36242327767,384.659890081212,-2131.70253319646
+"Scrap16","16% Scrap",2045,"Pre-processing (ktons of battery)",9493.53659608786,918.387361849208,-8575.14923423865
+"Scrap16","16% Scrap",2045,"Refining (ktons of black mass)",2732.81952898252,384.659890081212,-2348.15963890131
+"Scrap16","16% Scrap",2046,"Pre-processing (ktons of battery)",10223.9551750908,918.387361849208,-9305.56781324157
+"Scrap16","16% Scrap",2046,"Refining (ktons of black mass)",2940.7770143289,384.659890081212,-2556.11712424769
+"Scrap16","16% Scrap",2047,"Pre-processing (ktons of battery)",10931.9199214876,918.387361849208,-10013.5325596384
+"Scrap16","16% Scrap",2047,"Refining (ktons of black mass)",3143.15676229277,384.659890081212,-2758.49687221156
+"Scrap16","16% Scrap",2048,"Pre-processing (ktons of battery)",11611.356061786,918.387361849208,-10692.9686999368
+"Scrap16","16% Scrap",2048,"Refining (ktons of black mass)",3338.3726826657,384.659890081212,-2953.71279258449
+"Scrap16","16% Scrap",2049,"Pre-processing (ktons of battery)",12220.5204343641,918.387361849208,-11302.1330725149
+"Scrap16","16% Scrap",2049,"Refining (ktons of black mass)",3513.87863396214,384.659890081212,-3129.21874388093
+"Scrap16","16% Scrap",2050,"Pre-processing (ktons of battery)",12618.9425274414,918.387361849208,-11700.5551655922
+"Scrap16","16% Scrap",2050,"Refining (ktons of black mass)",3627.38985569698,384.659890081212,-3242.72996561577
